@@ -1,37 +1,38 @@
 'use strict';
 
-import http from 'http';
-import https from 'https';
-import express from 'express';
-import path from 'path';
-import bodyParser from 'body-parser';
-import fs from 'fs';
+const http = require('http');
+const https = require('https');
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const fs = require('fs');
 
-import cors from 'cors';
-import multer from 'multer';
+const cors = require('cors');
+const multer = require('multer');
 
-import cookieParser from 'cookie-parser';
-import expressSession from 'express-session';
+const cookieParser = require('cookie-parser');
+const expressSession = require('express-session');
 
-import passport from 'passport';
-import flash from 'connect-flash';
+const passport = require('passport');
+const flash = require('connect-flash');
 
-import config from './config/config';
+const config = require('./config/config');
 
-import serviceLoader from './loader/service_loader';
-import controllerLoader from './loader/controller_loader';
+const serviceLoader = require('./loader/service_loader');
+const controllerLoader = require('./loader/controller_loader');
 
-import local_login from './passport/local_login';
+const local_login = require('./passport/local_login');
 
 // logger
-import logger from './util/logger';
+const logger = require('./util/logger');
 
 //===== Socket.IO =====//
-import socketio from'socket.io';
+const socketio = require('socket.io');
 
 
 //=====================//
 
+// express Session 사용
 const sessionMiddleware = expressSession({
     secret: 'my key',
     resave: true,
@@ -39,10 +40,16 @@ const sessionMiddleware = expressSession({
 });
 
 
+// load external_loader
+const external_loader = require('./loader/external_loader');
+
+
+
 // Declaration of createApp function
 const createApp = () => {
     const app = express();
 
+    // View 설정
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');
     console.log('View engine is set to ejs.');    
@@ -50,8 +57,17 @@ const createApp = () => {
     app.use(cors());
     app.use('/', express.static(path.join(__dirname, 'public')));
     
-    app.use(bodyParser.urlencoded({extended:false}));
-    app.use(bodyParser.json());
+    //app.use(bodyParser.urlencoded({extended:false}));
+    app.use(bodyParser.urlencoded({
+        parameterLimit: 50000000,
+        limit: '50mb',
+        extended:true
+    }));
+    app.use(bodyParser.json({
+        parameterLimit: 50000000,
+        limit: '50mb',
+        extended:true
+    }));
     
     
     const upload = initUpload();
@@ -71,6 +87,24 @@ const createApp = () => {
     const router = express.Router();
     app.use('/', router);
 
+    app.post('/baroboard/upload', upload.array('imageFile'), function (req, res) {
+        var filesLength = req.files.length;
+        var uploadCnt = 0;
+     
+        if (filesLength <= 0) {
+            res.status(500).end();
+        } else {
+            for (var i = 0; i < filesLength; i++) {
+                imageUpload(req.files[i]);
+                uploadCnt += 1;
+     
+                if (uploadCnt == filesLength) {
+                    res.status(200).end();
+                }
+            }
+        }
+    });
+
 
     // load registered services
     serviceLoader.load();
@@ -80,25 +114,46 @@ const createApp = () => {
     controllerLoader.load(router, upload);
     logger.info('controller loader called.');
 
+    // load external interface 
+    external_loader.init(app, config);
+    
 
     initSwagger(app);
-    
 
     return app;    
 };
+
+/*이미지 업로드 함수*/
+function imageUpload(files) {
+    fs.readFile(files.path, function (err, data) {
+        var filePath = __dirname + '/public/images/' + files.originalname;
+        fs.writeFile(filePath, data, function (error) {
+            if (error) {
+                throw error;
+            } else {
+                fs.unlink(files.path, function (removeFileErr) {
+                    if (removeFileErr) {
+                        throw removeFileErr;
+                    }
+                });
+            }
+        });
+    });
+}
 
 // Declaration of initUpload function
 const initUpload = () => {
  
     const storage = multer.diskStorage({
         destination: function(req, file, callback) {
-            callback(null, 'uploads');
+            logger.debug('IN initUpload ',file);
+            callback(null, './public/images/');
         },
         filename: function(req, file, callback) {
             const extension = path.extname(file.originalname);
             const basename = path.basename(file.originalname, extension);
     
-            callback(null, basename + Date.now() + extension);
+            callback(null, basename);
         }
     });
     
@@ -217,6 +272,14 @@ const main = () => {
     return server;
 };
 
+
+
+
 // Call main function
 const webServer = main();
+
+
+
+
+
 

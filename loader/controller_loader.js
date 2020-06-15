@@ -6,21 +6,21 @@
 
 'use strict';
 
-import path from 'path';
-import fs from 'fs';
+const path = require('path');
+const fs = require('fs');
 
-import controllerConfig from '../config/controller_config';
+const controllerConfig = require('../config/controller_config');
 
 // logger
-import logger from '../util/logger';
+const logger = require('../util/logger');
 
 const rest_types = ['list', 'create', 'read', 'update', 'delete'];
 
 const loader = {};
 
 // controller directory
-const controllerDir = __dirname + '\\..\\..\\controllers'
-const distControllerDir = __dirname + '\\..\\controllers'
+//const controllerDir = __dirname + '\\..\\..\\controllers'
+const controllerDir = __dirname + '\\..\\controllers'
 
 loader.load = (router, upload) => {
     logger.debug('load called.');
@@ -271,7 +271,7 @@ loader.registerPath = (router, upload, filePath, func, method, path, uploadFlag)
     
     if (controller[func]) {
         method.forEach((methodItem, methodIndex) => {
-            logger.debug('method #' + methodIndex + ' -> ' + methodItem);
+            logger.debug(' method #' + methodIndex + ' -> ' + methodItem);
         
             if (methodItem) {
                 methodItem = methodItem.trim();

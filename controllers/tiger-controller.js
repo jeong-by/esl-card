@@ -6,9 +6,9 @@
 
 'use strict'
 
-import util from '../util/util';
-import param from '../util/param';
-import logger from '../util/logger';
+const util = require('../util/util');
+const param = require('../util/param');
+const logger = require('../util/logger');
 
 
 class Tiger {
@@ -23,6 +23,21 @@ class Tiger {
         
         const output = {
             message: 'hello'
+        }
+        
+        util.sendRes(res, 200, 'OK', output);
+    }
+
+    /**
+     * @RequestMapping(path="/tiger/bye")
+     */
+    bye(req, res) {
+        logger.debug('Tiger:hello called for path /tiger/bye');
+
+        const params = param.parse(req);
+        
+        const output = {
+            message: 'bye'
         }
         
         util.sendRes(res, 200, 'OK', output);

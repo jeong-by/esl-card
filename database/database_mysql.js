@@ -1,16 +1,18 @@
 'use strict';
 
-import mysql from 'mysql';
-import mysqlUtilities from 'mysql-utilities';
+const mysql = require('mysql');
+const mysqlUtilities = require('mysql-utilities');
 
-import path from 'path';
-import fs from 'fs';
+const path = require('path');
+const fs = require('fs');
 
-import config from'../config/config';
-import sqlConfig from'../config/sql_config';
-import logger from '../util/logger';
-import util from '../util/util';
+const config = require('../config/config');
+const sqlConfig = require('../config/sql_config');
+const logger = require('../util/logger');
+const util = require('../util/util');
  
+
+const log = config.debug.log;
 const dbName = 'database_mysql';
 let isMaster = true;
 let failoverCount = 0;
@@ -18,8 +20,9 @@ let isFailovering = false;
 let pool = null;
 
 const getPool = () => {
-    console.log('getPool called.');
-
+    if(log ==true){
+        console.log('getPool called.');
+    }
     if (isMaster) {
         pool = mysql.createPool(config.database[dbName].master);
     } else {
@@ -28,40 +31,94 @@ const getPool = () => {
 }
 
 getPool();
-console.log('database_mysql file loaded.');
-
+if(log ==true){
+    console.log('database_mysql file loaded.');
+}
 const sqlDir = __dirname + '/sql';
 let sqlObj = {};
 
 const loadSql = () => {
-    console.log('loadSql called.');
+    if(log ==true){console.log('loadSql called.');}
 
     // check all sql files
     fs.readdir(sqlDir, (err, filenames) => {
         if (err) {
-            console.log('Unable to scan sql directory: ' + err);
+            if(log ==true){console.log('Unable to scan sql directory: ' + err);}
             return;
         } 
 
         // listing all filenames
         filenames.forEach((filename) => {
             const filePath = sqlDir + '/' + filename;
-            console.log('sql file path -> ' + filePath);
+            if(log ==true){console.log('sql file path -> ' + filePath);}
 
             const curObj = require(filePath);
             Object.assign(sqlObj, curObj);
         });
 
         const sqlNames = Object.keys(sqlObj);
-        console.log('SQL count -> ' + sqlNames.length);
-        console.log('SQL names -> ' + sqlNames.join());
+        if(log ==true){console.log('SQL count -> ' + sqlNames.length);}
+        if(log ==true){console.log('SQL names -> ' + sqlNames.join());}
 
-        console.log('database SQL file loaded.');
+        if(log ==true){console.log('database SQL file loaded.');}
     });
 
 }
 
 loadSql();
+
+
+//replaceAll prototype 선언
+String.prototype.replaceAll = function(org, dest) {
+    return this.split(org).join(dest);
+}
+
+
+const changeColonToUpperCase = (sql) => {
+    let beginIndex = -1;
+    let endIndex = -1;
+    let curWord = '';
+    
+    let newSql = sql;
+
+    for (let i = 0; i < sql.length; i++) {
+        const curChar = sql[i];
+        if (curChar == ':') {
+            // :% 인 경우 제외
+            if (sql[i+1] && sql[i+1] == '%') {
+
+            } else {
+                beginIndex = i;
+            }
+        }
+
+        if (beginIndex > -1) {
+            if (curChar == ' ' || curChar == ',' || curChar == ')') {
+                endIndex = i;
+
+                const curToken = curWord.toUpperCase();
+                newSql = newSql.replace(curWord, curToken);
+
+                beginIndex = -1;
+                endIndex = -1;
+                curWord = '';
+            } else {
+                curWord += curChar;
+            }
+        } 
+    }
+
+    // in case of last word
+    if (beginIndex > -1) {
+        const curToken = curWord.toUpperCase();
+        newSql = newSql.replace(curWord, curToken);
+    }
+
+    if(log ==true){console.log('colon param to upper case -> ' + newSql);}
+    
+    return newSql;
+}                
+
 
 
 
@@ -91,9 +148,11 @@ class DatabaseMySQL {
             let sql = curSqlObj.sql;
 
             let sqlParams = [];
-            curSqlObj.params.forEach((item, index) => {
-                sqlParams.push(params[item]);
-            })
+            if (curSqlObj.params) {
+                curSqlObj.params.forEach((item, index) => {
+                    sqlParams.push(params[item]);
+                })
+            }
 
             queryParams.sql = sql;
             queryParams.sqlParams = sqlParams;
@@ -128,9 +187,11 @@ class DatabaseMySQL {
         let sql = curSqlObj.sql;
 
         let sqlParams = [];
-        curSqlObj.params.forEach((item, index) => {
-            sqlParams.push(params[item]);
-        })
+        if (curSqlObj.params) {
+            curSqlObj.params.forEach((item, index) => {
+                sqlParams.push(params[item]);
+            })
+        }
 
         queryParams.sql = sql;
         queryParams.sqlParams = sqlParams;
@@ -154,25 +215,32 @@ class DatabaseMySQL {
  
 
     executeRaw(executeParams, retryCount, callback) {
-        console.log('executeRaw called.');
-        console.log('Execute Params -> ' + JSON.stringify(executeParams));
+        if(log ==true){console.log('executeRaw called.');}
+        
+        const executeParamsText = JSON.stringify(executeParams);
+        if (executeParamsText && executeParamsText.length < 1000) {
+            if(log ==true){console.log('Execute Params -> ' + executeParamsText);}
+        } else {
+            if(log ==true){console.log('Execute Params -> over 1000 characters.');}
+        }
 
         const sqlName = executeParams.sqlName;
         let sql = executeParams.sql;
-        const sqlParams = executeParams.sqlParams;
+        let sqlParams = executeParams.sqlParams;
+        let paramType = executeParams.paramType;
         const mapper = executeParams.mapper;
         
         pool.getConnection((err, conn) => {
 
             if (err) {
-                console.log('Error in fetching database connection -> ' + err);
+                if(log ==true){console.log('Error in fetching database connection -> ' + err);}
                 
                 if (err.code === 'ECONNREFUSED') {
                     retryCount += 1;
-                    console.log('retryCount : ' + retryCount + '/' + config.database[dbName].retryStrategy.limit);
+                    if(log ==true){console.log('retryCount : ' + retryCount + '/' + config.database[dbName].retryStrategy.limit);}
 
                     if (retryCount < config.database[dbName].retryStrategy.limit) {
-                        console.log('Retrying #' + retryCount);
+                        if(log ==true){console.log('Retrying #' + retryCount);}
                         
                         if (failoverCount > config.database[dbName].retryStrategy.failoverLimit) {
                             callback(err, null);
@@ -195,14 +263,14 @@ class DatabaseMySQL {
                                 }
             
                                 pool.end(() => {
-                                    console.log('existing pool ended.');
+                                    if(log ==true){console.log('existing pool ended.');}
  
                                     getPool();
-                                    console.log('database connection pool is failovered to ');
+                                    if(log ==true){console.log('database connection pool is failovered to ');}
                                     if (isMaster) {
-                                        console.log('master config -> ' + config.database[dbName].master.host + ':' + config.database[dbName].master.port);
+                                        if(log ==true){console.log('master config -> ' + config.database[dbName].master.host + ':' + config.database[dbName].master.port);}
                                     } else {
-                                        console.log('slave config -> ' + config.database[dbName].slave.host + ':' + config.database[dbName].slave.port);
+                                        if(log ==true){console.log('slave config -> ' + config.database[dbName].slave.host + ':' + config.database[dbName].slave.port);}
                                     }
 
                                     failoverCount += 1;
@@ -230,7 +298,11 @@ class DatabaseMySQL {
                 return;
             }
 
-            console.log('current SQL -> ' + sql);
+            if (sql && sql.length < 1000) {
+                if(log ==true){console.log('current SQL -> ' + sql);}
+            } else {
+                if(log ==true){console.log('current SQL -> over 1000 characters');}
+            }
 
             // apply sqlReplaces
             if (executeParams.sqlReplaces) {
@@ -269,12 +341,54 @@ class DatabaseMySQL {
                 }
             }
 
+            // : style parameter
+            if (paramType) {
+                if(log) {logger.debug('Parameter is of colon style.');}
+
+                // change sql to upper case
+                sql = changeColonToUpperCase(sql);
+
+                // replace parameters with :name
+                const paramKeys = Object.keys(executeParams.params);
+                for (let i = 0; i < paramKeys.length; i++) {
+                    try {
+                        let curKey = paramKeys[i];
+                        let curValue = executeParams.params[curKey];
+                        if (executeParams.paramType[curKey] == 'string') {
+                            curValue = "'" + curValue + "'";
+                        }
+                        if(log ==true){logger.debug('mapping #' + i + ' [' + curKey + '] -> [' + curValue + ']');}
+
+                        //let replaced = sql.replaceAll(':' + curKey.toUpperCase(), curValue);
+                        let replaced = sql.replace(':' + curKey.toUpperCase(), curValue);
+                        if (replaced) {
+                            sql = replaced;
+                        }
+
+                        //replaced = sql.replaceAll(':' + curKey.toLowerCase(), curValue);
+                        //if (replaced) {
+                        //    sql = replaced;
+                        //}
+                    } catch(err2) {
+                        logger.debug('mapping error : ' + JSON.stringify(err2));
+                    }
+                };
+
+                sqlParams = [];
+            } else {
+                if(log){logger.debug('Parameter is of normal style.');}
+            }
+
             const query = conn.query(sql, sqlParams, (err, rows) => {
                 if (conn) {
                     conn.release();
                 }
 
-                console.log('SQL -> ' + query.sql);
+                if (sql && sql.length < 1000 ) {
+                    if(log ==true){console.log('SQL -> ' + query.sql);}
+                } else {
+                    if(log ==true){console.log('SQL -> over 1000 characters');}
+                }
 
                 if (err) {
                     console.log('Error in executing SQL -> ' + err);
@@ -291,12 +405,12 @@ class DatabaseMySQL {
     }
 
     applyMapper(mapper, rows) {
-        logger.debug('applyMapper called.');
+        if(log) {logger.debug('applyMapper called.');}
 
         let results = [];
          
         if (mapper) {
-            logger.debug('mapper found with attributes ' + Object.keys(mapper).length);
+            if(log ==true){logger.debug('mapper found with attributes ' + Object.keys(mapper).length);}
             rows.forEach((item, index) => {
                 console.log('INPUT ITEM -> ' + JSON.stringify(item));
 
@@ -304,7 +418,7 @@ class DatabaseMySQL {
                 Object.keys(mapper).forEach((key, position) => {
                     try {
                         if (index == 0) {
-                            logger.debug('mapping #' + position + ' [' + key + '] -> [' + mapper[key] + ']');
+                            if(log ==true){logger.debug('mapping #' + position + ' [' + key + '] -> [' + mapper[key] + ']');}
                         }
                         
                         outputItem[key] = item[mapper[key]];
@@ -312,15 +426,15 @@ class DatabaseMySQL {
                             outputItem[key] = item[mapper[key].toUpperCase()] || item[mapper[key].toLowerCase()];
                         }
                     } catch(err2) {
-                        logger.debug('mapping error : ' + JSON.stringify(err2));
+                        if(log ==true){logger.debug('mapping error : ' + JSON.stringify(err2));}
                     }
                 });
-                console.log('OUTPUT ITEM -> ' + JSON.stringify(outputItem));
+                if(log ==true){console.log('OUTPUT ITEM -> ' + JSON.stringify(outputItem));}
 
                 results.push(outputItem);
             });
         } else {
-            logger.debug('mapper not found. query result will be set to output.');
+            if(log) {logger.debug('mapper not found. query result will be set to output.');}
             results = rows;
         }
 
