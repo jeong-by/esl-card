@@ -1,0 +1,1871 @@
+2020-05-20 09:06:15.077 - DEBUG: [service_loader.js:17:12] load in service_loader called.
+2020-05-20 09:06:15.081 - DEBUG: [service_loader.js:21:16] #0 -> id:1, unit:person
+2020-05-20 09:06:15.377 - DEBUG: [service_loader.js:39:16] method #0 -> list
+2020-05-20 09:06:15.378 - DEBUG: [service_loader.js:43:16]     do method name -> doList
+2020-05-20 09:06:15.379 - DEBUG: [service_loader.js:39:16] method #1 -> read
+2020-05-20 09:06:15.379 - DEBUG: [service_loader.js:43:16]     do method name -> doRead
+2020-05-20 09:06:15.380 - DEBUG: [service_loader.js:39:16] method #2 -> create
+2020-05-20 09:06:15.380 - DEBUG: [service_loader.js:43:16]     do method name -> doCreate
+2020-05-20 09:06:15.381 - DEBUG: [service_loader.js:39:16] method #3 -> update
+2020-05-20 09:06:15.381 - DEBUG: [service_loader.js:43:16]     do method name -> doUpdate
+2020-05-20 09:06:15.382 - DEBUG: [service_loader.js:39:16] method #4 -> delete
+2020-05-20 09:06:15.382 - DEBUG: [service_loader.js:43:16]     do method name -> doDelete
+2020-05-20 09:06:15.383 - INFO: [index.js:111:12] service loader called.
+2020-05-20 09:06:15.383 - DEBUG: [controller_loader.js:26:12] load called.
+2020-05-20 09:06:15.384 - DEBUG: [controller_loader.js:106:12] autoLoad called.
+2020-05-20 09:06:15.421 - DEBUG: [controller_loader.js:34:20] #0 -> id:1, type:rest, base:, unit:person
+2020-05-20 09:06:15.428 - DEBUG: [person-controller.js:27:16] PersonController initialized.
+2020-05-20 09:06:15.429 - DEBUG: [controller_loader.js:53:24] rest type #0 -> list
+2020-05-20 09:06:15.429 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person, func -> list
+2020-05-20 09:06:15.429 - DEBUG: [controller_loader.js:53:24] rest type #1 -> create
+2020-05-20 09:06:15.430 - DEBUG: [controller_loader.js:73:24] rest request method -> post, path -> /person, func -> create
+2020-05-20 09:06:15.431 - DEBUG: [controller_loader.js:53:24] rest type #2 -> read
+2020-05-20 09:06:15.434 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person/:id, func -> read
+2020-05-20 09:06:15.437 - DEBUG: [controller_loader.js:53:24] rest type #3 -> update
+2020-05-20 09:06:15.438 - DEBUG: [controller_loader.js:73:24] rest request method -> put, path -> /person/:id, func -> update
+2020-05-20 09:06:15.441 - DEBUG: [controller_loader.js:53:24] rest type #4 -> delete
+2020-05-20 09:06:15.443 - DEBUG: [controller_loader.js:73:24] rest request method -> delete, path -> /person/:id, func -> delete
+2020-05-20 09:06:15.446 - DEBUG: [controller_loader.js:36:20] #1 -> id:2, type:path, path:/profile/list, method:get,post, file:profile-controller, func:list
+2020-05-20 09:06:15.451 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2020-05-20 09:06:15.452 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2020-05-20 09:06:15.457 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2020-05-20 09:06:15.459 - DEBUG: [controller_loader.js:36:20] #2 -> id:3, type:path, path:/profile/get, method:get,post, file:profile-controller, func:get
+2020-05-20 09:06:15.461 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2020-05-20 09:06:15.462 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2020-05-20 09:06:15.465 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2020-05-20 09:06:15.467 - DEBUG: [controller_loader.js:36:20] #3 -> id:4, type:path, path:/profile/add, method:get, file:profile-controller, func:add
+2020-05-20 09:06:15.468 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2020-05-20 09:06:15.469 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2020-05-20 09:06:15.471 - DEBUG: [controller_loader.js:36:20] #4 -> id:5, type:path, path:/profile/upload, method:post, file:profile-controller, func:upload
+2020-05-20 09:06:15.472 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2020-05-20 09:06:15.476 - DEBUG: [controller_loader.js:84:28] method #0 -> post
+2020-05-20 09:06:15.478 - DEBUG: [controller_loader.js:36:20] #5 -> id:6, type:path, path:/test/set_cookie, method:get, file:test-controller, func:set_cookie
+2020-05-20 09:06:15.482 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2020-05-20 09:06:15.483 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2020-05-20 09:06:15.486 - DEBUG: [controller_loader.js:36:20] #6 -> id:7, type:path, path:/test/show_cookie, method:get, file:test-controller, func:show_cookie
+2020-05-20 09:06:15.487 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2020-05-20 09:06:15.488 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2020-05-20 09:06:15.489 - INFO: [index.js:115:12] controller loader called.
+2020-05-20 09:06:15.551 - DEBUG: [mci.js:20:16] MCI initialized.
+2020-05-20 09:06:15.552 - DEBUG: [mci.js:28:20] name : external01
+2020-05-20 09:06:15.654 - DEBUG: [cni.js:15:16] CNI initialized.
+2020-05-20 09:06:15.655 - DEBUG: [cni.js:21:16] server name : external02
+2020-05-20 09:06:15.659 - DEBUG: [cni.js:25:16] server host : localhost
+2020-05-20 09:06:15.660 - DEBUG: [cni.js:26:16] server port : 7102
+2020-05-20 09:06:16.880 - INFO: [index.js:238:20] Http Server started.
+2020-05-20 09:06:16.883 - INFO: [index.js:248:16] Base URL -> http://localhost:7001
+2020-05-20 09:06:16.885 - INFO: [index.js:253:16] Namespace -> ::_7001_18876
+2020-05-20 09:06:17.347 - DEBUG: [socketio_loader.js:73:9] socketio_loader.load called.
+2020-05-20 09:06:17.351 - DEBUG: [socketio_loader.js:83:16] read namespace file -> ::_7001_9580
+2020-05-20 09:06:17.361 - INFO: [index.js:261:20] socket.io loader called.
+2020-05-20 09:06:17.413 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/device -> in file ../controllers/baroboard-device-controller, table : baroboard.device
+2020-05-20 09:06:17.430 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2020-05-20 09:06:17.431 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device, func -> list
+2020-05-20 09:06:17.433 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2020-05-20 09:06:17.438 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/device, func -> create
+2020-05-20 09:06:17.444 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2020-05-20 09:06:17.445 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device/:id, func -> read
+2020-05-20 09:06:17.448 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2020-05-20 09:06:17.452 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/device/:id, func -> update
+2020-05-20 09:06:17.452 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2020-05-20 09:06:17.454 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/device/:id, func -> delete
+2020-05-20 09:06:17.466 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/update -> updateData in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:17.892 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:17.901 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/select -> selectData in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:17.904 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:17.913 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/list -> dashboardList in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:17.915 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:17.925 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/sublist -> dashboardSubList in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:17.929 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:17.934 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/legacy -> legacyInfo in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:17.936 - DEBUG: [controller_loader.js:288:16] legacyInfo not found in the controller.
+2020-05-20 09:06:17.944 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/fieldlist -> dashboardFieldList in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:17.947 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:17.954 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/preview2 -> preview2 in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:17.954 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:17.964 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/apply -> applyData in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:17.966 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:17.975 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/preview -> applyData2 in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:17.977 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:17.984 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/goodbattery -> batteryUpdate in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:17.988 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.000 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/badbattery -> batteryUpdate2 in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:18.004 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.017 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/check/usinglayout -> checkUsingLayout in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:18.019 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.031 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/status -> statusUpdate in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:18.036 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.044 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/mappinglist -> layoutMappingDataList in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:18.049 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.062 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/modify/layout -> modifyLayoutinfo in file ../controllers/baroboard-device-controller
+2020-05-20 09:06:18.064 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.082 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/device_group -> in file ../controllers/baroboard-device-group-controller, table : baroboard.device_group
+2020-05-20 09:06:18.085 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2020-05-20 09:06:18.086 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device_group, func -> list
+2020-05-20 09:06:18.091 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2020-05-20 09:06:18.094 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/device_group, func -> create
+2020-05-20 09:06:18.098 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2020-05-20 09:06:18.100 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device_group/:id, func -> read
+2020-05-20 09:06:18.102 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2020-05-20 09:06:18.104 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/device_group/:id, func -> update
+2020-05-20 09:06:18.109 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2020-05-20 09:06:18.111 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/device_group/:id, func -> delete
+2020-05-20 09:06:18.129 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/image -> in file ../controllers/baroboard-image-controller, table : baroboard.image
+2020-05-20 09:06:18.132 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2020-05-20 09:06:18.136 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/image, func -> list
+2020-05-20 09:06:18.141 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2020-05-20 09:06:18.142 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/image, func -> create
+2020-05-20 09:06:18.145 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2020-05-20 09:06:18.149 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/image/:id, func -> read
+2020-05-20 09:06:18.151 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2020-05-20 09:06:18.152 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/image/:id, func -> update
+2020-05-20 09:06:18.159 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2020-05-20 09:06:18.161 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/image/:id, func -> delete
+2020-05-20 09:06:18.171 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/list -> requestList in file ../controllers/baroboard-image-controller
+2020-05-20 09:06:18.175 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.182 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/list -> requestcategoryList in file ../controllers/baroboard-image-controller
+2020-05-20 09:06:18.184 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.196 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/delete_item -> requestDeleteImage2 in file ../controllers/baroboard-image-controller
+2020-05-20 09:06:18.200 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.210 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/title_delete -> requestDeleteCategory in file ../controllers/baroboard-image-controller
+2020-05-20 09:06:18.211 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.221 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/add -> requestAddCategoryItem in file ../controllers/baroboard-image-controller
+2020-05-20 09:06:18.223 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.232 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/image -> requestAddImageItemInCategory in file ../controllers/baroboard-image-controller
+2020-05-20 09:06:18.234 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.236 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:18.251 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/layout -> in file ../controllers/baroboard-layout-controller, table : baroboard.layout
+2020-05-20 09:06:18.253 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2020-05-20 09:06:18.254 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/layout, func -> list
+2020-05-20 09:06:18.260 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2020-05-20 09:06:18.261 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/layout, func -> create
+2020-05-20 09:06:18.263 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2020-05-20 09:06:18.264 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/layout/:id, func -> read
+2020-05-20 09:06:18.265 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2020-05-20 09:06:18.268 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/layout/:id, func -> update
+2020-05-20 09:06:18.271 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2020-05-20 09:06:18.274 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/layout/:id, func -> delete
+2020-05-20 09:06:18.285 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/layout/image/del -> requestImageDelete in file ../controllers/baroboard-layout-controller
+2020-05-20 09:06:18.288 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.292 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:18.299 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/layout/image/update -> requestUpdateImage in file ../controllers/baroboard-layout-controller
+2020-05-20 09:06:18.303 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.310 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/layout/mapping/update -> updateMapping in file ../controllers/baroboard-layout-controller
+2020-05-20 09:06:18.314 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.326 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/legacy -> in file ../controllers/baroboard-legacy, table : baroboard.legacy
+2020-05-20 09:06:18.327 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2020-05-20 09:06:18.329 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/legacy, func -> list
+2020-05-20 09:06:18.333 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2020-05-20 09:06:18.334 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/legacy, func -> create
+2020-05-20 09:06:18.335 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2020-05-20 09:06:18.337 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/legacy/:id, func -> read
+2020-05-20 09:06:18.338 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2020-05-20 09:06:18.341 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/legacy/:id, func -> update
+2020-05-20 09:06:18.343 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2020-05-20 09:06:18.344 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/legacy/:id, func -> delete
+2020-05-20 09:06:18.358 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/users -> in file ../controllers/baroboard-users-controller, table : baroboard.users
+2020-05-20 09:06:18.360 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2020-05-20 09:06:18.364 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/users, func -> list
+2020-05-20 09:06:18.365 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2020-05-20 09:06:18.366 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/users, func -> create
+2020-05-20 09:06:18.368 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2020-05-20 09:06:18.370 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/users/:id, func -> read
+2020-05-20 09:06:18.376 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2020-05-20 09:06:18.377 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/users/:id, func -> update
+2020-05-20 09:06:18.379 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2020-05-20 09:06:18.381 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/users/:id, func -> delete
+2020-05-20 09:06:18.393 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/users/login -> login in file ../controllers/baroboard-users-controller
+2020-05-20 09:06:18.400 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.413 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/users/logout -> logout in file ../controllers/baroboard-users-controller
+2020-05-20 09:06:18.417 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.431 - DEBUG: [controller_loader.js:226:12] registerRest called : /bear -> in file ../controllers/bear-controller, table : test.person
+2020-05-20 09:06:18.433 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2020-05-20 09:06:18.437 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /bear, func -> list
+2020-05-20 09:06:18.440 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2020-05-20 09:06:18.442 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /bear, func -> create
+2020-05-20 09:06:18.446 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2020-05-20 09:06:18.448 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /bear/:id, func -> read
+2020-05-20 09:06:18.450 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2020-05-20 09:06:18.453 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /bear/:id, func -> update
+2020-05-20 09:06:18.459 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2020-05-20 09:06:18.460 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /bear/:id, func -> delete
+2020-05-20 09:06:18.479 - DEBUG: [controller_loader.js:226:12] registerRest called : /cat -> in file ../controllers/cat-controller, table : undefined
+2020-05-20 09:06:18.482 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2020-05-20 09:06:18.484 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /cat, func -> list
+2020-05-20 09:06:18.488 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2020-05-20 09:06:18.490 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /cat, func -> create
+2020-05-20 09:06:18.493 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2020-05-20 09:06:18.496 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /cat/:id, func -> read
+2020-05-20 09:06:18.498 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2020-05-20 09:06:18.500 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /cat/:id, func -> update
+2020-05-20 09:06:18.501 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2020-05-20 09:06:18.504 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /cat/:id, func -> delete
+2020-05-20 09:06:18.531 - DEBUG: [controller_loader.js:267:12] registerPath called : /chat/send -> send in file ../controllers/chat-controller
+2020-05-20 09:06:18.535 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.562 - DEBUG: [controller_loader.js:267:12] registerPath called : /cni-test/patient-list -> patientList in file ../controllers/cni-controller
+2020-05-20 09:06:18.574 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.578 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:18.604 - DEBUG: [controller_loader.js:267:12] registerPath called : /consent/v1/patient/inpatient-list-01 -> inpatientList01 in file ../controllers/consent-v1-kbsmc-controller
+2020-05-20 09:06:18.608 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.610 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:18.612 - DEBUG: [controller_loader.js:267:12] registerPath called : /consent/v1/consent/consent-save-01 -> consentSave01 in file ../controllers/consent-v1-kbsmc-controller
+2020-05-20 09:06:18.615 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.627 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:18.705 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/index -> index in file ../controllers/dog-controller
+2020-05-20 09:06:18.717 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.724 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:18.737 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/list -> list in file ../controllers/dog-controller
+2020-05-20 09:06:18.743 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.748 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:18.762 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/create -> create in file ../controllers/dog-controller
+2020-05-20 09:06:18.768 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.770 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:18.800 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/read -> read in file ../controllers/dog-controller
+2020-05-20 09:06:18.802 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.807 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:18.818 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/update -> update in file ../controllers/dog-controller
+2020-05-20 09:06:18.819 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.821 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:18.835 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/delete -> delete in file ../controllers/dog-controller
+2020-05-20 09:06:18.837 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:18.860 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep.do -> sheepIndex in file ../controllers/index-controller
+2020-05-20 09:06:18.865 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.893 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep2.do -> sheepIndex2 in file ../controllers/index-controller
+2020-05-20 09:06:18.898 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.932 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep3.do -> sheepIndex3 in file ../controllers/index-controller
+2020-05-20 09:06:18.943 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.963 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep4.do -> sheepIndex4 in file ../controllers/index-controller
+2020-05-20 09:06:18.966 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:18.982 - DEBUG: [controller_loader.js:267:12] registerPath called : /esl-index.do -> eslIndex in file ../controllers/index-controller
+2020-05-20 09:06:18.986 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:19.023 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/ -> list in file ../controllers/lion-controller
+2020-05-20 09:06:19.029 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:19.042 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/create -> create in file ../controllers/lion-controller
+2020-05-20 09:06:19.045 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:19.060 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/read/:id -> read in file ../controllers/lion-controller
+2020-05-20 09:06:19.063 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:19.075 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/update/:id -> update in file ../controllers/lion-controller
+2020-05-20 09:06:19.077 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:19.098 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/delete/:id -> delete in file ../controllers/lion-controller
+2020-05-20 09:06:19.100 - DEBUG: [controller_loader.js:274:20]  method #0 -> delete
+2020-05-20 09:06:19.129 - DEBUG: [controller_loader.js:267:12] registerPath called : /mci-test/patient-list -> patientList in file ../controllers/mci-controller
+2020-05-20 09:06:19.150 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:19.153 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:19.181 - DEBUG: [controller_loader.js:267:12] registerPath called : /panda/list -> list in file ../controllers/panda-controller
+2020-05-20 09:06:19.186 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:19.235 - DEBUG: [controller_loader.js:267:12] registerPath called : /sboard_image/upload -> upload in file ../controllers/sboard-image-controller
+2020-05-20 09:06:19.243 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:19.268 - DEBUG: [controller_loader.js:267:12] registerPath called : /sboard_image/send -> send in file ../controllers/sboard-image-controller
+2020-05-20 09:06:19.272 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:19.284 - DEBUG: [controller_loader.js:267:12] registerPath called : /sboard_image/send_group -> sendGroup in file ../controllers/sboard-image-controller
+2020-05-20 09:06:19.300 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:19.358 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/ -> list in file ../controllers/sheep-controller
+2020-05-20 09:06:19.365 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:19.382 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/ -> create in file ../controllers/sheep-controller
+2020-05-20 09:06:19.383 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:19.396 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/:id -> read in file ../controllers/sheep-controller
+2020-05-20 09:06:19.399 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:19.404 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/:id -> update in file ../controllers/sheep-controller
+2020-05-20 09:06:19.408 - DEBUG: [controller_loader.js:274:20]  method #0 -> put
+2020-05-20 09:06:19.414 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/:id -> delete in file ../controllers/sheep-controller
+2020-05-20 09:06:19.415 - DEBUG: [controller_loader.js:274:20]  method #0 -> delete
+2020-05-20 09:06:19.432 - DEBUG: [controller_loader.js:267:12] registerPath called : /data/lastmodifieddate -> getLastModifiedDate in file ../controllers/sync_to_mci-controller
+2020-05-20 09:06:19.467 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:19.476 - DEBUG: [controller_loader.js:267:12] registerPath called : /data/apply -> applyData in file ../controllers/sync_to_mci-controller
+2020-05-20 09:06:19.478 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2020-05-20 09:06:19.494 - DEBUG: [controller_loader.js:267:12] registerPath called : /tiger/hello -> hello in file ../controllers/tiger-controller
+2020-05-20 09:06:19.497 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:19.499 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:19.507 - DEBUG: [controller_loader.js:267:12] registerPath called : /tiger/bye -> bye in file ../controllers/tiger-controller
+2020-05-20 09:06:19.510 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2020-05-20 09:06:19.513 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2020-05-20 09:06:19.571 - DEBUG: [socketio_loader.js:103:16] Error in executing sql -> Error: ER_BAD_DB_ERROR: Unknown database 'chat'
+2020-05-20 09:06:19.662 - DEBUG: [socketio_loader.js:125:16] namespace file saved to -> ./socketio.pid
+2020-05-20 09:06:19.664 - INFO: [socketio_loader.js:133:12] socket.io service started.
+2020-05-20 09:06:19.668 - DEBUG: [socketio_loader.js:147:12] redis subscribed -> myapp_message
+2020-05-20 09:08:53.753 - DEBUG: [mci.js:20:16] MCI initialized.
+2020-05-20 09:08:53.759 - INFO: [sync_to_mci_test.js:40:12] Sync_to_MCI is started.
+2020-05-20 09:08:53.759 - INFO: [sync_to_mci_test.js:52:12] sync_to_mci Controller is imported.
+2020-05-20 09:08:53.760 - INFO: [sync_to_mci_test.js:63:12] MCIPatientInfo started
+2020-05-20 09:08:53.817 - DEBUG: [mci-controller.js:36:16] MCITest:patientList called for path /mci-test/patient-list
+2020-05-20 09:08:53.837 - DEBUG: [mci_util.js:17:16] MciUtil initialized.
+2020-05-20 09:08:53.911 - DEBUG: [mci_util.js:181:16] query called.
+2020-05-20 09:08:53.912 - DEBUG: [mci_util.js:182:16] values.input -> {"wardCd":"171130"}
+2020-05-20 09:08:53.914 - DEBUG: [mci.js:37:16] mci.send called.
+2020-05-20 09:08:53.916 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2020-05-20 09:08:53.919 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2020-05-20 09:08:53.922 - DEBUG: [mci.js:46:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"175a2be0-9a2e-11ea-8a7c-ad1ce416d8e4\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"mno_elsdidt_l01\",\"tlgrRqstDt\":\"20200520090853918000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mns_elsdidt_002\":{\"wardCd\":\"171130\"}}"
+2020-05-20 09:08:53.927 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2020-05-20 09:08:53.929 - DEBUG: [mci.js:67:10] output : 0000001092{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"175a2be0-9a2e-11ea-8a7c-ad1ce416d8e4","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"mno_elsdidt_l01","tlgrRqstDt":"20200520090853918000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mns_elsdidt_002":{"wardCd":"171130"}}
+2020-05-20 09:08:53.933 - DEBUG: [mci.js:148:16] sendData called.
+2020-05-20 09:08:53.940 - DEBUG: [mci.js:160:20] Client connection ID : 175d8740-9a2e-11ea-8a7c-ad1ce416d8e4
+2020-05-20 09:08:53.942 - DEBUG: [mci.js:163:20] about to send output.
+2020-05-20 09:08:53.947 - DEBUG: [mci_util.js:212:32] send request done -> output sent.
+2020-05-20 09:08:53.948 - DEBUG: [mci.js:168:20] all before release : 1
+2020-05-20 09:08:53.950 - DEBUG: [mci.js:169:20] free before release : 0
+2020-05-20 09:08:54.085 - DEBUG: [mci_util.js:215:32] received event : data
+2020-05-20 09:08:54.095 - DEBUG: [mci_util.js:33:11] typeof data : object
+2020-05-20 09:08:54.096 - DEBUG: [mci_util.js:40:16] [[Class]] property : [object Uint8Array]
+2020-05-20 09:08:54.097 - DEBUG: [mci_util.js:41:16] is Buffer? : true
+2020-05-20 09:08:54.103 - DEBUG: [mci_util.js:57:20] remaining buffer for socket [175d8740-9a2e-11ea-8a7c-ad1ce416d8e4] not exists.
+2020-05-20 09:08:54.109 - DEBUG: [mci_util.js:70:16] length string : 0000003600
+2020-05-20 09:08:54.113 - DEBUG: [mci_util.js:76:16] body length : 3600
+2020-05-20 09:08:54.114 - DEBUG: [mci_util.js:86:16] compared length : 3600, 3600
+2020-05-20 09:08:54.115 - DEBUG: [mci_util.js:96:20] body buffer is completed.
+2020-05-20 09:08:54.117 - DEBUG: [mci_util.js:99:20] converting body data for TEST.
+2020-05-20 09:08:54.126 - DEBUG: [mci_util.js:104:24] first digit : {
+2020-05-20 09:08:54.127 - DEBUG: [mci_util.js:129:24] connection released.
+2020-05-20 09:08:54.132 - DEBUG: [mci_util.js:248:16] processCompleted called.
+2020-05-20 09:08:54.133 - DEBUG: [mci_util.js:252:16] output -> {
+	"cfs_sheader_001": {
+		"tlgrLngtVl": "0000003056",
+		"uuid": "79b0f125-f24c-43ae-8c28-58916bbe7e57",
+		"tlgrPrgrNo": "2",
+		"tlgrTypeCd": "A",
+		"inrfId": "mno_elsdidt_l01",
+		"tlgrRqstDt": "20200228080326152000",
+		"lnkdSystInfmVl": "11001101",
+		"sesnId": "",
+		"tlgrRqstSystIp": "119.6.3.92",
+		"tlgrMediDvsnCd": "MO",
+		"tlgrRqstSystId": "bm0",
+		"tlgrTrnmSrvcId": "DRS_100000_1001",
+		"tlgrTrnmUserId": "MOBILE",
+		"tlgrRecvSrvcId": "mno_elsdidt_l01",
+		"tlgrRecvUserId": "",
+		"prsgRsltDvsnCd": "1",
+		"filePrsgYn": "",
+		"syncPrsgDvsnCd": "S",
+		"ectnYn": "N",
+		"cmrnYn": "N",
+		"systEnvrDvsnCd": "D",
+		"testTlgrYn": "N",
+		"inrfSttsCd": "",
+		"wndoHndeId": "",
+		"dataInfmYn": "",
+		"tlgrVrsnCeckYn": "",
+		"rqstTlgrVrsnNo": "",
+		"rspnTlgrVrsnNo": "",
+		"cmrnTrgtYn": "",
+		"systHedrRmrkVl": ""
+	},
+	"cfs_bheader_s00": {
+		"evntTypCd": "",
+		"hsptCd": "",
+		"cntrCd": "",
+		"dprtCd": "",
+		"natnCd": "ko",
+		"lnggCd": "KR",
+		"aftrMtrlExstYn": "",
+		"mxmmRqstVl": "",
+		"mesgCd": "IB00013",
+		"mesgCtn": "정상 조회되었습니다.",
+		"adddMesgCd": "",
+		"adddMesgCtn": "",
+		"errPrgmNm": "",
+		"errFuncNm": "",
+		"errLineNo": "",
+		"errSqlNo": "",
+		"errTpNo": "",
+		"errMesgPrsgDvsnCd": "S",
+		"excfCd": "",
+		"dtlsExcfCd": "",
+		"mesgMngmDvsnYn": "",
+		"userId": "MOBILE",
+		"scryAplyYn": "",
+		"bswrHedrRmrkVl": ""
+	},
+	"mnc_elsdidt_001": {
+		"afiReptNtm": 2,
+		"mns_elsdidt_001": [
+			{
+				"ptntNm": "윤지록",
+				"gendCd": "M",
+				"ageCtn": "64세",
+				"btdt": "1956-02-15",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "",
+				"etcYn": "Y",
+				"inptCasbCtn": "Y",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "2020-02-21",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "08:00~09:00 / 17:00~17:30",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "07:30~08:30 / 17:30~18:30",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "07W",
+				"carePtrmNo": "01",
+				"careSckbNo": "01",
+				"ptno": "06460451",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "171130",
+				"mdrpNo": 2014423079,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "조식 후",
+				"npoDscrMemoCtn": "물만 드세요",
+				"ptntInftCtn": "( 5 )시까지 절대안정"
+			},
+			{
+				"ptntNm": "김테스트",
+				"gendCd": "F",
+				"ageCtn": "30세",
+				"btdt": "1989-11-28",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "",
+				"blodCatnYn": "",
+				"invrIsltYn": "",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "09",
+				"careSckbNo": "01",
+				"ptno": "42738795",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "202366",
+				"mdrpNo": 2014423080,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "N",
+				"npoCtn": "",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": ""
+			}
+		]
+	}
+}
+2020-05-20 09:08:54.147 - DEBUG: [mci_util.js:276:20] processResponse called.
+2020-05-20 09:08:54.149 - DEBUG: [mci_util.js:282:24] KEYS -> ["cfs_sheader_001","cfs_bheader_s00","mnc_elsdidt_001"]
+2020-05-20 09:08:54.150 - DEBUG: [mci_util.js:310:16] parseHeader called.
+2020-05-20 09:08:54.152 - DEBUG: [mci_util.js:286:24] HEADER -> {"serviceId":"mno_elsdidt_l01","userId":"","errMessage":"","code":"IB00013","message":"정상 조회되었습니다."}
+2020-05-20 09:08:54.154 - DEBUG: [mci_util.js:488:16] parseBody called.
+2020-05-20 09:08:54.155 - DEBUG: [mci_util.js:495:20] outname type : string
+2020-05-20 09:08:54.158 - DEBUG: [mci_util.js:504:24] repeat count : 2
+2020-05-20 09:08:54.162 - DEBUG: [mci_util.js:523:16] parseData called.
+2020-05-20 09:08:54.163 - DEBUG: [mci_util.js:529:24] mapper found with attributes 36
+2020-05-20 09:08:54.165 - DEBUG: [mci_util.js:535:40] mapping #0 [firstName] -> [ptntNm] : 윤지록
+2020-05-20 09:08:54.165 - DEBUG: [mci_util.js:535:40] mapping #1 [nameWarning] -> [ptntNmCatnYn] : Y
+2020-05-20 09:08:54.166 - DEBUG: [mci_util.js:535:40] mapping #2 [gender] -> [gendCd] : M
+2020-05-20 09:08:54.169 - DEBUG: [mci_util.js:535:40] mapping #3 [age] -> [ageCtn] : 64세
+2020-05-20 09:08:54.175 - DEBUG: [mci_util.js:535:40] mapping #4 [birthDate] -> [btdt] : 1956-02-15
+2020-05-20 09:08:54.176 - DEBUG: [mci_util.js:535:40] mapping #5 [dept] -> [mcdpNm] : 감염내과분과
+2020-05-20 09:08:54.178 - DEBUG: [mci_util.js:535:40] mapping #6 [doctorName1] -> [gndrNm] : 김시호
+2020-05-20 09:08:54.180 - DEBUG: [mci_util.js:535:40] mapping #7 [doctorName2] -> [chdrNm] : 고재현
+2020-05-20 09:08:54.184 - DEBUG: [mci_util.js:535:40] mapping #8 [caution3] -> [fallCtn] : Y
+2020-05-20 09:08:54.185 - DEBUG: [mci_util.js:535:40] mapping #9 [caution4] -> [bdsrEtcCtn] : Y
+2020-05-20 09:08:54.185 - DEBUG: [mci_util.js:535:40] mapping #10 [caution2B] -> [ctctYn] : Y
+2020-05-20 09:08:54.187 - DEBUG: [mci_util.js:535:40] mapping #11 [caution2A] -> [cnsdCtctStcrVl] : 
+2020-05-20 09:08:54.190 - DEBUG: [mci_util.js:535:40] mapping #12 [caution1A] -> [airCatnYn] : 
+2020-05-20 09:08:54.194 - DEBUG: [mci_util.js:535:40] mapping #13 [caution1B] -> [drplYn] : Y
+2020-05-20 09:08:54.194 - DEBUG: [mci_util.js:535:40] mapping #14 [caution5] -> [blodCatnYn] : Y
+2020-05-20 09:08:54.196 - DEBUG: [mci_util.js:535:40] mapping #15 [caution6A] -> [invrIsltYn] : 
+2020-05-20 09:08:54.196 - DEBUG: [mci_util.js:535:40] mapping #16 [caution6B] -> [etcYn] : Y
+2020-05-20 09:08:54.197 - DEBUG: [mci_util.js:535:40] mapping #17 [npoYn] -> [npoYn] : Y
+2020-05-20 09:08:54.198 - DEBUG: [mci_util.js:535:40] mapping #18 [npoCtn] -> [npoCtn] : 조식 후
+2020-05-20 09:08:54.200 - DEBUG: [mci_util.js:535:40] mapping #19 [npoDscrMemoCtn] -> [npoDscrMemoCtn] : 물만 드세요
+2020-05-20 09:08:54.205 - DEBUG: [mci_util.js:535:40] mapping #20 [ptntInftCtn] -> [ptntInftCtn] : ( 5 )시까지 절대안정
+2020-05-20 09:08:54.206 - DEBUG: [mci_util.js:535:40] mapping #21 [treatDate] -> [admsDt] : 2020-02-21
+2020-05-20 09:08:54.206 - DEBUG: [mci_util.js:535:40] mapping #22 [leavingDate] -> [dschPrrnYmd] : 2020-02-21
+2020-05-20 09:08:54.207 - DEBUG: [mci_util.js:535:40] mapping #23 [roundingSun] -> [dvsnNm1] : 
+2020-05-20 09:08:54.208 - DEBUG: [mci_util.js:535:40] mapping #24 [roundingMon] -> [dvsnNm2] : 10:00~12:00 / 15:00~17:00
+2020-05-20 09:08:54.210 - DEBUG: [mci_util.js:535:40] mapping #25 [roundingTue] -> [dvsnNm3] : 08:00~09:00 / 17:00~17:30
+2020-05-20 09:08:54.211 - DEBUG: [mci_util.js:535:40] mapping #26 [roundingWed] -> [dvsnNm4] : 11:00~13:00 / 16:00~18:00
+2020-05-20 09:08:54.215 - DEBUG: [mci_util.js:535:40] mapping #27 [roundingThu] -> [dvsnNm5] : 07:30~08:30 / 17:30~18:30
+2020-05-20 09:08:54.216 - DEBUG: [mci_util.js:535:40] mapping #28 [roundingFri] -> [dvsnNm6] : 15:00~17:00 / 18:00~20:00
+2020-05-20 09:08:54.217 - DEBUG: [mci_util.js:535:40] mapping #29 [roundingSat] -> [dvsnNm7] : 
+2020-05-20 09:08:54.219 - DEBUG: [mci_util.js:535:40] mapping #30 [ward] -> [wardCdCtn] : 07W
+2020-05-20 09:08:54.220 - DEBUG: [mci_util.js:535:40] mapping #31 [roomNo] -> [carePtrmNo] : 01
+2020-05-20 09:08:54.222 - DEBUG: [mci_util.js:535:40] mapping #32 [bedNo] -> [careSckbNo] : 01
+2020-05-20 09:08:54.226 - DEBUG: [mci_util.js:535:40] mapping #33 [id] -> [ptno] : 06460451
+2020-05-20 09:08:54.227 - DEBUG: [mci_util.js:535:40] mapping #34 [wardName] -> [wardNm] : 음압격리병동 5층
+2020-05-20 09:08:54.228 - DEBUG: [mci_util.js:535:40] mapping #35 [wardId] -> [wardCd] : 171130
+2020-05-20 09:43:41.649 - DEBUG: [mci.js:20:16] MCI initialized.
+2020-05-20 09:43:41.653 - INFO: [sync_to_mci_test.js:42:12] Sync_to_MCI is started.
+2020-05-20 09:43:41.656 - INFO: [sync_to_mci_test.js:54:12] sync_to_mci Controller is imported.
+2020-05-20 09:43:41.657 - INFO: [sync_to_mci_test.js:65:12] MCIPatientInfo started
+2020-05-20 09:43:41.703 - DEBUG: [mci-controller.js:36:16] MCITest:patientList called for path /mci-test/patient-list
+2020-05-20 09:43:41.713 - DEBUG: [mci_util.js:17:16] MciUtil initialized.
+2020-05-20 09:43:41.787 - DEBUG: [mci_util.js:181:16] query called.
+2020-05-20 09:43:41.789 - DEBUG: [mci_util.js:182:16] values.input -> {"wardCd":"171130"}
+2020-05-20 09:43:41.790 - DEBUG: [mci.js:37:16] mci.send called.
+2020-05-20 09:43:41.792 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2020-05-20 09:43:41.795 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2020-05-20 09:43:41.796 - DEBUG: [mci.js:46:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"f3d2c420-9a32-11ea-8a7c-ad1ce416d8e4\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"mno_elsdidt_l01\",\"tlgrRqstDt\":\"20200520094341794000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mns_elsdidt_002\":{\"wardCd\":\"171130\"}}"
+2020-05-20 09:43:41.802 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2020-05-20 09:43:41.806 - DEBUG: [mci.js:67:10] output : 0000001092{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"f3d2c420-9a32-11ea-8a7c-ad1ce416d8e4","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"mno_elsdidt_l01","tlgrRqstDt":"20200520094341794000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mns_elsdidt_002":{"wardCd":"171130"}}
+2020-05-20 09:43:41.811 - DEBUG: [mci.js:148:16] sendData called.
+2020-05-20 09:43:41.818 - DEBUG: [mci.js:160:20] Client connection ID : f3d64690-9a32-11ea-8a7c-ad1ce416d8e4
+2020-05-20 09:43:41.821 - DEBUG: [mci.js:163:20] about to send output.
+2020-05-20 09:43:41.825 - DEBUG: [mci_util.js:212:32] send request done -> output sent.
+2020-05-20 09:43:41.826 - DEBUG: [mci.js:168:20] all before release : 1
+2020-05-20 09:43:41.827 - DEBUG: [mci.js:169:20] free before release : 0
+2020-05-20 09:43:41.950 - DEBUG: [mci_util.js:215:32] received event : data
+2020-05-20 09:43:41.951 - DEBUG: [mci_util.js:33:11] typeof data : object
+2020-05-20 09:43:41.954 - DEBUG: [mci_util.js:40:16] [[Class]] property : [object Uint8Array]
+2020-05-20 09:43:41.956 - DEBUG: [mci_util.js:41:16] is Buffer? : true
+2020-05-20 09:43:41.957 - DEBUG: [mci_util.js:57:20] remaining buffer for socket [f3d64690-9a32-11ea-8a7c-ad1ce416d8e4] not exists.
+2020-05-20 09:43:41.961 - DEBUG: [mci_util.js:70:16] length string : 0000003600
+2020-05-20 09:43:41.966 - DEBUG: [mci_util.js:76:16] body length : 3600
+2020-05-20 09:43:41.967 - DEBUG: [mci_util.js:86:16] compared length : 3600, 3600
+2020-05-20 09:43:41.970 - DEBUG: [mci_util.js:96:20] body buffer is completed.
+2020-05-20 09:43:41.974 - DEBUG: [mci_util.js:99:20] converting body data for TEST.
+2020-05-20 09:43:41.974 - DEBUG: [mci_util.js:104:24] first digit : {
+2020-05-20 09:43:41.977 - DEBUG: [mci_util.js:129:24] connection released.
+2020-05-20 09:43:41.980 - DEBUG: [mci_util.js:248:16] processCompleted called.
+2020-05-20 09:43:41.983 - DEBUG: [mci_util.js:252:16] output -> {
+	"cfs_sheader_001": {
+		"tlgrLngtVl": "0000003056",
+		"uuid": "79b0f125-f24c-43ae-8c28-58916bbe7e57",
+		"tlgrPrgrNo": "2",
+		"tlgrTypeCd": "A",
+		"inrfId": "mno_elsdidt_l01",
+		"tlgrRqstDt": "20200228080326152000",
+		"lnkdSystInfmVl": "11001101",
+		"sesnId": "",
+		"tlgrRqstSystIp": "119.6.3.92",
+		"tlgrMediDvsnCd": "MO",
+		"tlgrRqstSystId": "bm0",
+		"tlgrTrnmSrvcId": "DRS_100000_1001",
+		"tlgrTrnmUserId": "MOBILE",
+		"tlgrRecvSrvcId": "mno_elsdidt_l01",
+		"tlgrRecvUserId": "",
+		"prsgRsltDvsnCd": "1",
+		"filePrsgYn": "",
+		"syncPrsgDvsnCd": "S",
+		"ectnYn": "N",
+		"cmrnYn": "N",
+		"systEnvrDvsnCd": "D",
+		"testTlgrYn": "N",
+		"inrfSttsCd": "",
+		"wndoHndeId": "",
+		"dataInfmYn": "",
+		"tlgrVrsnCeckYn": "",
+		"rqstTlgrVrsnNo": "",
+		"rspnTlgrVrsnNo": "",
+		"cmrnTrgtYn": "",
+		"systHedrRmrkVl": ""
+	},
+	"cfs_bheader_s00": {
+		"evntTypCd": "",
+		"hsptCd": "",
+		"cntrCd": "",
+		"dprtCd": "",
+		"natnCd": "ko",
+		"lnggCd": "KR",
+		"aftrMtrlExstYn": "",
+		"mxmmRqstVl": "",
+		"mesgCd": "IB00013",
+		"mesgCtn": "정상 조회되었습니다.",
+		"adddMesgCd": "",
+		"adddMesgCtn": "",
+		"errPrgmNm": "",
+		"errFuncNm": "",
+		"errLineNo": "",
+		"errSqlNo": "",
+		"errTpNo": "",
+		"errMesgPrsgDvsnCd": "S",
+		"excfCd": "",
+		"dtlsExcfCd": "",
+		"mesgMngmDvsnYn": "",
+		"userId": "MOBILE",
+		"scryAplyYn": "",
+		"bswrHedrRmrkVl": ""
+	},
+	"mnc_elsdidt_001": {
+		"afiReptNtm": 2,
+		"mns_elsdidt_001": [
+			{
+				"ptntNm": "윤지록",
+				"gendCd": "M",
+				"ageCtn": "64세",
+				"btdt": "1956-02-15",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "",
+				"etcYn": "Y",
+				"inptCasbCtn": "Y",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "2020-02-21",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "08:00~09:00 / 17:00~17:30",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "07:30~08:30 / 17:30~18:30",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "07W",
+				"carePtrmNo": "01",
+				"careSckbNo": "01",
+				"ptno": "06460451",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "171130",
+				"mdrpNo": 2014423079,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "조식 후",
+				"npoDscrMemoCtn": "물만 드세요",
+				"ptntInftCtn": "( 5 )시까지 절대안정"
+			},
+			{
+				"ptntNm": "김테스트",
+				"gendCd": "F",
+				"ageCtn": "30세",
+				"btdt": "1989-11-28",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "",
+				"blodCatnYn": "",
+				"invrIsltYn": "",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "09",
+				"careSckbNo": "01",
+				"ptno": "42738795",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "202366",
+				"mdrpNo": 2014423080,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "N",
+				"npoCtn": "",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": ""
+			}
+		]
+	}
+}
+2020-05-20 09:43:41.997 - DEBUG: [mci_util.js:276:20] processResponse called.
+2020-05-20 09:43:41.999 - DEBUG: [mci_util.js:282:24] KEYS -> ["cfs_sheader_001","cfs_bheader_s00","mnc_elsdidt_001"]
+2020-05-20 09:43:42.000 - DEBUG: [mci_util.js:310:16] parseHeader called.
+2020-05-20 09:43:42.002 - DEBUG: [mci_util.js:286:24] HEADER -> {"serviceId":"mno_elsdidt_l01","userId":"","errMessage":"","code":"IB00013","message":"정상 조회되었습니다."}
+2020-05-20 09:43:42.003 - DEBUG: [mci_util.js:488:16] parseBody called.
+2020-05-20 09:43:42.004 - DEBUG: [mci_util.js:495:20] outname type : string
+2020-05-20 09:43:42.005 - DEBUG: [mci_util.js:504:24] repeat count : 2
+2020-05-20 09:43:42.007 - DEBUG: [mci_util.js:523:16] parseData called.
+2020-05-20 09:43:42.011 - DEBUG: [mci_util.js:529:24] mapper found with attributes 36
+2020-05-20 09:43:42.014 - DEBUG: [mci_util.js:535:40] mapping #0 [firstName] -> [ptntNm] : 윤지록
+2020-05-20 09:43:42.017 - DEBUG: [mci_util.js:535:40] mapping #1 [nameWarning] -> [ptntNmCatnYn] : Y
+2020-05-20 09:43:42.018 - DEBUG: [mci_util.js:535:40] mapping #2 [gender] -> [gendCd] : M
+2020-05-20 09:43:42.022 - DEBUG: [mci_util.js:535:40] mapping #3 [age] -> [ageCtn] : 64세
+2020-05-20 09:43:42.023 - DEBUG: [mci_util.js:535:40] mapping #4 [birthDate] -> [btdt] : 1956-02-15
+2020-05-20 09:43:42.024 - DEBUG: [mci_util.js:535:40] mapping #5 [dept] -> [mcdpNm] : 감염내과분과
+2020-05-20 09:43:42.026 - DEBUG: [mci_util.js:535:40] mapping #6 [doctorName1] -> [gndrNm] : 김시호
+2020-05-20 09:43:42.027 - DEBUG: [mci_util.js:535:40] mapping #7 [doctorName2] -> [chdrNm] : 고재현
+2020-05-20 09:43:42.028 - DEBUG: [mci_util.js:535:40] mapping #8 [caution3] -> [fallCtn] : Y
+2020-05-20 09:43:42.034 - DEBUG: [mci_util.js:535:40] mapping #9 [caution4] -> [bdsrEtcCtn] : Y
+2020-05-20 09:43:42.035 - DEBUG: [mci_util.js:535:40] mapping #10 [caution2B] -> [ctctYn] : Y
+2020-05-20 09:43:42.037 - DEBUG: [mci_util.js:535:40] mapping #11 [caution2A] -> [cnsdCtctStcrVl] : 
+2020-05-20 09:43:42.041 - DEBUG: [mci_util.js:535:40] mapping #12 [caution1A] -> [airCatnYn] : 
+2020-05-20 09:43:42.042 - DEBUG: [mci_util.js:535:40] mapping #13 [caution1B] -> [drplYn] : Y
+2020-05-20 09:43:42.043 - DEBUG: [mci_util.js:535:40] mapping #14 [caution5] -> [blodCatnYn] : Y
+2020-05-20 09:43:42.044 - DEBUG: [mci_util.js:535:40] mapping #15 [caution6A] -> [invrIsltYn] : 
+2020-05-20 09:43:42.045 - DEBUG: [mci_util.js:535:40] mapping #16 [caution6B] -> [etcYn] : Y
+2020-05-20 09:43:42.051 - DEBUG: [mci_util.js:535:40] mapping #17 [npoYn] -> [npoYn] : Y
+2020-05-20 09:43:42.053 - DEBUG: [mci_util.js:535:40] mapping #18 [npoCtn] -> [npoCtn] : 조식 후
+2020-05-20 09:43:42.054 - DEBUG: [mci_util.js:535:40] mapping #19 [npoDscrMemoCtn] -> [npoDscrMemoCtn] : 물만 드세요
+2020-05-20 09:43:42.056 - DEBUG: [mci_util.js:535:40] mapping #20 [ptntInftCtn] -> [ptntInftCtn] : ( 5 )시까지 절대안정
+2020-05-20 09:43:42.057 - DEBUG: [mci_util.js:535:40] mapping #21 [treatDate] -> [admsDt] : 2020-02-21
+2020-05-20 09:43:42.061 - DEBUG: [mci_util.js:535:40] mapping #22 [leavingDate] -> [dschPrrnYmd] : 2020-02-21
+2020-05-20 09:43:42.063 - DEBUG: [mci_util.js:535:40] mapping #23 [roundingSun] -> [dvsnNm1] : 
+2020-05-20 09:43:42.065 - DEBUG: [mci_util.js:535:40] mapping #24 [roundingMon] -> [dvsnNm2] : 10:00~12:00 / 15:00~17:00
+2020-05-20 09:43:42.065 - DEBUG: [mci_util.js:535:40] mapping #25 [roundingTue] -> [dvsnNm3] : 08:00~09:00 / 17:00~17:30
+2020-05-20 09:43:42.067 - DEBUG: [mci_util.js:535:40] mapping #26 [roundingWed] -> [dvsnNm4] : 11:00~13:00 / 16:00~18:00
+2020-05-20 09:43:42.071 - DEBUG: [mci_util.js:535:40] mapping #27 [roundingThu] -> [dvsnNm5] : 07:30~08:30 / 17:30~18:30
+2020-05-20 09:43:42.073 - DEBUG: [mci_util.js:535:40] mapping #28 [roundingFri] -> [dvsnNm6] : 15:00~17:00 / 18:00~20:00
+2020-05-20 09:43:42.073 - DEBUG: [mci_util.js:535:40] mapping #29 [roundingSat] -> [dvsnNm7] : 
+2020-05-20 09:43:42.075 - DEBUG: [mci_util.js:535:40] mapping #30 [ward] -> [wardCdCtn] : 07W
+2020-05-20 09:43:42.078 - DEBUG: [mci_util.js:535:40] mapping #31 [roomNo] -> [carePtrmNo] : 01
+2020-05-20 09:43:42.083 - DEBUG: [mci_util.js:535:40] mapping #32 [bedNo] -> [careSckbNo] : 01
+2020-05-20 09:43:42.085 - DEBUG: [mci_util.js:535:40] mapping #33 [id] -> [ptno] : 06460451
+2020-05-20 09:43:42.087 - DEBUG: [mci_util.js:535:40] mapping #34 [wardName] -> [wardNm] : 음압격리병동 5층
+2020-05-20 09:43:42.091 - DEBUG: [mci_util.js:535:40] mapping #35 [wardId] -> [wardCd] : 171130
+2020-05-20 09:43:42.143 - INFO: [sync_to_mci_test.js:88:24] Begin to make [DID] Socket Data in the [171130] department
+2020-05-20 09:43:42.145 - INFO: [sync_to_mci_test.js:128:24] Begin to make [ESL] Socket Data in the [171130] department
+2020-05-20 09:43:42.172 - INFO: [sync_to_mci_test.js:140:24] [171130]  MCI information has been updated in the DB
+2020-05-20 09:54:31.976 - DEBUG: [mci.js:20:16] MCI initialized.
+2020-05-20 09:54:31.981 - INFO: [sync_to_mci.js:42:12] Sync_to_MCI is started.
+2020-05-20 09:54:31.982 - INFO: [sync_to_mci.js:54:12] sync_to_mci Controller is imported.
+2020-05-20 09:54:31.983 - INFO: [sync_to_mci.js:65:12] MCIPatientInfo started
+2020-05-20 09:54:32.028 - DEBUG: [mci-controller.js:36:16] MCITest:patientList called for path /mci-test/patient-list
+2020-05-20 09:54:32.031 - DEBUG: [mci_util.js:17:16] MciUtil initialized.
+2020-05-20 09:54:32.121 - DEBUG: [mci_util.js:181:16] query called.
+2020-05-20 09:54:32.121 - DEBUG: [mci_util.js:182:16] values.input -> {"wardCd":"171130"}
+2020-05-20 09:54:32.124 - DEBUG: [mci.js:37:16] mci.send called.
+2020-05-20 09:54:32.125 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2020-05-20 09:54:32.127 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2020-05-20 09:54:32.129 - DEBUG: [mci.js:46:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"7773b4f0-9a34-11ea-8a7c-ad1ce416d8e4\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"mno_elsdidt_l01\",\"tlgrRqstDt\":\"20200520095432127000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mns_elsdidt_002\":{\"wardCd\":\"171130\"}}"
+2020-05-20 09:54:32.132 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2020-05-20 09:54:32.136 - DEBUG: [mci.js:67:10] output : 0000001092{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"7773b4f0-9a34-11ea-8a7c-ad1ce416d8e4","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"mno_elsdidt_l01","tlgrRqstDt":"20200520095432127000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mns_elsdidt_002":{"wardCd":"171130"}}
+2020-05-20 09:54:32.139 - DEBUG: [mci.js:148:16] sendData called.
+2020-05-20 09:54:32.148 - DEBUG: [mci.js:160:20] Client connection ID : 7776e940-9a34-11ea-8a7c-ad1ce416d8e4
+2020-05-20 09:54:32.150 - DEBUG: [mci.js:163:20] about to send output.
+2020-05-20 09:54:32.153 - DEBUG: [mci_util.js:212:32] send request done -> output sent.
+2020-05-20 09:54:32.155 - DEBUG: [mci.js:168:20] all before release : 1
+2020-05-20 09:54:32.159 - DEBUG: [mci.js:169:20] free before release : 0
+2020-05-20 09:54:32.298 - DEBUG: [mci_util.js:215:32] received event : data
+2020-05-20 09:54:32.299 - DEBUG: [mci_util.js:33:11] typeof data : object
+2020-05-20 09:54:32.304 - DEBUG: [mci_util.js:40:16] [[Class]] property : [object Uint8Array]
+2020-05-20 09:54:32.305 - DEBUG: [mci_util.js:41:16] is Buffer? : true
+2020-05-20 09:54:32.308 - DEBUG: [mci_util.js:57:20] remaining buffer for socket [7776e940-9a34-11ea-8a7c-ad1ce416d8e4] not exists.
+2020-05-20 09:54:32.313 - DEBUG: [mci_util.js:70:16] length string : 0000003600
+2020-05-20 09:54:32.314 - DEBUG: [mci_util.js:76:16] body length : 3600
+2020-05-20 09:54:32.319 - DEBUG: [mci_util.js:86:16] compared length : 3600, 3600
+2020-05-20 09:54:32.322 - DEBUG: [mci_util.js:96:20] body buffer is completed.
+2020-05-20 09:54:32.326 - DEBUG: [mci_util.js:99:20] converting body data for TEST.
+2020-05-20 09:54:32.330 - DEBUG: [mci_util.js:104:24] first digit : {
+2020-05-20 09:54:32.332 - DEBUG: [mci_util.js:129:24] connection released.
+2020-05-20 09:54:32.333 - DEBUG: [mci_util.js:248:16] processCompleted called.
+2020-05-20 09:54:32.336 - DEBUG: [mci_util.js:252:16] output -> {
+	"cfs_sheader_001": {
+		"tlgrLngtVl": "0000003056",
+		"uuid": "79b0f125-f24c-43ae-8c28-58916bbe7e57",
+		"tlgrPrgrNo": "2",
+		"tlgrTypeCd": "A",
+		"inrfId": "mno_elsdidt_l01",
+		"tlgrRqstDt": "20200228080326152000",
+		"lnkdSystInfmVl": "11001101",
+		"sesnId": "",
+		"tlgrRqstSystIp": "119.6.3.92",
+		"tlgrMediDvsnCd": "MO",
+		"tlgrRqstSystId": "bm0",
+		"tlgrTrnmSrvcId": "DRS_100000_1001",
+		"tlgrTrnmUserId": "MOBILE",
+		"tlgrRecvSrvcId": "mno_elsdidt_l01",
+		"tlgrRecvUserId": "",
+		"prsgRsltDvsnCd": "1",
+		"filePrsgYn": "",
+		"syncPrsgDvsnCd": "S",
+		"ectnYn": "N",
+		"cmrnYn": "N",
+		"systEnvrDvsnCd": "D",
+		"testTlgrYn": "N",
+		"inrfSttsCd": "",
+		"wndoHndeId": "",
+		"dataInfmYn": "",
+		"tlgrVrsnCeckYn": "",
+		"rqstTlgrVrsnNo": "",
+		"rspnTlgrVrsnNo": "",
+		"cmrnTrgtYn": "",
+		"systHedrRmrkVl": ""
+	},
+	"cfs_bheader_s00": {
+		"evntTypCd": "",
+		"hsptCd": "",
+		"cntrCd": "",
+		"dprtCd": "",
+		"natnCd": "ko",
+		"lnggCd": "KR",
+		"aftrMtrlExstYn": "",
+		"mxmmRqstVl": "",
+		"mesgCd": "IB00013",
+		"mesgCtn": "정상 조회되었습니다.",
+		"adddMesgCd": "",
+		"adddMesgCtn": "",
+		"errPrgmNm": "",
+		"errFuncNm": "",
+		"errLineNo": "",
+		"errSqlNo": "",
+		"errTpNo": "",
+		"errMesgPrsgDvsnCd": "S",
+		"excfCd": "",
+		"dtlsExcfCd": "",
+		"mesgMngmDvsnYn": "",
+		"userId": "MOBILE",
+		"scryAplyYn": "",
+		"bswrHedrRmrkVl": ""
+	},
+	"mnc_elsdidt_001": {
+		"afiReptNtm": 2,
+		"mns_elsdidt_001": [
+			{
+				"ptntNm": "윤지록",
+				"gendCd": "M",
+				"ageCtn": "64세",
+				"btdt": "1956-02-15",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "",
+				"etcYn": "Y",
+				"inptCasbCtn": "Y",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "2020-02-21",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "08:00~09:00 / 17:00~17:30",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "07:30~08:30 / 17:30~18:30",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "07W",
+				"carePtrmNo": "01",
+				"careSckbNo": "01",
+				"ptno": "06460451",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "171130",
+				"mdrpNo": 2014423079,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "조식 후",
+				"npoDscrMemoCtn": "물만 드세요",
+				"ptntInftCtn": "( 5 )시까지 절대안정"
+			},
+			{
+				"ptntNm": "김테스트",
+				"gendCd": "F",
+				"ageCtn": "30세",
+				"btdt": "1989-11-28",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "",
+				"blodCatnYn": "",
+				"invrIsltYn": "",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "09",
+				"careSckbNo": "01",
+				"ptno": "42738795",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "202366",
+				"mdrpNo": 2014423080,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "N",
+				"npoCtn": "",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": ""
+			}
+		]
+	}
+}
+2020-05-20 09:54:32.356 - DEBUG: [mci_util.js:276:20] processResponse called.
+2020-05-20 09:54:32.359 - DEBUG: [mci_util.js:282:24] KEYS -> ["cfs_sheader_001","cfs_bheader_s00","mnc_elsdidt_001"]
+2020-05-20 09:54:32.361 - DEBUG: [mci_util.js:310:16] parseHeader called.
+2020-05-20 09:54:32.363 - DEBUG: [mci_util.js:286:24] HEADER -> {"serviceId":"mno_elsdidt_l01","userId":"","errMessage":"","code":"IB00013","message":"정상 조회되었습니다."}
+2020-05-20 09:54:32.367 - DEBUG: [mci_util.js:488:16] parseBody called.
+2020-05-20 09:54:32.371 - DEBUG: [mci_util.js:495:20] outname type : string
+2020-05-20 09:54:32.371 - DEBUG: [mci_util.js:504:24] repeat count : 2
+2020-05-20 09:54:32.373 - DEBUG: [mci_util.js:523:16] parseData called.
+2020-05-20 09:54:32.376 - DEBUG: [mci_util.js:529:24] mapper found with attributes 36
+2020-05-20 09:54:32.382 - DEBUG: [mci_util.js:535:40] mapping #0 [firstName] -> [ptntNm] : 윤지록
+2020-05-20 09:54:32.384 - DEBUG: [mci_util.js:535:40] mapping #1 [nameWarning] -> [ptntNmCatnYn] : Y
+2020-05-20 09:54:32.386 - DEBUG: [mci_util.js:535:40] mapping #2 [gender] -> [gendCd] : M
+2020-05-20 09:54:32.390 - DEBUG: [mci_util.js:535:40] mapping #3 [age] -> [ageCtn] : 64세
+2020-05-20 09:54:32.392 - DEBUG: [mci_util.js:535:40] mapping #4 [birthDate] -> [btdt] : 1956-02-15
+2020-05-20 09:54:32.393 - DEBUG: [mci_util.js:535:40] mapping #5 [dept] -> [mcdpNm] : 감염내과분과
+2020-05-20 09:54:32.396 - DEBUG: [mci_util.js:535:40] mapping #6 [doctorName1] -> [gndrNm] : 김시호
+2020-05-20 09:54:32.399 - DEBUG: [mci_util.js:535:40] mapping #7 [doctorName2] -> [chdrNm] : 고재현
+2020-05-20 09:54:32.400 - DEBUG: [mci_util.js:535:40] mapping #8 [caution3] -> [fallCtn] : Y
+2020-05-20 09:54:32.402 - DEBUG: [mci_util.js:535:40] mapping #9 [caution4] -> [bdsrEtcCtn] : Y
+2020-05-20 09:54:32.403 - DEBUG: [mci_util.js:535:40] mapping #10 [caution2B] -> [ctctYn] : Y
+2020-05-20 09:54:32.406 - DEBUG: [mci_util.js:535:40] mapping #11 [caution2A] -> [cnsdCtctStcrVl] : 
+2020-05-20 09:54:32.407 - DEBUG: [mci_util.js:535:40] mapping #12 [caution1A] -> [airCatnYn] : 
+2020-05-20 09:54:32.411 - DEBUG: [mci_util.js:535:40] mapping #13 [caution1B] -> [drplYn] : Y
+2020-05-20 09:54:32.412 - DEBUG: [mci_util.js:535:40] mapping #14 [caution5] -> [blodCatnYn] : Y
+2020-05-20 09:54:32.413 - DEBUG: [mci_util.js:535:40] mapping #15 [caution6A] -> [invrIsltYn] : 
+2020-05-20 09:54:32.415 - DEBUG: [mci_util.js:535:40] mapping #16 [caution6B] -> [etcYn] : Y
+2020-05-20 09:54:32.417 - DEBUG: [mci_util.js:535:40] mapping #17 [npoYn] -> [npoYn] : Y
+2020-05-20 09:54:32.420 - DEBUG: [mci_util.js:535:40] mapping #18 [npoCtn] -> [npoCtn] : 조식 후
+2020-05-20 09:54:32.421 - DEBUG: [mci_util.js:535:40] mapping #19 [npoDscrMemoCtn] -> [npoDscrMemoCtn] : 물만 드세요
+2020-05-20 09:54:32.423 - DEBUG: [mci_util.js:535:40] mapping #20 [ptntInftCtn] -> [ptntInftCtn] : ( 5 )시까지 절대안정
+2020-05-20 09:54:32.424 - DEBUG: [mci_util.js:535:40] mapping #21 [treatDate] -> [admsDt] : 2020-02-21
+2020-05-20 09:54:32.427 - DEBUG: [mci_util.js:535:40] mapping #22 [leavingDate] -> [dschPrrnYmd] : 2020-02-21
+2020-05-20 09:54:32.430 - DEBUG: [mci_util.js:535:40] mapping #23 [roundingSun] -> [dvsnNm1] : 
+2020-05-20 09:54:32.432 - DEBUG: [mci_util.js:535:40] mapping #24 [roundingMon] -> [dvsnNm2] : 10:00~12:00 / 15:00~17:00
+2020-05-20 09:54:32.433 - DEBUG: [mci_util.js:535:40] mapping #25 [roundingTue] -> [dvsnNm3] : 08:00~09:00 / 17:00~17:30
+2020-05-20 09:54:32.434 - DEBUG: [mci_util.js:535:40] mapping #26 [roundingWed] -> [dvsnNm4] : 11:00~13:00 / 16:00~18:00
+2020-05-20 09:54:32.437 - DEBUG: [mci_util.js:535:40] mapping #27 [roundingThu] -> [dvsnNm5] : 07:30~08:30 / 17:30~18:30
+2020-05-20 09:54:32.441 - DEBUG: [mci_util.js:535:40] mapping #28 [roundingFri] -> [dvsnNm6] : 15:00~17:00 / 18:00~20:00
+2020-05-20 09:54:32.442 - DEBUG: [mci_util.js:535:40] mapping #29 [roundingSat] -> [dvsnNm7] : 
+2020-05-20 09:54:32.443 - DEBUG: [mci_util.js:535:40] mapping #30 [ward] -> [wardCdCtn] : 07W
+2020-05-20 09:54:32.445 - DEBUG: [mci_util.js:535:40] mapping #31 [roomNo] -> [carePtrmNo] : 01
+2020-05-20 09:54:32.447 - DEBUG: [mci_util.js:535:40] mapping #32 [bedNo] -> [careSckbNo] : 01
+2020-05-20 09:54:32.451 - DEBUG: [mci_util.js:535:40] mapping #33 [id] -> [ptno] : 06460451
+2020-05-20 09:54:32.452 - DEBUG: [mci_util.js:535:40] mapping #34 [wardName] -> [wardNm] : 음압격리병동 5층
+2020-05-20 09:54:32.453 - DEBUG: [mci_util.js:535:40] mapping #35 [wardId] -> [wardCd] : 171130
+2020-05-20 10:00:40.598 - DEBUG: [mci.js:20:16] MCI initialized.
+2020-05-20 10:00:40.604 - INFO: [sync_to_mci.js:42:12] Sync_to_MCI is started.
+2020-05-20 10:00:40.605 - INFO: [sync_to_mci.js:54:12] sync_to_mci Controller is imported.
+2020-05-20 10:00:40.606 - INFO: [sync_to_mci.js:65:12] MCIPatientInfo started
+2020-05-20 10:00:40.660 - DEBUG: [mci-controller.js:36:16] MCITest:patientList called for path /mci-test/patient-list
+2020-05-20 10:00:40.672 - DEBUG: [mci_util.js:17:16] MciUtil initialized.
+2020-05-20 10:00:40.739 - DEBUG: [mci_util.js:181:16] query called.
+2020-05-20 10:00:40.740 - DEBUG: [mci_util.js:182:16] values.input -> {"wardCd":"171130"}
+2020-05-20 10:00:40.743 - DEBUG: [mci.js:37:16] mci.send called.
+2020-05-20 10:00:40.744 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2020-05-20 10:00:40.745 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2020-05-20 10:00:40.746 - DEBUG: [mci.js:46:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"532a5990-9a35-11ea-8a7c-ad1ce416d8e4\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"mno_elsdidt_l01\",\"tlgrRqstDt\":\"20200520100040745000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mns_elsdidt_002\":{\"wardCd\":\"171130\"}}"
+2020-05-20 10:00:40.751 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2020-05-20 10:00:40.751 - DEBUG: [mci.js:67:10] output : 0000001092{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"532a5990-9a35-11ea-8a7c-ad1ce416d8e4","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"mno_elsdidt_l01","tlgrRqstDt":"20200520100040745000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mns_elsdidt_002":{"wardCd":"171130"}}
+2020-05-20 10:00:40.754 - DEBUG: [mci.js:148:16] sendData called.
+2020-05-20 10:00:40.757 - DEBUG: [mci.js:160:20] Client connection ID : 532c2e50-9a35-11ea-8a7c-ad1ce416d8e4
+2020-05-20 10:00:40.758 - DEBUG: [mci.js:163:20] about to send output.
+2020-05-20 10:00:40.760 - DEBUG: [mci_util.js:212:32] send request done -> output sent.
+2020-05-20 10:00:40.762 - DEBUG: [mci.js:168:20] all before release : 1
+2020-05-20 10:00:40.764 - DEBUG: [mci.js:169:20] free before release : 0
+2020-05-20 10:00:40.934 - DEBUG: [mci_util.js:215:32] received event : data
+2020-05-20 10:00:40.942 - DEBUG: [mci_util.js:33:11] typeof data : object
+2020-05-20 10:00:40.945 - DEBUG: [mci_util.js:40:16] [[Class]] property : [object Uint8Array]
+2020-05-20 10:00:40.950 - DEBUG: [mci_util.js:41:16] is Buffer? : true
+2020-05-20 10:00:40.951 - DEBUG: [mci_util.js:57:20] remaining buffer for socket [532c2e50-9a35-11ea-8a7c-ad1ce416d8e4] not exists.
+2020-05-20 10:00:40.958 - DEBUG: [mci_util.js:70:16] length string : 0000003600
+2020-05-20 10:00:40.959 - DEBUG: [mci_util.js:76:16] body length : 3600
+2020-05-20 10:00:40.963 - DEBUG: [mci_util.js:86:16] compared length : 3600, 3600
+2020-05-20 10:00:40.964 - DEBUG: [mci_util.js:96:20] body buffer is completed.
+2020-05-20 10:00:40.965 - DEBUG: [mci_util.js:99:20] converting body data for TEST.
+2020-05-20 10:00:40.966 - DEBUG: [mci_util.js:104:24] first digit : {
+2020-05-20 10:00:40.968 - DEBUG: [mci_util.js:129:24] connection released.
+2020-05-20 10:00:40.973 - DEBUG: [mci_util.js:248:16] processCompleted called.
+2020-05-20 10:00:40.974 - DEBUG: [mci_util.js:252:16] output -> {
+	"cfs_sheader_001": {
+		"tlgrLngtVl": "0000003056",
+		"uuid": "79b0f125-f24c-43ae-8c28-58916bbe7e57",
+		"tlgrPrgrNo": "2",
+		"tlgrTypeCd": "A",
+		"inrfId": "mno_elsdidt_l01",
+		"tlgrRqstDt": "20200228080326152000",
+		"lnkdSystInfmVl": "11001101",
+		"sesnId": "",
+		"tlgrRqstSystIp": "119.6.3.92",
+		"tlgrMediDvsnCd": "MO",
+		"tlgrRqstSystId": "bm0",
+		"tlgrTrnmSrvcId": "DRS_100000_1001",
+		"tlgrTrnmUserId": "MOBILE",
+		"tlgrRecvSrvcId": "mno_elsdidt_l01",
+		"tlgrRecvUserId": "",
+		"prsgRsltDvsnCd": "1",
+		"filePrsgYn": "",
+		"syncPrsgDvsnCd": "S",
+		"ectnYn": "N",
+		"cmrnYn": "N",
+		"systEnvrDvsnCd": "D",
+		"testTlgrYn": "N",
+		"inrfSttsCd": "",
+		"wndoHndeId": "",
+		"dataInfmYn": "",
+		"tlgrVrsnCeckYn": "",
+		"rqstTlgrVrsnNo": "",
+		"rspnTlgrVrsnNo": "",
+		"cmrnTrgtYn": "",
+		"systHedrRmrkVl": ""
+	},
+	"cfs_bheader_s00": {
+		"evntTypCd": "",
+		"hsptCd": "",
+		"cntrCd": "",
+		"dprtCd": "",
+		"natnCd": "ko",
+		"lnggCd": "KR",
+		"aftrMtrlExstYn": "",
+		"mxmmRqstVl": "",
+		"mesgCd": "IB00013",
+		"mesgCtn": "정상 조회되었습니다.",
+		"adddMesgCd": "",
+		"adddMesgCtn": "",
+		"errPrgmNm": "",
+		"errFuncNm": "",
+		"errLineNo": "",
+		"errSqlNo": "",
+		"errTpNo": "",
+		"errMesgPrsgDvsnCd": "S",
+		"excfCd": "",
+		"dtlsExcfCd": "",
+		"mesgMngmDvsnYn": "",
+		"userId": "MOBILE",
+		"scryAplyYn": "",
+		"bswrHedrRmrkVl": ""
+	},
+	"mnc_elsdidt_001": {
+		"afiReptNtm": 2,
+		"mns_elsdidt_001": [
+			{
+				"ptntNm": "윤지록",
+				"gendCd": "M",
+				"ageCtn": "64세",
+				"btdt": "1956-02-15",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "",
+				"etcYn": "Y",
+				"inptCasbCtn": "Y",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "2020-02-21",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "08:00~09:00 / 17:00~17:30",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "07:30~08:30 / 17:30~18:30",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "07W",
+				"carePtrmNo": "01",
+				"careSckbNo": "01",
+				"ptno": "06460451",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "171130",
+				"mdrpNo": 2014423079,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "조식 후",
+				"npoDscrMemoCtn": "물만 드세요",
+				"ptntInftCtn": "( 5 )시까지 절대안정"
+			},
+			{
+				"ptntNm": "김테스트",
+				"gendCd": "F",
+				"ageCtn": "30세",
+				"btdt": "1989-11-28",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "",
+				"blodCatnYn": "",
+				"invrIsltYn": "",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "09",
+				"careSckbNo": "01",
+				"ptno": "42738795",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "202366",
+				"mdrpNo": 2014423080,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "N",
+				"npoCtn": "",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": ""
+			}
+		]
+	}
+}
+2020-05-20 10:00:40.990 - DEBUG: [mci_util.js:276:20] processResponse called.
+2020-05-20 10:00:40.991 - DEBUG: [mci_util.js:282:24] KEYS -> ["cfs_sheader_001","cfs_bheader_s00","mnc_elsdidt_001"]
+2020-05-20 10:00:40.992 - DEBUG: [mci_util.js:310:16] parseHeader called.
+2020-05-20 10:00:40.994 - DEBUG: [mci_util.js:286:24] HEADER -> {"serviceId":"mno_elsdidt_l01","userId":"","errMessage":"","code":"IB00013","message":"정상 조회되었습니다."}
+2020-05-20 10:00:40.995 - DEBUG: [mci_util.js:488:16] parseBody called.
+2020-05-20 10:00:40.996 - DEBUG: [mci_util.js:495:20] outname type : string
+2020-05-20 10:00:40.998 - DEBUG: [mci_util.js:504:24] repeat count : 2
+2020-05-20 10:00:41.000 - DEBUG: [mci_util.js:523:16] parseData called.
+2020-05-20 10:00:41.001 - DEBUG: [mci_util.js:529:24] mapper found with attributes 36
+2020-05-20 10:00:41.008 - DEBUG: [mci_util.js:535:40] mapping #0 [firstName] -> [ptntNm] : 윤지록
+2020-05-20 10:00:41.011 - DEBUG: [mci_util.js:535:40] mapping #1 [nameWarning] -> [ptntNmCatnYn] : Y
+2020-05-20 10:00:41.012 - DEBUG: [mci_util.js:535:40] mapping #2 [gender] -> [gendCd] : M
+2020-05-20 10:00:41.016 - DEBUG: [mci_util.js:535:40] mapping #3 [age] -> [ageCtn] : 64세
+2020-05-20 10:00:41.017 - DEBUG: [mci_util.js:535:40] mapping #4 [birthDate] -> [btdt] : 1956-02-15
+2020-05-20 10:00:41.018 - DEBUG: [mci_util.js:535:40] mapping #5 [dept] -> [mcdpNm] : 감염내과분과
+2020-05-20 10:00:41.019 - DEBUG: [mci_util.js:535:40] mapping #6 [doctorName1] -> [gndrNm] : 김시호
+2020-05-20 10:00:41.022 - DEBUG: [mci_util.js:535:40] mapping #7 [doctorName2] -> [chdrNm] : 고재현
+2020-05-20 10:00:41.022 - DEBUG: [mci_util.js:535:40] mapping #8 [caution3] -> [fallCtn] : Y
+2020-05-20 10:00:41.026 - DEBUG: [mci_util.js:535:40] mapping #9 [caution4] -> [bdsrEtcCtn] : Y
+2020-05-20 10:00:41.027 - DEBUG: [mci_util.js:535:40] mapping #10 [caution2B] -> [ctctYn] : Y
+2020-05-20 10:00:41.028 - DEBUG: [mci_util.js:535:40] mapping #11 [caution2A] -> [cnsdCtctStcrVl] : 
+2020-05-20 10:00:41.031 - DEBUG: [mci_util.js:535:40] mapping #12 [caution1A] -> [airCatnYn] : 
+2020-05-20 10:00:41.036 - DEBUG: [mci_util.js:535:40] mapping #13 [caution1B] -> [drplYn] : Y
+2020-05-20 10:00:41.037 - DEBUG: [mci_util.js:535:40] mapping #14 [caution5] -> [blodCatnYn] : Y
+2020-05-20 10:00:41.039 - DEBUG: [mci_util.js:535:40] mapping #15 [caution6A] -> [invrIsltYn] : 
+2020-05-20 10:00:41.041 - DEBUG: [mci_util.js:535:40] mapping #16 [caution6B] -> [etcYn] : Y
+2020-05-20 10:00:41.043 - DEBUG: [mci_util.js:535:40] mapping #17 [npoYn] -> [npoYn] : Y
+2020-05-20 10:00:41.046 - DEBUG: [mci_util.js:535:40] mapping #18 [npoCtn] -> [npoCtn] : 조식 후
+2020-05-20 10:00:41.047 - DEBUG: [mci_util.js:535:40] mapping #19 [npoDscrMemoCtn] -> [npoDscrMemoCtn] : 물만 드세요
+2020-05-20 10:00:41.050 - DEBUG: [mci_util.js:535:40] mapping #20 [ptntInftCtn] -> [ptntInftCtn] : ( 5 )시까지 절대안정
+2020-05-20 10:00:41.051 - DEBUG: [mci_util.js:535:40] mapping #21 [treatDate] -> [admsDt] : 2020-02-21
+2020-05-20 10:00:41.055 - DEBUG: [mci_util.js:535:40] mapping #22 [leavingDate] -> [dschPrrnYmd] : 2020-02-21
+2020-05-20 10:00:41.057 - DEBUG: [mci_util.js:535:40] mapping #23 [roundingSun] -> [dvsnNm1] : 
+2020-05-20 10:00:41.060 - DEBUG: [mci_util.js:535:40] mapping #24 [roundingMon] -> [dvsnNm2] : 10:00~12:00 / 15:00~17:00
+2020-05-20 10:00:41.063 - DEBUG: [mci_util.js:535:40] mapping #25 [roundingTue] -> [dvsnNm3] : 08:00~09:00 / 17:00~17:30
+2020-05-20 10:00:41.064 - DEBUG: [mci_util.js:535:40] mapping #26 [roundingWed] -> [dvsnNm4] : 11:00~13:00 / 16:00~18:00
+2020-05-20 10:00:41.065 - DEBUG: [mci_util.js:535:40] mapping #27 [roundingThu] -> [dvsnNm5] : 07:30~08:30 / 17:30~18:30
+2020-05-20 10:00:41.066 - DEBUG: [mci_util.js:535:40] mapping #28 [roundingFri] -> [dvsnNm6] : 15:00~17:00 / 18:00~20:00
+2020-05-20 10:00:41.067 - DEBUG: [mci_util.js:535:40] mapping #29 [roundingSat] -> [dvsnNm7] : 
+2020-05-20 10:00:41.069 - DEBUG: [mci_util.js:535:40] mapping #30 [ward] -> [wardCdCtn] : 07W
+2020-05-20 10:00:41.070 - DEBUG: [mci_util.js:535:40] mapping #31 [roomNo] -> [carePtrmNo] : 01
+2020-05-20 10:00:41.074 - DEBUG: [mci_util.js:535:40] mapping #32 [bedNo] -> [careSckbNo] : 01
+2020-05-20 10:00:41.074 - DEBUG: [mci_util.js:535:40] mapping #33 [id] -> [ptno] : 06460451
+2020-05-20 10:00:41.075 - DEBUG: [mci_util.js:535:40] mapping #34 [wardName] -> [wardNm] : 음압격리병동 5층
+2020-05-20 10:00:41.076 - DEBUG: [mci_util.js:535:40] mapping #35 [wardId] -> [wardCd] : 171130
+2020-05-20 10:00:41.104 - DEBUG: [mci.js:178:16] createJsonData called.
+2020-05-20 10:00:41.105 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2020-05-20 10:00:41.106 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2020-05-20 10:00:41.107 - DEBUG: [mci.js:188:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"53616f20-9a35-11ea-a584-4369699896f3\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"uns_didpush_m01\",\"tlgrRqstDt\":\"20200520100041106000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mnc_dispush_000\":{\"evntTypCd\":\"L\",\"elbdNo\":\"DID07W01\",\"exrmNo\":\"\",\"exrmNm\":\"\",\"elbdMesgCtn\":\"\",\"waitYn\":\"\",\"apntCnt\":0,\"mddrNm\":\"\",\"waitRsrvMi\":0,\"elbdDereCtn\":\"\",\"clotResnCd\":\"\",\"asnuIdNm\":\"\",\"asgnNm\":\"\",\"afiReptNtm\":1,\"mns_dispush_000\":[{\"ptntNm\":\"윤지록\",\"btdt\":\"\",\"awtrDvsnCd\":\"\",\"coloCd\":\"\",\"ptntExmnNornSno\":0,\"doctorNm1\":\"김시호\",\"doctorNm2\":\"고재현\",\"ptntId\":\"06460451\"}],\"afiReptNtm01\":0,\"mns_dispush_001\":[]}}"
+2020-05-20 10:00:41.111 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2020-05-20 10:00:41.112 - DEBUG: [mci.js:208:16] output : 0000001483{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"53616f20-9a35-11ea-a584-4369699896f3","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"uns_didpush_m01","tlgrRqstDt":"20200520100041106000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mnc_dispush_000":{"evntTypCd":"L","elbdNo":"DID07W01","exrmNo":"","exrmNm":"","elbdMesgCtn":"","waitYn":"","apntCnt":0,"mddrNm":"","waitRsrvMi":0,"elbdDereCtn":"","clotResnCd":"","asnuIdNm":"","asgnNm":"","afiReptNtm":1,"mns_dispush_000":[{"ptntNm":"윤지록","btdt":"","awtrDvsnCd":"","coloCd":"","ptntExmnNornSno":0,"doctorNm1":"김시호","doctorNm2":"고재현","ptntId":"06460451"}],"afiReptNtm01":0,"mns_dispush_001":[]}}
+2020-05-20 10:00:41.115 - DEBUG: [mci.js:178:16] createJsonData called.
+2020-05-20 10:00:41.116 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2020-05-20 10:00:41.117 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2020-05-20 10:00:41.119 - DEBUG: [mci.js:188:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"53631cd0-9a35-11ea-a584-4369699896f3\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"uns_didpush_m01\",\"tlgrRqstDt\":\"20200520100041117000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mnc_dispush_000\":{\"evntTypCd\":\"L\",\"elbdNo\":\"DID07W09\",\"exrmNo\":\"\",\"exrmNm\":\"\",\"elbdMesgCtn\":\"\",\"waitYn\":\"\",\"apntCnt\":0,\"mddrNm\":\"\",\"waitRsrvMi\":0,\"elbdDereCtn\":\"\",\"clotResnCd\":\"\",\"asnuIdNm\":\"\",\"asgnNm\":\"\",\"afiReptNtm\":1,\"mns_dispush_000\":[{\"ptntNm\":\"김테스트\",\"btdt\":\"\",\"awtrDvsnCd\":\"\",\"coloCd\":\"\",\"ptntExmnNornSno\":0,\"doctorNm1\":\"김시호\",\"doctorNm2\":\"고재현\",\"ptntId\":\"42738795\"}],\"afiReptNtm01\":0,\"mns_dispush_001\":[]}}"
+2020-05-20 10:00:41.123 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2020-05-20 10:00:41.125 - DEBUG: [mci.js:208:16] output : 0000001486{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"53631cd0-9a35-11ea-a584-4369699896f3","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"uns_didpush_m01","tlgrRqstDt":"20200520100041117000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mnc_dispush_000":{"evntTypCd":"L","elbdNo":"DID07W09","exrmNo":"","exrmNm":"","elbdMesgCtn":"","waitYn":"","apntCnt":0,"mddrNm":"","waitRsrvMi":0,"elbdDereCtn":"","clotResnCd":"","asnuIdNm":"","asgnNm":"","afiReptNtm":1,"mns_dispush_000":[{"ptntNm":"김테스트","btdt":"","awtrDvsnCd":"","coloCd":"","ptntExmnNornSno":0,"doctorNm1":"김시호","doctorNm2":"고재현","ptntId":"42738795"}],"afiReptNtm01":0,"mns_dispush_001":[]}}
+2020-05-20 10:00:41.127 - INFO: [sync_to_mci.js:128:24] Begin to make [ESL] Socket Data in the [171130] department
+2020-05-20 10:00:41.140 - INFO: [sync_to_mci.js:140:24] [171130]  MCI information has been updated in the DB
+2020-05-20 10:03:42.931 - DEBUG: [mci.js:20:16] MCI initialized.
+2020-05-20 10:03:42.935 - INFO: [sync_to_mci.js:42:12] Sync_to_MCI is started.
+2020-05-20 10:03:42.936 - INFO: [sync_to_mci.js:54:12] sync_to_mci Controller is imported.
+2020-05-20 10:03:42.936 - INFO: [sync_to_mci.js:65:12] MCIPatientInfo started
+2020-05-20 10:03:42.979 - DEBUG: [mci-controller.js:36:16] MCITest:patientList called for path /mci-test/patient-list
+2020-05-20 10:03:42.988 - DEBUG: [mci_util.js:17:16] MciUtil initialized.
+2020-05-20 10:03:43.047 - DEBUG: [mci_util.js:181:16] query called.
+2020-05-20 10:03:43.047 - DEBUG: [mci_util.js:182:16] values.input -> {"wardCd":"171130"}
+2020-05-20 10:03:43.048 - DEBUG: [mci.js:37:16] mci.send called.
+2020-05-20 10:03:43.050 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2020-05-20 10:03:43.051 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2020-05-20 10:03:43.052 - DEBUG: [mci.js:46:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"bfd409b0-9a35-11ea-8a7c-ad1ce416d8e4\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"mno_elsdidt_l01\",\"tlgrRqstDt\":\"20200520100343051000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mns_elsdidt_002\":{\"wardCd\":\"171130\"}}"
+2020-05-20 10:03:43.054 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2020-05-20 10:03:43.055 - DEBUG: [mci.js:67:10] output : 0000001092{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"bfd409b0-9a35-11ea-8a7c-ad1ce416d8e4","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"mno_elsdidt_l01","tlgrRqstDt":"20200520100343051000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mns_elsdidt_002":{"wardCd":"171130"}}
+2020-05-20 10:03:43.059 - DEBUG: [mci.js:148:16] sendData called.
+2020-05-20 10:03:43.062 - DEBUG: [mci.js:160:20] Client connection ID : bfd5b760-9a35-11ea-8a7c-ad1ce416d8e4
+2020-05-20 10:03:43.063 - DEBUG: [mci.js:163:20] about to send output.
+2020-05-20 10:03:43.064 - DEBUG: [mci_util.js:212:32] send request done -> output sent.
+2020-05-20 10:03:43.065 - DEBUG: [mci.js:168:20] all before release : 1
+2020-05-20 10:03:43.067 - DEBUG: [mci.js:169:20] free before release : 0
+2020-05-20 10:03:43.189 - DEBUG: [mci_util.js:215:32] received event : data
+2020-05-20 10:03:43.190 - DEBUG: [mci_util.js:33:11] typeof data : object
+2020-05-20 10:03:43.198 - DEBUG: [mci_util.js:40:16] [[Class]] property : [object Uint8Array]
+2020-05-20 10:03:43.199 - DEBUG: [mci_util.js:41:16] is Buffer? : true
+2020-05-20 10:03:43.200 - DEBUG: [mci_util.js:57:20] remaining buffer for socket [bfd5b760-9a35-11ea-8a7c-ad1ce416d8e4] not exists.
+2020-05-20 10:03:43.204 - DEBUG: [mci_util.js:70:16] length string : 0000003600
+2020-05-20 10:03:43.205 - DEBUG: [mci_util.js:76:16] body length : 3600
+2020-05-20 10:03:43.207 - DEBUG: [mci_util.js:86:16] compared length : 3600, 3600
+2020-05-20 10:03:43.212 - DEBUG: [mci_util.js:96:20] body buffer is completed.
+2020-05-20 10:03:43.213 - DEBUG: [mci_util.js:99:20] converting body data for TEST.
+2020-05-20 10:03:43.217 - DEBUG: [mci_util.js:104:24] first digit : {
+2020-05-20 10:03:43.218 - DEBUG: [mci_util.js:129:24] connection released.
+2020-05-20 10:03:43.220 - DEBUG: [mci_util.js:248:16] processCompleted called.
+2020-05-20 10:03:43.222 - DEBUG: [mci_util.js:252:16] output -> {
+	"cfs_sheader_001": {
+		"tlgrLngtVl": "0000003056",
+		"uuid": "79b0f125-f24c-43ae-8c28-58916bbe7e57",
+		"tlgrPrgrNo": "2",
+		"tlgrTypeCd": "A",
+		"inrfId": "mno_elsdidt_l01",
+		"tlgrRqstDt": "20200228080326152000",
+		"lnkdSystInfmVl": "11001101",
+		"sesnId": "",
+		"tlgrRqstSystIp": "119.6.3.92",
+		"tlgrMediDvsnCd": "MO",
+		"tlgrRqstSystId": "bm0",
+		"tlgrTrnmSrvcId": "DRS_100000_1001",
+		"tlgrTrnmUserId": "MOBILE",
+		"tlgrRecvSrvcId": "mno_elsdidt_l01",
+		"tlgrRecvUserId": "",
+		"prsgRsltDvsnCd": "1",
+		"filePrsgYn": "",
+		"syncPrsgDvsnCd": "S",
+		"ectnYn": "N",
+		"cmrnYn": "N",
+		"systEnvrDvsnCd": "D",
+		"testTlgrYn": "N",
+		"inrfSttsCd": "",
+		"wndoHndeId": "",
+		"dataInfmYn": "",
+		"tlgrVrsnCeckYn": "",
+		"rqstTlgrVrsnNo": "",
+		"rspnTlgrVrsnNo": "",
+		"cmrnTrgtYn": "",
+		"systHedrRmrkVl": ""
+	},
+	"cfs_bheader_s00": {
+		"evntTypCd": "",
+		"hsptCd": "",
+		"cntrCd": "",
+		"dprtCd": "",
+		"natnCd": "ko",
+		"lnggCd": "KR",
+		"aftrMtrlExstYn": "",
+		"mxmmRqstVl": "",
+		"mesgCd": "IB00013",
+		"mesgCtn": "정상 조회되었습니다.",
+		"adddMesgCd": "",
+		"adddMesgCtn": "",
+		"errPrgmNm": "",
+		"errFuncNm": "",
+		"errLineNo": "",
+		"errSqlNo": "",
+		"errTpNo": "",
+		"errMesgPrsgDvsnCd": "S",
+		"excfCd": "",
+		"dtlsExcfCd": "",
+		"mesgMngmDvsnYn": "",
+		"userId": "MOBILE",
+		"scryAplyYn": "",
+		"bswrHedrRmrkVl": ""
+	},
+	"mnc_elsdidt_001": {
+		"afiReptNtm": 2,
+		"mns_elsdidt_001": [
+			{
+				"ptntNm": "윤지록",
+				"gendCd": "M",
+				"ageCtn": "64세",
+				"btdt": "1956-02-15",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "",
+				"etcYn": "Y",
+				"inptCasbCtn": "Y",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "2020-02-21",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "08:00~09:00 / 17:00~17:30",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "07:30~08:30 / 17:30~18:30",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "07W",
+				"carePtrmNo": "01",
+				"careSckbNo": "01",
+				"ptno": "06460451",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "171130",
+				"mdrpNo": 2014423079,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "조식 후",
+				"npoDscrMemoCtn": "물만 드세요",
+				"ptntInftCtn": "( 5 )시까지 절대안정"
+			},
+			{
+				"ptntNm": "김테스트",
+				"gendCd": "F",
+				"ageCtn": "30세",
+				"btdt": "1989-11-28",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "",
+				"blodCatnYn": "",
+				"invrIsltYn": "",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "09",
+				"careSckbNo": "01",
+				"ptno": "42738795",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "202366",
+				"mdrpNo": 2014423080,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "N",
+				"npoCtn": "",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": ""
+			}
+		]
+	}
+}
+2020-05-20 10:03:43.236 - DEBUG: [mci_util.js:276:20] processResponse called.
+2020-05-20 10:03:43.236 - DEBUG: [mci_util.js:282:24] KEYS -> ["cfs_sheader_001","cfs_bheader_s00","mnc_elsdidt_001"]
+2020-05-20 10:03:43.238 - DEBUG: [mci_util.js:310:16] parseHeader called.
+2020-05-20 10:03:43.239 - DEBUG: [mci_util.js:286:24] HEADER -> {"serviceId":"mno_elsdidt_l01","userId":"","errMessage":"","code":"IB00013","message":"정상 조회되었습니다."}
+2020-05-20 10:03:43.240 - DEBUG: [mci_util.js:488:16] parseBody called.
+2020-05-20 10:03:43.242 - DEBUG: [mci_util.js:495:20] outname type : string
+2020-05-20 10:03:43.243 - DEBUG: [mci_util.js:504:24] repeat count : 2
+2020-05-20 10:03:43.245 - DEBUG: [mci_util.js:523:16] parseData called.
+2020-05-20 10:03:43.247 - DEBUG: [mci_util.js:529:24] mapper found with attributes 36
+2020-05-20 10:03:43.250 - DEBUG: [mci_util.js:535:40] mapping #0 [firstName] -> [ptntNm] : 윤지록
+2020-05-20 10:03:43.251 - DEBUG: [mci_util.js:535:40] mapping #1 [nameWarning] -> [ptntNmCatnYn] : Y
+2020-05-20 10:03:43.252 - DEBUG: [mci_util.js:535:40] mapping #2 [gender] -> [gendCd] : M
+2020-05-20 10:03:43.252 - DEBUG: [mci_util.js:535:40] mapping #3 [age] -> [ageCtn] : 64세
+2020-05-20 10:03:43.253 - DEBUG: [mci_util.js:535:40] mapping #4 [birthDate] -> [btdt] : 1956-02-15
+2020-05-20 10:03:43.254 - DEBUG: [mci_util.js:535:40] mapping #5 [dept] -> [mcdpNm] : 감염내과분과
+2020-05-20 10:03:43.257 - DEBUG: [mci_util.js:535:40] mapping #6 [doctorName1] -> [gndrNm] : 김시호
+2020-05-20 10:03:43.263 - DEBUG: [mci_util.js:535:40] mapping #7 [doctorName2] -> [chdrNm] : 고재현
+2020-05-20 10:03:43.264 - DEBUG: [mci_util.js:535:40] mapping #8 [caution3] -> [fallCtn] : Y
+2020-05-20 10:03:43.265 - DEBUG: [mci_util.js:535:40] mapping #9 [caution4] -> [bdsrEtcCtn] : Y
+2020-05-20 10:03:43.266 - DEBUG: [mci_util.js:535:40] mapping #10 [caution2B] -> [ctctYn] : Y
+2020-05-20 10:03:43.270 - DEBUG: [mci_util.js:535:40] mapping #11 [caution2A] -> [cnsdCtctStcrVl] : 
+2020-05-20 10:03:43.272 - DEBUG: [mci_util.js:535:40] mapping #12 [caution1A] -> [airCatnYn] : 
+2020-05-20 10:03:43.273 - DEBUG: [mci_util.js:535:40] mapping #13 [caution1B] -> [drplYn] : Y
+2020-05-20 10:03:43.275 - DEBUG: [mci_util.js:535:40] mapping #14 [caution5] -> [blodCatnYn] : Y
+2020-05-20 10:03:43.276 - DEBUG: [mci_util.js:535:40] mapping #15 [caution6A] -> [invrIsltYn] : 
+2020-05-20 10:03:43.280 - DEBUG: [mci_util.js:535:40] mapping #16 [caution6B] -> [etcYn] : Y
+2020-05-20 10:03:43.281 - DEBUG: [mci_util.js:535:40] mapping #17 [npoYn] -> [npoYn] : Y
+2020-05-20 10:03:43.282 - DEBUG: [mci_util.js:535:40] mapping #18 [npoCtn] -> [npoCtn] : 조식 후
+2020-05-20 10:03:43.283 - DEBUG: [mci_util.js:535:40] mapping #19 [npoDscrMemoCtn] -> [npoDscrMemoCtn] : 물만 드세요
+2020-05-20 10:03:43.285 - DEBUG: [mci_util.js:535:40] mapping #20 [ptntInftCtn] -> [ptntInftCtn] : ( 5 )시까지 절대안정
+2020-05-20 10:03:43.288 - DEBUG: [mci_util.js:535:40] mapping #21 [treatDate] -> [admsDt] : 2020-02-21
+2020-05-20 10:03:43.289 - DEBUG: [mci_util.js:535:40] mapping #22 [leavingDate] -> [dschPrrnYmd] : 2020-02-21
+2020-05-20 10:03:43.290 - DEBUG: [mci_util.js:535:40] mapping #23 [roundingSun] -> [dvsnNm1] : 
+2020-05-20 10:03:43.292 - DEBUG: [mci_util.js:535:40] mapping #24 [roundingMon] -> [dvsnNm2] : 10:00~12:00 / 15:00~17:00
+2020-05-20 10:03:43.293 - DEBUG: [mci_util.js:535:40] mapping #25 [roundingTue] -> [dvsnNm3] : 08:00~09:00 / 17:00~17:30
+2020-05-20 10:03:43.295 - DEBUG: [mci_util.js:535:40] mapping #26 [roundingWed] -> [dvsnNm4] : 11:00~13:00 / 16:00~18:00
+2020-05-20 10:03:43.299 - DEBUG: [mci_util.js:535:40] mapping #27 [roundingThu] -> [dvsnNm5] : 07:30~08:30 / 17:30~18:30
+2020-05-20 10:03:43.300 - DEBUG: [mci_util.js:535:40] mapping #28 [roundingFri] -> [dvsnNm6] : 15:00~17:00 / 18:00~20:00
+2020-05-20 10:03:43.301 - DEBUG: [mci_util.js:535:40] mapping #29 [roundingSat] -> [dvsnNm7] : 
+2020-05-20 10:03:43.302 - DEBUG: [mci_util.js:535:40] mapping #30 [ward] -> [wardCdCtn] : 07W
+2020-05-20 10:03:43.303 - DEBUG: [mci_util.js:535:40] mapping #31 [roomNo] -> [carePtrmNo] : 01
+2020-05-20 10:03:43.306 - DEBUG: [mci_util.js:535:40] mapping #32 [bedNo] -> [careSckbNo] : 01
+2020-05-20 10:03:43.309 - DEBUG: [mci_util.js:535:40] mapping #33 [id] -> [ptno] : 06460451
+2020-05-20 10:03:43.309 - DEBUG: [mci_util.js:535:40] mapping #34 [wardName] -> [wardNm] : 음압격리병동 5층
+2020-05-20 10:03:43.311 - DEBUG: [mci_util.js:535:40] mapping #35 [wardId] -> [wardCd] : 171130
+2020-05-20 10:03:43.338 - INFO: [sync_to_mci.js:128:24] Begin to make [ESL] Socket Data in the [171130] department
+2020-05-20 10:03:43.350 - INFO: [sync_to_mci.js:140:24] [171130]  MCI information has been updated in the DB
+2020-05-20 10:04:04.107 - INFO: [sync_to_mci.js:147:24] [ESL + DID] information in the  [171130]  department has been updated.
+2020-05-20 10:05:32.069 - DEBUG: [mci.js:20:16] MCI initialized.
+2020-05-20 10:05:32.074 - INFO: [sync_to_mci.js:42:12] Sync_to_MCI is started.
+2020-05-20 10:05:32.074 - INFO: [sync_to_mci.js:54:12] sync_to_mci Controller is imported.
+2020-05-20 10:05:32.075 - INFO: [sync_to_mci.js:65:12] MCIPatientInfo started
+2020-05-20 10:05:32.117 - DEBUG: [mci-controller.js:36:16] MCITest:patientList called for path /mci-test/patient-list
+2020-05-20 10:05:32.129 - DEBUG: [mci_util.js:17:16] MciUtil initialized.
+2020-05-20 10:05:32.193 - DEBUG: [mci_util.js:181:16] query called.
+2020-05-20 10:05:32.194 - DEBUG: [mci_util.js:182:16] values.input -> {"wardCd":"171130"}
+2020-05-20 10:05:32.195 - DEBUG: [mci.js:37:16] mci.send called.
+2020-05-20 10:05:32.198 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2020-05-20 10:05:32.198 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2020-05-20 10:05:32.200 - DEBUG: [mci.js:46:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"00e28c60-9a36-11ea-8a7c-ad1ce416d8e4\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"mno_elsdidt_l01\",\"tlgrRqstDt\":\"20200520100532198000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mns_elsdidt_002\":{\"wardCd\":\"171130\"}}"
+2020-05-20 10:05:32.201 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2020-05-20 10:05:32.202 - DEBUG: [mci.js:67:10] output : 0000001092{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"00e28c60-9a36-11ea-8a7c-ad1ce416d8e4","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"mno_elsdidt_l01","tlgrRqstDt":"20200520100532198000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mns_elsdidt_002":{"wardCd":"171130"}}
+2020-05-20 10:05:32.205 - DEBUG: [mci.js:148:16] sendData called.
+2020-05-20 10:05:32.208 - DEBUG: [mci.js:160:20] Client connection ID : 00e41300-9a36-11ea-8a7c-ad1ce416d8e4
+2020-05-20 10:05:32.209 - DEBUG: [mci.js:163:20] about to send output.
+2020-05-20 10:05:32.210 - DEBUG: [mci_util.js:212:32] send request done -> output sent.
+2020-05-20 10:05:32.212 - DEBUG: [mci.js:168:20] all before release : 1
+2020-05-20 10:05:32.213 - DEBUG: [mci.js:169:20] free before release : 0
+2020-05-20 10:05:32.402 - DEBUG: [mci_util.js:215:32] received event : data
+2020-05-20 10:05:32.408 - DEBUG: [mci_util.js:33:11] typeof data : object
+2020-05-20 10:05:32.409 - DEBUG: [mci_util.js:40:16] [[Class]] property : [object Uint8Array]
+2020-05-20 10:05:32.411 - DEBUG: [mci_util.js:41:16] is Buffer? : true
+2020-05-20 10:05:32.415 - DEBUG: [mci_util.js:57:20] remaining buffer for socket [00e41300-9a36-11ea-8a7c-ad1ce416d8e4] not exists.
+2020-05-20 10:05:32.417 - DEBUG: [mci_util.js:70:16] length string : 0000003600
+2020-05-20 10:05:32.420 - DEBUG: [mci_util.js:76:16] body length : 3600
+2020-05-20 10:05:32.424 - DEBUG: [mci_util.js:86:16] compared length : 3600, 3600
+2020-05-20 10:05:32.426 - DEBUG: [mci_util.js:96:20] body buffer is completed.
+2020-05-20 10:05:32.427 - DEBUG: [mci_util.js:99:20] converting body data for TEST.
+2020-05-20 10:05:32.429 - DEBUG: [mci_util.js:104:24] first digit : {
+2020-05-20 10:05:32.431 - DEBUG: [mci_util.js:129:24] connection released.
+2020-05-20 10:05:32.434 - DEBUG: [mci_util.js:248:16] processCompleted called.
+2020-05-20 10:05:32.435 - DEBUG: [mci_util.js:252:16] output -> {
+	"cfs_sheader_001": {
+		"tlgrLngtVl": "0000003056",
+		"uuid": "79b0f125-f24c-43ae-8c28-58916bbe7e57",
+		"tlgrPrgrNo": "2",
+		"tlgrTypeCd": "A",
+		"inrfId": "mno_elsdidt_l01",
+		"tlgrRqstDt": "20200228080326152000",
+		"lnkdSystInfmVl": "11001101",
+		"sesnId": "",
+		"tlgrRqstSystIp": "119.6.3.92",
+		"tlgrMediDvsnCd": "MO",
+		"tlgrRqstSystId": "bm0",
+		"tlgrTrnmSrvcId": "DRS_100000_1001",
+		"tlgrTrnmUserId": "MOBILE",
+		"tlgrRecvSrvcId": "mno_elsdidt_l01",
+		"tlgrRecvUserId": "",
+		"prsgRsltDvsnCd": "1",
+		"filePrsgYn": "",
+		"syncPrsgDvsnCd": "S",
+		"ectnYn": "N",
+		"cmrnYn": "N",
+		"systEnvrDvsnCd": "D",
+		"testTlgrYn": "N",
+		"inrfSttsCd": "",
+		"wndoHndeId": "",
+		"dataInfmYn": "",
+		"tlgrVrsnCeckYn": "",
+		"rqstTlgrVrsnNo": "",
+		"rspnTlgrVrsnNo": "",
+		"cmrnTrgtYn": "",
+		"systHedrRmrkVl": ""
+	},
+	"cfs_bheader_s00": {
+		"evntTypCd": "",
+		"hsptCd": "",
+		"cntrCd": "",
+		"dprtCd": "",
+		"natnCd": "ko",
+		"lnggCd": "KR",
+		"aftrMtrlExstYn": "",
+		"mxmmRqstVl": "",
+		"mesgCd": "IB00013",
+		"mesgCtn": "정상 조회되었습니다.",
+		"adddMesgCd": "",
+		"adddMesgCtn": "",
+		"errPrgmNm": "",
+		"errFuncNm": "",
+		"errLineNo": "",
+		"errSqlNo": "",
+		"errTpNo": "",
+		"errMesgPrsgDvsnCd": "S",
+		"excfCd": "",
+		"dtlsExcfCd": "",
+		"mesgMngmDvsnYn": "",
+		"userId": "MOBILE",
+		"scryAplyYn": "",
+		"bswrHedrRmrkVl": ""
+	},
+	"mnc_elsdidt_001": {
+		"afiReptNtm": 2,
+		"mns_elsdidt_001": [
+			{
+				"ptntNm": "윤지록",
+				"gendCd": "M",
+				"ageCtn": "64세",
+				"btdt": "1956-02-15",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "",
+				"etcYn": "Y",
+				"inptCasbCtn": "Y",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "2020-02-21",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "08:00~09:00 / 17:00~17:30",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "07:30~08:30 / 17:30~18:30",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "07W",
+				"carePtrmNo": "01",
+				"careSckbNo": "01",
+				"ptno": "06460451",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "171130",
+				"mdrpNo": 2014423079,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "조식 후",
+				"npoDscrMemoCtn": "물만 드세요",
+				"ptntInftCtn": "( 5 )시까지 절대안정"
+			},
+			{
+				"ptntNm": "김테스트",
+				"gendCd": "F",
+				"ageCtn": "30세",
+				"btdt": "1989-11-28",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "",
+				"blodCatnYn": "",
+				"invrIsltYn": "",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "09",
+				"careSckbNo": "01",
+				"ptno": "42738795",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "202366",
+				"mdrpNo": 2014423080,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "N",
+				"npoCtn": "",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": ""
+			}
+		]
+	}
+}
+2020-05-20 10:05:32.453 - DEBUG: [mci_util.js:276:20] processResponse called.
+2020-05-20 10:05:32.456 - DEBUG: [mci_util.js:282:24] KEYS -> ["cfs_sheader_001","cfs_bheader_s00","mnc_elsdidt_001"]
+2020-05-20 10:05:32.458 - DEBUG: [mci_util.js:310:16] parseHeader called.
+2020-05-20 10:05:32.459 - DEBUG: [mci_util.js:286:24] HEADER -> {"serviceId":"mno_elsdidt_l01","userId":"","errMessage":"","code":"IB00013","message":"정상 조회되었습니다."}
+2020-05-20 10:05:32.461 - DEBUG: [mci_util.js:488:16] parseBody called.
+2020-05-20 10:05:32.463 - DEBUG: [mci_util.js:495:20] outname type : string
+2020-05-20 10:05:32.468 - DEBUG: [mci_util.js:504:24] repeat count : 2
+2020-05-20 10:05:32.470 - DEBUG: [mci_util.js:523:16] parseData called.
+2020-05-20 10:05:32.472 - DEBUG: [mci_util.js:529:24] mapper found with attributes 36
+2020-05-20 10:05:32.474 - DEBUG: [mci_util.js:535:40] mapping #0 [firstName] -> [ptntNm] : 윤지록
+2020-05-20 10:05:32.475 - DEBUG: [mci_util.js:535:40] mapping #1 [nameWarning] -> [ptntNmCatnYn] : Y
+2020-05-20 10:05:32.480 - DEBUG: [mci_util.js:535:40] mapping #2 [gender] -> [gendCd] : M
+2020-05-20 10:05:32.481 - DEBUG: [mci_util.js:535:40] mapping #3 [age] -> [ageCtn] : 64세
+2020-05-20 10:05:32.483 - DEBUG: [mci_util.js:535:40] mapping #4 [birthDate] -> [btdt] : 1956-02-15
+2020-05-20 10:05:32.487 - DEBUG: [mci_util.js:535:40] mapping #5 [dept] -> [mcdpNm] : 감염내과분과
+2020-05-20 10:05:32.490 - DEBUG: [mci_util.js:535:40] mapping #6 [doctorName1] -> [gndrNm] : 김시호
+2020-05-20 10:05:32.492 - DEBUG: [mci_util.js:535:40] mapping #7 [doctorName2] -> [chdrNm] : 고재현
+2020-05-20 10:05:32.496 - DEBUG: [mci_util.js:535:40] mapping #8 [caution3] -> [fallCtn] : Y
+2020-05-20 10:05:32.500 - DEBUG: [mci_util.js:535:40] mapping #9 [caution4] -> [bdsrEtcCtn] : Y
+2020-05-20 10:05:32.501 - DEBUG: [mci_util.js:535:40] mapping #10 [caution2B] -> [ctctYn] : Y
+2020-05-20 10:05:32.502 - DEBUG: [mci_util.js:535:40] mapping #11 [caution2A] -> [cnsdCtctStcrVl] : 
+2020-05-20 10:05:32.505 - DEBUG: [mci_util.js:535:40] mapping #12 [caution1A] -> [airCatnYn] : 
+2020-05-20 10:05:32.507 - DEBUG: [mci_util.js:535:40] mapping #13 [caution1B] -> [drplYn] : Y
+2020-05-20 10:05:32.511 - DEBUG: [mci_util.js:535:40] mapping #14 [caution5] -> [blodCatnYn] : Y
+2020-05-20 10:05:32.512 - DEBUG: [mci_util.js:535:40] mapping #15 [caution6A] -> [invrIsltYn] : 
+2020-05-20 10:05:32.513 - DEBUG: [mci_util.js:535:40] mapping #16 [caution6B] -> [etcYn] : Y
+2020-05-20 10:05:32.515 - DEBUG: [mci_util.js:535:40] mapping #17 [npoYn] -> [npoYn] : Y
+2020-05-20 10:05:32.517 - DEBUG: [mci_util.js:535:40] mapping #18 [npoCtn] -> [npoCtn] : 조식 후
+2020-05-20 10:05:32.521 - DEBUG: [mci_util.js:535:40] mapping #19 [npoDscrMemoCtn] -> [npoDscrMemoCtn] : 물만 드세요
+2020-05-20 10:05:32.522 - DEBUG: [mci_util.js:535:40] mapping #20 [ptntInftCtn] -> [ptntInftCtn] : ( 5 )시까지 절대안정
+2020-05-20 10:05:32.523 - DEBUG: [mci_util.js:535:40] mapping #21 [treatDate] -> [admsDt] : 2020-02-21
+2020-05-20 10:05:32.524 - DEBUG: [mci_util.js:535:40] mapping #22 [leavingDate] -> [dschPrrnYmd] : 2020-02-21
+2020-05-20 10:05:32.527 - DEBUG: [mci_util.js:535:40] mapping #23 [roundingSun] -> [dvsnNm1] : 
+2020-05-20 10:05:32.531 - DEBUG: [mci_util.js:535:40] mapping #24 [roundingMon] -> [dvsnNm2] : 10:00~12:00 / 15:00~17:00
+2020-05-20 10:05:32.532 - DEBUG: [mci_util.js:535:40] mapping #25 [roundingTue] -> [dvsnNm3] : 08:00~09:00 / 17:00~17:30
+2020-05-20 10:05:32.533 - DEBUG: [mci_util.js:535:40] mapping #26 [roundingWed] -> [dvsnNm4] : 11:00~13:00 / 16:00~18:00
+2020-05-20 10:05:32.534 - DEBUG: [mci_util.js:535:40] mapping #27 [roundingThu] -> [dvsnNm5] : 07:30~08:30 / 17:30~18:30
+2020-05-20 10:05:32.536 - DEBUG: [mci_util.js:535:40] mapping #28 [roundingFri] -> [dvsnNm6] : 15:00~17:00 / 18:00~20:00
+2020-05-20 10:05:32.540 - DEBUG: [mci_util.js:535:40] mapping #29 [roundingSat] -> [dvsnNm7] : 
+2020-05-20 10:05:32.542 - DEBUG: [mci_util.js:535:40] mapping #30 [ward] -> [wardCdCtn] : 07W
+2020-05-20 10:05:32.543 - DEBUG: [mci_util.js:535:40] mapping #31 [roomNo] -> [carePtrmNo] : 01
+2020-05-20 10:05:32.544 - DEBUG: [mci_util.js:535:40] mapping #32 [bedNo] -> [careSckbNo] : 01
+2020-05-20 10:05:32.545 - DEBUG: [mci_util.js:535:40] mapping #33 [id] -> [ptno] : 06460451
+2020-05-20 10:05:32.547 - DEBUG: [mci_util.js:535:40] mapping #34 [wardName] -> [wardNm] : 음압격리병동 5층
+2020-05-20 10:05:32.551 - DEBUG: [mci_util.js:535:40] mapping #35 [wardId] -> [wardCd] : 171130
+2020-05-20 10:05:32.579 - INFO: [sync_to_mci.js:128:24] Begin to make [ESL] Socket Data in the [171130] department
+2020-05-20 10:05:32.590 - INFO: [sync_to_mci.js:141:24] [171130]  MCI information has been updated in the DB
+2020-05-20 10:05:53.387 - INFO: [sync_to_mci.js:149:24] [ESL + DID] information in the  [171130]  department has been updated.
+2020-05-20 10:06:03.880 - DEBUG: [mci.js:20:16] MCI initialized.
+2020-05-20 10:06:03.885 - INFO: [sync_to_mci.js:42:12] Sync_to_MCI is started.
+2020-05-20 10:06:03.885 - INFO: [sync_to_mci.js:54:12] sync_to_mci Controller is imported.
+2020-05-20 10:06:03.886 - INFO: [sync_to_mci.js:65:12] MCIPatientInfo started
+2020-05-20 10:06:03.933 - DEBUG: [mci-controller.js:36:16] MCITest:patientList called for path /mci-test/patient-list
+2020-05-20 10:06:03.944 - DEBUG: [mci_util.js:17:16] MciUtil initialized.
+2020-05-20 10:06:04.008 - DEBUG: [mci_util.js:181:16] query called.
+2020-05-20 10:06:04.009 - DEBUG: [mci_util.js:182:16] values.input -> {"wardCd":"171130"}
+2020-05-20 10:06:04.012 - DEBUG: [mci.js:37:16] mci.send called.
+2020-05-20 10:06:04.014 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2020-05-20 10:06:04.016 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2020-05-20 10:06:04.017 - DEBUG: [mci.js:46:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"13d96ff0-9a36-11ea-8a7c-ad1ce416d8e4\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"mno_elsdidt_l01\",\"tlgrRqstDt\":\"20200520100604016000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mns_elsdidt_002\":{\"wardCd\":\"171130\"}}"
+2020-05-20 10:06:04.019 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2020-05-20 10:06:04.023 - DEBUG: [mci.js:67:10] output : 0000001092{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"13d96ff0-9a36-11ea-8a7c-ad1ce416d8e4","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"mno_elsdidt_l01","tlgrRqstDt":"20200520100604016000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mns_elsdidt_002":{"wardCd":"171130"}}
+2020-05-20 10:06:04.024 - DEBUG: [mci.js:148:16] sendData called.
+2020-05-20 10:06:04.030 - DEBUG: [mci.js:160:20] Client connection ID : 13dbb9e0-9a36-11ea-8a7c-ad1ce416d8e4
+2020-05-20 10:06:04.031 - DEBUG: [mci.js:163:20] about to send output.
+2020-05-20 10:06:04.032 - DEBUG: [mci_util.js:212:32] send request done -> output sent.
+2020-05-20 10:06:04.033 - DEBUG: [mci.js:168:20] all before release : 1
+2020-05-20 10:06:04.035 - DEBUG: [mci.js:169:20] free before release : 0
+2020-05-20 10:06:04.211 - DEBUG: [mci_util.js:215:32] received event : data
+2020-05-20 10:06:04.213 - DEBUG: [mci_util.js:33:11] typeof data : object
+2020-05-20 10:06:04.218 - DEBUG: [mci_util.js:40:16] [[Class]] property : [object Uint8Array]
+2020-05-20 10:06:04.220 - DEBUG: [mci_util.js:41:16] is Buffer? : true
+2020-05-20 10:06:04.221 - DEBUG: [mci_util.js:57:20] remaining buffer for socket [13dbb9e0-9a36-11ea-8a7c-ad1ce416d8e4] not exists.
+2020-05-20 10:06:04.225 - DEBUG: [mci_util.js:70:16] length string : 0000003600
+2020-05-20 10:06:04.226 - DEBUG: [mci_util.js:76:16] body length : 3600
+2020-05-20 10:06:04.233 - DEBUG: [mci_util.js:86:16] compared length : 3600, 3600
+2020-05-20 10:06:04.234 - DEBUG: [mci_util.js:96:20] body buffer is completed.
+2020-05-20 10:06:04.237 - DEBUG: [mci_util.js:99:20] converting body data for TEST.
+2020-05-20 10:06:04.238 - DEBUG: [mci_util.js:104:24] first digit : {
+2020-05-20 10:06:04.239 - DEBUG: [mci_util.js:129:24] connection released.
+2020-05-20 10:06:04.240 - DEBUG: [mci_util.js:248:16] processCompleted called.
+2020-05-20 10:06:04.242 - DEBUG: [mci_util.js:252:16] output -> {
+	"cfs_sheader_001": {
+		"tlgrLngtVl": "0000003056",
+		"uuid": "79b0f125-f24c-43ae-8c28-58916bbe7e57",
+		"tlgrPrgrNo": "2",
+		"tlgrTypeCd": "A",
+		"inrfId": "mno_elsdidt_l01",
+		"tlgrRqstDt": "20200228080326152000",
+		"lnkdSystInfmVl": "11001101",
+		"sesnId": "",
+		"tlgrRqstSystIp": "119.6.3.92",
+		"tlgrMediDvsnCd": "MO",
+		"tlgrRqstSystId": "bm0",
+		"tlgrTrnmSrvcId": "DRS_100000_1001",
+		"tlgrTrnmUserId": "MOBILE",
+		"tlgrRecvSrvcId": "mno_elsdidt_l01",
+		"tlgrRecvUserId": "",
+		"prsgRsltDvsnCd": "1",
+		"filePrsgYn": "",
+		"syncPrsgDvsnCd": "S",
+		"ectnYn": "N",
+		"cmrnYn": "N",
+		"systEnvrDvsnCd": "D",
+		"testTlgrYn": "N",
+		"inrfSttsCd": "",
+		"wndoHndeId": "",
+		"dataInfmYn": "",
+		"tlgrVrsnCeckYn": "",
+		"rqstTlgrVrsnNo": "",
+		"rspnTlgrVrsnNo": "",
+		"cmrnTrgtYn": "",
+		"systHedrRmrkVl": ""
+	},
+	"cfs_bheader_s00": {
+		"evntTypCd": "",
+		"hsptCd": "",
+		"cntrCd": "",
+		"dprtCd": "",
+		"natnCd": "ko",
+		"lnggCd": "KR",
+		"aftrMtrlExstYn": "",
+		"mxmmRqstVl": "",
+		"mesgCd": "IB00013",
+		"mesgCtn": "정상 조회되었습니다.",
+		"adddMesgCd": "",
+		"adddMesgCtn": "",
+		"errPrgmNm": "",
+		"errFuncNm": "",
+		"errLineNo": "",
+		"errSqlNo": "",
+		"errTpNo": "",
+		"errMesgPrsgDvsnCd": "S",
+		"excfCd": "",
+		"dtlsExcfCd": "",
+		"mesgMngmDvsnYn": "",
+		"userId": "MOBILE",
+		"scryAplyYn": "",
+		"bswrHedrRmrkVl": ""
+	},
+	"mnc_elsdidt_001": {
+		"afiReptNtm": 2,
+		"mns_elsdidt_001": [
+			{
+				"ptntNm": "윤지록",
+				"gendCd": "M",
+				"ageCtn": "64세",
+				"btdt": "1956-02-15",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "",
+				"etcYn": "Y",
+				"inptCasbCtn": "Y",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "2020-02-21",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "08:00~09:00 / 17:00~17:30",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "07:30~08:30 / 17:30~18:30",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "07W",
+				"carePtrmNo": "01",
+				"careSckbNo": "01",
+				"ptno": "06460451",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "171130",
+				"mdrpNo": 2014423079,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "조식 후",
+				"npoDscrMemoCtn": "물만 드세요",
+				"ptntInftCtn": "( 5 )시까지 절대안정"
+			},
+			{
+				"ptntNm": "김테스트",
+				"gendCd": "F",
+				"ageCtn": "30세",
+				"btdt": "1989-11-28",
+				"mcdpNm": "감염내과분과",
+				"chdrNm": "고재현",
+				"gndrNm": "김시호",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "",
+				"blodCatnYn": "",
+				"invrIsltYn": "",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2020-02-21",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "",
+				"dvsnNm2": "10:00~12:00 / 15:00~17:00",
+				"dvsnNm3": "",
+				"dvsnNm4": "11:00~13:00 / 16:00~18:00",
+				"dvsnNm5": "",
+				"dvsnNm6": "15:00~17:00 / 18:00~20:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "09",
+				"careSckbNo": "01",
+				"ptno": "42738795",
+				"wardNm": "음압격리병동 5층",
+				"wardCd": "202366",
+				"mdrpNo": 2014423080,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "N",
+				"npoCtn": "",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": ""
+			}
+		]
+	}
+}
+2020-05-20 10:06:04.255 - DEBUG: [mci_util.js:276:20] processResponse called.
+2020-05-20 10:06:04.256 - DEBUG: [mci_util.js:282:24] KEYS -> ["cfs_sheader_001","cfs_bheader_s00","mnc_elsdidt_001"]
+2020-05-20 10:06:04.259 - DEBUG: [mci_util.js:310:16] parseHeader called.
+2020-05-20 10:06:04.259 - DEBUG: [mci_util.js:286:24] HEADER -> {"serviceId":"mno_elsdidt_l01","userId":"","errMessage":"","code":"IB00013","message":"정상 조회되었습니다."}
+2020-05-20 10:06:04.263 - DEBUG: [mci_util.js:488:16] parseBody called.
+2020-05-20 10:06:04.266 - DEBUG: [mci_util.js:495:20] outname type : string
+2020-05-20 10:06:04.267 - DEBUG: [mci_util.js:504:24] repeat count : 2
+2020-05-20 10:06:04.271 - DEBUG: [mci_util.js:523:16] parseData called.
+2020-05-20 10:06:04.273 - DEBUG: [mci_util.js:529:24] mapper found with attributes 36
+2020-05-20 10:06:04.274 - DEBUG: [mci_util.js:535:40] mapping #0 [firstName] -> [ptntNm] : 윤지록
+2020-05-20 10:06:04.280 - DEBUG: [mci_util.js:535:40] mapping #1 [nameWarning] -> [ptntNmCatnYn] : Y
+2020-05-20 10:06:04.281 - DEBUG: [mci_util.js:535:40] mapping #2 [gender] -> [gendCd] : M
+2020-05-20 10:06:04.283 - DEBUG: [mci_util.js:535:40] mapping #3 [age] -> [ageCtn] : 64세
+2020-05-20 10:06:04.284 - DEBUG: [mci_util.js:535:40] mapping #4 [birthDate] -> [btdt] : 1956-02-15
+2020-05-20 10:06:04.286 - DEBUG: [mci_util.js:535:40] mapping #5 [dept] -> [mcdpNm] : 감염내과분과
+2020-05-20 10:06:04.289 - DEBUG: [mci_util.js:535:40] mapping #6 [doctorName1] -> [gndrNm] : 김시호
+2020-05-20 10:06:04.291 - DEBUG: [mci_util.js:535:40] mapping #7 [doctorName2] -> [chdrNm] : 고재현
+2020-05-20 10:06:04.292 - DEBUG: [mci_util.js:535:40] mapping #8 [caution3] -> [fallCtn] : Y
+2020-05-20 10:06:04.294 - DEBUG: [mci_util.js:535:40] mapping #9 [caution4] -> [bdsrEtcCtn] : Y
+2020-05-20 10:06:04.296 - DEBUG: [mci_util.js:535:40] mapping #10 [caution2B] -> [ctctYn] : Y
+2020-05-20 10:06:04.297 - DEBUG: [mci_util.js:535:40] mapping #11 [caution2A] -> [cnsdCtctStcrVl] : 
+2020-05-20 10:06:04.300 - DEBUG: [mci_util.js:535:40] mapping #12 [caution1A] -> [airCatnYn] : 
+2020-05-20 10:06:04.301 - DEBUG: [mci_util.js:535:40] mapping #13 [caution1B] -> [drplYn] : Y
+2020-05-20 10:06:04.303 - DEBUG: [mci_util.js:535:40] mapping #14 [caution5] -> [blodCatnYn] : Y
+2020-05-20 10:06:04.304 - DEBUG: [mci_util.js:535:40] mapping #15 [caution6A] -> [invrIsltYn] : 
+2020-05-20 10:06:04.306 - DEBUG: [mci_util.js:535:40] mapping #16 [caution6B] -> [etcYn] : Y
+2020-05-20 10:06:04.309 - DEBUG: [mci_util.js:535:40] mapping #17 [npoYn] -> [npoYn] : Y
+2020-05-20 10:06:04.311 - DEBUG: [mci_util.js:535:40] mapping #18 [npoCtn] -> [npoCtn] : 조식 후
+2020-05-20 10:06:04.312 - DEBUG: [mci_util.js:535:40] mapping #19 [npoDscrMemoCtn] -> [npoDscrMemoCtn] : 물만 드세요
+2020-05-20 10:06:04.313 - DEBUG: [mci_util.js:535:40] mapping #20 [ptntInftCtn] -> [ptntInftCtn] : ( 5 )시까지 절대안정
+2020-05-20 10:06:04.314 - DEBUG: [mci_util.js:535:40] mapping #21 [treatDate] -> [admsDt] : 2020-02-21
+2020-05-20 10:06:04.316 - DEBUG: [mci_util.js:535:40] mapping #22 [leavingDate] -> [dschPrrnYmd] : 2020-02-21
+2020-05-20 10:06:04.316 - DEBUG: [mci_util.js:535:40] mapping #23 [roundingSun] -> [dvsnNm1] : 
+2020-05-20 10:06:04.320 - DEBUG: [mci_util.js:535:40] mapping #24 [roundingMon] -> [dvsnNm2] : 10:00~12:00 / 15:00~17:00
+2020-05-20 10:06:04.320 - DEBUG: [mci_util.js:535:40] mapping #25 [roundingTue] -> [dvsnNm3] : 08:00~09:00 / 17:00~17:30
+2020-05-20 10:06:04.321 - DEBUG: [mci_util.js:535:40] mapping #26 [roundingWed] -> [dvsnNm4] : 11:00~13:00 / 16:00~18:00
+2020-05-20 10:06:04.323 - DEBUG: [mci_util.js:535:40] mapping #27 [roundingThu] -> [dvsnNm5] : 07:30~08:30 / 17:30~18:30
+2020-05-20 10:06:04.323 - DEBUG: [mci_util.js:535:40] mapping #28 [roundingFri] -> [dvsnNm6] : 15:00~17:00 / 18:00~20:00
+2020-05-20 10:06:04.325 - DEBUG: [mci_util.js:535:40] mapping #29 [roundingSat] -> [dvsnNm7] : 
+2020-05-20 10:06:04.329 - DEBUG: [mci_util.js:535:40] mapping #30 [ward] -> [wardCdCtn] : 07W
+2020-05-20 10:06:04.329 - DEBUG: [mci_util.js:535:40] mapping #31 [roomNo] -> [carePtrmNo] : 01
+2020-05-20 10:06:04.331 - DEBUG: [mci_util.js:535:40] mapping #32 [bedNo] -> [careSckbNo] : 01
+2020-05-20 10:06:04.332 - DEBUG: [mci_util.js:535:40] mapping #33 [id] -> [ptno] : 06460451
+2020-05-20 10:06:04.332 - DEBUG: [mci_util.js:535:40] mapping #34 [wardName] -> [wardNm] : 음압격리병동 5층
+2020-05-20 10:06:04.333 - DEBUG: [mci_util.js:535:40] mapping #35 [wardId] -> [wardCd] : 171130
+2020-05-20 10:06:04.361 - INFO: [sync_to_mci.js:129:24] Begin to make [ESL] Socket Data in the [171130] department
+2020-05-20 10:06:04.372 - INFO: [sync_to_mci.js:142:24] [171130]  MCI information has been updated in the DB

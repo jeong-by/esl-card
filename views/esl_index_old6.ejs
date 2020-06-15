@@ -1,0 +1,3804 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ESL Index</title>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="/mdb/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="/mdb/css/mdb.min.css" rel="stylesheet">
+ 
+        <!-- Fonts -->
+        <link href="/fonts/NanumFonts.css" rel="stylesheet">
+
+        <style>
+            .double-nav .breadcrumb-dn {
+                color: #fff;
+            }
+            
+            .side-nav.wide.slim .sn-ad-avatar-wrapper a span {
+                display: none;
+            }
+ 
+            table.table td, table.table th {   
+                padding-top: 0.2em;   
+                padding-bottom: 0.2em;
+            }
+
+            main {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            /*===== Layout Editor =====*/
+ 
+            * {
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+
+            html, body {
+                width:100%;
+                height:100%;
+            }
+
+            /* 선택된 아이템 */
+            .selected-item {
+                border: 4px solid rgba(235,115,0,0.5) !important;
+            }
+
+            /* 갖다 놓을 공간 */
+            /*
+                11.6' 640x960
+                7.5'  640x384
+                6.0'  600x448
+            */
+            #dropzone1 {
+                height: 640px;
+                width: 960px;
+            }
+
+            /* 갖다 놓을 공간 공통 */
+            .dropzone {
+                background-color: #ccc;
+                border: dashed 4px transparent;
+                transition: background-color 0.3s;
+            }
+
+            .drop-active {
+                border-color: #aaa;
+            }
+
+            .drop-target {
+                background-color: #29e;
+                border-color: #fff;
+                border-style: solid;
+            }
+
+            .palette {
+                display: table;
+            }
+
+            .palette-row {
+                display: table-row;
+            }
+
+            /* 갖다 놓을 아이템 */
+            .drag-drop {
+                display: table-cell;
+                width: 7em;
+                height: 3em;
+                color: #fff;
+                background-color: #29e;
+                border: solid 2px #fff;
+                touch-action: none;
+                -webkit-transform: translate(0px, 0px);
+                        transform: translate(0px, 0px);
+                transition: background-color 0.3s;
+                text-align: center;
+                vertical-align: middle;
+                margin-right: 1em;
+            }
+
+            .drag-drop.can-drop {
+                color: #000;
+                background-color: #fff;
+            }
+   
+
+            /*===== Layout Editor END =====*/
+
+        </style>
+
+    </head>
+    <body>
+  
+        <div id="container" class="fixed-sn">
+ 
+            <!--Double navigation-->
+            <header class="indigo-skin">
+                <!-- Sidebar navigation -->
+                <div id="slide-out" class="side-nav fixed wide sn-bg-1">
+                <ul class="custom-scrollbar">
+                    <!-- Logo -->
+                    <li>
+                    <div class="logo-wrapper sn-ad-avatar-wrapper">
+                        <a href="#"><img src="/images/logo.png" class="rounded-circle"><span>Logo</span></a>
+                    </div>
+                    </li>
+                    <!--/. Logo -->
+                    <!-- Side navigation links -->
+                    <li>
+                        <ul class="collapsible collapsible-accordion">
+                            <li><a class="collapsible-header waves-effect arrow-r active"><i class="sv-slim-icon fas fa-chevron-right"></i> 레이아웃 <i class="fas fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#" onclick="showPage('page1-1');sideMenuSelected(this);" class="sideMenuItem waves-effect active">
+                                        <span class="sv-slim"> LL </span>
+                                        <span class="sv-normal">레이아웃 리스트</span></a>
+                                    </li>
+                                    <li><a href="#" onclick="showLayoutBuilderPage();sideMenuSelected(this);" class="sideMenuItem waves-effect">
+                                        <span class="sv-slim"> LE </span>
+                                        <span class="sv-normal">레이아웃 빌더</span></a>
+                                    </li>
+                                    <li><a href="#" onclick="sideMenuSelected(this);" class="sideMenuItem waves-effect">
+                                        <span class="sv-slim"> VD </span>
+                                        <span class="sv-normal">뷰 속성 정의</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </li>
+                            <li><a class="collapsible-header waves-effect arrow-r"><i class="sv-slim-icon far fa-hand-point-right"></i> ESL 단말 <i class="fas fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#" onclick="showPage('page2-1');sideMenuSelected(this);" class="sideMenuItem waves-effect">
+                                        <span class="sv-slim"> DB </span>
+                                        <span class="sv-normal">단말 대시보드</span></a>
+                                    </li>
+                                    <li><a href="#" onclick="showPage('page2-2');requestDeviceList(1,10);sideMenuSelected(this);" class="sideMenuItem waves-effect">
+                                        <span class="sv-slim"> DL </span>
+                                        <span class="sv-normal">단말 리스트</span></a>
+                                    </li>
+                                    <li><a href="#" onclick="sideMenuSelected(this);" class="sideMenuItem waves-effect">
+                                        <span class="sv-slim"> GL </span>
+                                        <span class="sv-normal">단말 그룹 리스트</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </li>
+                            <li><a class="collapsible-header waves-effect arrow-r"><i class="sv-slim-icon fas fa-eye"></i> 레거시 연동 <i class="fas fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#" onclick="sideMenuSelected(this);" class="sideMenuItem waves-effect">
+                                        <span class="sv-slim"> ESI </span>
+                                        <span class="sv-normal">ESL 서버 연동</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </li>
+                            <li><a class="collapsible-header waves-effect arrow-r"><i class="sv-slim-icon fas fa-eye"></i> 사용자 <i class="fas fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#" onclick="sideMenuSelected(this);" class="sideMenuItem waves-effect">
+                                        <span class="sv-slim"> UL </span>
+                                        <span class="sv-normal">사용자 리스트</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </li>
+                            
+                            <li><a id="toggle" class="waves-effect"><i class="sv-slim-icon fas fa-angle-double-left"></i>메뉴 작게</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--/. Side navigation links -->
+                </ul>
+                <div class="sidenav-bg rgba-blue-strong"></div>
+                </div>
+                <!--/. Sidebar navigation -->
+                <!-- Navbar -->
+                <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav indigo darken-1">
+                <!-- SideNav slide-out button -->
+                <div class="float-left">
+                    <a href="#" id="hamburgerIcon" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
+                </div>
+                <!-- Breadcrumb-->
+                <div class="breadcrumb-dn mr-auto">
+                    <p>BaroESL 서비스</p>
+                </div>
+                <ul class="nav navbar-nav nav-flex-icons ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fas fa-user"></i> <span class="clearfix d-none d-sm-inline-block">로그인</span></a>
+                    </li>
+ 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            알림 메시지
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">알림 리스트</a>
+                            <a class="dropdown-item" href="#">기타 알림</a>
+                        </div>
+                    </li>
+                </ul>
+                </nav>
+                <!-- /.Navbar -->
+            </header>
+            <!--/.Double navigation-->
+
+            <!--Main Layout-->
+            <main>
+                
+                <!-- Page 1-1 레이아웃 리스트 -->
+                <div id="page1-1">
+                    <div class="container-fluid">
+                        
+                        <div class="row mb-1" style="margin-top:-2em; margin-left:1em; margin-right:1em;">
+                            <div class="col-md-12">
+                                <h4 class="mt-5 mb-3 font-weight-bold dark-grey-text">레이아웃 리스트</h4>
+                            
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb grey lighten-4">
+                                        <li class="breadcrumb-item"><i class="fas fa-grip-vertical" style="margin-right:1em;"></i><a href="#">Layout</a></li>
+                                        <li class="breadcrumb-item active">레이아웃 리스트</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+            
+                        <!-- Grid row -->
+                        <div class="row rgba-white-light z-depth-1" style="margin-left:1.2em; margin-right:1em; margin-bottom:3rem;max-width:38rem;">
+
+                            <!-- Grid column -->
+                            <div class="col-md-4">
+                
+                                <select class="mdb-select md-form" id="searchSelect">
+                                    <option value="" disabled>검색 칼럼 선택</option>
+                                    <option value="id">아이디</option>
+                                    <option value="name" selected>이름</option>
+                                    <option value="resolution">해상도</option>
+                                </select>
+        
+                            </div>
+                            <div class="col-md-6" style="padding-top:1em;">
+
+                                <form class="form-inline md-form mt-2 ml-2">
+                                    <input class="mt-2" type="text" placeholder="검색어 입력" style="max-width: 24em;" id="searchInput">
+                                    <button type="button" class="btn btn-outline-indigo btn-rounded btn-sm px-2" onclick="searchItem()"><i class="fas fa-search mt-0 indigo-text" style="margin-right:0.5em;"></i>검색</button>
+                                </form>
+                                            
+                            </div>
+                            <div class="col-md-2">
+                                                        
+                                <!-- ProgressBar -->
+                                <div style="display:none; padding-top:1.7em;" id="progress1">
+                                    <div class="preloader-wrapper small active crazy">
+                                        <div class="spinner-layer spinner-blue-only">
+                                            <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+    
+
+                        <div class="card card-cascade narrower z-depth-1" style="margin-left:1em; margin-right:1em; margin-bottom:2em;">
+
+                                <!-- Card image -->
+                            <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+                                
+                                <a href="" class="white-text mx-3">레이아웃 리스트</a>
+                    
+                                <div>
+                                    <span id="totalOutput" class="badge badge-pill badge-primary" style="padding:0.6em; margin-right:1em;">결과 0</span>
+                                    <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="showAddPage()"><i class="fas fa-plus mt-0" style="margin-right:0.5em;"></i>추가</button>
+                                </div>
+                    
+                            </div>
+                            <!-- /Card image -->
+                            
+                            <div class="card-body">
+                                
+                                <div class="table-responsive">
+                                    <!-- Table -->
+                                    <table class="table table-sm mb-0 table-striped" id="table1">
+                        
+                                        <!-- Table head -->
+                                        <thead>
+                                            <tr>
+                                                <th style="width:10%;"></th>
+                                                <th class="th-lg" style="width:20%;"><a>이름 <i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg" style="width:10%;"><a href="">해상도<i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg" style="width:20%;"><a href="">설명<i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg" style="width:10%;"><a href="">레이아웃<i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg" style="width:10%;"><a href="">매핑<i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg text-center" style="width:20%;"><a href="">기능</a></th>
+                                            </tr>
+                                        </thead>
+                                        <!-- Table head -->
+
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <div class="card-footer">
+                                
+                                <div id="pagination"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div id="page1-1-1" style="display:none;">
+
+                    <div class="container-fluid">
+                    
+                        <div class="card" style="margin-left:4em; margin-right:4em; margin-top:2em; margin-bottom:2em;">
+                
+                            <div class="card-header info-color white-text text-center py-4">
+                                <h4 id="page2Title">레이아웃 추가</h4>
+                            </div>
+
+                            <div class="card-body">
+
+                                <form class="text-center" style="color:#757575; padding:4em;" action="#">
+                                
+                                    <div class="md-form mt-3">
+                                        <input type="text" id="nameInput" class="form-control">
+                                        <label for="nameInput">이름</label>
+                                    </div>
+
+                                    <div class="md-form mt-3">
+                                        <input type="text" id="resolutionInput" class="form-control">
+                                        <label for="resolutionInput">해상도</label>
+                                    </div>
+
+                                    <div class="md-form mt-3">
+                                        <input type="text" id="detailsInput" class="form-control">
+                                        <label for="detailsInput">설명</label>
+                                    </div>
+
+                                    <div class="row" style="margin-top:3em;">
+                                        <div class="col-sm-1"></div>
+                                        <div class="col-sm-5">
+                                            <button class="btn btn-outline-primary waves-effect" onclick="saveItem()">저장</button>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <button class="btn btn-outline-secondary waves-effect" onclick="showPage('page1-1')">닫기</button>
+                                        </div>
+                                        <div class="col-sm-1"></div>
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>    
+
+                </div>
+    
+                <!-- Page 1-2 레이아웃 빌더 -->
+                <div id="page1-2" style="display:none;">
+
+                    <div class="container-fluid" style="padding:0;">
+                        <div class="row no-gutters">
+                            <div style="display:inline-block;">
+                                <div id="dropzone1" class="dropzone"></div>
+                            </div>
+                            <div style="display:inline-block; margin-left:1em;">
+                                <div class="palette">
+                                    <div class="palette-row">
+                                        <div id="TextViewWidget" palette="true" widget-type="TextView" class="drag-drop">
+                                            TextView
+                                        </div>
+                                        <div id="ImageViewWidget" palette="true" widget-type="ImageView" class="drag-drop">
+                                            ImageView
+                                        </div>
+                                    </div>
+                                    <div class="palette-row">
+                                        <div id="CircleViewWidget" palette="true" widget-type="CircleView" class="drag-drop">
+                                            CircleView
+                                        </div>
+                                        <div id="QRViewWidget" palette="true" widget-type="QRView" class="drag-drop">
+                                            QRView
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <table id="pg" class="easyui-propertygrid" style="width:240px; height:540px; margin-top:6px;" showGroup="true" scrollbarSize="0"></table>
+                                
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-md-2">
+                                <select class="easyui-combobox" id="device-size" name="device-size" label="Device Size:" labelPosition="top" style="width:140px;">
+                                    <option value="11.6">11.6' (960x640)</option>
+                                    <option value="7.5">7.5' (640x384)</option>
+                                    <option value="6.0">6.0' (600x448)</option>
+                                </select>
+                                <input type="button" value="Change" onclick="changeDeviceSize()">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="button" value="Remove Selected" onclick="removeSelected()">
+                                <input type="button" value="Preview" onclick="convertToImage()">
+                                <input type="button" value="Unselect All" onclick="unselectAll()">
+                                <input type="button" value="z-index Up" onclick="zindexUp()">
+                                <input type="button" value="z-index Down" onclick="zindexDown()">
+                            </div>
+                            <div class="col-md-7">
+                                <input type="button" value="Save to File" onclick="saveToFile()">
+            
+                                <input type="file" id="myFile">
+                                <input type="button" value="Load from File" onclick="loadFromFile()">
+
+                                <input type="hidden" id="layoutId">
+                                <input type="text" id="layoutName" placeholder="Layout Name">
+                                <input type="text" id="layoutDetails" placeholder="Layout Details">
+                                <input type="button" value="Save to DB" onclick="saveToDB()">
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                    <!-- The Modal -->
+                    <div class="modal fade" id="previewModal">
+                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content" style="width:1080px">
+                            
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Preview</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div id="img-container">
+            
+                                    </div>
+                                </div>
+                                
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+                <!-- Page 2-1 단말 대시보드 -->
+                <div id="page2-1" style="display:none;">
+
+                    <div class="container-fluid">
+                         
+                        <!-- Section: Classic admin cards -->
+                        <section class="pb-3">
+
+                            <div class="row mb-1">
+                                <div class="col-md-12">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb grey lighten-4">
+                                            <li class="breadcrumb-item"><i class="fas fa-grip-vertical" style="margin-right:1em;"></i><a href="javascript:showPage('page2-1-1');">대시보드</a></li>
+                                            <li class="breadcrumb-item"><a href="#">암병원</a></li>
+                                            <li class="breadcrumb-item active">C11E</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                
+                            <!-- Grid row -->
+                            <div class="row">
+
+                                <!-- Grid column -->
+                                <div class="col-sm-2 mb-xl-0 mb-4">
+
+                                    <!-- Card Primary -->
+                                    <div class="card classic-admin-card primary-color">
+                                        <div class="card-body">
+                                            <div class="pull-right">
+                                                <h6 class="check"><i class="fas fa-cog fa-spin fa-md" style="margin-right:1rem;"></i>C11E-56-01</h6>
+                                            </div>
+                                            <p class="white-text"><span style="margin-right:1rem;">11'</span><span>800X600</span></p>
+                                            <h6 class="check" style="margin-top:0.5rem;">34012280 김명자</h6>
+                                            <p><span style="margin-right:1em;">금식</span><span>14시 CT검사</span></p>
+                                        </div>
+                                    </div>
+                                    <!-- Card Primary -->
+
+                                </div>
+                                <!-- Grid column -->
+
+                                <!-- Grid column -->
+                                <div class="col-sm-2 mb-xl-0 mb-4">
+
+                                    <!-- Card Primary -->
+                                    <div class="card classic-admin-card primary-color">
+                                        <div class="card-body">
+                                            <div class="pull-right">
+                                                <h6 class="check"><i class="fas fa-cog fa-spin fa-md" style="margin-right:1rem;"></i>C11E-56-02</h6>
+                                            </div>
+                                            <p class="white-text"><span style="margin-right:1rem;">11'</span><span>800X600</span></p>
+                                            <h6 class="check" style="margin-top:0.5rem;">24551609 박현수</h6>
+                                            <p><span style="margin-right:1em;">금식</span></p>
+                                        </div>    
+                                    </div>
+                                    <!-- Card Primary -->
+            
+                                </div>
+                                <!-- Grid column -->
+
+                                <!-- Grid column -->
+                                <div class="col-sm-2 mb-xl-0 mb-4">
+
+                                    <!-- Card Primary -->
+                                    <div class="card classic-admin-card primary-color">
+                                        <div class="card-body">
+                                            <div class="pull-right">
+                                                <h6 class="check"><i class="fas fa-cog fa-spin fa-md" style="margin-right:1rem;"></i>C11E-56-03</h6>
+                                            </div>
+                                            <p class="white-text"><span style="margin-right:1rem;">11'</span><span>800X600</span></p>
+                                            <h6 class="check" style="margin-top:0.5rem;">32550021 김하늘</h6>
+                                            <p><span style="margin-right:1em;">금식</span></p>
+                                        </div>
+                                    </div>
+                                    <!-- Card Primary -->
+            
+                                </div>
+                                <!-- Grid column -->
+
+                                <!-- Grid column -->
+                                <div class="col-sm-2 mb-xl-0 mb-4">
+
+                                    <!-- Card Red -->
+                                    <div class="card classic-admin-card red accent-2">
+                                        <div class="card-body">
+                                            <div class="pull-right">
+                                                <h6 class="check"><i class="fas fa-cog animated heartBeat infinite" style="margin-right:1rem;"></i>C11E-56-04</h6>
+                                            </div>
+                                            <p class="white-text"><span style="margin-right:1rem;">11'</span><span>800X600</span></p>
+                                            <h6 class="check" style="margin-top:0.5rem;">24108778 박한수</h6>
+                                            <p><span>Battery low : 10%</span></p>
+                                        </div>
+                                    </div>
+                                    <!-- Card Red -->
+
+                                </div>
+                                <!-- Grid column -->
+
+
+                                <!-- Grid column -->
+                                <div class="col-sm-2 mb-xl-0 mb-4">
+
+                                    <!-- Card Primary -->
+                                    <div class="card classic-admin-card primary-color">
+                                        <div class="card-body">
+                                            <div class="pull-right">
+                                                <h6 class="check"><i class="fas fa-cog fa-spin fa-md" style="margin-right:1rem;"></i>C11E-56-05</h6>
+                                            </div>
+                                            <p class="white-text"><span style="margin-right:1rem;">11'</span><span>800X600</span></p>
+                                            <h6 class="check" style="margin-top:0.5rem;">16006443 한지수</h6>
+                                            <p><span>10시 내시경</span></p>
+                                        </div>
+                                    </div>
+                                    <!-- Card Primary -->
+            
+                                </div>
+                                <!-- Grid column -->
+        
+                                
+                                <!-- Grid column -->
+                                <div class="col-sm-2 mb-xl-0 mb-4">
+
+                                    <!-- Card Primary -->
+                                    <div class="card classic-admin-card primary-color">
+                                        <div class="card-body">
+                                            <div class="pull-right">
+                                                <h6 class="check"><i class="fas fa-cog fa-spin fa-md" style="margin-right:1rem;"></i>C11E-56-06</h6>
+                                            </div>
+                                            <p class="white-text"><span style="margin-right:1rem;">11'</span><span>800X600</span></p>
+                                            <h6 class="check" style="margin-top:0.5rem;">38103412 박현진</h6>
+                                            <p><span>금식</span></p>
+                                        </div>
+                                    </div>
+                                    <!-- Card Primary -->
+            
+                                </div>
+                                <!-- Grid column -->
+        
+                            </div>
+                            <!-- Grid row -->
+
+
+                            <!-- Grid row -->
+                            <div class="row" style="margin-top:2rem;">
+
+                                <!-- Grid column -->
+                                <div class="col-sm-2 mb-xl-0 mb-4">
+
+                                    <!-- Card Primary -->
+                                    <div class="card classic-admin-card primary-color">
+                                    <div class="card-body">
+                                        <div class="pull-right">
+                                            <h6 class="check"><i class="fas fa-cog fa-spin fa-md" style="margin-right:1rem;"></i>C11E-57-01</h6>
+                                        </div>
+                                        <p class="white-text"><span style="margin-right:1rem;">11'</span><span>800X600</span></p>
+                                        <h6 class="check" style="margin-top:0.5rem;">26092234 이수민</h6>
+                                        <p><span>금식</span></p>
+                                    </div>
+                                    </div>
+                                    <!-- Card Primary -->
+
+                                </div>
+                                <!-- Grid column -->
+    
+                                <!-- Grid column -->
+                                <div class="col-sm-2 mb-xl-0 mb-4">
+
+                                    <!-- Card Primary -->
+                                    <div class="card classic-admin-card primary-color">
+                                    <div class="card-body">
+                                        <div class="pull-right">
+                                            <h6 class="check"><i class="fas fa-cog fa-spin fa-md" style="margin-right:1rem;"></i>C11E-57-02</h6>
+                                        </div>
+                                        <p class="white-text"><span style="margin-right:1rem;">11'</span><span>800X600</span></p>
+                                        <h6 class="check" style="margin-top:0.5rem;">28341109 박완규</h6>
+                                        <p><span>금식</span></p>
+                                    </div>
+                                    </div>
+                                    <!-- Card Primary -->
+
+                                </div>
+                                <!-- Grid column -->
+    
+                            </div>
+
+                        </section>
+                        <!-- Section: Classic admin cards -->
+
+                    </div>
+                </div>
+                
+                <div id="page2-1-1" style="display:none;">
+
+                    <div class="container-fluid">
+                                        
+                        <!-- Section: Cards color -->
+                        <section class="mt-2">
+
+                            <div class="row mb-1">
+                                <div class="col-md-12">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb grey lighten-4">
+                                            <li class="breadcrumb-item"><i class="fas fa-grip-vertical" style="margin-right:1em;"></i><a href="javascript:showPage('page2-1-1');">대시보드</a></li>
+                                            <li class="breadcrumb-item"><a href="#">암병원</a></li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                
+                            <!-- Grid row -->
+                            <div class="row">
+
+                            <!-- Grid column -->
+                            <div class="col-xl-3 col-md-3 col-sm-4 mb-4">
+
+                                <!-- Panel -->
+                                <div class="card">
+
+                                <div class="card-header white-text red accent-2">
+                                    C11E
+                                </div>
+ 
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <a class="text-info">
+                                        <h6 class="py-1 mt-3 font-weight-500"><i class="fas fa-laptop mr-2"></i>Normal: <span>26</span></h6>
+                                    </a>
+
+                                    <a class="text-danger">
+                                        <h6 class="py-1 mt-3 font-weight-500"><i class="fas fa-laptop mr-2"></i>Alert: <span>1</span></h6>
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar blue" role="progressbar" style="width: 95%" aria-valuenow="95"
+                                            aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <!-- Text -->
+                                    <p class="font-small grey-text">Device health (95%)</p>
+
+                                    <button type="button" class="btn btn-outline-primary btn-rounded btn-sm px-2 float-right" onclick="showPage('page2-1')">상세보기</button>
+                                </div>
+                                <!-- Card content -->
+
+                                </div>
+                                <!-- Panel -->
+
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-xl-3 col-md-3 col-sm-4 mb-4">
+
+                                <!-- Panel -->
+                                <div class="card">
+
+                                <div class="card-header white-text primary-color">
+                                    C10E
+                                </div>
+
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <a class="text-info">
+                                        <h6 class="py-1 mt-3 font-weight-500"><i class="fas fa-laptop mr-2"></i>Normal: <span>24</span></h6>
+                                    </a>
+
+                                    <a class="text-danger">
+                                        <h6 class="py-1 mt-3 font-weight-500"><i class="fas fa-laptop mr-2"></i>Alert: <span>0</span></h6>
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar blue" role="progressbar" style="width: 95%" aria-valuenow="95"
+                                            aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <!-- Text -->
+                                    <p class="font-small grey-text">Device health (95%)</p>
+                                    
+                                    <button type="button" class="btn btn-outline-primary btn-rounded btn-sm px-2 float-right" onclick="showPage('page2-1')">상세보기</button>
+                                </div>
+                                <!-- Card content -->
+    
+                                </div>
+                                <!-- Panel -->
+
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-xl-3 col-md-3 col-sm-4 mb-4">
+
+                                <!-- Panel -->
+                                <div class="card">
+
+                                <div class="card-header white-text primary-color">
+                                    C10W
+                                </div>
+ 
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <a class="text-info">
+                                        <h6 class="py-1 mt-3 font-weight-500"><i class="fas fa-laptop mr-2"></i>Normal: <span>27</span></h6>
+                                    </a>
+
+                                    <a class="text-danger">
+                                        <h6 class="py-1 mt-3 font-weight-500"><i class="fas fa-laptop mr-2"></i>Alert: <span>0</span></h6>
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar blue" role="progressbar" style="width: 95%" aria-valuenow="95"
+                                            aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <!-- Text -->
+                                    <p class="font-small grey-text">Device health (95%)</p>
+                                    
+                                    <button type="button" class="btn btn-outline-primary btn-rounded btn-sm px-2 float-right" onclick="showPage('page2-1')">상세보기</button>
+                                </div>
+                                <!-- Card content -->
+    
+                                </div>
+                                <!-- Panel -->
+
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-xl-3 col-md-3 col-sm-4 mb-4">
+
+                                <!-- Panel -->
+                                <div class="card">
+                                <div class="card-header white-text primary-color">
+                                    C09E
+                                </div>
+ 
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <a class="text-info">
+                                        <h6 class="py-1 mt-3 font-weight-500"><i class="fas fa-laptop mr-2"></i>Normal: <span>19</span></h6>
+                                    </a>
+
+                                    <a class="text-danger">
+                                        <h6 class="py-1 mt-3 font-weight-500"><i class="fas fa-laptop mr-2"></i>Alert: <span>0</span></h6>
+                                    </a>
+
+                                    <div class="progress">
+                                        <div class="progress-bar blue" role="progressbar" style="width: 95%" aria-valuenow="95"
+                                            aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <!-- Text -->
+                                    <p class="font-small grey-text">Device health (95%)</p>
+                                    
+                                    <button type="button" class="btn btn-outline-primary btn-rounded btn-sm px-2 float-right" onclick="showPage('page2-1')">상세보기</button>
+                                </div>
+                                <!-- Card content -->
+    
+                                </div>
+                                <!-- Panel -->
+
+
+                            </div>
+                            <!-- Grid column -->
+                            </div>
+                            <!-- Grid row -->
+
+                        </section>
+                        <!-- Section: Cards color -->
+                        
+                    </div>    
+
+                </div>
+
+
+                <!-- Page 2-2 단말 리스트 -->
+                <div id="page2-2">
+                    <div class="container-fluid">
+                        
+                        <div class="row mb-1" style="margin-top:-2em; margin-left:1em; margin-right:1em;">
+                            <div class="col-md-12">
+                                <h4 class="mt-5 mb-3 font-weight-bold dark-grey-text">단말 리스트</h4>
+                            
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb grey lighten-4">
+                                        <li class="breadcrumb-item"><i class="fas fa-grip-vertical" style="margin-right:1em;"></i><a href="#">Device</a></li>
+                                        <li class="breadcrumb-item active">단말 리스트</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+            
+                        <!-- Grid row -->
+                        <div class="row rgba-white-light z-depth-1" style="margin-left:1.2em; margin-right:1em; margin-bottom:3rem;max-width:38rem;">
+
+                            <!-- Grid column -->
+                            <div class="col-md-4">
+                
+                                <select class="mdb-select md-form" id="searchDeviceSelect">
+                                    <option value="" disabled>검색 칼럼 선택</option>
+                                    <option value="id">아이디</option>
+                                    <option value="name" selected>이름</option>
+                                    <option value="resolution">해상도</option>
+                                </select>
+        
+                            </div>
+                            <div class="col-md-6" style="padding-top:1em;">
+
+                                <form class="form-inline md-form mt-2 ml-2">
+                                    <input class="mt-2" type="text" placeholder="검색어 입력" style="max-width: 24em;" id="searchDeviceInput">
+                                    <button type="button" class="btn btn-outline-indigo btn-rounded btn-sm px-2" onclick="searchDeviceItem()"><i class="fas fa-search mt-0 indigo-text" style="margin-right:0.5em;"></i>검색</button>
+                                </form>
+                                            
+                            </div>
+                            <div class="col-md-2">
+                                                        
+                                <!-- ProgressBar -->
+                                <div style="display:none; padding-top:1.7em;" id="progressDevice1">
+                                    <div class="preloader-wrapper small active crazy">
+                                        <div class="spinner-layer spinner-blue-only">
+                                            <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+    
+
+                        <div class="card card-cascade narrower z-depth-1" style="margin-left:1em; margin-right:1em; margin-bottom:2em;">
+
+                                <!-- Card image -->
+                            <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+                                
+                                <a href="" class="white-text mx-3">단말 리스트</a>
+                    
+                                <div>
+                                    <span id="totalDeviceOutput" class="badge badge-pill badge-primary" style="padding:0.6em; margin-right:1em;">결과 0</span>
+                                    <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="showDeviceAddPage()"><i class="fas fa-plus mt-0" style="margin-right:0.5em;"></i>추가</button>
+                                </div>
+                    
+                            </div>
+                            <!-- /Card image -->
+                            
+                            <div class="card-body">
+                                
+                                <div class="table-responsive">
+                                    <!-- Table -->
+                                    <table class="table table-sm mb-0 table-striped" id="tableDevice1">
+                        
+                                        <!-- Table head -->
+                                        <thead>
+                                            <tr>
+                                                <th style="width:10%;"></th>
+                                                <th class="th-lg" style="width:20%;"><a>이름 <i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg" style="width:5%;"><a href="">그룹<i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg" style="width:5%;"><a href="">유형<i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg" style="width:5%;"><a href="">크기<i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg" style="width:5%;"><a href="">상태<i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg" style="width:10%;"><a href="">레이아웃<i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg" style="width:10%;"><a href="">데이터<i class="fas fa-sort ml-1"></i></a></th>
+                                                <th class="th-lg text-center" style="width:30%;"><a href="">기능</a></th>
+                                            </tr>
+                                        </thead>
+                                        <!-- Table head -->
+
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <div class="card-footer">
+                                
+                                <div id="paginationDevice"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div id="page2-2-1" style="display:none;">
+
+                    <div class="container-fluid">
+                    
+                        <div class="card" style="margin-left:4em; margin-right:4em; margin-top:2em; margin-bottom:2em;">
+                
+                            <div class="card-header info-color white-text text-center py-4">
+                                <h4 id="page2-2-1Title">단말 추가</h4>
+                            </div>
+
+                            <div class="card-body">
+
+                                <form class="text-center" style="color:#757575; padding:4em;" action="#">
+                                
+                                    <div class="md-form mt-3">
+                                        <input type="text" id="deviceNameInput" class="form-control">
+                                        <label for="deviceNameInput">이름</label>
+                                    </div>
+
+                                    <div class="md-form mt-3">
+                                        <input type="text" id="deviceGroupInput" class="form-control">
+                                        <label for="deviceGroupInput">그룹</label>
+                                    </div>
+
+                                    <div class="md-form mt-3">
+                                        <input type="text" id="deviceTypeInput" class="form-control">
+                                        <label for="deviceTypeInput">유형</label>
+                                    </div>
+
+                                    <div class="md-form mt-3">
+                                        <input type="text" id="deviceSizeInput" class="form-control">
+                                        <label for="deviceSizeInput">크기</label>
+                                    </div>
+    
+                                    <div class="md-form mt-3">
+                                        <input type="text" id="deviceResolutionInput" class="form-control">
+                                        <label for="deviceResolutionInput">해상도</label>
+                                    </div>
+            
+                                    <div class="md-form mt-3">
+                                        <input type="text" id="deviceStatusCodeInput" class="form-control">
+                                        <label for="deviceStatusCodeInput">상태 코드</label>
+                                    </div>
+        
+                                    <div class="md-form mt-3">
+                                        <input type="text" id="deviceStatusMessageInput" class="form-control">
+                                        <label for="deviceStatusMessageInput">상태 메시지</label>
+                                    </div>
+            
+                                    <div class="row" style="margin-top:3em;">
+                                        <div class="col-sm-1"></div>
+                                        <div class="col-sm-5">
+                                            <button class="btn btn-outline-primary waves-effect" onclick="saveDeviceItem()">저장</button>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <button class="btn btn-outline-secondary waves-effect" onclick="showPage('page2-2')">닫기</button>
+                                        </div>
+                                        <div class="col-sm-1"></div>
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>    
+
+                </div>
+    
+
+
+            </main>
+            <!--Main Layout-->
+
+
+
+
+        </div>            
+
+        
+        <!--Modal: modalConfirmDelete-->
+        <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content text-center">
+                    <!--Header-->
+                    <div class="modal-header d-flex justify-content-center">
+                        <p class="heading">레이아웃 삭제 확인</p>
+                    </div>
+
+                    <!--Body-->
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-3">
+                                <p></p>
+                                <p class="text-center"><i class="fas fa-times fa-4x animated rotateIn"></i></i></p>
+                            </div>
+                    
+                            <div class="col-9 align-self-center">
+                                <p></p>
+                                <p>선택한 항목을 삭제하시겠습니까?</p>
+                            </div>
+                        </div>
+ 
+                    </div>
+
+                    <!--Footer-->
+                    <div class="modal-footer flex-center">
+                        <a href="" class="btn btn-info waves-effect" data-dismiss="modal" onclick="requestRemove()"> 예 </a>
+                        <a type="button" class="btn  btn-outline-info waves-effect" data-dismiss="modal">아니오</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: modalConfirmDelete-->
+
+        
+        <!--Modal: modalDeviceConfirmDelete-->
+        <div class="modal fade" id="modalDeviceConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content text-center">
+                    <!--Header-->
+                    <div class="modal-header d-flex justify-content-center">
+                        <p class="heading">단말 삭제 확인</p>
+                    </div>
+
+                    <!--Body-->
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-3">
+                                <p></p>
+                                <p class="text-center"><i class="fas fa-times fa-4x animated rotateIn"></i></i></p>
+                            </div>
+                    
+                            <div class="col-9 align-self-center">
+                                <p></p>
+                                <p>선택한 항목을 삭제하시겠습니까?</p>
+                            </div>
+                        </div>
+ 
+                    </div>
+
+                    <!--Footer-->
+                    <div class="modal-footer flex-center">
+                        <a href="" class="btn btn-info waves-effect" data-dismiss="modal" onclick="requestDeviceRemove()"> 예 </a>
+                        <a type="button" class="btn  btn-outline-info waves-effect" data-dismiss="modal">아니오</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: modalConfirmDelete-->
+
+        
+        <!--Modal: modalDeviceConfirmApply-->
+        <div class="modal fade" id="modalDeviceConfirmApply" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content text-center">
+                    <!--Header-->
+                    <div class="modal-header d-flex justify-content-center">
+                        <p class="heading">단말 데이터 적용 확인</p>
+                    </div>
+
+                    <!--Body-->
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-3">
+                                <p></p>
+                                <p class="text-center"><i class="fas fa-times fa-4x animated rotateIn"></i></i></p>
+                            </div>
+                    
+                            <div class="col-9 align-self-center">
+                                <p></p>
+                                <p>선택한 단말에 데이터를 적용하시겠습니까?</p>
+                            </div>
+                        </div>
+ 
+                    </div>
+
+                    <!--Footer-->
+                    <div class="modal-footer flex-center">
+                        <a href="" class="btn btn-info waves-effect" data-dismiss="modal" onclick="requestDeviceDataApply()"> 예 </a>
+                        <a type="button" class="btn  btn-outline-info waves-effect" data-dismiss="modal">아니오</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: modalConfirmDelete-->
+
+
+
+        <!-- The Modal -->
+        <div class="modal fade" id="mappingModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content" style="width:1080px">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Mapping</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div id="JsonContainer" style="width:100%; height:30em;">
+
+                        </div>
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="saveLayoutMapping()">Save</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+            
+    
+        <!-- The Modal -->
+        <div class="modal fade" id="deviceDataModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content" style="width:1080px">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Device Data</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div id="JsonContainer2" style="width:100%; height:30em;">
+
+                        </div>
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="saveDeviceData()">Save</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+            
+
+        <!-- The Modal -->
+        <div class="modal fade" id="modalDataInput" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content" style="width:1080px">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modalDataInputTitle">Data Input</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div id="inputContainer" style="width:100%; height:30em; overflow:auto;">
+
+                        </div>
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="saveDeviceDataInput()">Save</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+               
+        
+
+
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="/mdb/js/jquery-3.4.1.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="/mdb/js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="/mdb/js/bootstrap.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="/mdb/js/mdb.min.js"></script>
+
+        <!-- Axios -->
+        <script src="/js/axios.min.js"></script>
+
+
+        <!-- Interact.js -->
+        <script src="/js/interact.min.js"></script>
+        
+        <!-- EasyUI -->
+        <link rel="stylesheet" type="text/css" href="/easyui/themes/default/easyui.css">
+	    <link rel="stylesheet" type="text/css" href="/easyui/themes/icon.css">
+        <script src="/easyui/jquery.easyui.min.js"></script>
+        <script src="/easyui/plugins/jquery.color.js"></script>
+
+        <!-- DomToImage -->
+        <script src="/js/dom-to-image.min.js"></script>
+
+        <!-- Base64 -->
+        <script src="/js/base64js.min.js"></script>
+
+        
+        <!-- JSON 편집기 -->
+        <link href="/css/jsoneditor.min.css" rel="stylesheet" type="text/css">
+        <script src="/js/jsoneditor.min.js"></script>
+    
+        <!-- QR Code -->       
+        <script src="/js/qrcode.js"></script>
+        <script src="/js/qrcode_UTF8.js"></script>
+ 
+
+        <script>
+            const pageNames = [
+                'page1-1',
+                'page1-1-1',
+                'page1-2',
+                'page2-1',
+                'page2-1-1',
+                'page2-2',
+                'page2-2-1'
+            ]
+
+            var mode;
+            var selected;
+            var search;
+            var searchValue;
+
+            //===== Layout Editor =====//            
+            let selectedItem = [];
+
+
+            var jsonEditor;
+            var jsonEditor2;
+
+
+            $(document).ready(function() {
+                console.log('ready 호출됨');
+
+                //replaceAll prototype 선언
+                String.prototype.replaceAll = function(org, dest) {
+                    return this.split(org).join(dest);
+                }
+
+                //===== Layout List =====//
+
+                // SideNav Initialization
+                $(".button-collapse").sideNav();
+
+                
+                new WOW().init();
+
+                $('.mdb-select').materialSelect();
+
+                showPage('page1-1');
+
+                requestList(1, 10);
+     
+                // Json editor
+                initJsonEditor();
+        
+                // Json editor
+                initJsonEditor2();
+        
+                //===== Layout List END =====//
+
+
+                //===== Layout Editor =====//
+
+                // Color Editor
+                $.extend($.fn.datagrid.defaults.editors, {
+                    color: {
+                        init: function(container, options){
+                            var input = $('<input class="easyui-color">').appendTo(container);
+                            input.color(options);
+                            return input;
+                        },
+                        destroy: function(target){
+                            $(target).color('destroy');
+                        },
+                        getValue: function(target){
+                            return $(target).color('getValue');
+                        },
+                        setValue: function(target, value){
+                            $(target).color('setValue', value);
+                        },
+                        resize: function(target, width){
+                            $(target).color('resize', width);
+                        }
+                    }
+                })
+ 
+                const data = []
+
+                $('#pg').propertygrid('loadData', data);
+                $('#pg').propertygrid({
+                    onSelect: function (index, row) {
+                        console.log('onSelect -> ' + index + ', ' + JSON.stringify(row));
+                    },
+                    onBeginEdit:function(index,row){
+                        var pg = $(this);
+                        var ed = pg.propertygrid('getEditors',index)[0];
+                        if (ed){
+                            var input;
+                            if ($(ed.target).hasClass('textbox-f')){
+                                input = $(ed.target).textbox('textbox');
+                            } else {
+                                input = $(ed.target);
+                            }
+                            input.bind('keydown', function(e) {
+                                console.log('keydown -> ' + e.keyCode);
+
+                                if (e.keyCode == 9) {	// tab key
+                                    let cell = pg.propertygrid('options').finder.getTr(pg[0], index+1).find('td[field="value"] div.datagrid-cell');
+                                    console.log(cell);
+                                    if (cell.length == 0) {
+                                        cell = pg.propertygrid('options').finder.getTr(pg[0], index-1).find('td[field="value"] div.datagrid-cell');
+                                    }
+
+                                    cell.trigger('click');
+                                    return false;
+                                } else if (e.keyCode == 13) {	// enter key
+                                    let cell = pg.propertygrid('options').finder.getTr(pg[0], index+1).find('td[field="value"] div.datagrid-cell');
+                                    console.log(cell);
+                                    if (cell.length == 0) {
+                                        cell = pg.propertygrid('options').finder.getTr(pg[0], index-1).find('td[field="value"] div.datagrid-cell');
+                                    }
+                                    
+                                    cell.trigger('click');
+                                    return false;
+                                }
+                            })
+                        }
+                    },
+                    onAfterEdit:function(index, row){
+                        console.log('onAfterEdit -> ' + index + ', ' + JSON.stringify(row));
+
+                        applyPropertyChange(selectedItem[0], row);
+                    }
+
+                });
+ 
+                // make dialog draggable
+                $('.modal-dialog').draggable({
+    	            "handle":".modal-header"
+                });
+ 
+
+                //===== Layout Editor END =====//
+            });
+
+            // close sidenav
+            function sideMenuSelected(elem) {
+                console.log('sideMenuSelected called');
+
+                // remove all active class attribute
+                $('.sideMenuItem').removeClass('active');
+
+                elem.classList.add('active');
+
+                // 가로 크기 체크
+                var curContainer = $('#container');
+                var width = curContainer.width();
+                if (width <= 1440) {
+                    $('#hamburgerIcon').trigger('click');
+                    //$('#slide-out').attr('style','transform: translateX(-100%);transition:  all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94)');
+                } else {
+                    //$('#sidenav-overlay').remove();
+                    $('#sidenav-overlay').hide();
+                }
+                
+            }
+
+
+            function initJsonEditor() {
+                // create the editor
+                var JsonContainer = document.getElementById("JsonContainer");
+                var options = {
+                    mode: 'code',
+                    modes: ['code', 'tree'], // allowed modes
+                    onError: function (err) {
+                        alert(err.toString());
+                    },
+                    onModeChange: function (newMode, oldMode) {
+                        console.log('Mode switched from', oldMode, 'to', newMode);
+                    }
+                };
+                jsonEditor = new JSONEditor(JsonContainer, options);
+                jsonEditor.set({});
+                //jsonEditor.expandAll();
+                 
+            }
+            
+
+            function initJsonEditor2() {
+                // create the editor
+                var JsonContainer2 = document.getElementById("JsonContainer2");
+                var options = {
+                    mode: 'code',
+                    modes: ['code', 'tree'], // allowed modes
+                    onError: function (err) {
+                        alert(err.toString());
+                    },
+                    onModeChange: function (newMode, oldMode) {
+                        console.log('Mode switched from', oldMode, 'to', newMode);
+                    }
+                };
+                jsonEditor2 = new JSONEditor(JsonContainer2, options);
+                jsonEditor2.set({});
+                //jsonEditor2.expandAll();
+                
+            }
+            
+
+
+            //===== Baroboard Layout =====//
+            function requestList(page, perPage) {
+                console.log('requestList 호출됨 : ' + page + ', ' + perPage);
+ 
+                requestSearch(page, perPage);
+            }
+
+            function requestSearch(page, perPage) {
+                console.log('requestSearch 호출됨');
+
+                var params = '?page=' + page
+                            + '&perPage=' + perPage;
+
+                if (searchValue) {
+                    params += '&search=' + search;
+                    params += '&searchValue=' + searchValue;
+                }
+                 
+                // show progressbar
+                $('#progress1').show();
+
+                axios({
+                    method: 'get',
+                    url: '/baroboard/layout' + params,
+                    responseType: 'json'
+                }).then(function(response) {
+                    // hide progressbar
+                    $('#progress1').hide();
+
+                    //console.log('응답 -> ' + JSON.stringify(response));
+
+                    // 테이블에서 헤더 아이템만 빼고 모두 삭제
+                    var table1 = document.getElementById('table1');
+                    var firstElementChild = table1.firstElementChild;
+                    table1.innerHTML = '';
+                    table1.append(firstElementChild);
+
+                    // 테이블에 응답 결과 추가
+                    response.data.output.body.forEach(function(item, index) {
+                        addItem(item.id, item.name, item.resolution, item.details, item.data, item.mapping);
+                    })
+
+                    // 페이지 번호 구성하기
+                    makePage(response.data.output.header);
+
+                    // 검색 정보 설정
+                    $('#searchSelect').val(search);
+                    $('#searchInput').val(searchValue);
+
+                    // 총 갯수 표시
+                    $('#totalOutput').text('결과 ' + response.data.output.header.total);
+
+                }).catch(function(err) {
+                    // hide progressbar
+                    $('#progress1').hide();
+
+                    console.error('Error -> ' + err);
+
+                    toastr.error('요청을 처리할 수 없습니다. 잠시 후 다시 시도해주세요. <br>Error -> ' + err, {timeOut: 3000});
+                });
+            }
+
+            function makePage(header) {
+
+                if (header.page) {
+
+                    var page = Number(header.page);
+                    var perPage = Number(header.perPage);
+                    var total = header.total;
+                    var pageCount = Math.ceil(total / perPage);
+
+                    console.log('page -> ' + page + ', ' + perPage + ', ' + total + ', ' + pageCount);
+
+                    var pagination = '';
+                    
+                    // 페이지 시작 태그
+                    pagination += '<nav aria-label="Page navigation">';
+                    pagination += '  <ul class="pagination pagination-circle pg-blue justify-content-end">';
+
+                    // 처음으로, 이전 버튼 태그
+                    if (page > 1) {
+                        pagination += '    <li class="page-item">';
+                        pagination += '      <a class="page-link" href="javascript:requestList(1, ' + perPage + ')">First</a>';
+                        pagination += '    </li>';
+                        pagination += '    <li class="page-item">';
+                        pagination += '      <a class="page-link" aria-label="Previous" href="javascript:requestList(' + (page - 1) + ', ' + perPage + ')">';
+                        pagination += '        <span aria-hidden="true">&laquo;</span>';
+                        pagination += '        <span class="sr-only">Previous</span>';
+                        pagination += '      </a>';
+                        pagination += '    </li>';
+                    } else {
+                        pagination += '    <li class="page-item disabled">';
+                        pagination += '      <a class="page-link">First</a>';
+                        pagination += '    </li>';
+                        pagination += '    <li class="page-item disabled">';
+                        pagination += '      <a class="page-link" aria-label="Previous">';
+                        pagination += '        <span aria-hidden="true">&laquo;</span>';
+                        pagination += '        <span class="sr-only">Previous</span>';
+                        pagination += '      </a>';
+                        pagination += '    </li>';
+                    }
+
+                    // 페이지 번호 버튼
+                    var initial = Math.floor(page / 10) * 10;
+                    var max = pageCount - initial;
+                    if (max > 10) {
+                        max = initial + 10;
+                    } else {
+                        max = initial + max;
+                    }
+                    console.log('initial : ' + initial + ', max : ' + max);
+
+                    for (var i = initial; i < max; i++) {
+                        if ((i+1) != page) {
+                            pagination += '    <li class="page-item"><a class="page-link" href="javascript:requestList(' + (i+1) + ', ' + perPage + ')">' + (i+1) + '</a></li>';
+                        } else {
+                            pagination += '    <li class="page-item active"><a class="page-link">' + (i+1) + '</a></li>';
+                        }
+                    }
+
+                    // 끝으로, 다음 버튼 태그
+                    if (page < pageCount) {
+                        pagination += '    <li class="page-item">';
+                        pagination += '      <a class="page-link" aria-label="Next" href="javascript:requestList(' + (page+1) + ', ' + perPage + ')">';
+                        pagination += '        <span aria-hidden="true">&raquo;</span>';
+                        pagination += '        <span class="sr-only">Next</span>';
+                        pagination += '      </a>';
+                        pagination += '    </li>';
+                        pagination += '    <li class="page-item"><a class="page-link" href="javascript:requestList(' + pageCount + ', ' + perPage + ')">Last</a></li>';
+                    } else {
+                        pagination += '    <li class="page-item disabled">';
+                        pagination += '      <a class="page-link" aria-label="Next">';
+                        pagination += '        <span aria-hidden="true">&raquo;</span>';
+                        pagination += '        <span class="sr-only">Next</span>';
+                        pagination += '      </a>';
+                        pagination += '    </li>';
+                        pagination += '    <li class="page-item disabled"><a class="page-link">Last</a></li>';
+                    }
+
+                    // 페이지 끝 태그
+                    pagination += '  </ul>';
+                    pagination += '</nav>';
+
+                    $('#pagination').html(pagination);
+
+                }
+
+            }
+
+
+            function requestAdd(name, resolution, details, layoutId, data) {
+                console.log('requestAdd 호출됨');
+
+                var params = {
+                    name: name,
+                    resolution: resolution,
+                    details: details
+                }
+
+                if (layoutId) {
+                    params.id = layoutId;
+                }
+
+                if (data) {
+                    params.data = data;
+                }
+
+                axios({
+                    method: 'post',
+                    url: '/baroboard/layout',
+                    data: params,
+                    responseType: 'json'
+                }).then(function(response) {
+                    console.log('응답 -> ' + JSON.stringify(response));
+
+                    if (response.data.output.body.affectedRows > 0) {
+                        console.log('추가 성공');
+                        
+                        toastr.info('정상적으로 추가되었습니다.');
+
+                        requestList(1, 10);
+                    }
+
+                }).catch(function(err) {
+                    console.error('Error -> ' + err);
+                });
+            }
+
+            function requestModify(id, name, resolution, details, data) {
+                console.log('requestModify 호출됨 : ' + id + ', ' + name + ', ' + resolution + ', ' + details);
+
+                var params = {
+                    name: name,
+                    resolution: resolution,
+                    details: details
+                }
+
+                if (data) {
+                    params.data = data;
+                }
+
+                axios({
+                    method: 'put',
+                    url: '/baroboard/layout/' + id,
+                    data: params,
+                    responseType: 'json'
+                }).then(function(response) {
+                    //console.log('응답 -> ' + JSON.stringify(response));
+
+                    if (response.data.output.body.affectedRows > 0) {
+                        console.log('수정 성공');
+
+                        toastr.info('정상적으로 수정되었습니다.');
+
+                        requestList(1, 10);
+                    }
+
+                }).catch(function(err) {
+                    console.error('Error -> ' + err);
+                });
+            }
+
+            function requestRemove(id) {
+                console.log('requestRemove 호출됨 : ' + id);
+ 
+                axios({
+                    method: 'delete',
+                    url: '/baroboard/layout/' + selected,
+                    responseType: 'json'
+                }).then(function(response) {
+                    console.log('응답 -> ' + JSON.stringify(response));
+
+                    if (response.data.output.body.affectedRows > 0) {
+                        console.log('삭제 성공');
+
+                        $('#toast-container').attr('class','md-toast-bottom-right');
+                        toastr.info('정상적으로 삭제되었습니다.');
+
+                        requestList(1, 10);
+                    }
+
+                }).catch(function(err) {
+                    console.error('Error -> ' + err);
+                });
+            }
+
+
+            function requestLayoutMappingUpdate(id, mapping) {
+                console.log('requestLayoutMappingUpdate 호출됨 : ' + id + ', ' + mapping);
+
+                const params = {
+                    id: id,
+                    mapping: mapping
+                }
+
+                axios({
+                    method: 'post',
+                    url: '/baroboard/layout/mapping/update',
+                    data: params,
+                    responseType: 'json'
+                }).then(function(response) {
+                    console.log('응답 -> ' + JSON.stringify(response));
+
+                    if (response.data.output.affectedRows > 0) {
+                        console.log('수정 성공');
+
+                        toastr.info('정상적으로 수정되었습니다.');
+
+                        requestList(1, 10);
+                    }
+
+                }).catch(function(err) {
+                    console.error('Error -> ' + err);
+                });
+            }
+
+
+
+            function showPage(pageName) {
+                for (let i = 0; i < pageNames.length; i++) {
+                    $('#' + pageNames[i]).hide();
+                }
+
+                $('#' + pageName).show();
+            }
+
+            function showAddPage() {
+                mode = 'add';
+
+                $('#page2Title').text('레이아웃 추가');
+                
+                $('#nameInput').val('');
+                $('#resolutionInput').val('');
+                $('#detailsInput').val('');
+                
+                showPage('page1-1-1');
+            }
+
+            function searchItem() {
+                search = $('#searchSelect').val();
+                searchValue = $('#searchInput').val();
+                console.log('search : ' + search + ', ' + searchValue);
+
+                requestSearch(1, 10);
+            }
+
+            function saveItem() {
+                if (mode == 'add') {
+                    addInputItem();
+                } else if (mode == 'modify') {
+                    modifyInputItem();
+                }
+
+                showPage('page1-1');
+            }
+
+            function addInputItem() {
+                var name = $('#nameInput').val();
+                var resolution = $('#resolutionInput').val();
+                var details = $('#detailsInput').val();
+                
+                requestAdd(name, resolution, details);
+
+            }
+
+            function addItem(id, name, resolution, details, data, mapping) {
+                console.log('addItem 호출됨 : ' + id + ', ' + name + ', ' + resolution + ', ' + details);
+ 
+                var html = '<tr id="item' + id + '">'
+                         + '    <td class="text-left align-middle" style="width:10%;">'
+                         + '      <img src="/images/layout_48.png" style="width:2em;">'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:20%;">'
+                         + '      <span id="item' + id + '_name">' + name + '</span>'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:10%;">'
+                         + '      <span id="item' + id + '_resolution">' + resolution + '</span>'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:20%;">'
+                         + '      <span id="item' + id + '_details">' + details + '</span>'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:10%;">'
+                         + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="showLayoutBuilder(\'' + id + '\', \'' + name + '\', \'' + resolution + '\', \'' + details + '\', \'' + data + '\')"><i class="fas fa-edit fa-lg blue-text"></i></button>'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:10%;">'
+                         + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="showLayoutMapping(\'' + id + '\', \'' + name + '\', \'' + resolution + '\', \'' + details + '\', \'' + data + '\', \'' + mapping + '\')"><i class="fas fa-edit fa-lg blue-text"></i></button>'
+                         + '    </td>'
+                         + '    <td class="text-center align-middle" style="width:20%;">'
+                         + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="showModifyPage(\'' + id + '\', \'' + name + '\', \'' + resolution + '\', \'' + details + '\')"><i class="fas fa-edit fa-lg cyan-text"></i></button>'
+                         + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="deleteItem(\'' + id + '\')"><i class="fas fa-trash fa-lg red-text"></i></button>'
+                         + '    </td>'
+                         + '</tr>';
+
+                $('#table1').append(html); 
+                 
+            }
+
+            function showModifyPage(id, name, resolution, details) {
+                console.log('showModifyPage 호출됨 : ' + id + ', ' + name + ', ' + resolution + ', ' + details);
+
+                mode = 'modify';
+                selected = id;
+
+                $('#page2Title').text('레이아웃 수정');
+
+                $('#nameInput').val(name);
+                $('#resolutionInput').val(resolution);
+                $('#detailsInput').val(details);
+               
+                showPage('page1-1-1');
+
+                $('#nameInput').focus();
+                $('#resolutionInput').focus();
+                $('#detailsInput').focus();
+                
+            }
+
+
+
+
+            //===== Baroboard Device =====//
+
+            function requestDeviceList(page, perPage) {
+                console.log('requestDeviceList 호출됨 : ' + page + ', ' + perPage);
+ 
+                requestDeviceSearch(page, perPage);
+            }
+
+            function requestDeviceSearch(page, perPage) {
+                console.log('requestDeviceSearch 호출됨');
+
+                var params = '?page=' + page
+                            + '&perPage=' + perPage;
+
+                if (searchValue) {
+                    params += '&search=' + search;
+                    params += '&searchValue=' + searchValue;
+                }
+                 
+                // show progressbar
+                $('#progressDevice1').show();
+
+                axios({
+                    method: 'get',
+                    url: '/baroboard/device' + params,
+                    responseType: 'json'
+                }).then(function(response) {
+                    // hide progressbar
+                    $('#progressDevice1').hide();
+
+                    //console.log('응답 -> ' + JSON.stringify(response));
+
+                    // 테이블에서 헤더 아이템만 빼고 모두 삭제
+                    var tableDevice1 = document.getElementById('tableDevice1');
+                    var firstElementChild = tableDevice1.firstElementChild;
+                    tableDevice1.innerHTML = '';
+                    tableDevice1.append(firstElementChild);
+
+                    // 테이블에 응답 결과 추가
+                    response.data.output.body.forEach(function(item, index) {
+                        addDeviceItem(item.id, item.name, item.group_name, item.type, item.size, item.resolution, item.status, item.status_message, item.layout_name, item.data);
+                    })
+
+                    // 페이지 번호 구성하기
+                    makeDevicePage(response.data.output.header);
+
+                    // 검색 정보 설정
+                    $('#searchDeviceSelect').val(search);
+                    $('#searchDeviceInput').val(searchValue);
+
+                    // 총 갯수 표시
+                    $('#totalDeviceOutput').text('결과 ' + response.data.output.header.total);
+
+                }).catch(function(err) {
+                    // hide progressbar
+                    $('#progressDevice1').hide();
+
+                    console.error('Error -> ' + err);
+
+                    toastr.error('요청을 처리할 수 없습니다. 잠시 후 다시 시도해주세요. <br>Error -> ' + err, {timeOut: 3000});
+                });
+            }
+
+            function makeDevicePage(header) {
+
+                if (header.page) {
+
+                    var page = Number(header.page);
+                    var perPage = Number(header.perPage);
+                    var total = header.total;
+                    var pageCount = Math.ceil(total / perPage);
+
+                    console.log('page -> ' + page + ', ' + perPage + ', ' + total + ', ' + pageCount);
+
+                    var pagination = '';
+                    
+                    // 페이지 시작 태그
+                    pagination += '<nav aria-label="Page navigation">';
+                    pagination += '  <ul class="pagination pagination-circle pg-blue justify-content-end">';
+
+                    // 처음으로, 이전 버튼 태그
+                    if (page > 1) {
+                        pagination += '    <li class="page-item">';
+                        pagination += '      <a class="page-link" href="javascript:requestList(1, ' + perPage + ')">First</a>';
+                        pagination += '    </li>';
+                        pagination += '    <li class="page-item">';
+                        pagination += '      <a class="page-link" aria-label="Previous" href="javascript:requestList(' + (page - 1) + ', ' + perPage + ')">';
+                        pagination += '        <span aria-hidden="true">&laquo;</span>';
+                        pagination += '        <span class="sr-only">Previous</span>';
+                        pagination += '      </a>';
+                        pagination += '    </li>';
+                    } else {
+                        pagination += '    <li class="page-item disabled">';
+                        pagination += '      <a class="page-link">First</a>';
+                        pagination += '    </li>';
+                        pagination += '    <li class="page-item disabled">';
+                        pagination += '      <a class="page-link" aria-label="Previous">';
+                        pagination += '        <span aria-hidden="true">&laquo;</span>';
+                        pagination += '        <span class="sr-only">Previous</span>';
+                        pagination += '      </a>';
+                        pagination += '    </li>';
+                    }
+
+                    // 페이지 번호 버튼
+                    var initial = Math.floor(page / 10) * 10;
+                    var max = pageCount - initial;
+                    if (max > 10) {
+                        max = initial + 10;
+                    } else {
+                        max = initial + max;
+                    }
+                    console.log('initial : ' + initial + ', max : ' + max);
+
+                    for (var i = initial; i < max; i++) {
+                        if ((i+1) != page) {
+                            pagination += '    <li class="page-item"><a class="page-link" href="javascript:requestList(' + (i+1) + ', ' + perPage + ')">' + (i+1) + '</a></li>';
+                        } else {
+                            pagination += '    <li class="page-item active"><a class="page-link">' + (i+1) + '</a></li>';
+                        }
+                    }
+
+                    // 끝으로, 다음 버튼 태그
+                    if (page < pageCount) {
+                        pagination += '    <li class="page-item">';
+                        pagination += '      <a class="page-link" aria-label="Next" href="javascript:requestList(' + (page+1) + ', ' + perPage + ')">';
+                        pagination += '        <span aria-hidden="true">&raquo;</span>';
+                        pagination += '        <span class="sr-only">Next</span>';
+                        pagination += '      </a>';
+                        pagination += '    </li>';
+                        pagination += '    <li class="page-item"><a class="page-link" href="javascript:requestList(' + pageCount + ', ' + perPage + ')">Last</a></li>';
+                    } else {
+                        pagination += '    <li class="page-item disabled">';
+                        pagination += '      <a class="page-link" aria-label="Next">';
+                        pagination += '        <span aria-hidden="true">&raquo;</span>';
+                        pagination += '        <span class="sr-only">Next</span>';
+                        pagination += '      </a>';
+                        pagination += '    </li>';
+                        pagination += '    <li class="page-item disabled"><a class="page-link">Last</a></li>';
+                    }
+
+                    // 페이지 끝 태그
+                    pagination += '  </ul>';
+                    pagination += '</nav>';
+
+                    $('#paginationDevice').html(pagination);
+
+                }
+
+            }
+
+
+            function requestDeviceAdd(deviceName, deviceGroup, deviceType, deviceSize, deviceResolution, deviceStatusCode, deviceStatusMessage) {
+                console.log('requestDeviceAdd 호출됨');
+
+                var params = {
+                    name: deviceName,
+                    group_name: deviceGroup,
+                    type: deviceType,
+                    size: deviceSize,
+                    resolution: deviceResolution,
+                    status: deviceStatusCode,
+                    status_message: deviceStatusMessage
+                }
+ 
+                axios({
+                    method: 'post',
+                    url: '/baroboard/device',
+                    data: params,
+                    responseType: 'json'
+                }).then(function(response) {
+                    console.log('응답 -> ' + JSON.stringify(response));
+
+                    if (response.data.output.body.affectedRows > 0) {
+                        console.log('추가 성공');
+                        
+                        toastr.info('정상적으로 추가되었습니다.');
+
+                        requestDeviceList(1, 10);
+                    }
+
+                }).catch(function(err) {
+                    console.error('Error -> ' + err);
+                });
+            }
+
+            function requestDeviceModify(id, deviceName, deviceGroup, deviceType, deviceSize, deviceResolution, deviceStatusCode, deviceStatusMessage) {
+                console.log('requestDeviceModify 호출됨 : ' + id + ', ' + name + ', ' + deviceGroup + ', ' + deviceType);
+
+                var params = {
+                    name: deviceName,
+                    group_name: deviceGroup,
+                    type: deviceType,
+                    size: deviceSize,
+                    resolution: deviceResolution,
+                    status: deviceStatusCode,
+                    status_message: deviceStatusMessage
+                }
+ 
+                axios({
+                    method: 'put',
+                    url: '/baroboard/device/' + id,
+                    data: params,
+                    responseType: 'json'
+                }).then(function(response) {
+                    console.log('응답 -> ' + JSON.stringify(response));
+
+                    if (response.data.output.body.affectedRows > 0) {
+                        console.log('수정 성공');
+
+                        toastr.info('정상적으로 수정되었습니다.');
+
+                        requestDeviceList(1, 10);
+                    }
+
+                }).catch(function(err) {
+                    console.error('Error -> ' + err);
+                });
+            }
+
+            function requestDeviceRemove() {
+                console.log('requestDeviceRemove 호출됨');
+ 
+                axios({
+                    method: 'delete',
+                    url: '/baroboard/device/' + selected,
+                    responseType: 'json'
+                }).then(function(response) {
+                    console.log('응답 -> ' + JSON.stringify(response));
+
+                    if (response.data.output.body.affectedRows > 0) {
+                        console.log('삭제 성공');
+
+                        $('#toast-container').attr('class','md-toast-bottom-right');
+                        toastr.info('정상적으로 삭제되었습니다.');
+
+                        requestDeviceList(1, 10);
+                    }
+
+                }).catch(function(err) {
+                    console.error('Error -> ' + err);
+                });
+            }
+
+            
+            function requestDeviceDataUpdate(id, data) {
+                console.log('requestDeviceDataUpdate 호출됨 : ' + id + ', ' + data);
+
+                const params = {
+                    id: id,
+                    data: data
+                }
+
+                axios({
+                    method: 'post',
+                    url: '/baroboard/device/data/update',
+                    data: params,
+                    responseType: 'json'
+                }).then(function(response) {
+                    console.log('응답 -> ' + JSON.stringify(response));
+
+                    if (response.data.output.affectedRows > 0) {
+                        console.log('수정 성공');
+
+                        toastr.info('정상적으로 수정되었습니다.');
+
+                        requestDeviceList(1, 10);
+                    }
+
+                }).catch(function(err) {
+                    console.error('Error -> ' + err);
+                });
+            }
+
+
+            function requestDeviceDataApply() {
+                console.log('requestDeviceDataApply 호출됨');
+ 
+                const params = {
+                    id: selected
+                }
+
+                axios({
+                    method: 'post',
+                    url: '/baroboard/device/data/apply',
+                    data: params,
+                    responseType: 'json'
+                }).then(function(response) {
+                    //console.log('응답 -> ' + JSON.stringify(response));
+
+                    //if (response.data.output.body.affectedRows > 0) {
+                        console.log('단말 데이터 적용 요청 성공');
+
+                        $('#toast-container').attr('class','md-toast-bottom-right');
+                        toastr.info('정상적으로 요청되었습니다.');
+
+                        requestDeviceList(1, 10);
+                    //}
+
+                }).catch(function(err) {
+                    console.error('Error -> ' + err);
+                });
+            }
+
+            
+            function requestDeviceDataSelect(id) {
+                console.log('requestDeviceDataSelect 호출됨 : ' + id);
+  
+                deviceId = id;
+
+                const params = '?' + 'id=' + id;
+
+                axios({
+                    method: 'get',
+                    url: '/baroboard/device/data/select' + params,
+                    responseType: 'json'
+                }).then(function(response) {
+                    console.log('응답 -> ' + JSON.stringify(response));
+ 
+                    // modalDataInput 대화상자에 데이터 입력상자 표시
+                    if (response.data.output.length > 0) {
+                        const curItem = response.data.output[0];
+                        const layoutMappingText = Base64Decode(curItem.layout_mapping);
+                        const deviceDataText = Base64Decode(curItem.device_data);
+                        const layoutMapping = JSON.parse(layoutMappingText);
+                        const deviceData = JSON.parse(deviceDataText);
+
+                        curLayoutMapping = layoutMapping;
+
+
+                        /*
+                        MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+                        var observer = new MutationObserver(function(mutations, observer) {
+                            console.log('changed.');
+                                
+                            const nodes = $('#inputContainer').find('input');
+                            console.log('child nodes : ' + nodes.length);
+                            
+                            nodes.each(() => {
+                                $(this).trigger('click');
+                            })
+
+                        });
+ 
+                        observer.observe(document, {
+                            subtree: true,
+                            childList: true
+                        });
+                        */
+
+                        const curOutput = makeDataInputLayout(layoutMapping, deviceData);
+                        $('#inputContainer').html(curOutput);
+                                
+                          
+                    }
+                    
+                }).catch(function(err) {
+                    console.error('Error -> ' + err);
+
+                    toastr.error('요청을 처리할 수 없습니다. 잠시 후 다시 시도해주세요. <br>Error -> ' + err, {timeOut: 3000});
+                });
+            }
+
+        
+            // mapping example -> layout_mapping
+            // {
+            //    "item0": {
+            //        "title": "환자명"
+            //        "target": "text",
+            //        "source": "data.patientName"
+            //    }
+            // }
+            //
+            
+            // data example -> device_data
+            // {
+            //    "data": {
+            //      "patientName": "홍길동"
+            //    }
+            // }
+
+            // 데이터 입력상자를 위한 레이아웃 만들기
+            function makeDataInputLayout(layoutMapping, deviceData) {
+                console.log('makeDataInputLayout called.');
+ 
+                let output = '';
+                    output += '<form class="text-left" style="color:#757575; padding-left:4em; padding-right:4em;" action="#">';
+                    
+                const mappingKeys = Object.keys(layoutMapping);
+                console.log('count of mapping keys : ' + mappingKeys.length);
+
+                const sources = [];
+                for (let i = 0; i < mappingKeys.length; i++) {
+                    const curKey = mappingKeys[i];
+                    const curObj = layoutMapping[curKey];
+                    console.log('#' + i + ' ' + curKey + ' -> ' + JSON.stringify(curObj));
+
+                    // get value from deviceData
+                    let curValue = '';
+                    if (curObj['source']) {
+                        console.log('source attribute found.');
+
+                        // source가 중복된 경우에는 skip
+                        if (sources.indexOf(curObj['source']) > -1) {
+                            if (curObj['operator']) {
+                                console.log('source is duplicate -> skipping');
+                                continue;
+                            }
+                        } else {
+                            sources.push(curObj['source']);
+                        }
+
+                        const dataAttr = curObj['source'];
+                        const curAttrs = dataAttr.split('.');
+                        curValue = deviceData;
+                        for (let j = 0; j < curAttrs.length; j++) {
+                            if (curValue[curAttrs[j]]) {
+                                curValue = curValue[curAttrs[j]];
+                            } else {
+                                curValue = '';
+                            }
+                        }
+                        
+                    } else {
+                        console.log('source attribute for data not found');
+                    }
+                    console.log('curValue : ' + JSON.stringify(curValue));
+ 
+                    if (i % 2 == 0) {
+                        output += '  <div class="row" style="margin-top:2em;">';
+                    }
+
+                    output += '    <div class="col-sm-6">';
+                    output += '      <div>';
+                    output += '        <label for="' + curKey + '">' + curObj.title + '</label>';    
+                    output += '        <input type="text" id="' + 'deviceInput_' + curKey + '" class="form-control" value="' + curValue + '">';
+                    output += '      </div>';
+                    output += '    </div>';
+
+                    if (i % 2 == 1) {
+                        output += '  </div>';
+                    }
+                }
+ 
+                if (mappingKeys.length % 2 == 1) {
+                    output += '  </div>';
+                }
+
+                output += '</form>';
+
+                return output;
+            }
+
+            function showDeviceAddPage() {
+                mode = 'add';
+
+                $('#page2-2-1Title').text('단말 추가');
+                
+                $('#deviceNameInput').val('');
+                $('#deviceGroupInput').val('');
+                $('#deviceTypeInput').val('');
+                $('#deviceSizeInput').val('');
+                $('#deviceResolutionInput').val('');
+                $('#deviceStatusCodeInput').val('');
+                $('#deviceStatusMessageInput').val('');
+
+                showPage('page2-2-1');
+            }
+
+            function searchDeviceItem() {
+                search = $('#searchDeviceSelect').val();
+                searchValue = $('#searchDeviceInput').val();
+                console.log('search : ' + search + ', ' + searchValue);
+
+                requestDeviceSearch(1, 10);
+            }
+
+            function saveDeviceItem() {
+                if (mode == 'add') {
+                    addDeviceInputItem();
+                } else if (mode == 'modify') {
+                    modifyDeviceInputItem();
+                }
+
+                showPage('page2-2');
+            }
+
+            function addDeviceInputItem() {
+                var deviceName = $('#deviceNameInput').val();
+                var deviceGroup = $('#deviceGroupInput').val();
+                var deviceType = $('#deviceTypeInput').val();
+                var deviceSize = $('#deviceSizeInput').val();
+                var deviceResolution = $('#deviceResolutionInput').val();
+                var deviceStatusCode = $('#deviceStatusCodeInput').val();
+                var deviceStatusMessage = $('#deviceStatusMessageInput').val();
+                
+                requestDeviceAdd(deviceName, deviceGroup, deviceType, deviceSize, deviceResolution, deviceStatusCode, deviceStatusMessage);
+
+            }
+
+            function addDeviceItem(id, name, group_name, type, size, resolution, status, status_message, layout_name, data) {
+                console.log('addDeviceItem 호출됨 : ' + id + ', ' + name + ', ' + group_name + ', ' + type + ', ' + size + ', ' + status_message + ', ' + layout_name);
+ 
+                var html = '<tr id="itemDevice' + id + '">'
+                         + '    <td class="text-left align-middle" style="width:10%;">'
+                         + '      <img src="/images/layout_48.png" style="width:2em;">'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:20%;">'
+                         + '      <span id="itemDevice' + id + '_name">' + name + '</span>'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:5%;">'
+                         + '      <span id="itemDevice' + id + '_group_name">' + group_name + '</span>'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:5%;">'
+                         + '      <span id="itemDevice' + id + '_type">' + type + '</span>'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:5%;">'
+                         + '      <span id="itemDevice' + id + '_size">' + size + '</span>'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:5%;">'
+                         + '      <span id="itemDevice' + id + '_status">' + status_message + '</span>'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:10%;">'
+                         + '      <span id="itemDevice' + id + '_layout_name">' + layout_name + '</span>'
+                         + '    </td>'
+                         + '    <td class="text-left align-middle" style="width:10%;">'
+                         + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="showDeviceData(\'' + id + '\', \'' + name + '\', \'' + group_name + '\', \'' + type + '\', \'' + size + '\', \'' + resolution + '\', \'' + status + '\', \'' + status_message + '\', \'' + data + '\')"><i class="fas fa-edit fa-lg blue-text"></i></button>'
+                         + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="showDataInput(\'' + id + '\', \'' + name + '\')"><i class="fas fa-pen-alt fa-lg blue-text"></i></button>'
+                         + '    </td>'
+                         + '    <td class="text-center align-middle" style="width:30%;">'
+                         + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="showDeviceModifyPage(\'' + id + '\', \'' + name + '\', \'' + group_name + '\', \'' + type + '\', \'' + size + '\', \'' + resolution + '\', \'' + status + '\', \'' + status_message + '\', \'' + data + '\')"><i class="fas fa-edit fa-lg cyan-text"></i></button>'
+                         + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="deleteDeviceItem(\'' + id + '\')"><i class="fas fa-trash fa-lg red-text"></i></button>'
+                         + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="applyDeviceData(\'' + id + '\')"><i class="fas fa-external-link-alt fa-lg red-text"></i></button>'
+                         + '    </td>'
+                         + '</tr>';
+
+                $('#tableDevice1').append(html); 
+                 
+            }
+
+            function showDeviceModifyPage(id, name, group_name, type, size, resolution, status, status_message, data) {
+                console.log('showDeviceModifyPage 호출됨 : ' + id + ', ' + name + ', ' + group_name + ', ' + type);
+
+                mode = 'modify';
+                selected = id;
+
+                $('#page2-2-1Title').text('단말 수정');
+
+                $('#deviceNameInput').val(name);
+                $('#deviceGroupInput').val(group_name);
+                $('#deviceTypeInput').val(type);
+                $('#deviceSizeInput').val(size);
+                $('#deviceResolutionInput').val(resolution);
+                $('#deviceStatusCodeInput').val(status);
+                $('#deviceStatusMessageInput').val(status_message);
+ 
+                showPage('page2-2-1');
+
+                $('#deviceNameInput').focus();
+                $('#deviceGroupInput').focus();
+                $('#deviceTypeInput').focus();
+                $('#deviceSizeInput').focus();
+                $('#deviceResolutionInput').focus();
+                $('#deviceStatusCodeInput').focus();
+                $('#deviceStatusMessageInput').focus();
+  
+            }
+
+
+            let deviceId;
+            let curLayoutMapping;
+            
+            function showDeviceData(id, name, group_name, type, size, resolution, status, status_message, data) {
+                console.log('showDeviceData 호출됨');
+                console.log('data -> ' + data);
+
+                deviceId = id;
+   
+                if (data != 'undefined' && data.length > 4) {
+                    const decoded = Base64Decode(data);
+                    console.log('decoded -> ' + decoded);
+ 
+                    const contents = JSON.parse(decoded);
+ 
+                    jsonEditor2.set(contents);
+
+                    $("#deviceDataModal").modal();
+                } else {
+                    console.log('device data is invalid.');
+
+                    const contents = {};
+                    jsonEditor2.set(contents);
+
+                    $("#deviceDataModal").modal();
+                    
+                }
+            }
+
+            function saveDeviceData() {
+                const json = jsonEditor2.get();
+                const contents = JSON.stringify(json);
+                const data = Base64Encode(contents);
+
+                console.log('data -> ' + data);
+
+                requestDeviceDataUpdate(deviceId, data);
+
+            }
+
+
+            function showDataInput(id, name) {
+                console.log('showDataInput 호출됨');
+
+                $('#modalDataInputTitle').text('Data Input - ' + name);
+
+                requestDeviceDataSelect(id);
+
+                $('#modalDataInput').modal('show');
+
+            }
+
+            function saveDeviceDataInput() {
+                console.log('saveDeviceDataInput called.');
+
+                const mappingKeys = Object.keys(curLayoutMapping);
+                console.log('count of mapping keys : ' + mappingKeys.length);
+                let outObj = {};
+
+                const sources = [];
+                for (let i = 0; i < mappingKeys.length; i++) {
+                    const curKey = mappingKeys[i];
+                    const curObj = curLayoutMapping[curKey];
+                    console.log('#' + i + ' ' + curKey + ' -> ' + JSON.stringify(curObj));
+                
+
+                    // source가 중복된 경우에는 skip
+                    if (sources.indexOf(curObj['source']) > -1) {
+                        if (curObj['operator']) {
+                            console.log('source is duplicate -> skipping');
+                            continue;
+                        }
+                    } else {
+                        sources.push(curObj['source']);
+                    }
+
+
+                    const curInputValue = $('#deviceInput_' + curKey).val();
+
+                    // get source
+                    const curSource = curObj.source;
+                    const sourceArray = curSource.split('.');
+                    let outObjRef = outObj;
+                    for (let j = 0; j < sourceArray.length; j++) {
+                        if (j == (sourceArray.length-1)) { // last element
+                            outObjRef[sourceArray[j]] = curInputValue;
+                        } else {
+                            if (outObjRef[sourceArray[j]]) {
+
+                            } else {
+                                outObjRef[sourceArray[j]] = {};
+                            }
+                            outObjRef = outObjRef[sourceArray[j]];
+                        }
+                    }
+                }
+
+                console.log('output object -> ' + JSON.stringify(outObj));
+                const contents = JSON.stringify(outObj);
+                const data = Base64Encode(contents);
+
+                console.log('data -> ' + data);
+
+                requestDeviceDataUpdate(deviceId, data);
+            }
+
+
+            function deleteDeviceItem(id) {
+                console.log('deleteDeviceItem 호출됨');
+
+                selected = id;
+
+                $('#modalDeviceConfirmDelete').modal('show');
+            }
+
+            function applyDeviceData(id) {
+                console.log('applyDeviceData 호출됨');
+
+                selected = id;
+
+                $('#modalDeviceConfirmApply').modal('show');
+            }
+
+
+
+
+            //===== Layout Builder =====//
+
+            let layoutId;
+            let layoutMode;
+
+            function showLayoutBuilderPage() {
+                showPage('page1-2');
+                
+                // set layout mode
+                layoutMode = 'add';
+
+                $('#layoutId').val('');
+                $('#layoutName').val('');
+                $('#layoutDetails').val('');
+
+                $('#device-size').combobox('setValue', '11.6');
+                changeDeviceSize();
+
+                
+                // remove all children
+                const dropzone1 = document.getElementById('dropzone1');
+                console.log('count of existing child nodes : ' + dropzone1.childElementCount);
+                while(dropzone1.childElementCount > 0) {
+                    console.log('removing child.');
+                    dropzone1.firstElementChild.remove();
+                }
+
+            }
+
+            function showLayoutBuilder(id, name, resolution, details, data) {
+                console.log('showLayoutBuilder 호출됨');
+   
+                showPage('page1-2');
+
+                // set layout mode
+                layoutMode = 'modify';
+                 
+                // set layoutName and layoutDetails
+                $('#layoutId').val(id);
+                $('#layoutName').val(name);
+                $('#layoutDetails').val(details);
+
+                if (resolution == '960X640') {
+                    $('#device-size').combobox('setValue', '11.6');
+
+                } else if (resolution == '640X384') {
+                    $('#device-size').combobox('setValue', '7.5');
+
+                } else if (resolution == '600X448') {
+                    $('#device-size').combobox('setValue', '6.0');
+
+                }
+                changeDeviceSize();
+
+                const contents = Base64Decode(data);
+                parseContents(contents);
+            }
+
+            function showLayoutMapping(id, name, resolution, details, data, mapping) {
+                console.log('showLayoutMapping 호출됨');
+                console.log('mapping -> ' + mapping);
+
+                layoutId = id;
+   
+                if (mapping != 'undefined' && mapping.length > 4) {
+                    const decoded = Base64Decode(mapping);
+                    console.log('decoded -> ' + decoded);
+
+                    //let replaced = decoded.replaceAll('\\"', '\"');
+                    //replaced = replaced.substr(1, replaced.length-2);
+                    //console.log('replaced -> ' + replaced);
+
+                    const contents = JSON.parse(decoded);
+ 
+                    jsonEditor.set(contents);
+
+                    $("#mappingModal").modal();
+                } else {
+                    console.log('mapping data is invalid.');
+
+                    const contents = {};
+                    jsonEditor.set(contents);
+
+                    $("#mappingModal").modal();
+                    
+                }
+            }
+
+            function saveLayoutMapping() {
+                const json = jsonEditor.get();
+                const contents = JSON.stringify(json);
+                const mapping = Base64Encode(contents);
+
+                console.log('mapping -> ' + mapping);
+
+                requestLayoutMappingUpdate(layoutId, mapping);
+
+            }
+
+            function modifyInputItem() {
+                console.log('modifyInputItem 호출됨');
+
+                var name = $('#nameInput').val();
+                var resolution = $('#resolutionInput').val();
+                var details = $('#detailsInput').val();
+                
+                requestModify(selected, name, resolution, details);
+            }
+
+            function deleteItem(id) {
+                console.log('deleteItem 호출됨');
+
+                selected = id;
+
+                $('#modalConfirmDelete').modal('show');
+            }
+
+
+            //===== Layout Editor =====//
+
+            function changeDeviceSize() {
+                var deviceSizeSelect = document.getElementById("device-size");
+                var selectValue = deviceSizeSelect.options[deviceSizeSelect.selectedIndex].value;
+                console.log('selected value : ' + selectValue);
+
+                if (selectValue == '11.6') {
+                    $('#dropzone1').width('960px');
+                    $('#dropzone1').height('640px');
+
+                    $('#dropzone1').css({'width':'960px'});
+                    $('#dropzone1').css({'height':'640px'});
+                } else if (selectValue == '7.5') {
+                    $('#dropzone1').width('640px');
+                    $('#dropzone1').height('384px');
+                    
+                    $('#dropzone1').css({'width':'640px'});
+                    $('#dropzone1').css({'height':'384px'});
+                } else if (selectValue == '6.0') {
+                    $('#dropzone1').width('600px');
+                    $('#dropzone1').height('448px');
+                    
+                    $('#dropzone1').css({'width':'600px'});
+                    $('#dropzone1').css({'height':'448px'});
+                }
+
+            }
+
+            function removeSelected() {
+                console.log('removeSelected called.');
+
+                for (let i = 0; i < selectedItem.length; i++) {
+                    selectedItem[i].remove();
+                }
+            }
+
+            function unselectAll() {
+                setSelected(null);
+            }
+
+            function zindexUp() {
+                console.log('zindexUp called');
+
+                if (selectedItem.length > 0) {
+                    for (let i = 0; i < selectedItem.length; i++) {
+                        if (selectedItem[i].style.zIndex) {
+                            selectedItem[i].style.zIndex = Number(selectedItem[i].style.zIndex) + 1;
+                        } else {
+                            selectedItem[i].style.zIndex = 3;
+                        }
+                        console.log('#' + i + ' -> ' + selectedItem[i].style.zIndex);
+                    }
+                }
+            }
+
+            function zindexDown() {
+                console.log('zindexDown called');
+                
+                if (selectedItem.length > 0) {
+                    for (let i = 0; i < selectedItem.length; i++) {
+                        if (selectedItem[i].style.zIndex) {
+                            selectedItem[i].style.zIndex = Number(selectedItem[i].style.zIndex) - 1;
+                        } else {
+                            selectedItem[i].style.zIndex = 2;
+                        }
+                        console.log('#' + i + ' -> ' + selectedItem[i].style.zIndex);
+                    }
+                }
+            }
+
+            function convertToImage() {
+                console.log('convertToImage called.');
+
+                setSelected(null);
+
+                var dropzone1 = document.getElementById('dropzone1');
+
+                
+                // move to 0,0
+                const oldTop = $('#dropzone1').offset().top;
+                const oldLeft = $('#dropzone1').offset().left;
+                console.log('dropzone1 : ' + oldLeft + ', ' + oldTop);
+                for (let i = 0; i < dropzone1.childElementCount; i++) {
+                    const elemY = parseInt(dropzone1.childNodes[i].getAttribute('data-y')) - oldTop;
+                    const elemX = parseInt(dropzone1.childNodes[i].getAttribute('data-x')) - oldLeft;
+                    console.log('elem x, y : ' + elemX + ', ' + elemY);
+
+                    dropzone1.childNodes[i].style.webkitTransform = dropzone1.childNodes[i].style.transform =
+                            'translate(' + elemX + 'px,' + elemY + 'px)'
+
+                    dropzone1.childNodes[i].setAttribute('data-y', elemY);
+                    dropzone1.childNodes[i].setAttribute('data-x', elemX);
+                }
+
+                domtoimage.toPng(dropzone1)
+                    .then(function (dataUrl) {
+                        var img = new Image();
+                        img.src = dataUrl;
+                        const imgContainer = document.getElementById('img-container');
+                        while (imgContainer.hasChildNodes()) {
+                            imgContainer.removeChild(imgContainer.firstChild);
+                        }
+                        imgContainer.appendChild(img);
+
+                        // move to old coord
+                        for (let i = 0; i < dropzone1.childElementCount; i++) {
+                            const elemY = parseInt(dropzone1.childNodes[i].getAttribute('data-y')) + oldTop;
+                            const elemX = parseInt(dropzone1.childNodes[i].getAttribute('data-x')) + oldLeft;
+                            console.log('elem x, y : ' + elemX + ', ' + elemY);
+
+                            dropzone1.childNodes[i].style.webkitTransform = dropzone1.childNodes[i].style.transform =
+                                    'translate(' + elemX + 'px,' + elemY + 'px)'
+
+                            dropzone1.childNodes[i].setAttribute('data-y', elemY);
+                            dropzone1.childNodes[i].setAttribute('data-x', elemX);
+                        }
+
+                        $("#previewModal").modal();
+                    })
+                    .catch(function (error) {
+                        // move to old coord
+                        for (let i = 0; i < dropzone1.childElementCount; i++) {
+                            const elemY = parseInt(dropzone1.childNodes[i].getAttribute('data-y')) + oldTop;
+                            const elemX = parseInt(dropzone1.childNodes[i].getAttribute('data-x')) + oldLeft;
+                            console.log('elem x, y : ' + elemX + ', ' + elemY);
+                            
+                            dropzone1.childNodes[i].style.webkitTransform = dropzone1.childNodes[i].style.transform =
+                                    'translate(' + elemX + 'px,' + elemY + 'px)'
+
+                            dropzone1.childNodes[i].setAttribute('data-y', elemY);
+                            dropzone1.childNodes[i].setAttribute('data-x', elemX);
+                        }
+
+                        console.error('Error occurred in converting to image', error);
+                    });
+            }
+
+            function Base64Encode(str, encoding = 'utf-8') {
+                var bytes = new (TextEncoder || TextEncoderLite)(encoding).encode(str);        
+                return base64js.fromByteArray(bytes);
+            }
+
+            function Base64Decode(str, encoding = 'utf-8') {
+                var bytes = base64js.toByteArray(str);
+                return new (TextDecoder || TextDecoderLite)(encoding).decode(bytes);
+            }
+
+            function saveToDB() {
+                console.log('saveToDB called.');
+
+                let views = makeContents();
+                let contents = JSON.stringify(views);
+                let data = Base64Encode(contents);
+
+                const layoutName = $('#layoutName').val();
+                const layoutDetails = $('#layoutDetails').val();
+                
+                const deviceSize = $('#device-size').val();
+                let layoutResolution;
+                if (deviceSize == '11.6') {
+                    layoutResolution = '960X640';
+                } else if (deviceSize == '7.5') {
+                    layoutResolution = '640X384';
+                } else if (deviceSize == '6.0') {
+                    layoutResolution = '600X448';
+                }
+                
+                if (layoutMode == 'add') {
+                    const layoutId = 'L' + generateRequestCode();
+                    requestAdd(layoutName, layoutResolution, layoutDetails, layoutId, data);
+                } else if (layoutMode == 'modify') {
+                    const layoutId = $('#layoutId').val();
+                    requestModify(layoutId, layoutName, layoutResolution, layoutDetails, data);
+                } else {
+                    console.log('Unknown layoutMode : ' + layoutMode);
+                }
+            }
+
+            //===== RequestCode =====//
+
+            var seqCode = 0;
+
+            /*
+             * Generate request code (using time and sequence)
+             */
+             function generateRequestCode() {
+                var date = new Date();
+
+                var seqCodeStr = getSeqCode();
+ 
+                var components = [
+                    date.getFullYear(),
+                    ("0" + (date.getMonth() + 1)).slice(-2),
+                    date.getDate(),
+                    date.getHours(),
+                    date.getMinutes(),
+                    date.getSeconds(),
+                    date.getMilliseconds(),
+                    seqCodeStr
+                ];
+ 
+                var curCode = components.join("");
+                return curCode;
+            }
+
+            /*
+             * Get sequence code (01 ~ 99)
+             */
+            function getSeqCode() {
+                seqCode += 1;
+                if (seqCode > 99) {
+                    seqCode = 0;
+                }
+                var seqCodeStr = String(seqCode);
+                if (seqCodeStr.length == 1) {
+                    seqCodeStr = '0' + seqCodeStr;
+                }
+
+                return seqCodeStr;
+            }
+
+            //=======================//
+
+
+            function saveToFile() {
+                let views = makeContents();
+                let viewsStr = JSON.stringify(views);
+                let contents = Base64Encode(viewsStr);
+                let filename = 'output1.json';
+
+                const a = document.createElement("a");
+                const file = new Blob([contents], {type:'text/plain'});
+                a.href = URL.createObjectURL(file);
+                a.download = filename;
+                a.click();
+
+            }
+
+            function makeContents() {
+                const viewInfo = [];
+                const dropzone1 = document.getElementById('dropzone1');
+                for (let i = 0; i < dropzone1.childNodes.length; i++) {
+                    const target = dropzone1.childNodes[i];
+
+                    const widgetType = target.getAttribute('widget-type');
+                    const targetPropertyData = makePropertyData(target, true);
+                    
+                    viewInfo.push({
+                        widgetType: widgetType,
+                        properties: targetPropertyData
+                    });
+                }
+
+                return viewInfo;
+            }
+
+            function loadFromFile() {
+                var input = document.getElementById('myFile');
+
+                if (input.files && input.files[0]) {
+                    var myFile = input.files[0];
+                    var reader = new FileReader();
+
+                    reader.addEventListener('load', function(e) {
+                        const contents = e.target.result;
+                        
+                        parseContents(contents);
+                    })
+                    reader.readAsText(myFile, 'utf8');
+                }
+            
+            }
+
+            function parseContents(contents) {
+                const dropzone1 = document.getElementById('dropzone1');
+
+                // remove all children
+                console.log('count of existing child nodes : ' + dropzone1.childElementCount);
+                while(dropzone1.childElementCount > 0) {
+                    console.log('removing child.');
+                    dropzone1.firstElementChild.remove();
+                }
+
+                const viewInfo = JSON.parse(contents);
+                console.log('view count : ' + viewInfo.length);
+
+                // make a clone object
+                for (let i = 0; i < viewInfo.length; i++) {
+                    const curViewInfo = viewInfo[i];
+                    let view = makeView(i, curViewInfo);
+
+                    // apply property
+                    for (let j = 0; j < curViewInfo.properties.length; j++) {
+                        if (curViewInfo.properties[j].value) {
+                            view = applyPropertyChange(view, curViewInfo.properties[j], true);
+                        }
+                    }
+                    
+                    // set translate attribute
+                    const curY = view.getAttribute('data-y');
+                    const curX = view.getAttribute('data-x');
+                    console.log('translate x, y -> ' + curX + ', ' + curY);
+                    view.style.webkitTransform = view.style.transform =
+                            'translate(' + curX + 'px,' + curY + 'px)'
+
+                    
+                    // append child to dropzone1
+                    dropzone1.appendChild(view);
+                    
+                }
+ 
+            }
+
+            function makeView(index, viewInfo) {
+                let clone;
+                if (viewInfo.widgetType == 'TextView') {
+                    const widget = document.getElementById('TextViewWidget');
+                    clone = widget.cloneNode(true);
+
+                } else if (viewInfo.widgetType == 'ImageView') {
+                    const widget = document.getElementById('ImageViewWidget');
+                    clone = widget.cloneNode(true);
+
+                } else if (viewInfo.widgetType == 'CircleView') {
+                    const widget = document.getElementById('CircleViewWidget');
+                    clone = widget.cloneNode(true);
+
+                } else if (viewInfo.widgetType == 'QRView') {
+                    const widget = document.getElementById('QRViewWidget');
+                    clone = widget.cloneNode(true);
+
+                }
+ 
+                clone.setAttribute('id', 'item' + index);
+                clone.removeAttribute('palette');
+                   
+                clone.classList.add("drag-drop");
+                //clone.classList.add("text-center");
+                clone.classList.add("align-middle");
+                clone.classList.add("can-drop");
+                
+                clone.setAttribute("state", 'initial');
+  
+                clone.style.position = 'absolute';
+                clone.style.top = '0'
+                clone.style.left = '0'
+                
+                clone.style.textAlign = 'center';
+                clone.style.fontFamily = 'NanumGothicBold';
+
+                clone.style.transform = "translate(0px, 0px)";
+
+                // update the posiion attributes
+                clone.setAttribute("data-x", 0);
+                clone.setAttribute("data-y", 0);
+                   
+                if (viewInfo.widgetType == 'TextView') {
+                    clone.style.width = '200px'
+                    clone.style.height = '100px'
+                    clone.style.lineHeight = '100px'
+
+                    clone.textContent = 'TextView';
+
+                } else if (viewInfo.widgetType == 'CircleView') {
+                    clone.style.width = '200px'
+                    clone.style.height = '200px'
+                    clone.style.lineHeight = '200px'
+                    clone.style.borderRadius = '50%';
+
+                    clone.textContent = 'CircleView';
+
+                } else if (viewInfo.widgetType == 'ImageView') {
+                    clone.style.width = '200px'
+                    clone.style.height = '200px'
+
+                    const elem = document.createElement('img');
+                    elem.setAttribute('src', 'images/person.png');
+                    elem.setAttribute('width', '100%');
+                    elem.setAttribute('height', '100%');
+                    elem.style.pointerEvents = 'none';
+
+                    clone.innerHTML = '';
+                    clone.appendChild(elem);
+
+                } else if (viewInfo.widgetType == 'QRView') {
+                    clone.style.width = '200px'
+                    clone.style.height = '200px'
+
+                    clone.setAttribute('data-code', 'Sample');
+
+                    clone.innerHTML = '';
+                } else {
+                    console.log('Unknown widget type : ' + viewInfo.widgetType);
+                }
+            
+                // default background-color and color
+                //clone.style.backgroundColor = '#ffffff';
+                //clone.style.color = '#000000';
+
+                return clone;
+            }
+
+            function applyPropertyChange(view, row, isTransform) {
+                console.log('applying property : ' + row.name + ', ' + row.value);
+
+                if (row.name == 'id') {
+                    view.setAttribute('id', row.value);
+                } else if (row.name == 'top') {
+                    if (!isTransform) {
+                        const orgY = view.style.top;
+                        const curY = parseFloat(row.value) - parseFloat(orgY);
+                        console.log('top -> ' + curY);
+                        
+                        view.setAttribute('data-y', curY);
+                    }
+                    
+                    view.style.top = row.value;
+                    
+
+                    /** 참고 (top 설정부분)
+                    const parentY = $('#dropzone1').offset().top;
+                    const orgY = parseFloat(target.style.top);
+                    const curY = parseFloat(target.getAttribute('data-y'));
+                    let styleTop = Math.round(orgY + curY - parentY);
+                    */
+
+                } else if (row.name == 'left') {
+                    if (!isTransform) {
+                        const orgX = view.style.left;
+                        const curX = parseFloat(row.value) - parseFloat(orgX);
+                        console.log('left -> ' + curX);
+
+                        view.setAttribute('data-x', curX);
+                    }
+                        
+                    view.style.left = row.value;
+                    
+                } else if (row.name == 'data-y') {
+                    view.setAttribute('data-y', row.value);
+                } else if (row.name == 'data-x') {
+                    view.setAttribute('data-x', row.value);
+                } else if (row.name == 'width') {
+                    view.style.width = row.value;
+                } else if (row.name == 'height') {
+                    view.style.height = row.value;
+                } else if (row.name == 'text') {
+                    view.textContent = row.value;  
+
+                // font    
+                } else if (row.name == 'font-size') {
+                    view.style.fontSize = row.value;     
+                } else if (row.name == 'font-style') {
+                    view.style.fontStyle = row.value;       
+                } else if (row.name == 'font-weight') {
+                    view.style.fontWeight = row.value;     
+                } else if (row.name == 'font-family') {
+                    view.style.fontFamily = row.value;     
+                   
+                } else if (row.name == 'color') {
+                    view.style.color = row.value;      
+                } else if (row.name == 'background-color') {
+                    view.style.backgroundColor = row.value;    
+                } else if (row.name == 'border-width') {
+                    view.style.borderWidth = row.value;          
+                } else if (row.name == 'border-style') {
+                    view.style.borderStyle = row.value;          
+                } else if (row.name == 'border-color') {
+                    view.style.borderColor = row.value;     
+
+                // margin    
+                } else if (row.name == 'margin-top') {
+                    view.style.marginTop = row.value;
+                } else if (row.name == 'margin-bottom') {
+                    view.style.marginBottom = row.value;
+                } else if (row.name == 'margin-left') {
+                    view.style.marginLeft = row.value;
+                } else if (row.name == 'margin-right') {
+                    view.style.marginRight = row.value;        
+                    
+                // padding    
+                } else if (row.name == 'padding-top') {
+                    view.style.paddingTop = row.value;
+                } else if (row.name == 'padding-bottom') {
+                    view.style.paddingBottom = row.value;
+                } else if (row.name == 'padding-left') {
+                    view.style.paddingLeft = row.value;
+                } else if (row.name == 'padding-right') {
+                    view.style.paddingRight = row.value;      
+
+                } else if (row.name == 'line-height') {
+                    view.style.lineHeight = row.value;      
+
+                // border-radius
+                } else if (row.name == 'border-top-left-radius') {
+                    view.style.borderTopLeftRadius = row.value;    
+                } else if (row.name == 'border-top-right-radius') {
+                    view.style.borderTopRightRadius = row.value;      
+                } else if (row.name == 'border-bottom-left-radius') {
+                    view.style.borderBottomLeftRadius = row.value;    
+                } else if (row.name == 'border-bottom-right-radius') {
+                    view.style.borderBottomRightRadius = row.value;
+                         
+                // align
+                } else if (row.name == 'text-align') {
+                    view.style.textAlign = row.value;   
+
+                // z-index  
+                } else if (row.name == 'z-index') {
+                    view.style.zIndex = row.value;
+
+                // image src    
+                } else if (row.name == 'src') {
+                    if (view.firstElementChild && view.firstElementChild.hasAttribute('src')) {
+                        view.firstElementChild.setAttribute('src', row.value);
+                    } else if (view.hasAttribute('src')) {
+                        view.setAttribute('src', row.value);
+                    }
+
+                // QR code data  
+                } else if (row.name == 'data-code') {
+                    view.setAttribute('data-code', row.value);
+
+                    // create QR code
+                    const dataCode = row.value;
+                    const htmlStr = createQRCode(dataCode);
+                    view.innerHTML = htmlStr;
+
+                } else {
+                    console.log('unknown name.');
+                }
+
+                if (!isTransform) {
+                    // apply transform for x and y position
+                    if (row.name == 'top') {
+                        const orgY = view.style.top;
+                        const curY = parseFloat(row.value) - parseFloat(orgY);
+                        //console.log('top -> ' + curY);
+
+                        //const parentY = $('#dropzone1').offset().top;
+                        //const curY = parseFloat(row.value) + parseFloat(parentY);
+                        //console.log('top -> ' + curY);
+
+                        //const parentX = $('#dropzone1').offset().left;
+                        //const curX = view.style.left + parseFloat(parentX);
+                        const curX = view.getAttribute('data-x');
+                        //console.log('left -> ' + curX);
+
+                        console.log('translate x, y -> ' + curX + ', ' + curY);
+                        if (curX && curY) {
+                            view.style.webkitTransform = view.style.transform =
+                                'translate(' + curX + 'px,' + curY + 'px)'
+                        }
+
+                    } else if (row.name == 'left') {
+                        //const parentY = $('#dropzone1').offset().top;
+                        //const curY = view.style.top + parseFloat(parentY);
+                        const curY = view.getAttribute('data-y');
+                        //console.log('top -> ' + curY);
+
+                        //const parentX = $('#dropzone1').offset().left;
+                        //const curX = parseFloat(row.value) + parseFloat(parentX);
+                         
+                        //console.log('left -> ' + curX);
+                        
+                        const orgX = view.style.left;
+                        const curX = parseFloat(row.value) - parseFloat(orgX);
+                        console.log('left -> ' + curX);
+                        
+                        console.log('translate x, y -> ' + curX + ', ' + curY);
+                        if (curX && curY) {
+                            view.style.webkitTransform = view.style.transform =
+                                'translate(' + curX + 'px,' + curY + 'px)'
+                        }
+                    }
+                }
+
+                return view;
+            }
+
+
+            interact('.dropzone').dropzone({
+                // 지정된 아이템만 드래그 가능하도록 함
+                accept: '.drag-drop',
+                
+                // 드롭하기 위해 75% 이상 겹쳐야 함
+                overlap: 0.75,
+
+                // 이벤트 등록
+                ondropactivate: function (event) {
+                    // add active dropzone feedback
+                    event.target.classList.add('drop-active')
+                },
+                ondragenter: function (event) {
+                    var draggableElement = event.relatedTarget
+                    var dropzoneElement = event.target
+
+                    // feedback the possibility of a drop
+                    dropzoneElement.classList.add('drop-target')
+                    draggableElement.classList.add('can-drop')
+                    //draggableElement.textContent = 'Dragged in'
+                },
+                ondragleave: function (event) {
+                    // remove the drop feedback style
+                    event.target.classList.remove('drop-target')
+                    event.relatedTarget.classList.remove('can-drop')
+                    //event.relatedTarget.textContent = 'Dragged out'
+                },
+                ondrop: function (event) {
+                    // 끌어다 놓았을 때 이벤트
+
+                    const widgetType = event.relatedTarget.getAttribute('widget-type');
+                    console.log('widget type : ' + widgetType);
+
+                    const state = event.relatedTarget.getAttribute('state');
+                    console.log('state : ' + state);
+
+                    // 가로/세로 크기 설정
+                    if (state == 'initial') {
+                        if (widgetType == 'TextView') {
+                            event.relatedTarget.style.width = '200px'
+                            event.relatedTarget.style.height = '100px'
+                            event.relatedTarget.style.lineHeight = '100px'
+        
+                            event.relatedTarget.textContent = 'TextView';
+
+                        } else if (widgetType == 'CircleView') {
+                            event.relatedTarget.style.width = '200px'
+                            event.relatedTarget.style.height = '200px'
+                            event.relatedTarget.style.lineHeight = '200px'
+                            event.relatedTarget.style.borderRadius = '50%';
+        
+                            event.relatedTarget.textContent = 'CircleView';
+ 
+                        } else if (widgetType == 'ImageView') {
+                            event.relatedTarget.style.width = '200px'
+                            event.relatedTarget.style.height = '200px'
+        
+                            const elem = document.createElement('img');
+                            elem.setAttribute('src', 'images/person.png');
+                            elem.setAttribute('width', '100%');
+                            elem.setAttribute('height', '100%');
+                            elem.style.pointerEvents = 'none';
+
+                            event.relatedTarget.innerHTML = '';
+                            event.relatedTarget.appendChild(elem);
+
+                        } else if (widgetType == 'QRView') {
+                            event.relatedTarget.style.width = '200px'
+                            event.relatedTarget.style.height = '200px'
+         
+                            // create QR code
+                            const dataCode = "Sample";
+                            const htmlStr = createQRCode(dataCode);
+                            event.relatedTarget.innerHTML = htmlStr;
+
+                            event.relatedTarget.setAttribute('data-code', dataCode);
+                        } 
+                    }
+
+
+                    //event.relatedTarget.textContent = 'Dropped'
+
+                    // top/left 위치 확인
+                    const targetTop = event.relatedTarget.getAttribute('data-x');
+                    const targetLeft = event.relatedTarget.getAttribute('data-y');
+                    console.log('dropitem top/left : ' + targetTop + ', ' + targetLeft);
+
+                    console.log('dropitem bound : ' + event.relatedTarget.getBoundingClientRect());
+                    const offsetX = event.relatedTarget.offsetLeft - targetLeft;
+                    console.log('offsetX : ' + offsetX);
+                    
+                    // 기본 z-index를 0으로 설정
+                    if (event.relatedTarget.style.zIndex) {
+                        console.log('zIndex : ' + event.relatedTarget.style.zIndex);
+                    } else {
+                        console.log('zIndex is not defined');
+                        event.relatedTarget.style.zIndex = 0;
+                    }
+                    
+                    setSelected(event.relatedTarget);
+
+                },
+                ondropdeactivate: function (event) {
+                    // remove active dropzone feedback
+                    event.target.classList.remove('drop-active')
+                    event.target.classList.remove('drop-target')
+                }
+            })
+
+            interact('.drag-drop').draggable({
+                inertia: true,
+                modifiers: [
+                    interact.modifiers.restrictRect({
+                        endOnly: true
+                    })
+                ],
+                manualStart: true,
+                autoScroll: true,
+                // dragMoveListener from the dragging demo above
+                onmove: dragMoveListener
+            }).resizable({
+                // resize from all edges and corners
+                edges: { left: true, right: true, bottom: true, top: true },
+
+                modifiers: [
+                    // keep the edges inside the parent
+                    interact.modifiers.restrictEdges({
+                        endOnly: true
+                    }),
+
+                    // minimum size
+                    interact.modifiers.restrictSize({
+                        min: { width: 10, height: 10 }
+                    })
+                ],
+
+                inertia: true
+            })
+            .on('move', function (event) {
+                var interaction = event.interaction;
+
+                // if the pointer was moved while being held down
+                // and an interaction hasn't started yet
+                if (interaction.pointerIsDown && !interaction.interacting()) {
+                    var target = event.currentTarget;
+
+                    if (target.getAttribute('palette')) {
+                        // create a clone of the currentTarget element
+                        var clone = event.currentTarget.cloneNode(true);
+                        clone.removeAttribute('palette');
+                         
+                        console.log(event.currentTarget);
+                        
+                        var targetBounding = target.getBoundingClientRect();
+
+                        // add dragging class
+                        //clone.classList.add("drag-dragging");
+                        //clone.classList.remove("drag-dropped");
+                        clone.classList.add("drag-drop");
+                        //clone.classList.add("text-center");
+                        clone.classList.add("align-middle");
+
+                        // translate the element
+                        clone.style.transform = "translate(0px, 0px)";
+                        clone.style.position = "absolute";        
+                        clone.style.top = (targetBounding.top + window.scrollY) + "px";
+                        clone.style.left = (targetBounding.left + window.scrollX) + "px";
+                        clone.style.textAlign = 'center';
+                        clone.style.fontFamily = 'NanumGothicBold';
+
+                        // default background-color and color
+                        clone.style.backgroundColor = '#ffffff';
+                        clone.style.color = '#000000';
+
+                        // update the posiion attributes
+                        clone.setAttribute("data-x", 0);
+                        clone.setAttribute("data-y", 0);
+                        
+
+                        // insert the clone to the page
+                        //document.body.appendChild(clone);
+                        const dropzone1 = document.getElementById('dropzone1');
+                        
+                        const index = dropzone1.childElementCount;
+                        clone.setAttribute('id', 'item' + index);
+
+                        dropzone1.appendChild(clone);
+
+                        // start a drag interaction targeting the clone
+                        interaction.start({ name: 'drag' }, event.interactable, clone);
+                
+                        clone.setAttribute("state", 'initial');
+
+                    } else {
+                        
+                        // start a drag interaction targeting the clone
+                        interaction.start({ name: 'drag' }, event.interactable, target);
+                
+                        target.setAttribute("state", 'move');
+
+                    }
+
+                }     
+                
+            })
+            .on('resizemove', function (event) {
+                var target = event.target
+                var x = (parseFloat(target.getAttribute('data-x')) || 0)
+                var y = (parseFloat(target.getAttribute('data-y')) || 0)
+
+                // update the element's style
+                target.style.width = event.rect.width + 'px'
+                target.style.height = event.rect.height + 'px'
+
+                // translate when resizing from top or left edges
+                x += event.deltaRect.left
+                y += event.deltaRect.top
+
+                target.style.webkitTransform = target.style.transform =
+                    'translate(' + x + 'px,' + y + 'px)'
+
+                target.setAttribute('data-x', x)
+                target.setAttribute('data-y', y)
+                //target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height)
+                console.log('coord : '  + Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height));
+
+                target.setAttribute("state", 'resize');
+
+            })
+            .on('down', function (event) {
+                const target = event.target;
+
+                setSelected(target);
+            })
+            .on('up', function (event) {
+                const target = event.target
+
+            })
+
+
+            // QR 코드 생성, 결과물은 img 태그가 됨
+            function createQRCode(text) {
+                const typeNumber = '0'; // auto detect
+                const errorCorrectionLevel = 'H'; // High
+                const mode = 'Byte'; // Byte mode
+                const mb = 'UTF-8'; // Multi-Byte
+                const cellsize = 4;
+
+                qrcode.stringToBytes = qrcode.stringToBytesFuncs[mb];
+
+                const qr = qrcode(typeNumber || 4, errorCorrectionLevel || 'M');
+                qr.addData(text, mode);
+                qr.make();
+
+                return qr.createImgTag(cellsize, 4);
+            }
+
+
+            function setSelected(target) {
+
+                // 선택된 아이템이므로 selected 설정
+                if (selectedItem.length > 0) { // 기존에 선택된 아이템이 있으면 selected 해제
+                    for (let i = 0; i < selectedItem.length; i++) {
+                        selectedItem[i].classList.remove('selected-item');
+                    }
+                    selectedItem = [];
+                }
+                
+                if (target) {
+                    target.classList.add('selected-item');
+                    selectedItem.push(target);
+                    
+                    setPropertyData(target);
+                }
+
+            }
+
+            function setPropertyData(target) {
+                console.log('setPropertyData called.');
+
+                const data = makePropertyData(target);
+                $('#pg').propertygrid('loadData', data);
+
+            }
+
+            function makePropertyData(target, isRawCoord) {
+                console.log('makePropertyData called.');
+
+                let widgetType = target.getAttribute('widget-type');
+                if (!widgetType) {
+                    widgetType = target.parentElement.getAttribute('widget-type');
+                }
+                console.log('widget type : ' + widgetType);
+ 
+                const data = [];
+                
+                // id
+                const viewId = target.getAttribute('id');
+                data.push({name:'id',value:viewId,group:'Basic',editor:'text'});
+
+                // top coord
+                const parentY = $('#dropzone1').offset().top;
+                const orgY = parseFloat(target.style.top);
+                const curY = parseFloat(target.getAttribute('data-y'));
+                let styleTop = Math.round(orgY + curY - parentY);
+                if (isNaN(styleTop)) {
+                    styleTop = '';
+                } else {
+                    styleTop += 'px';
+                }
+
+                if (isRawCoord) {
+                    data.push({name:'top',value:orgY + 'px',group:'Position',editor:'text'});
+                    data.push({name:'data-y',value:curY,group:'Position',editor:'text'});
+                } else {
+                    data.push({name:'top',value:styleTop,group:'Position',editor:'text'});
+                }
+
+                // left coord
+                const parentX = $('#dropzone1').offset().left;
+                const orgX = parseFloat(target.style.left);
+                const curX = parseFloat(target.getAttribute('data-x'));
+                let styleLeft = Math.round(orgX + curX - parentX);
+                if (isNaN(styleLeft)) {
+                    styleLeft = '';
+                } else {
+                    styleLeft += 'px';
+                }
+
+                if (isRawCoord) {
+                    data.push({name:'left',value:orgX + 'px',group:'Position',editor:'text'});
+                    data.push({name:'data-x',value:curX,group:'Position',editor:'text'});
+                } else {
+                    data.push({name:'left',value:styleLeft,group:'Position',editor:'text'});
+                }
+
+                const styleWidth = target.style.width;
+                data.push({name:'width',value:styleWidth,group:'Position',editor:'text'});
+
+                const styleHeight = target.style.height;
+                data.push({name:'height',value:styleHeight,group:'Position',editor:'text'});
+
+                const styleBackgroundColor = target.style.backgroundColor;
+                data.push({name:'background-color',value:styleBackgroundColor,group:'Style',editor:'color'});
+
+                const styleBorderWidth = target.style.borderWidth;
+                data.push({name:'border-width',value:styleBorderWidth,group:'Style',editor:'text'});
+
+                const styleBorderStyle = target.style.borderStyle;
+                data.push({name:'border-style',value:styleBorderStyle,group:'Style',editor:'text'});
+
+                const styleBorderColor = target.style.borderColor;
+                data.push({name:'border-color',value:styleBorderColor,group:'Style',editor:'color'});
+
+                // margin
+                const styleMarginTop = target.style.marginTop;
+                data.push({name:'margin-top',value:styleMarginTop,group:'Style',editor:'text'});
+
+                const styleMarginBottom = target.style.marginBottom;
+                data.push({name:'margin-bottom',value:styleMarginBottom,group:'Style',editor:'text'});
+
+                const styleMarginLeft = target.style.marginLeft;
+                data.push({name:'margin-left',value:styleMarginLeft,group:'Style',editor:'text'});
+
+                const styleMarginRight = target.style.marginRight;
+                data.push({name:'margin-right',value:styleMarginRight,group:'Style',editor:'text'});
+
+                // padding
+                const stylePaddingTop = target.style.paddingTop;
+                data.push({name:'padding-top',value:stylePaddingTop,group:'Style',editor:'text'});
+
+                const stylePaddingBottom = target.style.paddingBottom;
+                data.push({name:'padding-bottom',value:stylePaddingBottom,group:'Style',editor:'text'});
+
+                const stylePaddingLeft = target.style.paddingLeft;
+                data.push({name:'padding-left',value:stylePaddingLeft,group:'Style',editor:'text'});
+
+                const stylePaddingRight = target.style.paddingRight;
+                data.push({name:'padding-right',value:stylePaddingRight,group:'Style',editor:'text'});
+
+                const styleLineHeight = target.style.lineHeight;
+                data.push({name:'line-height',value:styleLineHeight,group:'Style',editor:'text'});
+
+                // border-radius
+                const styleBorderTopLeftRadius = target.style.borderTopLeftRadius;
+                data.push({name:'border-top-left-radius',value:styleBorderTopLeftRadius,group:'Style',editor:'text'});
+
+                const styleBorderTopRightRadius = target.style.borderTopRightRadius;
+                data.push({name:'border-top-right-radius',value:styleBorderTopRightRadius,group:'Style',editor:'text'});
+
+                const styleBorderBottomLeftRadius = target.style.borderBottomLeftRadius;
+                data.push({name:'border-bottom-left-radius',value:styleBorderBottomLeftRadius,group:'Style',editor:'text'});
+
+                const styleBorderBottomRightRadius = target.style.borderBottomRightRadius;
+                data.push({name:'border-bottom-right-radius',value:styleBorderBottomRightRadius,group:'Style',editor:'text'});
+
+                // align
+                const styleTextAlign = target.style.textAlign;
+                data.push({name:'text-align',value:styleTextAlign,group:'Style',editor:'text'});
+
+                // z-index
+                const styleZIndex = target.style.zIndex;
+                data.push({name:'z-index',value:styleZIndex,group:'Style',editor:'text'});
+
+
+                if (widgetType == 'TextView') {
+                    const styleColor = target.style.color;
+                    data.push({name:'color',value:styleColor,group:'Style',editor:'color'});
+
+                    const styleText = target.textContent;
+                    data.push({name:'text',value:styleText,group:'Style',editor:'text'});
+
+                    // font
+                    const styleFontSize = target.style.fontSize;
+                    data.push({name:'font-size',value:styleFontSize,group:'Style',editor:'text'});
+
+                    const styleFontStyle = target.style.fontStyle;
+                    data.push({name:'font-style',value:styleFontStyle,group:'Style',editor:'text'});
+
+                    const styleFontWeight = target.style.fontWeight;
+                    data.push({name:'font-weight',value:styleFontWeight,group:'Style',editor:'text'});
+
+                    const styleFontFamily = target.style.fontFamily;
+                    data.push({name:'font-family',value:styleFontFamily,group:'Style',editor:'text'});
+
+                } else if (widgetType == 'CircleView') {
+                    const styleColor = target.style.color;
+                    data.push({name:'color',value:styleColor,group:'Style',editor:'color'});
+
+                    const styleText = target.textContent;
+                    data.push({name:'text',value:styleText,group:'Style',editor:'text'});
+
+                    // font
+                    const styleFontSize = target.style.fontSize;
+                    data.push({name:'font-size',value:styleFontSize,group:'Style',editor:'text'});
+
+                    const styleFontStyle = target.style.fontStyle;
+                    data.push({name:'font-style',value:styleFontStyle,group:'Style',editor:'text'});
+
+                    const styleFontWeight = target.style.fontWeight;
+                    data.push({name:'font-weight',value:styleFontWeight,group:'Style',editor:'text'});
+
+                    const styleFontFamily = target.style.fontFamily;
+                    data.push({name:'font-family',value:styleFontFamily,group:'Style',editor:'text'});
+
+                } else if (widgetType == 'ImageView') {
+                    console.dir(target);
+
+                    let imageSrc = '';
+                    if (target.firstElementChild && target.firstElementChild.hasAttribute('src')) {
+                        imageSrc = target.firstElementChild.getAttribute('src');
+                    } else if (target.hasAttribute('src')) {
+                        imageSrc = target.getAttribute('src');
+                    }
+
+                    data.push({name:'src',value:imageSrc,group:'Style',editor:'text'});
+
+                } else if (widgetType == 'QRView') {
+                    console.dir(target);
+
+                    let dataCode = '';
+                    if (target.hasAttribute('data-code')) {
+                        dataCode = target.getAttribute('data-code');
+                    }
+
+                    data.push({name:'data-code',value:dataCode,group:'Data',editor:'text'});
+
+                } 
+                  
+                return data;
+            }
+
+
+            function dragMoveListener (event) {
+                var target = event.target
+                // keep the dragged position in the data-x/data-y attributes
+                var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+                var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+                // translate the element
+                target.style.webkitTransform =
+                    target.style.transform =
+                    'translate(' + x + 'px, ' + y + 'px)'
+
+                // update the posiion attributes
+                target.setAttribute('data-x', x)
+                target.setAttribute('data-y', y)
+            }
+
+            // this is used later in the resizing and gesture demos
+            window.dragMoveListener = dragMoveListener
+
+            //===== Layout Editor END =====//
+
+
+        </script>
+
+
+    </body>
+</html>
