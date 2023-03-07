@@ -11,54 +11,23 @@
  
 const util = require('../util/util');
 const logger = require('../util/logger');
-
+// BY START 2021-03-31
+const by_AES = require('../public/js/by_AES');
+const EnCryption = new by_AES ();
+// BY END 2021-03-31
 class Index {
 
-    /**
-     * @RequestMapping(path="/sheep.do", method="get")
-     */
-    sheepIndex(req, res) {
-        logger.debug('sheepIndex called for path /sheep.do');
- 
-        util.render(req, res, 'sheep_index', {});
-    }
-
-    /**
-     * @RequestMapping(path="/sheep2.do", method="get")
-     */
-    sheepIndex2(req, res) {
-        logger.debug('sheepIndex2 called for path /sheep2.do');
- 
-        util.render(req, res, 'sheep_index2', {});
-    }
- 
-    /**
-     * @RequestMapping(path="/sheep3.do", method="get")
-     */
-    sheepIndex3(req, res) {
-        logger.debug('sheepIndex3 called for path /sheep3.do');
- 
-        util.render(req, res, 'sheep_index3', {});
-    }
- 
-    /**
-     * @RequestMapping(path="/sheep4.do", method="get")
-     */
-    sheepIndex4(req, res) {
-        logger.debug('sheepIndex4 called for path /sheep4.do');
- 
-        util.render(req, res, 'sheep_index4', {});
-    }
  
     /**
      * @RequestMapping(path="/esl-index.do", method="get")
      */
     eslIndex(req, res) {
         logger.debug('eslIndex called for path /esl-index.do');
- 
-        util.render(req, res, 'esl_index', {});
+        const parseKey = EnCryption.requestParseKey();
+        const iv = EnCryption.requestIv();
+        util.render(req, res, 'esl_index',{parseKey:parseKey,iv:iv});
     }
- 
+        
 }
 
 module.exports = Index;

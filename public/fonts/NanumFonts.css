@@ -103,9 +103,14 @@
 } */
 
 @font-face {
-      font-family: 'SLGM';
-      src: url(SLGM.ttf) format('truetype');
+      font-family: 'SGM';
+      src: url(SGM.ttf) format('truetype');
 }
+@font-face {
+      font-family: 'SGLB';
+      src: url(SGLB.ttf) format('truetype');
+}
+
 
 /* @font-face {
       font-family: 'SGL';

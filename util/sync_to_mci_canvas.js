@@ -92,11 +92,11 @@ const drawRoundRect = (ctx, x, y, width, height, radius, fill, stroke, radiusTop
     }        
 }
 let returnCode;
-function responseAIMS(body,code) {
+async function responseAIMS(body,code) {
     return new Promise(resolve => {
-        console.log("["+code+"] : "+body);
-        console.log('------------------------------------------------------------------------------------'); 
-        resolve();
+        logger.error("["+code+"] : "+body);
+        resolve(body);
+        
     }); 
         
 }
@@ -157,6 +157,7 @@ class Layer {
 
         this.context.fillStyle = this.backgroundColor;
         this.context.fillRect(0, 0, this.width, this.height);
+        
 
         for (let i = 0; i < this.shapeArray.length; i++) {
             this.shapeArray[i].draw(this.context);
@@ -186,12 +187,15 @@ class Layer {
     }
 
     loadAsBase64(filename) {
+		console.log("filename");
+		console.log(filename);
         return new Promise((resolve, reject) => {
             this.doLoadAsBase64(filename, (err, result) => {
                 if (err) {
                     reject(err);
                 }
-
+				console.log("result length")
+				console.log(result.length);
                 resolve(result);
             })
         });
@@ -210,11 +214,11 @@ class Layer {
             callback(null, result);
         });
     }
-
-    async send(filename,url,code) {
+ 
+    async send5(filename,url,code) {
         // BY START 2019-11-18
         SERVER_URL =url;
-        
+        let returnBody;
         // BY END 2019-11-18
         
         const requestUrl = SERVER_URL + '/labels/contents/image?stationCode=DEFAULT_STATION_CODE';
@@ -249,24 +253,275 @@ class Layer {
                 }
             ]
         };
-
-        ajax.post({
-            url:requestUrl,
-            crossDomain:true,
-            dataType:"jsonp",
-            data:postData,
-            headers:{
-                "Accept": "application/json",
-                "Content-Type": "application/json;charset=UTF-8",
-                "Access-Control-Allow-Origin": "*",
-            }
-        },async function(err,res,body,destpath) {
-            await responseAIMS(body,code);
-
+        return new Promise((resolve, reject) => {
+            ajax.post({
+                url:requestUrl,
+                crossDomain:true,
+                dataType:"jsonp",
+                data:postData,
+                headers:{
+                    "Accept": "application/json",
+                    "Content-Type": "application/json;charset=UTF-8",
+                    "Access-Control-Allow-Origin": "*",
+                }
+            },async function(err,res,body,destpath) {
+                returnBody =  await responseAIMS(body,code);
+                resolve(returnBody);
+            })
+            
         })
+
+        
     }
+
+	// JU START 2022-02-15	
+    async send2(filename,url,code) {
+        // BY START 2019-11-18
+        SERVER_URL =url;
+        let returnBody;
+        // BY END 2019-11-18
+        
+        const requestUrl = SERVER_URL + '/labels/contents/image?stationCode=DEFAULT_STATION_CODE';
+
+        // BY START 2019-12-12
+        // code --> 단말기의 라벨 코드 값
+        // BY END 2019-12-12
+        
+		// JU START 2022-02-15	
+		var filepath = path.join(__dirname, filename);
+		//filepath = 'D:\\ubiaccess-server_esl\\output\\03D62FB1BA97.png';
+		console.log('filepath -> ' + filepath);
+
 	
+		var base64str = await fs.readFileSync(filepath, 'base64');
+		console.log('send2 base64str -> ' + base64str.substring(0, 20) + '...' + base64str.substring(base64str.length - 20, base64str.length));
+		
+		return 200;
+
+        var postData = {
+            labels: [
+                {
+                    contents:[
+                        {
+                            contentType:"IMAGE",
+                            fileName:"",
+                            imgBase64:base64str,
+                            imgUrl:"",
+                            pageIndex:1
+                        }
+                    ],
+                    frontPage:1,
+                    // JU START 2019-10-15
+                    labelCode:code
+                    // JU END 2019-10-15
+                }
+            ]
+        };
+        return new Promise((resolve, reject) => {
+            ajax.post({
+                url:requestUrl,
+                crossDomain:true,
+                dataType:"jsonp",
+                data:postData,
+                headers:{
+                    "Accept": "application/json",
+                    "Content-Type": "application/json;charset=UTF-8",
+                    "Access-Control-Allow-Origin": "*",
+                }
+            },async function(err,res,body,destpath) {
+                returnBody =  await responseAIMS(body,code);
+                resolve(returnBody);
+            })
+            
+        })
+        
+    }
+
+    async send3(filename,url,code) {
+        // BY START 2019-11-18
+        SERVER_URL =url;
+        let returnBody;
+        // BY END 2019-11-18
+        
+        const requestUrl = SERVER_URL + '/labels/contents/image?stationCode=DEFAULT_STATION_CODE';
+
+        // BY START 2019-12-12
+        // code --> 단말기의 라벨 코드 값
+        // BY END 2019-12-12
+
+		var filepath = path.join(__dirname, filename);
+		console.log('filepath -> ' + filepath);
+
+		console.log('1111111111111111111111111111111111111111111111111111111111111');
+		fs.readFile(filepath, 'base64', (err, result) => {
+			console.log('err -> ' + err);
+
+			if(err) {
+				return 400;
+			}
+
+			var base64str = result;
+		    console.log('send3 base64str -> ' + base64str.substring(0, 20) + '...' + base64str.substring(base64str.length - 20, base64str.length));
+      
+			var postData = {
+				labels: [
+					{
+						contents:[
+							{
+								contentType:"IMAGE",
+								fileName:"",
+								imgBase64:base64str,
+								imgUrl:"",
+								pageIndex:1
+							}
+						],
+						frontPage:1,
+						// JU START 2019-10-15
+						labelCode:code
+						// JU END 2019-10-15
+					}
+				]
+			};
+
+			console.log('Promise() 호출');
+
+			return new Promise((resolve, reject) => {
+				ajax.post({
+					url:requestUrl,
+					crossDomain:true,
+					dataType:"jsonp",
+					data:postData,
+					headers:{
+						"Accept": "application/json",
+						"Content-Type": "application/json;charset=UTF-8",
+						"Access-Control-Allow-Origin": "*",
+					}
+				},async function(err,res,body,destpath) {
+					returnBody =  await responseAIMS(body,code);
+					resolve(returnBody);
+				})
+				
+			})
+		});
+		console.log('2222222222222222222222222222222222222222222222222222222222222');
+    }
+
+	// JU START 2022-02-16
+	async send4(filename,url,code) {
+        // BY START 2019-11-18
+        SERVER_URL =url;
+        let returnBody;
+        // BY END 2019-11-18
+        
+        const requestUrl = SERVER_URL + '/labels/contents/image?stationCode=DEFAULT_STATION_CODE';
+
+        // BY START 2019-12-12
+        // code --> 단말기의 라벨 코드 값
+        // BY END 2019-12-12
+        
+		// JU START 2022-02-15	
+		var filepath = path.join(__dirname, filename);
+		//filepath = 'D:\\ubiaccess-server_esl\\output\\03D62FB1BA97.png';
+		
+		console.log('1111111111111111111111111111111111111111111111111111111111111');
+		const base64str = await this.loadAsBase64(filename)
+		console.log('BY-base64str -> ' + base64str.substring(0, 20) + '...' + base64str.substring(base64str.length - 20, base64str.length));
+		console.log(base64str.length);
+		console.log('2222222222222222222222222222222222222222222222222222222222222');
+
+        var postData = {
+            labels: [
+                {
+                    contents:[
+                        {
+                            contentType:"IMAGE",
+                            fileName:"",
+                            imgBase64:base64str,
+                            imgUrl:"",
+                            pageIndex:1
+                        }
+                    ],
+                    frontPage:1,
+                    // JU START 2019-10-15
+                    labelCode:code
+                    // JU END 2019-10-15
+                }
+            ]
+        };
+        return new Promise((resolve, reject) => {
+            ajax.post({
+                url:requestUrl,
+                crossDomain:true,
+                dataType:"jsonp",
+                data:postData,
+                headers:{
+                    "Accept": "application/json",
+                    "Content-Type": "application/json;charset=UTF-8",
+                    "Access-Control-Allow-Origin": "*",
+                }
+            },async function(err,res,body,destpath) {
+                returnBody =  await responseAIMS(body,code);
+                resolve(returnBody);
+            })
+            
+        })
+        
+    }
+
+	async send(filename,url,code) {
+        // BY START 2022-02-16
+        SERVER_URL =url;
+        let returnBody;
+        // BY END 2019-02-16
+        
+        const requestUrl = SERVER_URL + '/labels/contents/image?stationCode=DEFAULT_STATION_CODE';
+		//console.log('requestUrl -> ' + requestUrl);
+
+		const eslImageUrl = config.esl_image_url.url +  filename.substring(filename.lastIndexOf('/') + 1);
+		console.log('eslImageUrl -> ' + eslImageUrl);
+
+        var postData = {
+            labels: [
+                {
+                    contents:[
+                        {
+                            contentType:"IMAGE",
+                            fileName:"",
+                            imgBase64:"",
+                            imgUrl:eslImageUrl,
+                            pageIndex:1
+                        }
+                    ],
+                    frontPage:1,
+                    // JU START 2019-10-15
+                    labelCode:code
+                    // JU END 2019-10-15
+                }
+            ]
+        };
+        return new Promise((resolve, reject) => {
+            ajax.post({
+                url:requestUrl,
+                crossDomain:true,
+                dataType:"jsonp",
+                data:postData,
+                headers:{
+                    "Accept": "application/json",
+                    "Content-Type": "application/json;charset=UTF-8",
+                    "Access-Control-Allow-Origin": "*",
+                }
+            },async function(err,res,body,destpath) {
+                returnBody =  await responseAIMS(body,code);
+                resolve(returnBody);
+            })
+            
+        })
+
+        
+    }
 }
+
+
 
 class Shape {
     constructor() {
@@ -335,7 +590,7 @@ class TextRectShape extends RectShape {
 
         this.text = text;
 
-        this.fontFamily = 'NanumGothic';
+        this.fontFamily = 'SGLB';
         this.fontSize = '18px';
         this.fontWeight = '';
         this.textColor = 'black';
@@ -451,7 +706,7 @@ class TextRoundRectShape extends RoundRectShape {
 
         this.text = text;
 
-        this.fontFamily = 'NanumGothicBold';
+        this.fontFamily = 'SGM';
         this.fontSize = '18px';
         this.fontWeight = '';
         this.textColor = 'black';
@@ -554,6 +809,7 @@ class ImageShape extends Shape {
 var Canvas = require('canvas')
 
 function fontFile (name) {
+
     return path.join(__dirname, '../public/fonts/', name)
 }
 
@@ -573,7 +829,14 @@ Canvas.registerFont(fontFile('NanumSquareEB.ttf'), { family: 'NanumSquareExtraBo
 Canvas.registerFont(fontFile('NanumSquareL.ttf'), { family: 'NanumSquareLight' });
 
 // BY START 2019-12-26 
-Canvas.registerFont(fontFile('SLGM.ttf'), { family: 'SLGM' });
+Canvas.registerFont(fontFile('SGLB.ttf'), { family: 'SGLB' });
+Canvas.registerFont(fontFile('SGM.ttf'), { family: 'SGM' });
+// Canvas.registerFont(fontFile('SGL.ttf'), { family: 'SGL' });
+// Canvas.registerFont(fontFile('SLGR.ttf'), { family: 'SLGR' });
+// Canvas.registerFont(fontFile('SMM.ttf'), { family: 'SMM' });
+// Canvas.registerFont(fontFile('SGR.ttf'), { family: 'SGR' });
+// 
+
 // BY END 2019-12-26
 
 //Canvas.registerFont(fontFile('SECPTL.TTF'), { family: 'SecPtL' })

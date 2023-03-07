@@ -1,0 +1,54 @@
+2022-12-21 10:55:41.721 - DEBUG: [service_loader.js:17:12] load in service_loader called.
+2022-12-21 10:55:41.724 - DEBUG: [service_loader.js:21:16] #0 -> id:1, unit:person
+2022-12-21 10:55:42.222 - DEBUG: [service_loader.js:39:16] method #0 -> list
+2022-12-21 10:55:42.223 - DEBUG: [service_loader.js:43:16]     do method name -> doList
+2022-12-21 10:55:42.223 - DEBUG: [service_loader.js:39:16] method #1 -> read
+2022-12-21 10:55:42.223 - DEBUG: [service_loader.js:43:16]     do method name -> doRead
+2022-12-21 10:55:42.224 - DEBUG: [service_loader.js:39:16] method #2 -> create
+2022-12-21 10:55:42.224 - DEBUG: [service_loader.js:43:16]     do method name -> doCreate
+2022-12-21 10:55:42.225 - DEBUG: [service_loader.js:39:16] method #3 -> update
+2022-12-21 10:55:42.225 - DEBUG: [service_loader.js:43:16]     do method name -> doUpdate
+2022-12-21 10:55:42.226 - DEBUG: [service_loader.js:39:16] method #4 -> delete
+2022-12-21 10:55:42.226 - DEBUG: [service_loader.js:43:16]     do method name -> doDelete
+2022-12-21 10:55:42.226 - INFO: [index.js:114:12] service loader called.
+2022-12-21 10:55:42.227 - DEBUG: [controller_loader.js:26:12] load called.
+2022-12-21 10:55:42.227 - DEBUG: [controller_loader.js:106:12] autoLoad called.
+2022-12-21 10:55:42.327 - DEBUG: [controller_loader.js:34:20] #0 -> id:1, type:rest, base:, unit:person
+2022-12-21 10:55:42.351 - DEBUG: [person-controller.js:27:16] PersonController initialized.
+2022-12-21 10:55:42.351 - DEBUG: [controller_loader.js:53:24] rest type #0 -> list
+2022-12-21 10:55:42.351 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person, func -> list
+2022-12-21 10:55:42.352 - DEBUG: [controller_loader.js:53:24] rest type #1 -> create
+2022-12-21 10:55:42.352 - DEBUG: [controller_loader.js:73:24] rest request method -> post, path -> /person, func -> create
+2022-12-21 10:55:42.353 - DEBUG: [controller_loader.js:53:24] rest type #2 -> read
+2022-12-21 10:55:42.353 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person/:id, func -> read
+2022-12-21 10:55:42.353 - DEBUG: [controller_loader.js:53:24] rest type #3 -> update
+2022-12-21 10:55:42.354 - DEBUG: [controller_loader.js:73:24] rest request method -> put, path -> /person/:id, func -> update
+2022-12-21 10:55:42.354 - DEBUG: [controller_loader.js:53:24] rest type #4 -> delete
+2022-12-21 10:55:42.354 - DEBUG: [controller_loader.js:73:24] rest request method -> delete, path -> /person/:id, func -> delete
+2022-12-21 10:55:42.355 - DEBUG: [controller_loader.js:36:20] #1 -> id:2, type:path, path:/profile/list, method:get,post, file:profile-controller, func:list
+2022-12-21 10:55:42.367 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-21 10:55:42.367 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-21 10:55:42.368 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-21 10:55:42.368 - DEBUG: [controller_loader.js:36:20] #2 -> id:3, type:path, path:/profile/get, method:get,post, file:profile-controller, func:get
+2022-12-21 10:55:42.368 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-21 10:55:42.369 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-21 10:55:42.369 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-21 10:55:42.370 - DEBUG: [controller_loader.js:36:20] #3 -> id:4, type:path, path:/profile/add, method:get, file:profile-controller, func:add
+2022-12-21 10:55:42.370 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-21 10:55:42.370 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-21 10:55:42.371 - DEBUG: [controller_loader.js:36:20] #4 -> id:5, type:path, path:/profile/upload, method:post, file:profile-controller, func:upload
+2022-12-21 10:55:42.371 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-21 10:55:42.371 - DEBUG: [controller_loader.js:84:28] method #0 -> post
+2022-12-21 10:55:42.372 - DEBUG: [controller_loader.js:36:20] #5 -> id:6, type:path, path:/test/set_cookie, method:get, file:test-controller, func:set_cookie
+2022-12-21 10:55:42.381 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-21 10:55:42.382 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-21 10:55:42.382 - DEBUG: [controller_loader.js:36:20] #6 -> id:7, type:path, path:/test/show_cookie, method:get, file:test-controller, func:show_cookie
+2022-12-21 10:55:42.383 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-21 10:55:42.383 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-21 10:55:42.384 - INFO: [index.js:118:12] controller loader called.
+2022-12-21 10:55:42.440 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-21 10:55:42.440 - DEBUG: [mci.js:28:20] name : external01
+2022-12-21 10:55:42.635 - DEBUG: [cni.js:15:16] CNI initialized.
+2022-12-21 10:55:42.636 - DEBUG: [cni.js:21:16] server name : external02
+2022-12-21 10:55:42.636 - DEBUG: [cni.js:25:16] server host : localhost
+2022-12-21 10:55:42.636 - DEBUG: [cni.js:26:16] server port : 7102

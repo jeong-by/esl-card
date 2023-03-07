@@ -1,0 +1,1361 @@
+2022-12-05 21:40:07.861 - DEBUG: [service_loader.js:17:12] load in service_loader called.
+2022-12-05 21:40:07.864 - DEBUG: [service_loader.js:21:16] #0 -> id:1, unit:person
+2022-12-05 21:40:08.556 - DEBUG: [service_loader.js:39:16] method #0 -> list
+2022-12-05 21:40:08.556 - DEBUG: [service_loader.js:43:16]     do method name -> doList
+2022-12-05 21:40:08.557 - DEBUG: [service_loader.js:39:16] method #1 -> read
+2022-12-05 21:40:08.557 - DEBUG: [service_loader.js:43:16]     do method name -> doRead
+2022-12-05 21:40:08.558 - DEBUG: [service_loader.js:39:16] method #2 -> create
+2022-12-05 21:40:08.558 - DEBUG: [service_loader.js:43:16]     do method name -> doCreate
+2022-12-05 21:40:08.558 - DEBUG: [service_loader.js:39:16] method #3 -> update
+2022-12-05 21:40:08.559 - DEBUG: [service_loader.js:43:16]     do method name -> doUpdate
+2022-12-05 21:40:08.559 - DEBUG: [service_loader.js:39:16] method #4 -> delete
+2022-12-05 21:40:08.559 - DEBUG: [service_loader.js:43:16]     do method name -> doDelete
+2022-12-05 21:40:08.560 - INFO: [index.js:114:12] service loader called.
+2022-12-05 21:40:08.560 - DEBUG: [controller_loader.js:26:12] load called.
+2022-12-05 21:40:08.561 - DEBUG: [controller_loader.js:106:12] autoLoad called.
+2022-12-05 21:40:08.663 - DEBUG: [controller_loader.js:34:20] #0 -> id:1, type:rest, base:, unit:person
+2022-12-05 21:40:08.687 - DEBUG: [person-controller.js:27:16] PersonController initialized.
+2022-12-05 21:40:08.687 - DEBUG: [controller_loader.js:53:24] rest type #0 -> list
+2022-12-05 21:40:08.688 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person, func -> list
+2022-12-05 21:40:08.688 - DEBUG: [controller_loader.js:53:24] rest type #1 -> create
+2022-12-05 21:40:08.689 - DEBUG: [controller_loader.js:73:24] rest request method -> post, path -> /person, func -> create
+2022-12-05 21:40:08.689 - DEBUG: [controller_loader.js:53:24] rest type #2 -> read
+2022-12-05 21:40:08.690 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person/:id, func -> read
+2022-12-05 21:40:08.690 - DEBUG: [controller_loader.js:53:24] rest type #3 -> update
+2022-12-05 21:40:08.691 - DEBUG: [controller_loader.js:73:24] rest request method -> put, path -> /person/:id, func -> update
+2022-12-05 21:40:08.691 - DEBUG: [controller_loader.js:53:24] rest type #4 -> delete
+2022-12-05 21:40:08.691 - DEBUG: [controller_loader.js:73:24] rest request method -> delete, path -> /person/:id, func -> delete
+2022-12-05 21:40:08.692 - DEBUG: [controller_loader.js:36:20] #1 -> id:2, type:path, path:/profile/list, method:get,post, file:profile-controller, func:list
+2022-12-05 21:40:08.704 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:40:08.705 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:40:08.705 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:40:08.706 - DEBUG: [controller_loader.js:36:20] #2 -> id:3, type:path, path:/profile/get, method:get,post, file:profile-controller, func:get
+2022-12-05 21:40:08.706 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:40:08.706 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:40:08.707 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:40:08.707 - DEBUG: [controller_loader.js:36:20] #3 -> id:4, type:path, path:/profile/add, method:get, file:profile-controller, func:add
+2022-12-05 21:40:08.708 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:40:08.708 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:40:08.709 - DEBUG: [controller_loader.js:36:20] #4 -> id:5, type:path, path:/profile/upload, method:post, file:profile-controller, func:upload
+2022-12-05 21:40:08.709 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:40:08.710 - DEBUG: [controller_loader.js:84:28] method #0 -> post
+2022-12-05 21:40:08.711 - DEBUG: [controller_loader.js:36:20] #5 -> id:6, type:path, path:/test/set_cookie, method:get, file:test-controller, func:set_cookie
+2022-12-05 21:40:08.720 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:40:08.721 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:40:08.721 - DEBUG: [controller_loader.js:36:20] #6 -> id:7, type:path, path:/test/show_cookie, method:get, file:test-controller, func:show_cookie
+2022-12-05 21:40:08.722 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:40:08.723 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:40:08.723 - INFO: [index.js:118:12] controller loader called.
+2022-12-05 21:40:08.781 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-05 21:40:08.781 - DEBUG: [mci.js:28:20] name : external01
+2022-12-05 21:40:09.074 - DEBUG: [cni.js:15:16] CNI initialized.
+2022-12-05 21:40:09.075 - DEBUG: [cni.js:21:16] server name : external02
+2022-12-05 21:40:09.076 - DEBUG: [cni.js:25:16] server host : localhost
+2022-12-05 21:40:09.078 - DEBUG: [cni.js:26:16] server port : 7102
+2022-12-05 21:40:11.795 - INFO: [index.js:242:20] Http Server started.
+2022-12-05 21:40:11.795 - INFO: [index.js:252:16] Base URL -> http://localhost:7001
+2022-12-05 21:40:11.797 - INFO: [index.js:257:16] Namespace -> ::_7001_20540
+2022-12-05 21:40:12.662 - DEBUG: [socketio_loader.js:73:9] socketio_loader.load called.
+2022-12-05 21:40:12.667 - DEBUG: [socketio_loader.js:83:16] read namespace file -> ::_7001_27972
+2022-12-05 21:40:12.668 - INFO: [index.js:265:20] socket.io loader called.
+2022-12-05 21:40:12.672 - DEBUG: [socketio_loader.js:103:16] Error in executing sql -> Sql definition for chat_reset_presence not found in sql_config
+2022-12-05 21:40:12.858 - DEBUG: [socketio_loader.js:125:16] namespace file saved to -> ./socketio.pid
+2022-12-05 21:40:12.858 - INFO: [socketio_loader.js:133:12] socket.io service started.
+2022-12-05 21:40:12.861 - DEBUG: [socketio_loader.js:147:12] redis subscribed -> myapp_message
+2022-12-05 21:41:05.665 - DEBUG: [service_loader.js:17:12] load in service_loader called.
+2022-12-05 21:41:05.670 - DEBUG: [service_loader.js:21:16] #0 -> id:1, unit:person
+2022-12-05 21:41:05.721 - DEBUG: [service_loader.js:39:16] method #0 -> list
+2022-12-05 21:41:05.721 - DEBUG: [service_loader.js:43:16]     do method name -> doList
+2022-12-05 21:41:05.722 - DEBUG: [service_loader.js:39:16] method #1 -> read
+2022-12-05 21:41:05.722 - DEBUG: [service_loader.js:43:16]     do method name -> doRead
+2022-12-05 21:41:05.723 - DEBUG: [service_loader.js:39:16] method #2 -> create
+2022-12-05 21:41:05.723 - DEBUG: [service_loader.js:43:16]     do method name -> doCreate
+2022-12-05 21:41:05.724 - DEBUG: [service_loader.js:39:16] method #3 -> update
+2022-12-05 21:41:05.724 - DEBUG: [service_loader.js:43:16]     do method name -> doUpdate
+2022-12-05 21:41:05.724 - DEBUG: [service_loader.js:39:16] method #4 -> delete
+2022-12-05 21:41:05.725 - DEBUG: [service_loader.js:43:16]     do method name -> doDelete
+2022-12-05 21:41:05.725 - INFO: [index.js:114:12] service loader called.
+2022-12-05 21:41:05.726 - DEBUG: [controller_loader.js:26:12] load called.
+2022-12-05 21:41:05.726 - DEBUG: [controller_loader.js:106:12] autoLoad called.
+2022-12-05 21:41:05.734 - DEBUG: [controller_loader.js:34:20] #0 -> id:1, type:rest, base:, unit:person
+2022-12-05 21:41:05.737 - DEBUG: [person-controller.js:27:16] PersonController initialized.
+2022-12-05 21:41:05.737 - DEBUG: [controller_loader.js:53:24] rest type #0 -> list
+2022-12-05 21:41:05.738 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person, func -> list
+2022-12-05 21:41:05.738 - DEBUG: [controller_loader.js:53:24] rest type #1 -> create
+2022-12-05 21:41:05.739 - DEBUG: [controller_loader.js:73:24] rest request method -> post, path -> /person, func -> create
+2022-12-05 21:41:05.739 - DEBUG: [controller_loader.js:53:24] rest type #2 -> read
+2022-12-05 21:41:05.739 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person/:id, func -> read
+2022-12-05 21:41:05.740 - DEBUG: [controller_loader.js:53:24] rest type #3 -> update
+2022-12-05 21:41:05.740 - DEBUG: [controller_loader.js:73:24] rest request method -> put, path -> /person/:id, func -> update
+2022-12-05 21:41:05.741 - DEBUG: [controller_loader.js:53:24] rest type #4 -> delete
+2022-12-05 21:41:05.741 - DEBUG: [controller_loader.js:73:24] rest request method -> delete, path -> /person/:id, func -> delete
+2022-12-05 21:41:05.741 - DEBUG: [controller_loader.js:36:20] #1 -> id:2, type:path, path:/profile/list, method:get,post, file:profile-controller, func:list
+2022-12-05 21:41:05.742 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:41:05.743 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:41:05.743 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:41:05.744 - DEBUG: [controller_loader.js:36:20] #2 -> id:3, type:path, path:/profile/get, method:get,post, file:profile-controller, func:get
+2022-12-05 21:41:05.744 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:41:05.744 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:41:05.745 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:41:05.745 - DEBUG: [controller_loader.js:36:20] #3 -> id:4, type:path, path:/profile/add, method:get, file:profile-controller, func:add
+2022-12-05 21:41:05.746 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:41:05.746 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:41:05.746 - DEBUG: [controller_loader.js:36:20] #4 -> id:5, type:path, path:/profile/upload, method:post, file:profile-controller, func:upload
+2022-12-05 21:41:05.747 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:41:05.747 - DEBUG: [controller_loader.js:84:28] method #0 -> post
+2022-12-05 21:41:05.747 - DEBUG: [controller_loader.js:36:20] #5 -> id:6, type:path, path:/test/set_cookie, method:get, file:test-controller, func:set_cookie
+2022-12-05 21:41:05.748 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:41:05.749 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:41:05.749 - DEBUG: [controller_loader.js:36:20] #6 -> id:7, type:path, path:/test/show_cookie, method:get, file:test-controller, func:show_cookie
+2022-12-05 21:41:05.749 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:41:05.750 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:41:05.750 - INFO: [index.js:118:12] controller loader called.
+2022-12-05 21:41:05.764 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-05 21:41:05.764 - DEBUG: [mci.js:28:20] name : external01
+2022-12-05 21:41:05.791 - DEBUG: [cni.js:15:16] CNI initialized.
+2022-12-05 21:41:05.792 - DEBUG: [cni.js:21:16] server name : external02
+2022-12-05 21:41:05.794 - DEBUG: [cni.js:25:16] server host : localhost
+2022-12-05 21:41:05.794 - DEBUG: [cni.js:26:16] server port : 7102
+2022-12-05 21:41:06.025 - INFO: [index.js:242:20] Http Server started.
+2022-12-05 21:41:06.026 - INFO: [index.js:252:16] Base URL -> http://localhost:7001
+2022-12-05 21:41:06.028 - INFO: [index.js:257:16] Namespace -> ::_7001_12672
+2022-12-05 21:41:06.143 - DEBUG: [socketio_loader.js:73:9] socketio_loader.load called.
+2022-12-05 21:41:06.144 - DEBUG: [socketio_loader.js:83:16] read namespace file -> ::_7001_20540
+2022-12-05 21:41:06.146 - INFO: [index.js:265:20] socket.io loader called.
+2022-12-05 21:41:06.150 - DEBUG: [socketio_loader.js:103:16] Error in executing sql -> Sql definition for chat_reset_presence not found in sql_config
+2022-12-05 21:41:06.166 - DEBUG: [socketio_loader.js:125:16] namespace file saved to -> ./socketio.pid
+2022-12-05 21:41:06.166 - INFO: [socketio_loader.js:133:12] socket.io service started.
+2022-12-05 21:41:06.168 - DEBUG: [socketio_loader.js:147:12] redis subscribed -> myapp_message
+2022-12-05 21:41:56.502 - DEBUG: [service_loader.js:17:12] load in service_loader called.
+2022-12-05 21:41:56.506 - DEBUG: [service_loader.js:21:16] #0 -> id:1, unit:person
+2022-12-05 21:41:56.562 - DEBUG: [service_loader.js:39:16] method #0 -> list
+2022-12-05 21:41:56.563 - DEBUG: [service_loader.js:43:16]     do method name -> doList
+2022-12-05 21:41:56.565 - DEBUG: [service_loader.js:39:16] method #1 -> read
+2022-12-05 21:41:56.567 - DEBUG: [service_loader.js:43:16]     do method name -> doRead
+2022-12-05 21:41:56.568 - DEBUG: [service_loader.js:39:16] method #2 -> create
+2022-12-05 21:41:56.568 - DEBUG: [service_loader.js:43:16]     do method name -> doCreate
+2022-12-05 21:41:56.568 - DEBUG: [service_loader.js:39:16] method #3 -> update
+2022-12-05 21:41:56.569 - DEBUG: [service_loader.js:43:16]     do method name -> doUpdate
+2022-12-05 21:41:56.569 - DEBUG: [service_loader.js:39:16] method #4 -> delete
+2022-12-05 21:41:56.570 - DEBUG: [service_loader.js:43:16]     do method name -> doDelete
+2022-12-05 21:41:56.570 - INFO: [index.js:114:12] service loader called.
+2022-12-05 21:41:56.571 - DEBUG: [controller_loader.js:26:12] load called.
+2022-12-05 21:41:56.571 - DEBUG: [controller_loader.js:106:12] autoLoad called.
+2022-12-05 21:41:56.580 - DEBUG: [controller_loader.js:34:20] #0 -> id:1, type:rest, base:, unit:person
+2022-12-05 21:41:56.583 - DEBUG: [person-controller.js:27:16] PersonController initialized.
+2022-12-05 21:41:56.583 - DEBUG: [controller_loader.js:53:24] rest type #0 -> list
+2022-12-05 21:41:56.584 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person, func -> list
+2022-12-05 21:41:56.584 - DEBUG: [controller_loader.js:53:24] rest type #1 -> create
+2022-12-05 21:41:56.584 - DEBUG: [controller_loader.js:73:24] rest request method -> post, path -> /person, func -> create
+2022-12-05 21:41:56.585 - DEBUG: [controller_loader.js:53:24] rest type #2 -> read
+2022-12-05 21:41:56.585 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person/:id, func -> read
+2022-12-05 21:41:56.586 - DEBUG: [controller_loader.js:53:24] rest type #3 -> update
+2022-12-05 21:41:56.586 - DEBUG: [controller_loader.js:73:24] rest request method -> put, path -> /person/:id, func -> update
+2022-12-05 21:41:56.590 - DEBUG: [controller_loader.js:53:24] rest type #4 -> delete
+2022-12-05 21:41:56.591 - DEBUG: [controller_loader.js:73:24] rest request method -> delete, path -> /person/:id, func -> delete
+2022-12-05 21:41:56.591 - DEBUG: [controller_loader.js:36:20] #1 -> id:2, type:path, path:/profile/list, method:get,post, file:profile-controller, func:list
+2022-12-05 21:41:56.593 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:41:56.594 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:41:56.596 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:41:56.597 - DEBUG: [controller_loader.js:36:20] #2 -> id:3, type:path, path:/profile/get, method:get,post, file:profile-controller, func:get
+2022-12-05 21:41:56.597 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:41:56.598 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:41:56.598 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:41:56.599 - DEBUG: [controller_loader.js:36:20] #3 -> id:4, type:path, path:/profile/add, method:get, file:profile-controller, func:add
+2022-12-05 21:41:56.599 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:41:56.599 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:41:56.600 - DEBUG: [controller_loader.js:36:20] #4 -> id:5, type:path, path:/profile/upload, method:post, file:profile-controller, func:upload
+2022-12-05 21:41:56.600 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:41:56.600 - DEBUG: [controller_loader.js:84:28] method #0 -> post
+2022-12-05 21:41:56.601 - DEBUG: [controller_loader.js:36:20] #5 -> id:6, type:path, path:/test/set_cookie, method:get, file:test-controller, func:set_cookie
+2022-12-05 21:41:56.602 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:41:56.602 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:41:56.603 - DEBUG: [controller_loader.js:36:20] #6 -> id:7, type:path, path:/test/show_cookie, method:get, file:test-controller, func:show_cookie
+2022-12-05 21:41:56.606 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:41:56.606 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:41:56.607 - INFO: [index.js:118:12] controller loader called.
+2022-12-05 21:41:56.630 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-05 21:41:56.630 - DEBUG: [mci.js:28:20] name : external01
+2022-12-05 21:41:56.654 - DEBUG: [cni.js:15:16] CNI initialized.
+2022-12-05 21:41:56.658 - DEBUG: [cni.js:21:16] server name : external02
+2022-12-05 21:41:56.658 - DEBUG: [cni.js:25:16] server host : localhost
+2022-12-05 21:41:56.661 - DEBUG: [cni.js:26:16] server port : 7102
+2022-12-05 21:41:56.868 - INFO: [index.js:242:20] Http Server started.
+2022-12-05 21:41:56.869 - INFO: [index.js:252:16] Base URL -> http://localhost:7001
+2022-12-05 21:41:56.871 - INFO: [index.js:257:16] Namespace -> ::_7001_34788
+2022-12-05 21:41:56.974 - DEBUG: [socketio_loader.js:73:9] socketio_loader.load called.
+2022-12-05 21:41:56.975 - DEBUG: [socketio_loader.js:83:16] read namespace file -> ::_7001_12672
+2022-12-05 21:41:56.977 - INFO: [index.js:265:20] socket.io loader called.
+2022-12-05 21:41:56.981 - DEBUG: [socketio_loader.js:103:16] Error in executing sql -> Sql definition for chat_reset_presence not found in sql_config
+2022-12-05 21:41:56.998 - DEBUG: [socketio_loader.js:125:16] namespace file saved to -> ./socketio.pid
+2022-12-05 21:41:57.000 - INFO: [socketio_loader.js:133:12] socket.io service started.
+2022-12-05 21:41:57.002 - DEBUG: [socketio_loader.js:147:12] redis subscribed -> myapp_message
+2022-12-05 21:44:24.787 - DEBUG: [service_loader.js:17:12] load in service_loader called.
+2022-12-05 21:44:24.791 - DEBUG: [service_loader.js:21:16] #0 -> id:1, unit:person
+2022-12-05 21:44:24.843 - DEBUG: [service_loader.js:39:16] method #0 -> list
+2022-12-05 21:44:24.843 - DEBUG: [service_loader.js:43:16]     do method name -> doList
+2022-12-05 21:44:24.844 - DEBUG: [service_loader.js:39:16] method #1 -> read
+2022-12-05 21:44:24.844 - DEBUG: [service_loader.js:43:16]     do method name -> doRead
+2022-12-05 21:44:24.845 - DEBUG: [service_loader.js:39:16] method #2 -> create
+2022-12-05 21:44:24.845 - DEBUG: [service_loader.js:43:16]     do method name -> doCreate
+2022-12-05 21:44:24.845 - DEBUG: [service_loader.js:39:16] method #3 -> update
+2022-12-05 21:44:24.846 - DEBUG: [service_loader.js:43:16]     do method name -> doUpdate
+2022-12-05 21:44:24.846 - DEBUG: [service_loader.js:39:16] method #4 -> delete
+2022-12-05 21:44:24.847 - DEBUG: [service_loader.js:43:16]     do method name -> doDelete
+2022-12-05 21:44:24.847 - INFO: [index.js:114:12] service loader called.
+2022-12-05 21:44:24.848 - DEBUG: [controller_loader.js:26:12] load called.
+2022-12-05 21:44:24.848 - DEBUG: [controller_loader.js:106:12] autoLoad called.
+2022-12-05 21:44:24.856 - DEBUG: [controller_loader.js:34:20] #0 -> id:1, type:rest, base:, unit:person
+2022-12-05 21:44:24.858 - DEBUG: [person-controller.js:27:16] PersonController initialized.
+2022-12-05 21:44:24.858 - DEBUG: [controller_loader.js:53:24] rest type #0 -> list
+2022-12-05 21:44:24.859 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person, func -> list
+2022-12-05 21:44:24.859 - DEBUG: [controller_loader.js:53:24] rest type #1 -> create
+2022-12-05 21:44:24.859 - DEBUG: [controller_loader.js:73:24] rest request method -> post, path -> /person, func -> create
+2022-12-05 21:44:24.861 - DEBUG: [controller_loader.js:53:24] rest type #2 -> read
+2022-12-05 21:44:24.862 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person/:id, func -> read
+2022-12-05 21:44:24.862 - DEBUG: [controller_loader.js:53:24] rest type #3 -> update
+2022-12-05 21:44:24.863 - DEBUG: [controller_loader.js:73:24] rest request method -> put, path -> /person/:id, func -> update
+2022-12-05 21:44:24.863 - DEBUG: [controller_loader.js:53:24] rest type #4 -> delete
+2022-12-05 21:44:24.863 - DEBUG: [controller_loader.js:73:24] rest request method -> delete, path -> /person/:id, func -> delete
+2022-12-05 21:44:24.864 - DEBUG: [controller_loader.js:36:20] #1 -> id:2, type:path, path:/profile/list, method:get,post, file:profile-controller, func:list
+2022-12-05 21:44:24.865 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:44:24.865 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:44:24.866 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:44:24.866 - DEBUG: [controller_loader.js:36:20] #2 -> id:3, type:path, path:/profile/get, method:get,post, file:profile-controller, func:get
+2022-12-05 21:44:24.866 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:44:24.867 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:44:24.867 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:44:24.868 - DEBUG: [controller_loader.js:36:20] #3 -> id:4, type:path, path:/profile/add, method:get, file:profile-controller, func:add
+2022-12-05 21:44:24.868 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:44:24.868 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:44:24.869 - DEBUG: [controller_loader.js:36:20] #4 -> id:5, type:path, path:/profile/upload, method:post, file:profile-controller, func:upload
+2022-12-05 21:44:24.869 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:44:24.870 - DEBUG: [controller_loader.js:84:28] method #0 -> post
+2022-12-05 21:44:24.870 - DEBUG: [controller_loader.js:36:20] #5 -> id:6, type:path, path:/test/set_cookie, method:get, file:test-controller, func:set_cookie
+2022-12-05 21:44:24.871 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:44:24.871 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:44:24.872 - DEBUG: [controller_loader.js:36:20] #6 -> id:7, type:path, path:/test/show_cookie, method:get, file:test-controller, func:show_cookie
+2022-12-05 21:44:24.872 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:44:24.872 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:44:24.873 - INFO: [index.js:118:12] controller loader called.
+2022-12-05 21:44:24.885 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-05 21:44:24.886 - DEBUG: [mci.js:28:20] name : external01
+2022-12-05 21:44:24.911 - DEBUG: [cni.js:15:16] CNI initialized.
+2022-12-05 21:44:24.913 - DEBUG: [cni.js:21:16] server name : external02
+2022-12-05 21:44:24.919 - DEBUG: [cni.js:25:16] server host : localhost
+2022-12-05 21:44:24.919 - DEBUG: [cni.js:26:16] server port : 7102
+2022-12-05 21:44:25.123 - INFO: [index.js:242:20] Http Server started.
+2022-12-05 21:44:25.124 - INFO: [index.js:252:16] Base URL -> http://localhost:7001
+2022-12-05 21:44:25.126 - INFO: [index.js:257:16] Namespace -> ::_7001_30000
+2022-12-05 21:44:25.226 - DEBUG: [socketio_loader.js:73:9] socketio_loader.load called.
+2022-12-05 21:44:25.227 - DEBUG: [socketio_loader.js:83:16] read namespace file -> ::_7001_34788
+2022-12-05 21:44:25.229 - INFO: [index.js:265:20] socket.io loader called.
+2022-12-05 21:44:25.233 - DEBUG: [socketio_loader.js:103:16] Error in executing sql -> Sql definition for chat_reset_presence not found in sql_config
+2022-12-05 21:44:25.248 - DEBUG: [socketio_loader.js:125:16] namespace file saved to -> ./socketio.pid
+2022-12-05 21:44:25.249 - INFO: [socketio_loader.js:133:12] socket.io service started.
+2022-12-05 21:44:25.250 - DEBUG: [socketio_loader.js:147:12] redis subscribed -> myapp_message
+2022-12-05 21:45:16.903 - DEBUG: [service_loader.js:17:12] load in service_loader called.
+2022-12-05 21:45:16.906 - DEBUG: [service_loader.js:21:16] #0 -> id:1, unit:person
+2022-12-05 21:45:16.959 - DEBUG: [service_loader.js:39:16] method #0 -> list
+2022-12-05 21:45:16.959 - DEBUG: [service_loader.js:43:16]     do method name -> doList
+2022-12-05 21:45:16.959 - DEBUG: [service_loader.js:39:16] method #1 -> read
+2022-12-05 21:45:16.960 - DEBUG: [service_loader.js:43:16]     do method name -> doRead
+2022-12-05 21:45:16.960 - DEBUG: [service_loader.js:39:16] method #2 -> create
+2022-12-05 21:45:16.960 - DEBUG: [service_loader.js:43:16]     do method name -> doCreate
+2022-12-05 21:45:16.961 - DEBUG: [service_loader.js:39:16] method #3 -> update
+2022-12-05 21:45:16.961 - DEBUG: [service_loader.js:43:16]     do method name -> doUpdate
+2022-12-05 21:45:16.962 - DEBUG: [service_loader.js:39:16] method #4 -> delete
+2022-12-05 21:45:16.962 - DEBUG: [service_loader.js:43:16]     do method name -> doDelete
+2022-12-05 21:45:16.962 - INFO: [index.js:114:12] service loader called.
+2022-12-05 21:45:16.963 - DEBUG: [controller_loader.js:26:12] load called.
+2022-12-05 21:45:16.963 - DEBUG: [controller_loader.js:106:12] autoLoad called.
+2022-12-05 21:45:16.970 - DEBUG: [controller_loader.js:34:20] #0 -> id:1, type:rest, base:, unit:person
+2022-12-05 21:45:16.972 - DEBUG: [person-controller.js:27:16] PersonController initialized.
+2022-12-05 21:45:16.972 - DEBUG: [controller_loader.js:53:24] rest type #0 -> list
+2022-12-05 21:45:16.973 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person, func -> list
+2022-12-05 21:45:16.973 - DEBUG: [controller_loader.js:53:24] rest type #1 -> create
+2022-12-05 21:45:16.973 - DEBUG: [controller_loader.js:73:24] rest request method -> post, path -> /person, func -> create
+2022-12-05 21:45:16.973 - DEBUG: [controller_loader.js:53:24] rest type #2 -> read
+2022-12-05 21:45:16.974 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person/:id, func -> read
+2022-12-05 21:45:16.974 - DEBUG: [controller_loader.js:53:24] rest type #3 -> update
+2022-12-05 21:45:16.974 - DEBUG: [controller_loader.js:73:24] rest request method -> put, path -> /person/:id, func -> update
+2022-12-05 21:45:16.974 - DEBUG: [controller_loader.js:53:24] rest type #4 -> delete
+2022-12-05 21:45:16.974 - DEBUG: [controller_loader.js:73:24] rest request method -> delete, path -> /person/:id, func -> delete
+2022-12-05 21:45:16.975 - DEBUG: [controller_loader.js:36:20] #1 -> id:2, type:path, path:/profile/list, method:get,post, file:profile-controller, func:list
+2022-12-05 21:45:16.975 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:45:16.976 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:45:16.976 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:45:16.976 - DEBUG: [controller_loader.js:36:20] #2 -> id:3, type:path, path:/profile/get, method:get,post, file:profile-controller, func:get
+2022-12-05 21:45:16.976 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:45:16.977 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:45:16.977 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:45:16.977 - DEBUG: [controller_loader.js:36:20] #3 -> id:4, type:path, path:/profile/add, method:get, file:profile-controller, func:add
+2022-12-05 21:45:16.977 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:45:16.977 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:45:16.978 - DEBUG: [controller_loader.js:36:20] #4 -> id:5, type:path, path:/profile/upload, method:post, file:profile-controller, func:upload
+2022-12-05 21:45:16.981 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:45:16.981 - DEBUG: [controller_loader.js:84:28] method #0 -> post
+2022-12-05 21:45:16.981 - DEBUG: [controller_loader.js:36:20] #5 -> id:6, type:path, path:/test/set_cookie, method:get, file:test-controller, func:set_cookie
+2022-12-05 21:45:16.982 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:45:16.982 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:45:16.983 - DEBUG: [controller_loader.js:36:20] #6 -> id:7, type:path, path:/test/show_cookie, method:get, file:test-controller, func:show_cookie
+2022-12-05 21:45:16.983 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:45:16.983 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:45:16.983 - INFO: [index.js:118:12] controller loader called.
+2022-12-05 21:45:16.991 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-05 21:45:16.991 - DEBUG: [mci.js:28:20] name : external01
+2022-12-05 21:45:17.016 - DEBUG: [cni.js:15:16] CNI initialized.
+2022-12-05 21:45:17.017 - DEBUG: [cni.js:21:16] server name : external02
+2022-12-05 21:45:17.018 - DEBUG: [cni.js:25:16] server host : localhost
+2022-12-05 21:45:17.018 - DEBUG: [cni.js:26:16] server port : 7102
+2022-12-05 21:45:17.202 - INFO: [index.js:242:20] Http Server started.
+2022-12-05 21:45:17.203 - INFO: [index.js:252:16] Base URL -> http://localhost:7001
+2022-12-05 21:45:17.204 - INFO: [index.js:257:16] Namespace -> ::_7001_22812
+2022-12-05 21:45:17.307 - DEBUG: [socketio_loader.js:73:9] socketio_loader.load called.
+2022-12-05 21:45:17.308 - DEBUG: [socketio_loader.js:83:16] read namespace file -> ::_7001_30000
+2022-12-05 21:45:17.310 - INFO: [index.js:265:20] socket.io loader called.
+2022-12-05 21:45:17.314 - DEBUG: [socketio_loader.js:103:16] Error in executing sql -> Sql definition for chat_reset_presence not found in sql_config
+2022-12-05 21:45:17.327 - DEBUG: [socketio_loader.js:125:16] namespace file saved to -> ./socketio.pid
+2022-12-05 21:45:17.328 - INFO: [socketio_loader.js:133:12] socket.io service started.
+2022-12-05 21:45:17.329 - DEBUG: [socketio_loader.js:147:12] redis subscribed -> myapp_message
+2022-12-05 21:46:10.516 - DEBUG: [service_loader.js:17:12] load in service_loader called.
+2022-12-05 21:46:10.520 - DEBUG: [service_loader.js:21:16] #0 -> id:1, unit:person
+2022-12-05 21:46:10.581 - DEBUG: [service_loader.js:39:16] method #0 -> list
+2022-12-05 21:46:10.582 - DEBUG: [service_loader.js:43:16]     do method name -> doList
+2022-12-05 21:46:10.582 - DEBUG: [service_loader.js:39:16] method #1 -> read
+2022-12-05 21:46:10.582 - DEBUG: [service_loader.js:43:16]     do method name -> doRead
+2022-12-05 21:46:10.583 - DEBUG: [service_loader.js:39:16] method #2 -> create
+2022-12-05 21:46:10.583 - DEBUG: [service_loader.js:43:16]     do method name -> doCreate
+2022-12-05 21:46:10.584 - DEBUG: [service_loader.js:39:16] method #3 -> update
+2022-12-05 21:46:10.584 - DEBUG: [service_loader.js:43:16]     do method name -> doUpdate
+2022-12-05 21:46:10.584 - DEBUG: [service_loader.js:39:16] method #4 -> delete
+2022-12-05 21:46:10.584 - DEBUG: [service_loader.js:43:16]     do method name -> doDelete
+2022-12-05 21:46:10.585 - INFO: [index.js:114:12] service loader called.
+2022-12-05 21:46:10.585 - DEBUG: [controller_loader.js:26:12] load called.
+2022-12-05 21:46:10.585 - DEBUG: [controller_loader.js:106:12] autoLoad called.
+2022-12-05 21:46:10.594 - DEBUG: [controller_loader.js:34:20] #0 -> id:1, type:rest, base:, unit:person
+2022-12-05 21:46:10.596 - DEBUG: [person-controller.js:27:16] PersonController initialized.
+2022-12-05 21:46:10.596 - DEBUG: [controller_loader.js:53:24] rest type #0 -> list
+2022-12-05 21:46:10.596 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person, func -> list
+2022-12-05 21:46:10.597 - DEBUG: [controller_loader.js:53:24] rest type #1 -> create
+2022-12-05 21:46:10.597 - DEBUG: [controller_loader.js:73:24] rest request method -> post, path -> /person, func -> create
+2022-12-05 21:46:10.597 - DEBUG: [controller_loader.js:53:24] rest type #2 -> read
+2022-12-05 21:46:10.597 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person/:id, func -> read
+2022-12-05 21:46:10.598 - DEBUG: [controller_loader.js:53:24] rest type #3 -> update
+2022-12-05 21:46:10.598 - DEBUG: [controller_loader.js:73:24] rest request method -> put, path -> /person/:id, func -> update
+2022-12-05 21:46:10.598 - DEBUG: [controller_loader.js:53:24] rest type #4 -> delete
+2022-12-05 21:46:10.598 - DEBUG: [controller_loader.js:73:24] rest request method -> delete, path -> /person/:id, func -> delete
+2022-12-05 21:46:10.598 - DEBUG: [controller_loader.js:36:20] #1 -> id:2, type:path, path:/profile/list, method:get,post, file:profile-controller, func:list
+2022-12-05 21:46:10.600 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:46:10.601 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:46:10.602 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:46:10.602 - DEBUG: [controller_loader.js:36:20] #2 -> id:3, type:path, path:/profile/get, method:get,post, file:profile-controller, func:get
+2022-12-05 21:46:10.602 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:46:10.602 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:46:10.602 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-05 21:46:10.603 - DEBUG: [controller_loader.js:36:20] #3 -> id:4, type:path, path:/profile/add, method:get, file:profile-controller, func:add
+2022-12-05 21:46:10.603 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:46:10.603 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:46:10.603 - DEBUG: [controller_loader.js:36:20] #4 -> id:5, type:path, path:/profile/upload, method:post, file:profile-controller, func:upload
+2022-12-05 21:46:10.603 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-05 21:46:10.604 - DEBUG: [controller_loader.js:84:28] method #0 -> post
+2022-12-05 21:46:10.604 - DEBUG: [controller_loader.js:36:20] #5 -> id:6, type:path, path:/test/set_cookie, method:get, file:test-controller, func:set_cookie
+2022-12-05 21:46:10.605 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:46:10.605 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:46:10.605 - DEBUG: [controller_loader.js:36:20] #6 -> id:7, type:path, path:/test/show_cookie, method:get, file:test-controller, func:show_cookie
+2022-12-05 21:46:10.605 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-05 21:46:10.606 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-05 21:46:10.606 - INFO: [index.js:118:12] controller loader called.
+2022-12-05 21:46:10.613 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-05 21:46:10.613 - DEBUG: [mci.js:28:20] name : external01
+2022-12-05 21:46:10.644 - DEBUG: [cni.js:15:16] CNI initialized.
+2022-12-05 21:46:10.644 - DEBUG: [cni.js:21:16] server name : external02
+2022-12-05 21:46:10.646 - DEBUG: [cni.js:25:16] server host : localhost
+2022-12-05 21:46:10.648 - DEBUG: [cni.js:26:16] server port : 7102
+2022-12-05 21:46:10.851 - INFO: [index.js:242:20] Http Server started.
+2022-12-05 21:46:10.851 - INFO: [index.js:252:16] Base URL -> http://localhost:7001
+2022-12-05 21:46:10.853 - INFO: [index.js:257:16] Namespace -> ::_7001_13468
+2022-12-05 21:46:10.969 - DEBUG: [socketio_loader.js:73:9] socketio_loader.load called.
+2022-12-05 21:46:10.970 - DEBUG: [socketio_loader.js:83:16] read namespace file -> ::_7001_22812
+2022-12-05 21:46:10.973 - INFO: [index.js:265:20] socket.io loader called.
+2022-12-05 21:46:10.976 - DEBUG: [socketio_loader.js:103:16] Error in executing sql -> Sql definition for chat_reset_presence not found in sql_config
+2022-12-05 21:46:10.990 - DEBUG: [socketio_loader.js:125:16] namespace file saved to -> ./socketio.pid
+2022-12-05 21:46:10.991 - INFO: [socketio_loader.js:133:12] socket.io service started.
+2022-12-05 21:46:10.992 - DEBUG: [socketio_loader.js:147:12] redis subscribed -> myapp_message
+2022-12-05 21:46:11.010 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/darwin -> in file ../controllers/baroboard-darwin-sync-controller, table : baroboard.device
+2022-12-05 21:46:11.013 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-05 21:46:11.013 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/darwin, func -> list
+2022-12-05 21:46:11.013 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-05 21:46:11.014 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/darwin, func -> create
+2022-12-05 21:46:11.014 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-05 21:46:11.014 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/darwin/:id, func -> read
+2022-12-05 21:46:11.015 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-05 21:46:11.015 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/darwin/:id, func -> update
+2022-12-05 21:46:11.016 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-05 21:46:11.016 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/darwin/:id, func -> delete
+2022-12-05 21:46:11.018 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/darwin/request_esl_sync -> updateData in file ../controllers/baroboard-darwin-sync-controller
+2022-12-05 21:46:11.135 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.146 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/device -> in file ../controllers/baroboard-device-controller, table : baroboard.device
+2022-12-05 21:46:11.146 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-05 21:46:11.146 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device, func -> list
+2022-12-05 21:46:11.147 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-05 21:46:11.147 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/device, func -> create
+2022-12-05 21:46:11.148 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-05 21:46:11.148 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device/:id, func -> read
+2022-12-05 21:46:11.149 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-05 21:46:11.149 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/device/:id, func -> update
+2022-12-05 21:46:11.149 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-05 21:46:11.150 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/device/:id, func -> delete
+2022-12-05 21:46:11.157 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/update -> updateData in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.177 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.187 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/select -> selectData in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.187 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.189 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/list -> dashboardList in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.190 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.192 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/sublist -> dashboardSubList in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.192 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.201 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/legacy -> legacyInfo in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.202 - DEBUG: [controller_loader.js:288:16] legacyInfo not found in the controller.
+2022-12-05 21:46:11.203 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/fieldlist -> dashboardFieldList in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.203 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.204 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/preview2 -> preview2 in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.204 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.206 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/apply -> applyData in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.207 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.208 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/preview -> applyData2 in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.209 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.213 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/goodbattery -> batteryUpdate in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.214 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.215 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/badbattery -> batteryUpdate2 in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.215 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.217 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/check/usinglayout -> checkUsingLayout in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.217 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.218 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/status -> statusUpdate in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.218 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.220 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/statussync -> statusSync in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.220 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.221 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/mappinglist -> layoutMappingDataList in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.227 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.229 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/modify/layout -> modifyLayoutinfo in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.230 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.231 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/esl_request -> darwinPushESLData in file ../controllers/baroboard-device-controller
+2022-12-05 21:46:11.231 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.234 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/device_group -> in file ../controllers/baroboard-device-group-controller, table : baroboard.device_group
+2022-12-05 21:46:11.234 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-05 21:46:11.235 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device_group, func -> list
+2022-12-05 21:46:11.235 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-05 21:46:11.235 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/device_group, func -> create
+2022-12-05 21:46:11.235 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-05 21:46:11.236 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device_group/:id, func -> read
+2022-12-05 21:46:11.236 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-05 21:46:11.236 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/device_group/:id, func -> update
+2022-12-05 21:46:11.237 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-05 21:46:11.237 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/device_group/:id, func -> delete
+2022-12-05 21:46:11.243 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/image -> in file ../controllers/baroboard-image-controller, table : baroboard.image
+2022-12-05 21:46:11.244 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-05 21:46:11.247 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/image, func -> list
+2022-12-05 21:46:11.247 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-05 21:46:11.248 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/image, func -> create
+2022-12-05 21:46:11.248 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-05 21:46:11.248 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/image/:id, func -> read
+2022-12-05 21:46:11.249 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-05 21:46:11.249 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/image/:id, func -> update
+2022-12-05 21:46:11.249 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-05 21:46:11.249 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/image/:id, func -> delete
+2022-12-05 21:46:11.251 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/list -> requestList in file ../controllers/baroboard-image-controller
+2022-12-05 21:46:11.252 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.258 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/list -> requestcategoryList in file ../controllers/baroboard-image-controller
+2022-12-05 21:46:11.258 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.263 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/delete_item -> requestDeleteImage2 in file ../controllers/baroboard-image-controller
+2022-12-05 21:46:11.263 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.265 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/title_delete -> requestDeleteCategory in file ../controllers/baroboard-image-controller
+2022-12-05 21:46:11.265 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.267 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/add -> requestAddCategoryItem in file ../controllers/baroboard-image-controller
+2022-12-05 21:46:11.267 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.269 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/image -> requestAddImageItemInCategory in file ../controllers/baroboard-image-controller
+2022-12-05 21:46:11.275 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.275 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.281 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/layout -> in file ../controllers/baroboard-layout-controller, table : baroboard.layout
+2022-12-05 21:46:11.281 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-05 21:46:11.281 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/layout, func -> list
+2022-12-05 21:46:11.282 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-05 21:46:11.282 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/layout, func -> create
+2022-12-05 21:46:11.282 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-05 21:46:11.283 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/layout/:id, func -> read
+2022-12-05 21:46:11.283 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-05 21:46:11.283 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/layout/:id, func -> update
+2022-12-05 21:46:11.283 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-05 21:46:11.284 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/layout/:id, func -> delete
+2022-12-05 21:46:11.290 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/layout/image/del -> requestImageDelete in file ../controllers/baroboard-layout-controller
+2022-12-05 21:46:11.292 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.292 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.297 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/layout/image/update -> requestUpdateImage in file ../controllers/baroboard-layout-controller
+2022-12-05 21:46:11.298 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.299 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/layout/mapping/update -> updateMapping in file ../controllers/baroboard-layout-controller
+2022-12-05 21:46:11.300 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.308 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/legacy -> in file ../controllers/baroboard-legacy, table : baroboard.legacy
+2022-12-05 21:46:11.309 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-05 21:46:11.309 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/legacy, func -> list
+2022-12-05 21:46:11.309 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-05 21:46:11.310 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/legacy, func -> create
+2022-12-05 21:46:11.310 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-05 21:46:11.314 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/legacy/:id, func -> read
+2022-12-05 21:46:11.314 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-05 21:46:11.315 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/legacy/:id, func -> update
+2022-12-05 21:46:11.315 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-05 21:46:11.316 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/legacy/:id, func -> delete
+2022-12-05 21:46:11.324 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/users -> in file ../controllers/baroboard-users-controller, table : baroboard.users
+2022-12-05 21:46:11.324 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-05 21:46:11.324 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/users, func -> list
+2022-12-05 21:46:11.325 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-05 21:46:11.325 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/users, func -> create
+2022-12-05 21:46:11.326 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-05 21:46:11.327 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/users/:id, func -> read
+2022-12-05 21:46:11.330 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-05 21:46:11.330 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/users/:id, func -> update
+2022-12-05 21:46:11.331 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-05 21:46:11.331 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/users/:id, func -> delete
+2022-12-05 21:46:11.339 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/users/signup -> signup in file ../controllers/baroboard-users-controller
+2022-12-05 21:46:11.342 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.344 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/users/login -> login in file ../controllers/baroboard-users-controller
+2022-12-05 21:46:11.345 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.355 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/users/logout -> logout in file ../controllers/baroboard-users-controller
+2022-12-05 21:46:11.355 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.359 - DEBUG: [controller_loader.js:226:12] registerRest called : /bear -> in file ../controllers/bear-controller, table : test.person
+2022-12-05 21:46:11.359 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-05 21:46:11.360 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /bear, func -> list
+2022-12-05 21:46:11.360 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-05 21:46:11.364 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /bear, func -> create
+2022-12-05 21:46:11.369 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-05 21:46:11.369 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /bear/:id, func -> read
+2022-12-05 21:46:11.370 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-05 21:46:11.370 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /bear/:id, func -> update
+2022-12-05 21:46:11.371 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-05 21:46:11.372 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /bear/:id, func -> delete
+2022-12-05 21:46:11.378 - DEBUG: [controller_loader.js:226:12] registerRest called : /cat -> in file ../controllers/cat-controller, table : undefined
+2022-12-05 21:46:11.383 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-05 21:46:11.384 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /cat, func -> list
+2022-12-05 21:46:11.385 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-05 21:46:11.386 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /cat, func -> create
+2022-12-05 21:46:11.386 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-05 21:46:11.387 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /cat/:id, func -> read
+2022-12-05 21:46:11.387 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-05 21:46:11.388 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /cat/:id, func -> update
+2022-12-05 21:46:11.388 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-05 21:46:11.388 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /cat/:id, func -> delete
+2022-12-05 21:46:11.402 - DEBUG: [controller_loader.js:267:12] registerPath called : /chat/send -> send in file ../controllers/chat-controller
+2022-12-05 21:46:11.403 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.420 - DEBUG: [controller_loader.js:267:12] registerPath called : /cni-test/patient-list -> patientList in file ../controllers/cni-controller
+2022-12-05 21:46:11.422 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.422 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.433 - DEBUG: [controller_loader.js:267:12] registerPath called : /consent/v1/patient/inpatient-list-01 -> inpatientList01 in file ../controllers/consent-v1-kbsmc-controller
+2022-12-05 21:46:11.435 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.435 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.437 - DEBUG: [controller_loader.js:267:12] registerPath called : /consent/v1/consent/consent-save-01 -> consentSave01 in file ../controllers/consent-v1-kbsmc-controller
+2022-12-05 21:46:11.438 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.438 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.453 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/index -> index in file ../controllers/dog-controller
+2022-12-05 21:46:11.454 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.455 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.456 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/list -> list in file ../controllers/dog-controller
+2022-12-05 21:46:11.457 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.457 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.459 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/create -> create in file ../controllers/dog-controller
+2022-12-05 21:46:11.459 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.460 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.469 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/read -> read in file ../controllers/dog-controller
+2022-12-05 21:46:11.470 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.470 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.474 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/update -> update in file ../controllers/dog-controller
+2022-12-05 21:46:11.474 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.474 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.477 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/delete -> delete in file ../controllers/dog-controller
+2022-12-05 21:46:11.485 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.489 - DEBUG: [controller_loader.js:267:12] registerPath called : /esl-index.do -> eslIndex in file ../controllers/index-controller
+2022-12-05 21:46:11.491 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.504 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/ -> list in file ../controllers/lion-controller
+2022-12-05 21:46:11.507 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.509 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/create -> create in file ../controllers/lion-controller
+2022-12-05 21:46:11.509 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.511 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/read/:id -> read in file ../controllers/lion-controller
+2022-12-05 21:46:11.511 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.517 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/update/:id -> update in file ../controllers/lion-controller
+2022-12-05 21:46:11.517 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.519 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/delete/:id -> delete in file ../controllers/lion-controller
+2022-12-05 21:46:11.520 - DEBUG: [controller_loader.js:274:20]  method #0 -> delete
+2022-12-05 21:46:11.530 - DEBUG: [controller_loader.js:267:12] registerPath called : /mci-test/patient-list -> patientList in file ../controllers/mci-controller
+2022-12-05 21:46:11.532 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.533 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.543 - DEBUG: [controller_loader.js:267:12] registerPath called : /panda/list -> list in file ../controllers/panda-controller
+2022-12-05 21:46:11.545 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.558 - DEBUG: [controller_loader.js:267:12] registerPath called : /sboard_image/upload -> upload in file ../controllers/sboard-image-controller
+2022-12-05 21:46:11.559 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.564 - DEBUG: [controller_loader.js:267:12] registerPath called : /sboard_image/send -> send in file ../controllers/sboard-image-controller
+2022-12-05 21:46:11.565 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.567 - DEBUG: [controller_loader.js:267:12] registerPath called : /sboard_image/send_group -> sendGroup in file ../controllers/sboard-image-controller
+2022-12-05 21:46:11.567 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.577 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/ -> list in file ../controllers/sheep-controller
+2022-12-05 21:46:11.579 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.583 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/ -> create in file ../controllers/sheep-controller
+2022-12-05 21:46:11.586 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.590 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/:id -> read in file ../controllers/sheep-controller
+2022-12-05 21:46:11.590 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.592 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/:id -> update in file ../controllers/sheep-controller
+2022-12-05 21:46:11.592 - DEBUG: [controller_loader.js:274:20]  method #0 -> put
+2022-12-05 21:46:11.598 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/:id -> delete in file ../controllers/sheep-controller
+2022-12-05 21:46:11.598 - DEBUG: [controller_loader.js:274:20]  method #0 -> delete
+2022-12-05 21:46:11.608 - DEBUG: [controller_loader.js:267:12] registerPath called : /data/apply -> applyData in file ../controllers/sync_to_esl-controller
+2022-12-05 21:46:11.608 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.620 - DEBUG: [controller_loader.js:267:12] registerPath called : /data/lastmodifieddate -> getLastModifiedDate in file ../controllers/sync_to_mci-controller
+2022-12-05 21:46:11.623 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.625 - DEBUG: [controller_loader.js:267:12] registerPath called : /data/apply -> applyData in file ../controllers/sync_to_mci-controller
+2022-12-05 21:46:11.625 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-05 21:46:11.636 - DEBUG: [controller_loader.js:267:12] registerPath called : /tiger/hello -> hello in file ../controllers/tiger-controller
+2022-12-05 21:46:11.637 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.638 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:11.640 - DEBUG: [controller_loader.js:267:12] registerPath called : /tiger/bye -> bye in file ../controllers/tiger-controller
+2022-12-05 21:46:11.640 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-05 21:46:11.641 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-05 21:46:16.897 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-05 21:46:37.953 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-05 22:06:50.919 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-05 22:06:50.977 - INFO: [new_sync_to_mci_esl.js:88:16] [202365//05E] start.
+2022-12-05 22:06:50.994 - DEBUG: [mci-controller.js:36:16] MCITest:patientList called for path /mci-test/patient-list
+2022-12-05 22:06:51.000 - DEBUG: [mci_util.js:17:16] MciUtil initialized.
+2022-12-05 22:06:51.013 - DEBUG: [mci_util.js:181:16] query called.
+2022-12-05 22:06:51.013 - DEBUG: [mci_util.js:182:16] values.input -> {"wardCd":"202365"}
+2022-12-05 22:06:51.014 - DEBUG: [mci.js:37:16] mci.send called.
+2022-12-05 22:06:51.015 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2022-12-05 22:06:51.016 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2022-12-05 22:06:51.016 - DEBUG: [mci.js:46:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"aed3b170-749d-11ed-866a-3b48eceffe6f\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"mno_elsdidt_l01\",\"tlgrRqstDt\":\"20221205220651015000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mns_elsdidt_002\":{\"wardCd\":\"202365\"}}"
+2022-12-05 22:06:51.024 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2022-12-05 22:06:51.024 - DEBUG: [mci.js:67:10] output : 0000001092{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"aed3b170-749d-11ed-866a-3b48eceffe6f","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"mno_elsdidt_l01","tlgrRqstDt":"20221205220651015000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mns_elsdidt_002":{"wardCd":"202365"}}
+2022-12-05 22:06:51.025 - DEBUG: [mci.js:148:16] sendData called.
+2022-12-05 22:06:51.030 - DEBUG: [mci.js:160:20] Client connection ID : aed5fb60-749d-11ed-866a-3b48eceffe6f
+2022-12-05 22:06:51.031 - DEBUG: [mci.js:163:20] about to send output.
+2022-12-05 22:06:51.031 - DEBUG: [mci_util.js:212:32] send request done -> output sent.
+2022-12-05 22:06:51.035 - DEBUG: [mci.js:168:20] all before release : 1
+2022-12-05 22:06:51.037 - DEBUG: [mci.js:169:20] free before release : 0
+2022-12-05 22:06:51.065 - DEBUG: [mci_util.js:215:32] received event : data
+2022-12-05 22:06:51.068 - DEBUG: [mci_util.js:33:11] typeof data : object
+2022-12-05 22:06:51.069 - DEBUG: [mci_util.js:40:16] [[Class]] property : [object Uint8Array]
+2022-12-05 22:06:51.071 - DEBUG: [mci_util.js:41:16] is Buffer? : true
+2022-12-05 22:06:51.072 - DEBUG: [mci_util.js:57:20] remaining buffer for socket [aed5fb60-749d-11ed-866a-3b48eceffe6f] not exists.
+2022-12-05 22:06:51.072 - DEBUG: [mci_util.js:70:16] length string : 0000003730
+2022-12-05 22:06:51.072 - DEBUG: [mci_util.js:76:16] body length : 3730
+2022-12-05 22:06:51.073 - DEBUG: [mci_util.js:86:16] compared length : 3730, 3730
+2022-12-05 22:06:51.073 - DEBUG: [mci_util.js:96:20] body buffer is completed.
+2022-12-05 22:06:51.073 - DEBUG: [mci_util.js:99:20] converting body data for TEST.
+2022-12-05 22:06:51.074 - DEBUG: [mci_util.js:104:24] first digit : {
+2022-12-05 22:06:51.074 - DEBUG: [mci_util.js:129:24] connection released.
+2022-12-05 22:06:51.075 - DEBUG: [mci_util.js:248:16] processCompleted called.
+2022-12-05 22:06:51.081 - DEBUG: [mci_util.js:252:16] output -> {
+	"cfs_sheader_001": {
+		"tlgrLngtVl": "0000031460",
+		"uuid": "978a0a13-8b1c-475e-a13f-bab6138ce72a",
+		"tlgrPrgrNo": "2",
+		"tlgrTypeCd": "A",
+		"inrfId": "mno_elsdidt_l01",
+		"tlgrRqstDt": "20210831133854948000",
+		"lnkdSystInfmVl": "11001101",
+		"sesnId": "",
+		"tlgrRqstSystIp": "119.6.3.92",
+		"tlgrMediDvsnCd": "MO",
+		"tlgrRqstSystId": "bm0",
+		"tlgrTrnmSrvcId": "DRS_100000_1001",
+		"tlgrTrnmUserId": "MOBILE",
+		"tlgrRecvSrvcId": "mno_elsdidt_l01",
+		"tlgrRecvUserId": "",
+		"prsgRsltDvsnCd": "1",
+		"filePrsgYn": "",
+		"syncPrsgDvsnCd": "S",
+		"ectnYn": "N",
+		"cmrnYn": "N",
+		"systEnvrDvsnCd": "D",
+		"testTlgrYn": "N",
+		"inrfSttsCd": "",
+		"wndoHndeId": "",
+		"dataInfmYn": "",
+		"tlgrVrsnCeckYn": "",
+		"rqstTlgrVrsnNo": "",
+		"rspnTlgrVrsnNo": "",
+		"cmrnTrgtYn": "",
+		"systHedrRmrkVl": ""
+	},
+	"cfs_bheader_s00": {
+		"evntTypCd": "",
+		"hsptCd": "",
+		"cntrCd": "",
+		"dprtCd": "",
+		"natnCd": "ko",
+		"lnggCd": "KR",
+		"aftrMtrlExstYn": "",
+		"mxmmRqstVl": "",
+		"mesgCd": "IB00013",
+		"mesgCtn": "정상 조회되었습니다.!",
+		"adddMesgCd": "",
+		"adddMesgCtn": "",
+		"errPrgmNm": "",
+		"errFuncNm": "",
+		"errLineNo": "",
+		"errSqlNo": "",
+		"errTpNo": "",
+		"errMesgPrsgDvsnCd": "S",
+		"excfCd": "",
+		"dtlsExcfCd": "",
+		"mesgMngmDvsnYn": "",
+		"userId": "MOBILE",
+		"scryAplyYn": "",
+		"bswrHedrRmrkVl": ""
+	},
+	"mnc_elsdidt_001": {
+		"afiReptNtm": 27,
+		"mns_elsdidt_001": [
+			{
+				"ptntNm": "이승재",
+				"gendCd": "M",
+				"ageCtn": "28세",
+				"btdt": "1992-01-02",
+				"mcdpNm": "정형외과",
+				"chdrNm": "이인호",
+				"gndrNm": "정병윤",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "Y",
+				"airCatnYn": "Y",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "Y",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2022-08-31",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm2": "05:30~09:30 / 14:00~15:00",
+				"dvsnNm3": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm4": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm5": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm6": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "14",
+				"careSckbNo": "41",
+				"ptno": "51848158",
+				"wardNm": "05IU",
+				"wardCd": "202366",
+				"mdrpNo": 2023155495,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "왼다리 사용금지",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": "병실 밖 이동 금지",
+				"obsrRomStinYn": "Y"
+			},
+			{
+				"ptntNm": "삼승재",
+				"gendCd": "M",
+				"ageCtn": "28세",
+				"btdt": "1992-01-02",
+				"mcdpNm": "정형외과",
+				"chdrNm": "이인호",
+				"gndrNm": "정병윤",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "Y",
+				"airCatnYn": "Y",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "Y",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2022-08-31",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm2": "05:30~09:30 / 14:00~15:00",
+				"dvsnNm3": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm4": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm5": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm6": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "15",
+				"careSckbNo": "51",
+				"ptno": "51848158",
+				"wardNm": "05IU",
+				"wardCd": "202366",
+				"mdrpNo": 2023155495,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "절대안정",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": "병실 밖 이동 금지",
+				"obsrRomStinYn": "Y"
+			}
+		]
+	}
+}
+2022-12-05 22:06:51.088 - DEBUG: [mci_util.js:276:20] processResponse called.
+2022-12-05 22:06:51.088 - DEBUG: [mci_util.js:282:24] KEYS -> ["cfs_sheader_001","cfs_bheader_s00","mnc_elsdidt_001"]
+2022-12-05 22:06:51.089 - DEBUG: [mci_util.js:310:16] parseHeader called.
+2022-12-05 22:06:51.089 - DEBUG: [mci_util.js:286:24] HEADER -> {"serviceId":"mno_elsdidt_l01","userId":"","errMessage":"","code":"IB00013","message":"정상 조회되었습니다.!"}
+2022-12-05 22:06:51.090 - DEBUG: [mci_util.js:488:16] parseBody called.
+2022-12-05 22:06:51.090 - DEBUG: [mci_util.js:495:20] outname type : string
+2022-12-05 22:06:51.091 - DEBUG: [mci_util.js:504:24] repeat count : 2
+2022-12-05 22:06:51.091 - DEBUG: [mci_util.js:523:16] parseData called.
+2022-12-05 22:06:51.116 - DEBUG: [mci_util.js:529:24] mapper found with attributes 36
+2022-12-05 22:06:51.117 - DEBUG: [mci_util.js:535:40] mapping #0 [firstName] -> [ptntNm] : 이승재
+2022-12-05 22:06:51.118 - DEBUG: [mci_util.js:535:40] mapping #1 [nameWarning] -> [ptntNmCatnYn] : Y
+2022-12-05 22:06:51.118 - DEBUG: [mci_util.js:535:40] mapping #2 [gender] -> [gendCd] : M
+2022-12-05 22:06:51.119 - DEBUG: [mci_util.js:535:40] mapping #3 [age] -> [ageCtn] : 28세
+2022-12-05 22:06:51.119 - DEBUG: [mci_util.js:535:40] mapping #4 [birthDate] -> [btdt] : 1992-01-02
+2022-12-05 22:06:51.119 - DEBUG: [mci_util.js:535:40] mapping #5 [dept] -> [mcdpNm] : 정형외과
+2022-12-05 22:06:51.121 - DEBUG: [mci_util.js:535:40] mapping #6 [doctorName1] -> [gndrNm] : 정병윤
+2022-12-05 22:06:51.121 - DEBUG: [mci_util.js:535:40] mapping #7 [doctorName2] -> [chdrNm] : 이인호
+2022-12-05 22:06:51.121 - DEBUG: [mci_util.js:535:40] mapping #8 [caution3] -> [fallCtn] : Y
+2022-12-05 22:06:51.122 - DEBUG: [mci_util.js:535:40] mapping #9 [caution4] -> [bdsrEtcCtn] : Y
+2022-12-05 22:06:51.122 - DEBUG: [mci_util.js:535:40] mapping #10 [caution2B] -> [ctctYn] : Y
+2022-12-05 22:06:51.123 - DEBUG: [mci_util.js:535:40] mapping #11 [caution2A] -> [cnsdCtctStcrVl] : Y
+2022-12-05 22:06:51.123 - DEBUG: [mci_util.js:535:40] mapping #12 [caution1A] -> [airCatnYn] : Y
+2022-12-05 22:06:51.123 - DEBUG: [mci_util.js:535:40] mapping #13 [caution1B] -> [drplYn] : Y
+2022-12-05 22:06:51.126 - DEBUG: [mci_util.js:535:40] mapping #14 [caution5] -> [blodCatnYn] : Y
+2022-12-05 22:06:51.126 - DEBUG: [mci_util.js:535:40] mapping #15 [caution6A] -> [invrIsltYn] : Y
+2022-12-05 22:06:51.127 - DEBUG: [mci_util.js:535:40] mapping #16 [caution6B] -> [etcYn] : 
+2022-12-05 22:06:51.127 - DEBUG: [mci_util.js:535:40] mapping #17 [npoYn] -> [npoYn] : Y
+2022-12-05 22:06:51.127 - DEBUG: [mci_util.js:535:40] mapping #18 [npoCtn] -> [npoCtn] : 왼다리 사용금지
+2022-12-05 22:06:51.127 - DEBUG: [mci_util.js:535:40] mapping #19 [npoDscrMemoCtn] -> [npoDscrMemoCtn] : 
+2022-12-05 22:06:51.128 - DEBUG: [mci_util.js:535:40] mapping #20 [ptntInftCtn] -> [ptntInftCtn] : 병실 밖 이동 금지
+2022-12-05 22:06:51.128 - DEBUG: [mci_util.js:535:40] mapping #21 [treatDate] -> [admsDt] : 2022-08-31
+2022-12-05 22:06:51.128 - DEBUG: [mci_util.js:535:40] mapping #22 [leavingDate] -> [dschPrrnYmd] : 
+2022-12-05 22:06:51.128 - DEBUG: [mci_util.js:535:40] mapping #23 [roundingSun] -> [dvsnNm1] : 08:30~09:30 / 14:00~15:00
+2022-12-05 22:06:51.129 - DEBUG: [mci_util.js:535:40] mapping #24 [roundingMon] -> [dvsnNm2] : 05:30~09:30 / 14:00~15:00
+2022-12-05 22:06:51.129 - DEBUG: [mci_util.js:535:40] mapping #25 [roundingTue] -> [dvsnNm3] : 08:00~09:00 / 16:00~17:00
+2022-12-05 22:06:51.129 - DEBUG: [mci_util.js:535:40] mapping #26 [roundingWed] -> [dvsnNm4] : 08:00~09:00 / 16:00~17:00
+2022-12-05 22:06:51.129 - DEBUG: [mci_util.js:535:40] mapping #27 [roundingThu] -> [dvsnNm5] : 08:00~09:00 / 16:00~17:00
+2022-12-05 22:06:51.130 - DEBUG: [mci_util.js:535:40] mapping #28 [roundingFri] -> [dvsnNm6] : 08:30~09:30 / 14:00~15:00
+2022-12-05 22:06:51.130 - DEBUG: [mci_util.js:535:40] mapping #29 [roundingSat] -> [dvsnNm7] : 
+2022-12-05 22:06:51.130 - DEBUG: [mci_util.js:535:40] mapping #30 [ward] -> [wardCdCtn] : 05IU
+2022-12-05 22:06:51.131 - DEBUG: [mci_util.js:535:40] mapping #31 [roomNo] -> [carePtrmNo] : 14
+2022-12-05 22:06:51.131 - DEBUG: [mci_util.js:535:40] mapping #32 [bedNo] -> [careSckbNo] : 41
+2022-12-05 22:06:51.131 - DEBUG: [mci_util.js:535:40] mapping #33 [id] -> [ptno] : 51848158
+2022-12-05 22:06:51.131 - DEBUG: [mci_util.js:535:40] mapping #34 [wardName] -> [wardNm] : 05IU
+2022-12-05 22:06:51.132 - DEBUG: [mci_util.js:535:40] mapping #35 [wardId] -> [wardCd] : 202366
+2022-12-05 22:06:51.155 - INFO: [new_sync_to_mci_esl.js:155:16] [ Location: 05E || total Device : 9 || diffrent DATA count : 11 ]
+2022-12-05 22:06:51.156 - INFO: [sync_to_esl-controller.js:605:12] [05IU-14-41] 데이터 변경 감지
+2022-12-05 22:06:57.678 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-14-41] requestSuccess
+2022-12-05 22:06:57.679 - INFO: [sync_to_esl-controller.js:605:12] [05IU-15-51] 데이터 변경 감지
+2022-12-05 22:06:57.995 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-15-51] requestSuccess
+2022-12-05 22:06:57.996 - INFO: [sync_to_esl-controller.js:605:12] [05E-01-01] 데이터 변경 감지
+2022-12-05 22:06:58.281 - INFO: [new_sync_to_mci_esl.js:174:12] [05E-01-01] requestSuccess
+2022-12-05 22:06:58.281 - INFO: [sync_to_esl-controller.js:605:12] [05E-02-01] 데이터 변경 감지
+2022-12-05 22:06:58.553 - INFO: [new_sync_to_mci_esl.js:174:12] [05E-02-01] requestSuccess
+2022-12-05 22:06:58.554 - INFO: [sync_to_esl-controller.js:605:12] [05E-06-01] 데이터 변경 감지
+2022-12-05 22:06:58.833 - INFO: [new_sync_to_mci_esl.js:174:12] [05E-06-01] requestSuccess
+2022-12-05 22:06:58.833 - INFO: [sync_to_esl-controller.js:605:12] [05E-06-02] 데이터 변경 감지
+2022-12-05 22:06:59.090 - INFO: [new_sync_to_mci_esl.js:174:12] [05E-06-02] requestSuccess
+2022-12-05 22:06:59.090 - INFO: [sync_to_esl-controller.js:605:12] [05E-06-03] 데이터 변경 감지
+2022-12-05 22:06:59.441 - INFO: [new_sync_to_mci_esl.js:174:12] [05E-06-03] requestSuccess
+2022-12-05 22:06:59.442 - INFO: [sync_to_esl-controller.js:605:12] [05E-06-04] 데이터 변경 감지
+2022-12-05 22:06:59.755 - INFO: [new_sync_to_mci_esl.js:174:12] [05E-06-04] requestSuccess
+2022-12-05 22:06:59.756 - INFO: [sync_to_esl-controller.js:605:12] [05E-08-01] 데이터 변경 감지
+2022-12-05 22:07:00.107 - INFO: [new_sync_to_mci_esl.js:174:12] [05E-08-01] requestSuccess
+2022-12-05 22:07:00.108 - INFO: [sync_to_esl-controller.js:605:12] [05E-09-01] 데이터 변경 감지
+2022-12-05 22:07:00.503 - INFO: [new_sync_to_mci_esl.js:174:12] [05E-09-01] requestSuccess
+2022-12-05 22:07:00.504 - INFO: [sync_to_esl-controller.js:605:12] [05E-10-01] 데이터 변경 감지
+2022-12-05 22:07:00.843 - INFO: [new_sync_to_mci_esl.js:174:12] [05E-10-01] requestSuccess
+2022-12-05 22:07:00.844 - INFO: [new_sync_to_mci_esl.js:88:16] [202366//05IU] start.
+2022-12-05 22:07:00.847 - DEBUG: [mci-controller.js:36:16] MCITest:patientList called for path /mci-test/patient-list
+2022-12-05 22:07:00.851 - DEBUG: [mci_util.js:17:16] MciUtil initialized.
+2022-12-05 22:07:00.882 - DEBUG: [mci_util.js:181:16] query called.
+2022-12-05 22:07:00.886 - DEBUG: [mci_util.js:182:16] values.input -> {"wardCd":"202366"}
+2022-12-05 22:07:00.887 - DEBUG: [mci.js:37:16] mci.send called.
+2022-12-05 22:07:00.887 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2022-12-05 22:07:00.888 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2022-12-05 22:07:00.889 - DEBUG: [mci.js:46:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"b4b63180-749d-11ed-866a-3b48eceffe6f\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"mno_elsdidt_l01\",\"tlgrRqstDt\":\"20221205220700888000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mns_elsdidt_002\":{\"wardCd\":\"202366\"}}"
+2022-12-05 22:07:00.890 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2022-12-05 22:07:00.892 - DEBUG: [mci.js:67:10] output : 0000001092{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"b4b63180-749d-11ed-866a-3b48eceffe6f","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"mno_elsdidt_l01","tlgrRqstDt":"20221205220700888000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mns_elsdidt_002":{"wardCd":"202366"}}
+2022-12-05 22:07:00.893 - DEBUG: [mci.js:148:16] sendData called.
+2022-12-05 22:07:00.895 - DEBUG: [mci.js:160:20] Client connection ID : b4b71be0-749d-11ed-866a-3b48eceffe6f
+2022-12-05 22:07:00.906 - DEBUG: [mci.js:163:20] about to send output.
+2022-12-05 22:07:00.907 - DEBUG: [mci_util.js:212:32] send request done -> output sent.
+2022-12-05 22:07:00.910 - DEBUG: [mci.js:168:20] all before release : 1
+2022-12-05 22:07:00.912 - DEBUG: [mci.js:169:20] free before release : 0
+2022-12-05 22:07:00.930 - DEBUG: [mci_util.js:215:32] received event : data
+2022-12-05 22:07:00.931 - DEBUG: [mci_util.js:33:11] typeof data : object
+2022-12-05 22:07:00.936 - DEBUG: [mci_util.js:40:16] [[Class]] property : [object Uint8Array]
+2022-12-05 22:07:00.936 - DEBUG: [mci_util.js:41:16] is Buffer? : true
+2022-12-05 22:07:00.937 - DEBUG: [mci_util.js:57:20] remaining buffer for socket [b4b71be0-749d-11ed-866a-3b48eceffe6f] not exists.
+2022-12-05 22:07:00.938 - DEBUG: [mci_util.js:70:16] length string : 0000003730
+2022-12-05 22:07:00.938 - DEBUG: [mci_util.js:76:16] body length : 3730
+2022-12-05 22:07:00.939 - DEBUG: [mci_util.js:86:16] compared length : 3730, 3730
+2022-12-05 22:07:00.940 - DEBUG: [mci_util.js:96:20] body buffer is completed.
+2022-12-05 22:07:00.943 - DEBUG: [mci_util.js:99:20] converting body data for TEST.
+2022-12-05 22:07:00.947 - DEBUG: [mci_util.js:104:24] first digit : {
+2022-12-05 22:07:00.952 - DEBUG: [mci_util.js:129:24] connection released.
+2022-12-05 22:07:00.952 - DEBUG: [mci_util.js:248:16] processCompleted called.
+2022-12-05 22:07:00.953 - DEBUG: [mci_util.js:252:16] output -> {
+	"cfs_sheader_001": {
+		"tlgrLngtVl": "0000031460",
+		"uuid": "978a0a13-8b1c-475e-a13f-bab6138ce72a",
+		"tlgrPrgrNo": "2",
+		"tlgrTypeCd": "A",
+		"inrfId": "mno_elsdidt_l01",
+		"tlgrRqstDt": "20210831133854948000",
+		"lnkdSystInfmVl": "11001101",
+		"sesnId": "",
+		"tlgrRqstSystIp": "119.6.3.92",
+		"tlgrMediDvsnCd": "MO",
+		"tlgrRqstSystId": "bm0",
+		"tlgrTrnmSrvcId": "DRS_100000_1001",
+		"tlgrTrnmUserId": "MOBILE",
+		"tlgrRecvSrvcId": "mno_elsdidt_l01",
+		"tlgrRecvUserId": "",
+		"prsgRsltDvsnCd": "1",
+		"filePrsgYn": "",
+		"syncPrsgDvsnCd": "S",
+		"ectnYn": "N",
+		"cmrnYn": "N",
+		"systEnvrDvsnCd": "D",
+		"testTlgrYn": "N",
+		"inrfSttsCd": "",
+		"wndoHndeId": "",
+		"dataInfmYn": "",
+		"tlgrVrsnCeckYn": "",
+		"rqstTlgrVrsnNo": "",
+		"rspnTlgrVrsnNo": "",
+		"cmrnTrgtYn": "",
+		"systHedrRmrkVl": ""
+	},
+	"cfs_bheader_s00": {
+		"evntTypCd": "",
+		"hsptCd": "",
+		"cntrCd": "",
+		"dprtCd": "",
+		"natnCd": "ko",
+		"lnggCd": "KR",
+		"aftrMtrlExstYn": "",
+		"mxmmRqstVl": "",
+		"mesgCd": "IB00013",
+		"mesgCtn": "정상 조회되었습니다.!",
+		"adddMesgCd": "",
+		"adddMesgCtn": "",
+		"errPrgmNm": "",
+		"errFuncNm": "",
+		"errLineNo": "",
+		"errSqlNo": "",
+		"errTpNo": "",
+		"errMesgPrsgDvsnCd": "S",
+		"excfCd": "",
+		"dtlsExcfCd": "",
+		"mesgMngmDvsnYn": "",
+		"userId": "MOBILE",
+		"scryAplyYn": "",
+		"bswrHedrRmrkVl": ""
+	},
+	"mnc_elsdidt_001": {
+		"afiReptNtm": 27,
+		"mns_elsdidt_001": [
+			{
+				"ptntNm": "이승재",
+				"gendCd": "M",
+				"ageCtn": "28세",
+				"btdt": "1992-01-02",
+				"mcdpNm": "정형외과",
+				"chdrNm": "이인호",
+				"gndrNm": "정병윤",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "Y",
+				"airCatnYn": "Y",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "Y",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2022-08-31",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm2": "05:30~09:30 / 14:00~15:00",
+				"dvsnNm3": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm4": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm5": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm6": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "14",
+				"careSckbNo": "41",
+				"ptno": "51848158",
+				"wardNm": "05IU",
+				"wardCd": "202366",
+				"mdrpNo": 2023155495,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "왼다리 사용금지",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": "병실 밖 이동 금지",
+				"obsrRomStinYn": "Y"
+			},
+			{
+				"ptntNm": "삼승재",
+				"gendCd": "M",
+				"ageCtn": "28세",
+				"btdt": "1992-01-02",
+				"mcdpNm": "정형외과",
+				"chdrNm": "이인호",
+				"gndrNm": "정병윤",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "Y",
+				"airCatnYn": "Y",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "Y",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2022-08-31",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm2": "05:30~09:30 / 14:00~15:00",
+				"dvsnNm3": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm4": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm5": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm6": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "15",
+				"careSckbNo": "51",
+				"ptno": "51848158",
+				"wardNm": "05IU",
+				"wardCd": "202366",
+				"mdrpNo": 2023155495,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "절대안정",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": "병실 밖 이동 금지",
+				"obsrRomStinYn": "Y"
+			}
+		]
+	}
+}
+2022-12-05 22:07:00.956 - DEBUG: [mci_util.js:276:20] processResponse called.
+2022-12-05 22:07:00.972 - DEBUG: [mci_util.js:282:24] KEYS -> ["cfs_sheader_001","cfs_bheader_s00","mnc_elsdidt_001"]
+2022-12-05 22:07:00.973 - DEBUG: [mci_util.js:310:16] parseHeader called.
+2022-12-05 22:07:00.974 - DEBUG: [mci_util.js:286:24] HEADER -> {"serviceId":"mno_elsdidt_l01","userId":"","errMessage":"","code":"IB00013","message":"정상 조회되었습니다.!"}
+2022-12-05 22:07:00.975 - DEBUG: [mci_util.js:488:16] parseBody called.
+2022-12-05 22:07:00.975 - DEBUG: [mci_util.js:495:20] outname type : string
+2022-12-05 22:07:00.976 - DEBUG: [mci_util.js:504:24] repeat count : 2
+2022-12-05 22:07:00.977 - DEBUG: [mci_util.js:523:16] parseData called.
+2022-12-05 22:07:00.977 - DEBUG: [mci_util.js:529:24] mapper found with attributes 36
+2022-12-05 22:07:00.978 - DEBUG: [mci_util.js:535:40] mapping #0 [firstName] -> [ptntNm] : 이승재
+2022-12-05 22:07:00.978 - DEBUG: [mci_util.js:535:40] mapping #1 [nameWarning] -> [ptntNmCatnYn] : Y
+2022-12-05 22:07:00.979 - DEBUG: [mci_util.js:535:40] mapping #2 [gender] -> [gendCd] : M
+2022-12-05 22:07:00.980 - DEBUG: [mci_util.js:535:40] mapping #3 [age] -> [ageCtn] : 28세
+2022-12-05 22:07:00.980 - DEBUG: [mci_util.js:535:40] mapping #4 [birthDate] -> [btdt] : 1992-01-02
+2022-12-05 22:07:00.981 - DEBUG: [mci_util.js:535:40] mapping #5 [dept] -> [mcdpNm] : 정형외과
+2022-12-05 22:07:00.990 - DEBUG: [mci_util.js:535:40] mapping #6 [doctorName1] -> [gndrNm] : 정병윤
+2022-12-05 22:07:01.002 - DEBUG: [mci_util.js:535:40] mapping #7 [doctorName2] -> [chdrNm] : 이인호
+2022-12-05 22:07:01.003 - DEBUG: [mci_util.js:535:40] mapping #8 [caution3] -> [fallCtn] : Y
+2022-12-05 22:07:01.004 - DEBUG: [mci_util.js:535:40] mapping #9 [caution4] -> [bdsrEtcCtn] : Y
+2022-12-05 22:07:01.004 - DEBUG: [mci_util.js:535:40] mapping #10 [caution2B] -> [ctctYn] : Y
+2022-12-05 22:07:01.005 - DEBUG: [mci_util.js:535:40] mapping #11 [caution2A] -> [cnsdCtctStcrVl] : Y
+2022-12-05 22:07:01.006 - DEBUG: [mci_util.js:535:40] mapping #12 [caution1A] -> [airCatnYn] : Y
+2022-12-05 22:07:01.007 - DEBUG: [mci_util.js:535:40] mapping #13 [caution1B] -> [drplYn] : Y
+2022-12-05 22:07:01.009 - DEBUG: [mci_util.js:535:40] mapping #14 [caution5] -> [blodCatnYn] : Y
+2022-12-05 22:07:01.010 - DEBUG: [mci_util.js:535:40] mapping #15 [caution6A] -> [invrIsltYn] : Y
+2022-12-05 22:07:01.010 - DEBUG: [mci_util.js:535:40] mapping #16 [caution6B] -> [etcYn] : 
+2022-12-05 22:07:01.011 - DEBUG: [mci_util.js:535:40] mapping #17 [npoYn] -> [npoYn] : Y
+2022-12-05 22:07:01.012 - DEBUG: [mci_util.js:535:40] mapping #18 [npoCtn] -> [npoCtn] : 왼다리 사용금지
+2022-12-05 22:07:01.012 - DEBUG: [mci_util.js:535:40] mapping #19 [npoDscrMemoCtn] -> [npoDscrMemoCtn] : 
+2022-12-05 22:07:01.013 - DEBUG: [mci_util.js:535:40] mapping #20 [ptntInftCtn] -> [ptntInftCtn] : 병실 밖 이동 금지
+2022-12-05 22:07:01.013 - DEBUG: [mci_util.js:535:40] mapping #21 [treatDate] -> [admsDt] : 2022-08-31
+2022-12-05 22:07:01.014 - DEBUG: [mci_util.js:535:40] mapping #22 [leavingDate] -> [dschPrrnYmd] : 
+2022-12-05 22:07:01.014 - DEBUG: [mci_util.js:535:40] mapping #23 [roundingSun] -> [dvsnNm1] : 08:30~09:30 / 14:00~15:00
+2022-12-05 22:07:01.015 - DEBUG: [mci_util.js:535:40] mapping #24 [roundingMon] -> [dvsnNm2] : 05:30~09:30 / 14:00~15:00
+2022-12-05 22:07:01.015 - DEBUG: [mci_util.js:535:40] mapping #25 [roundingTue] -> [dvsnNm3] : 08:00~09:00 / 16:00~17:00
+2022-12-05 22:07:01.016 - DEBUG: [mci_util.js:535:40] mapping #26 [roundingWed] -> [dvsnNm4] : 08:00~09:00 / 16:00~17:00
+2022-12-05 22:07:01.016 - DEBUG: [mci_util.js:535:40] mapping #27 [roundingThu] -> [dvsnNm5] : 08:00~09:00 / 16:00~17:00
+2022-12-05 22:07:01.017 - DEBUG: [mci_util.js:535:40] mapping #28 [roundingFri] -> [dvsnNm6] : 08:30~09:30 / 14:00~15:00
+2022-12-05 22:07:01.018 - DEBUG: [mci_util.js:535:40] mapping #29 [roundingSat] -> [dvsnNm7] : 
+2022-12-05 22:07:01.025 - DEBUG: [mci_util.js:535:40] mapping #30 [ward] -> [wardCdCtn] : 05IU
+2022-12-05 22:07:01.036 - DEBUG: [mci_util.js:535:40] mapping #31 [roomNo] -> [carePtrmNo] : 14
+2022-12-05 22:07:01.039 - DEBUG: [mci_util.js:535:40] mapping #32 [bedNo] -> [careSckbNo] : 41
+2022-12-05 22:07:01.040 - DEBUG: [mci_util.js:535:40] mapping #33 [id] -> [ptno] : 51848158
+2022-12-05 22:07:01.050 - DEBUG: [mci_util.js:535:40] mapping #34 [wardName] -> [wardNm] : 05IU
+2022-12-05 22:07:01.053 - DEBUG: [mci_util.js:535:40] mapping #35 [wardId] -> [wardCd] : 202366
+2022-12-05 22:07:01.087 - INFO: [new_sync_to_mci_esl.js:155:16] [ Location: 05IU || total Device : 13 || diffrent DATA count : 13 ]
+2022-12-05 22:07:01.088 - INFO: [sync_to_esl-controller.js:605:12] [05IU-14-41] 데이터 변경 감지
+2022-12-05 22:07:01.640 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-14-41] requestSuccess
+2022-12-05 22:07:01.642 - INFO: [sync_to_esl-controller.js:605:12] [05IU-15-51] 데이터 변경 감지
+2022-12-05 22:07:02.399 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-15-51] requestSuccess
+2022-12-05 22:07:02.400 - INFO: [sync_to_esl-controller.js:605:12] [05IU-04-14] 데이터 변경 감지
+2022-12-05 22:07:02.793 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-04-14] requestSuccess
+2022-12-05 22:07:02.794 - INFO: [sync_to_esl-controller.js:605:12] [05IU-04-13] 데이터 변경 감지
+2022-12-05 22:07:03.160 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-04-13] requestSuccess
+2022-12-05 22:07:03.161 - INFO: [sync_to_esl-controller.js:605:12] [05IU-05-24] 데이터 변경 감지
+2022-12-05 22:07:03.508 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-05-24] requestSuccess
+2022-12-05 22:07:03.508 - INFO: [sync_to_esl-controller.js:605:12] [05IU-05-26] 데이터 변경 감지
+2022-12-05 22:07:03.827 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-05-26] requestSuccess
+2022-12-05 22:07:03.827 - INFO: [sync_to_esl-controller.js:605:12] [05IU-07-71] 데이터 변경 감지
+2022-12-05 22:07:04.126 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-07-71] requestSuccess
+2022-12-05 22:07:04.126 - INFO: [sync_to_esl-controller.js:605:12] [05IU-08-81] 데이터 변경 감지
+2022-12-05 22:07:04.415 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-08-81] requestSuccess
+2022-12-05 22:07:04.416 - INFO: [sync_to_esl-controller.js:605:12] [05IU-09-91] 데이터 변경 감지
+2022-12-05 22:07:04.691 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-09-91] requestSuccess
+2022-12-05 22:07:04.692 - INFO: [sync_to_esl-controller.js:605:12] [05IU-10-01] 데이터 변경 감지
+2022-12-05 22:07:04.978 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-10-01] requestSuccess
+2022-12-05 22:07:04.979 - INFO: [sync_to_esl-controller.js:605:12] [05IU-11-61] 데이터 변경 감지
+2022-12-05 22:07:05.232 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-11-61] requestSuccess
+2022-12-05 22:07:05.233 - INFO: [sync_to_esl-controller.js:605:12] [05IU-12-62] 데이터 변경 감지
+2022-12-05 22:07:05.534 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-12-62] requestSuccess
+2022-12-05 22:07:05.535 - INFO: [sync_to_esl-controller.js:605:12] [05IU-13-83] 데이터 변경 감지
+2022-12-05 22:07:05.880 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-13-83] requestSuccess
+2022-12-05 22:07:05.881 - INFO: [new_sync_to_mci_esl.js:88:16] [171118//15E] start.
+2022-12-05 22:07:05.887 - DEBUG: [mci-controller.js:36:16] MCITest:patientList called for path /mci-test/patient-list
+2022-12-05 22:07:05.895 - DEBUG: [mci_util.js:17:16] MciUtil initialized.
+2022-12-05 22:07:05.924 - DEBUG: [mci_util.js:181:16] query called.
+2022-12-05 22:07:05.925 - DEBUG: [mci_util.js:182:16] values.input -> {"wardCd":"171118"}
+2022-12-05 22:07:05.927 - DEBUG: [mci.js:37:16] mci.send called.
+2022-12-05 22:07:05.928 - DEBUG: [mci.js:75:16] createSystemHeader called.
+2022-12-05 22:07:05.928 - DEBUG: [mci.js:114:16] createBusinessHeader called.
+2022-12-05 22:07:05.929 - DEBUG: [mci.js:46:16] Request -> "{\"cfs_sheader_001\":{\"tlgrLngtVl\":\"0000001092\",\"uuid\":\"b7b73c80-749d-11ed-866a-3b48eceffe6f\",\"tlgrPrgrNo\":\"1\",\"tlgrTypeCd\":\"Q\",\"inrfId\":\"mno_elsdidt_l01\",\"tlgrRqstDt\":\"20221205220705928000\",\"lnkdSystInfmVl\":\"\",\"sesnId\":\"\",\"tlgrRqstSystIp\":\"119.6.3.104\",\"tlgrMediDvsnCd\":\"MO\",\"tlgrRqstSystId\":\"bm0\",\"tlgrTrnmSrvcId\":\"DRS_100000_1001\",\"tlgrTrnmUserId\":\"MOBILE\",\"tlgrRecvSrvcId\":\"\",\"tlgrRecvUserId\":\"\",\"prsgRsltDvsnCd\":\"\",\"filePrsgYn\":\"\",\"syncPrsgDvsnCd\":\"S\",\"ectnYn\":\"N\",\"cmrnYn\":\"N\",\"systEnvrDvsnCd\":\"P\",\"testTlgrYn\":\"N\",\"inrfSttsCd\":\"\",\"wndoHndeId\":\"\",\"dataInfmYn\":\"\",\"tlgrVrsnCeckYn\":\"\",\"rqstTlgrVrsnNo\":\"\",\"rspnTlgrVrsnNo\":\"\",\"cmrnTrgtYn\":\"\",\"systHedrRmrkVl\":\"\"},\"cfs_bheader_s00\":{\"evntTypCd\":\"\",\"hsptCd\":\"\",\"cntrCd\":\"\",\"dprtCd\":\"\",\"natnCd\":\"ko\",\"lnggCd\":\"KR\",\"aftrMtrlExstYn\":\"\",\"mxmmRqstVl\":\"\",\"mesgCd\":\"\",\"mesgCtn\":\"\",\"adddMesgCd\":\"\",\"adddMesgCtn\":\"\",\"errPrgmNm\":\"\",\"errFuncNm\":\"\",\"errLineNo\":\"\",\"errSqlNo\":\"\",\"errTpNo\":\"\",\"errMesgPrsgDvsnCd\":\"\",\"excfCd\":\"\",\"dtlsExcfCd\":\"\",\"mesgMngmDvsnYn\":\"\",\"userId\":\"MOBILE\",\"scryAplyYn\":\"\",\"bswrHedrRmrkVl\":\"\"},\"mns_elsdidt_002\":{\"wardCd\":\"171118\"}}"
+2022-12-05 22:07:05.930 - DEBUG: [mci.js:214:10] createLengthPrefix called.
+2022-12-05 22:07:05.930 - DEBUG: [mci.js:67:10] output : 0000001092{"cfs_sheader_001":{"tlgrLngtVl":"0000001092","uuid":"b7b73c80-749d-11ed-866a-3b48eceffe6f","tlgrPrgrNo":"1","tlgrTypeCd":"Q","inrfId":"mno_elsdidt_l01","tlgrRqstDt":"20221205220705928000","lnkdSystInfmVl":"","sesnId":"","tlgrRqstSystIp":"119.6.3.104","tlgrMediDvsnCd":"MO","tlgrRqstSystId":"bm0","tlgrTrnmSrvcId":"DRS_100000_1001","tlgrTrnmUserId":"MOBILE","tlgrRecvSrvcId":"","tlgrRecvUserId":"","prsgRsltDvsnCd":"","filePrsgYn":"","syncPrsgDvsnCd":"S","ectnYn":"N","cmrnYn":"N","systEnvrDvsnCd":"P","testTlgrYn":"N","inrfSttsCd":"","wndoHndeId":"","dataInfmYn":"","tlgrVrsnCeckYn":"","rqstTlgrVrsnNo":"","rspnTlgrVrsnNo":"","cmrnTrgtYn":"","systHedrRmrkVl":""},"cfs_bheader_s00":{"evntTypCd":"","hsptCd":"","cntrCd":"","dprtCd":"","natnCd":"ko","lnggCd":"KR","aftrMtrlExstYn":"","mxmmRqstVl":"","mesgCd":"","mesgCtn":"","adddMesgCd":"","adddMesgCtn":"","errPrgmNm":"","errFuncNm":"","errLineNo":"","errSqlNo":"","errTpNo":"","errMesgPrsgDvsnCd":"","excfCd":"","dtlsExcfCd":"","mesgMngmDvsnYn":"","userId":"MOBILE","scryAplyYn":"","bswrHedrRmrkVl":""},"mns_elsdidt_002":{"wardCd":"171118"}}
+2022-12-05 22:07:05.931 - DEBUG: [mci.js:148:16] sendData called.
+2022-12-05 22:07:05.942 - DEBUG: [mci.js:160:20] Client connection ID : b7b95f60-749d-11ed-866a-3b48eceffe6f
+2022-12-05 22:07:05.943 - DEBUG: [mci.js:163:20] about to send output.
+2022-12-05 22:07:05.944 - DEBUG: [mci_util.js:212:32] send request done -> output sent.
+2022-12-05 22:07:05.947 - DEBUG: [mci.js:168:20] all before release : 1
+2022-12-05 22:07:05.949 - DEBUG: [mci.js:169:20] free before release : 0
+2022-12-05 22:07:05.973 - DEBUG: [mci_util.js:215:32] received event : data
+2022-12-05 22:07:05.974 - DEBUG: [mci_util.js:33:11] typeof data : object
+2022-12-05 22:07:05.979 - DEBUG: [mci_util.js:40:16] [[Class]] property : [object Uint8Array]
+2022-12-05 22:07:05.980 - DEBUG: [mci_util.js:41:16] is Buffer? : true
+2022-12-05 22:07:05.980 - DEBUG: [mci_util.js:57:20] remaining buffer for socket [b7b95f60-749d-11ed-866a-3b48eceffe6f] not exists.
+2022-12-05 22:07:05.982 - DEBUG: [mci_util.js:70:16] length string : 0000003730
+2022-12-05 22:07:05.983 - DEBUG: [mci_util.js:76:16] body length : 3730
+2022-12-05 22:07:05.986 - DEBUG: [mci_util.js:86:16] compared length : 3730, 3730
+2022-12-05 22:07:05.987 - DEBUG: [mci_util.js:96:20] body buffer is completed.
+2022-12-05 22:07:05.988 - DEBUG: [mci_util.js:99:20] converting body data for TEST.
+2022-12-05 22:07:05.989 - DEBUG: [mci_util.js:104:24] first digit : {
+2022-12-05 22:07:05.989 - DEBUG: [mci_util.js:129:24] connection released.
+2022-12-05 22:07:05.990 - DEBUG: [mci_util.js:248:16] processCompleted called.
+2022-12-05 22:07:05.990 - DEBUG: [mci_util.js:252:16] output -> {
+	"cfs_sheader_001": {
+		"tlgrLngtVl": "0000031460",
+		"uuid": "978a0a13-8b1c-475e-a13f-bab6138ce72a",
+		"tlgrPrgrNo": "2",
+		"tlgrTypeCd": "A",
+		"inrfId": "mno_elsdidt_l01",
+		"tlgrRqstDt": "20210831133854948000",
+		"lnkdSystInfmVl": "11001101",
+		"sesnId": "",
+		"tlgrRqstSystIp": "119.6.3.92",
+		"tlgrMediDvsnCd": "MO",
+		"tlgrRqstSystId": "bm0",
+		"tlgrTrnmSrvcId": "DRS_100000_1001",
+		"tlgrTrnmUserId": "MOBILE",
+		"tlgrRecvSrvcId": "mno_elsdidt_l01",
+		"tlgrRecvUserId": "",
+		"prsgRsltDvsnCd": "1",
+		"filePrsgYn": "",
+		"syncPrsgDvsnCd": "S",
+		"ectnYn": "N",
+		"cmrnYn": "N",
+		"systEnvrDvsnCd": "D",
+		"testTlgrYn": "N",
+		"inrfSttsCd": "",
+		"wndoHndeId": "",
+		"dataInfmYn": "",
+		"tlgrVrsnCeckYn": "",
+		"rqstTlgrVrsnNo": "",
+		"rspnTlgrVrsnNo": "",
+		"cmrnTrgtYn": "",
+		"systHedrRmrkVl": ""
+	},
+	"cfs_bheader_s00": {
+		"evntTypCd": "",
+		"hsptCd": "",
+		"cntrCd": "",
+		"dprtCd": "",
+		"natnCd": "ko",
+		"lnggCd": "KR",
+		"aftrMtrlExstYn": "",
+		"mxmmRqstVl": "",
+		"mesgCd": "IB00013",
+		"mesgCtn": "정상 조회되었습니다.!",
+		"adddMesgCd": "",
+		"adddMesgCtn": "",
+		"errPrgmNm": "",
+		"errFuncNm": "",
+		"errLineNo": "",
+		"errSqlNo": "",
+		"errTpNo": "",
+		"errMesgPrsgDvsnCd": "S",
+		"excfCd": "",
+		"dtlsExcfCd": "",
+		"mesgMngmDvsnYn": "",
+		"userId": "MOBILE",
+		"scryAplyYn": "",
+		"bswrHedrRmrkVl": ""
+	},
+	"mnc_elsdidt_001": {
+		"afiReptNtm": 27,
+		"mns_elsdidt_001": [
+			{
+				"ptntNm": "이승재",
+				"gendCd": "M",
+				"ageCtn": "28세",
+				"btdt": "1992-01-02",
+				"mcdpNm": "정형외과",
+				"chdrNm": "이인호",
+				"gndrNm": "정병윤",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "Y",
+				"airCatnYn": "Y",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "Y",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2022-08-31",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm2": "05:30~09:30 / 14:00~15:00",
+				"dvsnNm3": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm4": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm5": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm6": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "14",
+				"careSckbNo": "41",
+				"ptno": "51848158",
+				"wardNm": "05IU",
+				"wardCd": "202366",
+				"mdrpNo": 2023155495,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "왼다리 사용금지",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": "병실 밖 이동 금지",
+				"obsrRomStinYn": "Y"
+			},
+			{
+				"ptntNm": "삼승재",
+				"gendCd": "M",
+				"ageCtn": "28세",
+				"btdt": "1992-01-02",
+				"mcdpNm": "정형외과",
+				"chdrNm": "이인호",
+				"gndrNm": "정병윤",
+				"fallCtn": "Y",
+				"bdsrEtcCtn": "Y",
+				"ctctYn": "Y",
+				"cnsdCtctStcrVl": "Y",
+				"airCatnYn": "Y",
+				"drplYn": "Y",
+				"blodCatnYn": "Y",
+				"invrIsltYn": "Y",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2022-08-31",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm2": "05:30~09:30 / 14:00~15:00",
+				"dvsnNm3": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm4": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm5": "08:00~09:00 / 16:00~17:00",
+				"dvsnNm6": "08:30~09:30 / 14:00~15:00",
+				"dvsnNm7": "",
+				"wardCdCtn": "05IU",
+				"carePtrmNo": "15",
+				"careSckbNo": "51",
+				"ptno": "51848158",
+				"wardNm": "05IU",
+				"wardCd": "202366",
+				"mdrpNo": 2023155495,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "절대안정",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": "병실 밖 이동 금지",
+				"obsrRomStinYn": "Y"
+			}
+		]
+	}
+}
+2022-12-05 22:07:05.994 - DEBUG: [mci_util.js:276:20] processResponse called.
+2022-12-05 22:07:06.009 - DEBUG: [mci_util.js:282:24] KEYS -> ["cfs_sheader_001","cfs_bheader_s00","mnc_elsdidt_001"]
+2022-12-05 22:07:06.010 - DEBUG: [mci_util.js:310:16] parseHeader called.
+2022-12-05 22:07:06.011 - DEBUG: [mci_util.js:286:24] HEADER -> {"serviceId":"mno_elsdidt_l01","userId":"","errMessage":"","code":"IB00013","message":"정상 조회되었습니다.!"}
+2022-12-05 22:07:06.012 - DEBUG: [mci_util.js:488:16] parseBody called.
+2022-12-05 22:07:06.012 - DEBUG: [mci_util.js:495:20] outname type : string
+2022-12-05 22:07:06.013 - DEBUG: [mci_util.js:504:24] repeat count : 2
+2022-12-05 22:07:06.013 - DEBUG: [mci_util.js:523:16] parseData called.
+2022-12-05 22:07:06.014 - DEBUG: [mci_util.js:529:24] mapper found with attributes 36
+2022-12-05 22:07:06.014 - DEBUG: [mci_util.js:535:40] mapping #0 [firstName] -> [ptntNm] : 이승재
+2022-12-05 22:07:06.015 - DEBUG: [mci_util.js:535:40] mapping #1 [nameWarning] -> [ptntNmCatnYn] : Y
+2022-12-05 22:07:06.015 - DEBUG: [mci_util.js:535:40] mapping #2 [gender] -> [gendCd] : M
+2022-12-05 22:07:06.016 - DEBUG: [mci_util.js:535:40] mapping #3 [age] -> [ageCtn] : 28세
+2022-12-05 22:07:06.016 - DEBUG: [mci_util.js:535:40] mapping #4 [birthDate] -> [btdt] : 1992-01-02
+2022-12-05 22:07:06.017 - DEBUG: [mci_util.js:535:40] mapping #5 [dept] -> [mcdpNm] : 정형외과
+2022-12-05 22:07:06.017 - DEBUG: [mci_util.js:535:40] mapping #6 [doctorName1] -> [gndrNm] : 정병윤
+2022-12-05 22:07:06.019 - DEBUG: [mci_util.js:535:40] mapping #7 [doctorName2] -> [chdrNm] : 이인호
+2022-12-05 22:07:06.019 - DEBUG: [mci_util.js:535:40] mapping #8 [caution3] -> [fallCtn] : Y
+2022-12-05 22:07:06.020 - DEBUG: [mci_util.js:535:40] mapping #9 [caution4] -> [bdsrEtcCtn] : Y
+2022-12-05 22:07:06.021 - DEBUG: [mci_util.js:535:40] mapping #10 [caution2B] -> [ctctYn] : Y
+2022-12-05 22:07:06.021 - DEBUG: [mci_util.js:535:40] mapping #11 [caution2A] -> [cnsdCtctStcrVl] : Y
+2022-12-05 22:07:06.021 - DEBUG: [mci_util.js:535:40] mapping #12 [caution1A] -> [airCatnYn] : Y
+2022-12-05 22:07:06.022 - DEBUG: [mci_util.js:535:40] mapping #13 [caution1B] -> [drplYn] : Y
+2022-12-05 22:07:06.023 - DEBUG: [mci_util.js:535:40] mapping #14 [caution5] -> [blodCatnYn] : Y
+2022-12-05 22:07:06.023 - DEBUG: [mci_util.js:535:40] mapping #15 [caution6A] -> [invrIsltYn] : Y
+2022-12-05 22:07:06.036 - DEBUG: [mci_util.js:535:40] mapping #16 [caution6B] -> [etcYn] : 
+2022-12-05 22:07:06.042 - DEBUG: [mci_util.js:535:40] mapping #17 [npoYn] -> [npoYn] : Y
+2022-12-05 22:07:06.044 - DEBUG: [mci_util.js:535:40] mapping #18 [npoCtn] -> [npoCtn] : 왼다리 사용금지
+2022-12-05 22:07:06.044 - DEBUG: [mci_util.js:535:40] mapping #19 [npoDscrMemoCtn] -> [npoDscrMemoCtn] : 
+2022-12-05 22:07:06.045 - DEBUG: [mci_util.js:535:40] mapping #20 [ptntInftCtn] -> [ptntInftCtn] : 병실 밖 이동 금지
+2022-12-05 22:07:06.046 - DEBUG: [mci_util.js:535:40] mapping #21 [treatDate] -> [admsDt] : 2022-08-31
+2022-12-05 22:07:06.046 - DEBUG: [mci_util.js:535:40] mapping #22 [leavingDate] -> [dschPrrnYmd] : 
+2022-12-05 22:07:06.047 - DEBUG: [mci_util.js:535:40] mapping #23 [roundingSun] -> [dvsnNm1] : 08:30~09:30 / 14:00~15:00
+2022-12-05 22:07:06.047 - DEBUG: [mci_util.js:535:40] mapping #24 [roundingMon] -> [dvsnNm2] : 05:30~09:30 / 14:00~15:00
+2022-12-05 22:07:06.048 - DEBUG: [mci_util.js:535:40] mapping #25 [roundingTue] -> [dvsnNm3] : 08:00~09:00 / 16:00~17:00
+2022-12-05 22:07:06.049 - DEBUG: [mci_util.js:535:40] mapping #26 [roundingWed] -> [dvsnNm4] : 08:00~09:00 / 16:00~17:00
+2022-12-05 22:07:06.049 - DEBUG: [mci_util.js:535:40] mapping #27 [roundingThu] -> [dvsnNm5] : 08:00~09:00 / 16:00~17:00
+2022-12-05 22:07:06.050 - DEBUG: [mci_util.js:535:40] mapping #28 [roundingFri] -> [dvsnNm6] : 08:30~09:30 / 14:00~15:00
+2022-12-05 22:07:06.051 - DEBUG: [mci_util.js:535:40] mapping #29 [roundingSat] -> [dvsnNm7] : 
+2022-12-05 22:07:06.051 - DEBUG: [mci_util.js:535:40] mapping #30 [ward] -> [wardCdCtn] : 05IU
+2022-12-05 22:07:06.052 - DEBUG: [mci_util.js:535:40] mapping #31 [roomNo] -> [carePtrmNo] : 14
+2022-12-05 22:07:06.053 - DEBUG: [mci_util.js:535:40] mapping #32 [bedNo] -> [careSckbNo] : 41
+2022-12-05 22:07:06.053 - DEBUG: [mci_util.js:535:40] mapping #33 [id] -> [ptno] : 51848158
+2022-12-05 22:07:06.059 - DEBUG: [mci_util.js:535:40] mapping #34 [wardName] -> [wardNm] : 05IU
+2022-12-05 22:07:06.071 - DEBUG: [mci_util.js:535:40] mapping #35 [wardId] -> [wardCd] : 202366
+2022-12-05 22:07:06.082 - INFO: [new_sync_to_mci_esl.js:155:16] [ Location: 15E || total Device : 34 || diffrent DATA count : 36 ]
+2022-12-05 22:07:06.083 - INFO: [sync_to_esl-controller.js:605:12] [05IU-14-41] 데이터 변경 감지
+2022-12-05 22:07:06.482 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-14-41] requestSuccess
+2022-12-05 22:07:06.482 - INFO: [sync_to_esl-controller.js:605:12] [05IU-15-51] 데이터 변경 감지
+2022-12-05 22:07:06.773 - INFO: [new_sync_to_mci_esl.js:174:12] [05IU-15-51] requestSuccess
+2022-12-05 22:07:06.773 - INFO: [sync_to_esl-controller.js:605:12] [15E-04-01] 데이터 변경 감지
+2022-12-05 22:07:07.021 - INFO: [new_sync_to_mci_esl.js:174:12] [15E-04-01] requestSuccess
+2022-12-05 22:07:07.021 - INFO: [sync_to_esl-controller.js:605:12] [15E-04-02] 데이터 변경 감지
+2022-12-05 22:07:07.255 - INFO: [new_sync_to_mci_esl.js:174:12] [15E-04-02] requestSuccess
+2022-12-05 22:07:07.255 - INFO: [sync_to_esl-controller.js:605:12] [15E-04-03] 데이터 변경 감지
+2022-12-05 22:07:07.583 - INFO: [new_sync_to_mci_esl.js:174:12] [15E-04-03] requestSuccess
+2022-12-05 22:07:07.584 - INFO: [sync_to_esl-controller.js:605:12] [15E-04-04] 데이터 변경 감지
+2022-12-05 22:07:07.909 - INFO: [new_sync_to_mci_esl.js:174:12] [15E-04-04] requestSuccess
+2022-12-05 22:07:07.910 - INFO: [sync_to_esl-controller.js:605:12] [15E-04-05] 데이터 변경 감지
+2022-12-05 22:07:08.220 - INFO: [new_sync_to_mci_esl.js:174:12] [15E-04-05] requestSuccess
+2022-12-05 22:07:08.221 - INFO: [sync_to_esl-controller.js:605:12] [15E-04-06] 데이터 변경 감지
+2022-12-05 22:07:08.512 - INFO: [new_sync_to_mci_esl.js:174:12] [15E-04-06] requestSuccess
+2022-12-05 22:07:08.512 - INFO: [sync_to_esl-controller.js:605:12] [15E-05-01] 데이터 변경 감지
+2022-12-05 22:07:08.766 - INFO: [new_sync_to_mci_esl.js:174:12] [15E-05-01] requestSuccess
+2022-12-05 22:07:08.766 - INFO: [sync_to_esl-controller.js:605:12] [15E-05-02] 데이터 변경 감지
+2022-12-05 22:07:08.997 - INFO: [new_sync_to_mci_esl.js:174:12] [15E-05-02] requestSuccess
+2022-12-05 22:07:08.998 - INFO: [sync_to_esl-controller.js:605:12] [15E-05-03] 데이터 변경 감지
+2022-12-05 22:07:09.255 - INFO: [new_sync_to_mci_esl.js:174:12] [15E-05-03] requestSuccess
+2022-12-05 22:07:09.256 - INFO: [sync_to_esl-controller.js:605:12] [15E-05-04] 데이터 변경 감지

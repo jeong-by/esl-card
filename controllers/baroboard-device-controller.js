@@ -25,7 +25,7 @@ const config = require('../config/config');
 // QRCode
 const QRCode = require('qr-image');
 
-const { Layer, Shape, RectShape, TextRectShape, RoundRectShape, TextRoundRectShape, ImageShape } = require('../util/baroboard_canvas');
+const { Layer, Shape, RectShape, TextRectShape, RoundRectShape, TextRoundRectShape, ImageShape,SyncStatus } = require('../util/baroboard_canvas');
 const fs = require('fs');
 const axios = require('axios');
 
@@ -33,6 +33,7 @@ const axios = require('axios');
 const aims_info = config.external[2];
 let aims_ip = 'http://'+aims_info.host + ':' +aims_info.port;
 const log = config.debug.log;
+const SERVER_URL = config.esl_image_url;
 
 var check_eng = /[a-zA-Z]/; 
 var check_spc = /[~!@#$%^&*()_+|<>?:{}]/; 
@@ -80,7 +81,7 @@ const makeLayoutImage = async (rotation,resolution, data,url,params,code) => {
 
     // 1. 레이어 생성
     const layer = new Layer(deviceWidth, deviceHeight);
-
+    
     // 2. Shape 추가
  
     console.log('count of widgets : ' + data.length);
@@ -130,6 +131,9 @@ const makeLayoutImage = async (rotation,resolution, data,url,params,code) => {
         
             if (props['font-family'] && props['font-family'].length > 0) {
                 shape1.fontFamily = props['font-family'];
+                // shape1.fontFamily = 'SLGM';
+                console.log(shape1.text +":"+shape1.fontSize +"//"+shape1.fontFamily);
+
             }
         
             // text-align
@@ -198,28 +202,35 @@ const makeLayoutImage = async (rotation,resolution, data,url,params,code) => {
 
             // class (cautionMemo 정보)
             if (props['class'] == 'cautionMemo1' || props['class'] == 'cautionMemo2') {
-                if( shape1.text.length>25) {
-                    shape1.text =' ·  '+shape1.text.substring(0,23);
-                }
-                else {
-                    shape1.text = ' ·  '+ shape1.text;
-                }
+                // if( shape1.text.length>25) {
+                //     shape1.text =' ·  '+shape1.text.substring(0,23);
+                // }
+                // else {
+                //     shape1.text = ' ·  '+ shape1.text;
+                // }
+                // shape1.text = ' ·  '+ shape1.text;
+                shape1['display'] = 'inline-block';
+                shape1['overflow'] ='hidden';
+                console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                console.log(shape1);
                 
-                //shape1['word-break'] ='break-all';
-                shape1['white-space'] = 'pre-line';
             }
-
+            // 환자명 영문 &국문 구별
             else if (props['class'] == 'firstName') {
-                if( !check_kor.test(shape1.text) && check_eng.test(shape1.text)) { 
-                    if(shape1.text.length>10) {
-                        shape1.text = shape1.text.substring(0,9);
-                    }
+               
+                shape1.overflow = 'hidden';
+                
+                if(check_kor.test(shape1.text)) {
                     
+                    if(shape1.text.length>=7) {
+                        shape1.text = shape1.text.substring(0,7);
+                    }
+                    console.log(shape1.text);
                 }
                 else{ 
-                    if(shape1.text.length>7) {
+                    if(shape1.text.length>=10) {
                         
-                        shape1.text = shape1.text.substring(0,6);
+                        shape1.text = shape1.text.substring(0,10);
                     }
                 }
             }
@@ -253,9 +264,8 @@ const makeLayoutImage = async (rotation,resolution, data,url,params,code) => {
             
  
             shape1.borderRadius = borderRadius;
-
             layer.addShape(shape1);
-
+            
         } else if (widget.widgetType == 'ImageView') {
             const props = widget.props;
 
@@ -335,7 +345,7 @@ const makeLayoutImage = async (rotation,resolution, data,url,params,code) => {
             }
  
             shape1.borderRadius = borderRadius;
-
+            console.log(shape1.text +":"+shape1.fontSize +"//"+shape1.fontFamily);
             layer.addShape(shape1);
 
         } else if (widget.widgetType == 'QRView') {
@@ -436,7 +446,8 @@ const makeLayoutImage = async (rotation,resolution, data,url,params,code) => {
 
     // BY START 2019-12-12
     if( url !=='preview') {
-        
+        console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        console.log(layer);
         layer.rotation(parseInt(rotation));
     }
     // BY END 2019-12-12
@@ -444,7 +455,7 @@ const makeLayoutImage = async (rotation,resolution, data,url,params,code) => {
 
     // 2. 레이어 그리기
     const drawResult = await layer.draw();
-
+    
     // 3. 이미지 파일로 저장
 
     let filename;
@@ -453,7 +464,7 @@ const makeLayoutImage = async (rotation,resolution, data,url,params,code) => {
         filename = '../public/index_img/preview.png';
     }
     else {
-        filename = '../output/'+params.id+'.png';
+        filename = '../public/esl/'+code+'.png';
     }
 
     
@@ -482,7 +493,6 @@ const makeLayoutImage = async (rotation,resolution, data,url,params,code) => {
             
             
             const response1 = await layer.send(filename,url,code);
-            
             // BY END 2019-11-25
             
         
@@ -904,7 +914,14 @@ class BaroboardDevice {
                                         console.log('array found');
                                     
                                         // curValue의 값을 , 로 구분한 후 순서 확인
-                                        const curValues = curValue.split(',');
+                                        console.log(curValue);
+                                        let curValues;
+                                        try  {
+                                            curValues = curValue.split(',');
+                                        }catch (err) {
+                                            curValues = curValue;
+                                        }
+                                        
                                         const indexStr = operatorObj.condition2;
                                         const indexInt = Number(indexStr);
                                         console.log('index no : ' + indexInt);
@@ -1197,6 +1214,8 @@ class BaroboardDevice {
         }
     }
 
+    
+
     /**
      * @RequestMapping(path="/goodbattery", method="post")
      */
@@ -1309,6 +1328,37 @@ class BaroboardDevice {
         }
         
     }
+    // BY START 2022-03-02
+    
+
+    /**
+     * @RequestMapping(path="/statussync", method="post")
+     */
+     async statusSync(req, res) {
+        logger.debug(`sync device Status: Data called for path /baroboard/statussync`);
+        const synctostatus = new SyncStatus();       
+        const returnBody = await synctostatus.getStatus();
+        for(let i = 0 ; i < returnBody.length; i++ ) {
+            const queryParams = {
+                sqlName: 'baroboard_device_status_update2',
+                params: {
+                    code:returnBody[i].labelCode,
+                    status:returnBody[i].status,
+                    status_message:returnBody[i].status
+                },
+                paramType:{
+                    code:'string',
+                    status:'string',
+                    status_message:'string'
+                }
+            }
+            
+            const row = await this.database.execute(queryParams);
+        }
+        util.sendRes(res, 200, 'OK', returnBody); 
+    }
+
+    // BY END 2022-03-02
 
 
     /**
@@ -1339,7 +1389,7 @@ class BaroboardDevice {
         }
          
     }
-
+    
     /**
      * @RequestMapping(path="/modify/layout", method="post")
      */
@@ -1367,11 +1417,22 @@ class BaroboardDevice {
         }
          
     }
+    /**
+     * @RequestMapping(path="/data/esl_request", method="post")
+     */
+     async darwinPushESLData(req, res) {
+        console.log("hohohohoho");
+        let params;
+        if (res) {
+            params = param.parse(req); 
+        }
+        else {
+            params = req;
+        }
+        darwinPushESLData2(params);
+        
+    }
 
-    
-   
-
-   
 }
 
 

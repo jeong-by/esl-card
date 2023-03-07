@@ -13,7 +13,7 @@ module.exports = {
     baroboard_device_data_update_sync: {
         sql: "update baroboard.device \
               set data = :data, \
-                  data_date = now() \
+                    data_date = now() \
               where id = :id"
     },
     // BY START 2019-12-12 //코드값, rotation값 추가로 갖고옴
@@ -28,9 +28,9 @@ module.exports = {
     baroboard_dashboard_list: {
         sql: "select group_id, group_name, \
                     count(id) as count_total, \
-                    count(if(status = '200', status, null)) as count_normal, \
-                    count(if(status <> '200', status, null)) as count_alert, \
-                    round(( count(if(status = '200', status, null)) / count(id) * 100 ), 0) as health_percentage \
+                    count(if(status = 'SUCCESS', status, null)) as count_normal, \
+                    count(if(status <> 'SUCCESS', status, null)) as count_alert, \
+                    round(( count(if(status = 'SUCCESS', status, null)) / count(id) * 100 ), 0) as health_percentage \
               from baroboard.device \
               group by group_id"
     },
@@ -53,10 +53,9 @@ module.exports = {
               where group_name = :groupName"
     },
     baroboard_users_login: {  // 로그인
-        sql: "select id, name, details, level, dept \
+        sql: "select id,password, name, details, level, dept \
               from baroboard.users \
-              where id = :userId \
-                    and password = :userPassword"
+              where id = :userId "
     },
     baroboard_users_login_date: {  // 로그인 시간 업데이트
         sql: "update baroboard.users \
@@ -68,11 +67,22 @@ module.exports = {
               set logout_date = now() \
               where id = :userId"
     },
-    // BY START 2019-11-25
-    baroboard_legacy: { //레거시 정보 갖고오기
-        sql: "select ip \
-              from baroboard.legacy" 
+    // BY START 2021-04-06
+    baroboard_users_signup : {
+        sql: "INSERT INTO baroboard.users \
+              (id,password,name,details,level,dept,create_author,create_date,modify_date)\
+              VALUE (:userId,:userPassword,:name,:details,:level,:dept,:create_author,now(),now())"
     },
+    // BY END 2021-04-06
+        
+    // BY START 2022-07-19
+    baroboard_device_group_didyn: { 
+        sql: "SELECT id, name FROM baroboard.device_group WHERE did_yn like 'y' "
+    },
+    baroboard_did_roomInfo : {
+        sql: "SELECT roomId, bedCount FROM baroboard.room WHERE wardId LIKE :wardId"
+    },
+    
     // BY END 2019-11-25
 
     // BY START 2019-12-11
@@ -98,6 +108,12 @@ module.exports = {
         sql: "update baroboard.device set status = :status, status_message = :status_message where id = :id "
     },
     // BY END 2019-12-16
+    
+    // BY START 2022-03-02
+    baroboard_device_status_update2: {
+        sql: "update baroboard.device set status = :status, status_message = :status_message where code = :code "
+    },
+    // BY END 2022-03-02
 
     // BY START 2020-01-06
     baroboard_device_layout_mapper : {
@@ -113,7 +129,7 @@ module.exports = {
         sql:"update baroboard.image_category set image = :image where name = :name "
     },
     baroboard_device_update_esldate : {
-        sql:"update baroboard.device set esl_date = :date where code = :labelcode"
+        sql:"update baroboard.device set esl_date = :date, status = :status, status_message = :status_message, battery = :battery where code = :labelcode"
     },
     baroboard_device_update_esldate2 : {
         sql:"update baroboard.device set esl_date = now() where code = :labelcode"
@@ -137,13 +153,46 @@ module.exports = {
         sql:"SELECT count(*) as count FROM baroboard.device WHERE layout_id = :id "
     },
     baroboard_device_data_resetData : {
-        sql:"UPDATE baroboard.device SET data = :data WHERE group_id = :wardId"
+        sql:"UPDATE baroboard.device SET data = :data , status = :status , status_message = :status_message WHERE id = :deviceId"
     },
     baroboard_device_data_getDevice : {
         sql:"SELECT d.id as id, d.name as `name`, l.mapping as mapping FROM baroboard.device d , baroboard.layout l WHERE d.group_id = :wardId AND l.id = d.layout_id "
     },
+    baroboard_did_get_wardData : {
+        sql:"SELECT DISTINCT SUBSTRING(name,1,6) AS name FROM baroboard.device WHERE group_id = :wardId "
+    },
     baroboard_image_add : {
         sql:"INSERT INTO baroboard.image (name) VALUES (:name)"
-    }
+    },
+    // BY START 2022-03-08
+    baroboard_add_device : {
+        sql:"INSERT INTO baroboard.device (id,code,name,group_id,group_name,type,size,resolution,location,rotation,status,status_message,battery,admin,layout_id,layout_name,create_author) SELECT :id,:code,:name,:group_id,:group_name,:type,:size,:resolution,:location,:rotation,:status,:status_message,:battery,:admin,:layout_id,:layout_name,:create_author FROM DUAL WHERE NOT EXISTS (SELECT *  FROM baroboard.device WHERE code = :code2)"
+    },
+    // DID SQL 
 
+    // Sync_to_mci_ESL SQL
+    // BY START 2022-08-17 
+
+    baroboard_device_group_eslyn: {
+        sql : "SELECT id,name FROM baroboard.device_group WHERE esl_yn like 'y' "
+    },
+    baroboard_esl_get_wardData: {
+        sql : "SELECT name  FROM baroboard.device WHERE group_id like :wardId"
+    },
+    baroboard_esl_get_device: {
+        sql: "SELECT d.id as id, d.name as `name`, l.mapping as mapping FROM baroboard.device d , baroboard.layout l WHERE d.name = :name AND l.id = d.layout_id "
+    },
+    baroboard_device_data_update_sync2: {
+        sql: "update baroboard.device SET data = :data, data_date = now() where id = :id"
+    },
+    baroboard_device_data_select2 : {
+        sql: "select a.id, a.name,a.code, a.group_name, a.type,a.rotation, a.size, a.resolution, a.layout_id, a.layout_name, a.data as device_data \
+                , b.data as layout_data, b.mapping as layout_mapping \
+                from baroboard.device a, baroboard.layout b \
+                where a.name = :name \
+                and a.layout_id = b.id"
+    },
+    baroboard_esl_save_stats : {
+        sql : "INSERT INTO baroboard.stats (group_name,device_name) VALUES (:groupName ,:wardName)"
+    }
 }

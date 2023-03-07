@@ -54,7 +54,7 @@ util.sendError = function (res, code, message) {
         message: message
     }
 
-    res.writeHead(200, {'Content-Type':'application/json;charset=utf8'});
+    res.writeHead(code, {'Content-Type':'application/json;charset=utf8'});
     res.end(JSON.stringify(output));
 }
 

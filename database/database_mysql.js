@@ -7,7 +7,7 @@ const path = require('path');
 const fs = require('fs');
 
 const config = require('../config/config');
-const sqlConfig = require('../config/sql_config');
+const sqlConfig = require('../database/sql/baroboard_sql');
 const logger = require('../util/logger');
 const util = require('../util/util');
  

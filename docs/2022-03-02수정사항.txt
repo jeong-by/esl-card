@@ -1,0 +1,17 @@
+2022-03-02 수정사항
+
+
+1. sync_to_mci.js 로직 수정 (오류 발생시 세분화)
+
+2. ESL 관리자 페이지 내 상태정보 로직 수정 및 조회 추가
+   (기존 '200','400','0' 상태 에서 'SUCCESS','PROCESSING','TIMEOUT','RESET' 으로 변경)
+
+=================================================================================================
+변경된 파일
+
+1. baroboard-device-controller.js
+2. esl-index.ejs
+3. baroboard_sql.js
+4. baroboard_canvas.js
+5. sync_to_mci.js
+6. sync_to_mci-controller.js

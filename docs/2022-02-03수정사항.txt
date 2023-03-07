@@ -1,0 +1,12 @@
+2022-02-03 수정사항
+
+
+1. ESL 장애 발생시 문자 전송하는 컨트롤러 추가
+
+=================================================================================================
+변경된 파일
+
+view/esl_index.ejs
+controller/baroboard_amis_sms_controller.js
+database/sql/baroboard_sql.js
+

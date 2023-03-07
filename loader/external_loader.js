@@ -377,7 +377,7 @@ external_loader.processData = (socket, data, socketListener) => {
 		console.log(getCurTime() + 'remaining buffer for socket [' + socket.id + '] exists.');
 		
 		let remainingBuffer = remainingMap.get(socket.id);
-		let concatBuffer = new Buffer(data.length + remainingBuffer.length);
+		let concatBuffer = new Buffer.from(data.length + remainingBuffer.length);
 		concatBuffer.fill();
 		remainingBuffer.copy(concatBuffer, 0);
 		data.copy(concatBuffer, remainingBuffer.length);
@@ -393,7 +393,7 @@ external_loader.processData = (socket, data, socketListener) => {
 	
 	
     // 전문 길이값 확인 (10자리)
-    let dataLenBuffer = new Buffer(10);
+    let dataLenBuffer = new Bufferfrom(10);
     data.copy(dataLenBuffer, 0, 0, 10);
     
 	// 전문 길이값을 문자열로 변환
@@ -457,7 +457,7 @@ external_loader.processData = (socket, data, socketListener) => {
 
 		remainingMap.set(socket.id, remainingBuffer);
 		
-		external_loader.processData(socket, new Buffer(0), socketListener);
+		external_loader.processData(socket, new Buffer.from(0), socketListener);
 	}
 	
 };

@@ -12,6 +12,7 @@ const multer = require('multer');
 
 const cookieParser = require('cookie-parser');
 const expressSession = require('express-session');
+const bcrypt = require('bcrypt-nodejs');
 
 const passport = require('passport');
 const flash = require('connect-flash');
@@ -23,6 +24,7 @@ const controllerLoader = require('./loader/controller_loader');
 
 const local_login = require('./passport/local_login');
 
+
 // logger
 const logger = require('./util/logger');
 
@@ -32,12 +34,15 @@ const socketio = require('socket.io');
 
 //=====================//
 
+// BY START 2021-03-29
 // express Session 사용
 const sessionMiddleware = expressSession({
-    secret: 'my key',
-    resave: true,
-    saveUninitialized: true
+    secret: 'unsnetworks', // 쿠키에 저장되는 식별자 데이터를 암호화하기위해
+    resave: false, // resave 요청이 왔을때 세션을 수정하지 않아도 다시 저장하게끔 (병목현상 일어날 수 있으니 false)
+    saveUninitialized: true // // 초기화 되지 않은 세션을 강제로 저장 --> 모든 방문자에게 고유한 식별 값 제공
 });
+
+// BY END 2021-03-29
 
 
 // load external_loader
@@ -72,9 +77,7 @@ const createApp = () => {
     
     const upload = initUpload();
 
-
     app.use(cookieParser());
-    
     app.use(sessionMiddleware);
     
     app.use(passport.initialize());
@@ -204,9 +207,9 @@ const initSwagger = (app) => {
 
 
 var options = {  
-    key: fs.readFileSync('private.pem'),
-    cert: fs.readFileSync('cert.pem'),
-    passphrase: '123456'
+    key: fs.readFileSync('./openssl/private.key'),
+    cert: fs.readFileSync('./openssl/public.key'),
+    //passphrase: 'unsnetworks'
 };
 
 let namespace;
@@ -219,6 +222,7 @@ const main = () => {
     let server;
     if (config.server.https) {
         server = https.createServer(options, app);
+        console.log(server);
     } else {
         server = http.createServer(app);
     }

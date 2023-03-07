@@ -1,0 +1,43 @@
+
+/* 메인함수 */
+startESLSync () 
+ㅣ  
+ㅣ  1. baroboard.device_group테이블에서 esl 적용 병동 리스트 가져오기
+ㅣ     -->wardList
+ㅣ
+ㅣ   for (wardList)
+ㅣ  ㅣ
+ㅣ  ㅣ 
+ㅣ  ㅣ 2. axios로 해당병동의 환자 정보 받아오기 (MCI_SERVER_URL + '/mci-test/patient-list?wardId=' + wardList[i].id)
+ㅣ  ㅣ    -->wardPatientInfo
+ㅣ  ㅣ
+ㅣ  ㅣ 3. hashMap에 MCI환자데이터 넣기
+ㅣ  ㅣ    -->mciInfo (key:wardName ,value: MCI환자데이터)
+ㅣ  ㅣ
+ㅣ  ㅣ 4. 기존 해쉬맵 (patientHashMap) 와 신규 MCI 데이터 비교
+ㅣ  ㅣ    -->difBed (기존과 비교하고 남은 MCI 데이터의 키값(wardName))
+ㅣ  ㅣ
+ㅣ  ㅣ for (difBed) 
+ㅣ  ㅣ  ㅣ
+ㅣ  ㅣ  ㅣ  5.1 해당 단말기 데이터 UNS DB 에서 초기화
+ㅣ  ㅣ  ㅣ  -->baroboardSyncModule.resetData()
+ㅣ  ㅣ  ㅣ
+ㅣ  ㅣ  ㅣ  5.2 기존 해쉬맵에 변경된 데이터 최신화
+ㅣ  ㅣ  ㅣ
+ㅣ  ㅣ  ㅣ  6. 해당 단말기 적용 레이아웃과 MCI 데이터로 새로운 데이터 생성
+ㅣ  ㅣ  ㅣ  -->baroboardSyncModule.GetWardLatoutData()
+ㅣ  ㅣ  ㅣ
+ㅣ  ㅣ  ㅣ
+ㅣ  ㅣ  ㅣ  7. 해당 단말기에 이미지 전송
+ㅣ  ㅣ  ㅣ  -->baroboardSyncModule.requestDeviceDataApply()
+ㅣ  ㅣ  ㅣ
+ㅣ  ㅣ  ㅣ-------------------------------------------------------------
+ㅣ  ㅣ  해당 병동 hashMap 지우기
+ㅣ  ㅣ  --> mciInfo.clear();
+ㅣ  ㅣ  
+ㅣ  ㅣ  ---------------------------------------------------------------
+ㅣ
+ㅣ   9. 전체 완료 후 AIMS 서버에서 데이터 적용시간,베터리 정보,적용상태 가져와 UNS DB에 저장
+ㅣ      --> baroboardSyncModule.RequestESLDate();
+ㅣ
+ㅣ  -----------------------------------------------------------------------------------

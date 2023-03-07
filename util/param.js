@@ -1,4 +1,6 @@
 'use strict';
+const config = require('../config/config');
+const log = config.debug.log;
 
 const param = {};
 
@@ -22,7 +24,7 @@ param.parse = function (req) {
     
     const paramsText = JSON.stringify(params);
     if (paramsText && paramsText.length < 1000) {
-        console.log(`PARAMS -> ${paramsText}`);
+        if(log==true){console.log(`PARAMS -> ${paramsText}`);}
     } else {
         console.log(`PARAMS -> over 1000 characters.`);
     }

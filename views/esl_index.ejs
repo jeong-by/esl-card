@@ -60,7 +60,7 @@
         /* 갖다 놓을 공간 */
         /*
                 11.6' 640x960
-                7.5'  640x384
+                7.5'  800x480
                 6.0'  600x448
             */
         #dropzone1 {
@@ -122,6 +122,16 @@
         .file-field.medium .file-path-wrapper .file-path {
             height: 2.8rem; }
 
+        /* BY START 2020-11-11 */
+        input[type='radio'] {
+            position:relative !important;
+            opacity: 1 !important;
+        }
+        .img-label {
+            position: relative !important;
+        }
+        /* BY END */
+
     </style>
     
 </head>
@@ -141,7 +151,9 @@
                             <div class="row" >
                                 <!-- <a ><img src="/images/logo.png" class="rounded-circle" style="height:80px; width:150px; margin-right: 80px;"><span>Logo</span></a> -->
                                 <!-- BY START 2019-11-14 --> 
-                                <h3 style="padding:0.5em;">Baro ESL 서비스</h3>
+                                <h3 style="padding:0.5em;">Baro ESL 서비스 </h3>
+                                
+                                <div id="output"></div>
                                 <!-- BY END 2019-11-14 -->
                             </div>
                             
@@ -271,6 +283,9 @@
                                     </ul>
                                 </div>
                             </li>
+                            <li style="float: right; margin-top:5vh;">
+                                <button type="button" class="btn btn-outline-white  btn-lg px-2" onclick="darwinPost()"><i class="fas fa-sms mt-0" style="margin-right:0.5em;"></i>Darwin전송</button>
+                            </li>
                         </ul>
 
 
@@ -339,9 +354,9 @@
                             <div class="card-body">
 
                                 <div class="form-header purple-gradient">
-                                    <h3 class="font-weight-500 my-2 py-1"><i class="fas fa-user"></i> 사용자 로그인 </h3>
+                                    <h3 class="font-weight-500 my-2 py-1"><i class="fas fa-user"></i> 사용자 로그인</h3>
                                 </div>
-
+                
                                 <div class="md-form">
                                     <i class="fas fa-user prefix white-text"></i>
                                     <input type="text" id="userIdInput" class="form-control">
@@ -470,18 +485,20 @@
                                     <!-- Table head -->
                                     <thead>
                                         <tr>
-                                            <th style="width:10%;"></th>
+                                            <th style="width:8%;"></th>
+                                            <th class="th-lg" style="width:10%;"><a>Serial <i
+                                                class="fas fa-sort ml-1"></i></a></th>
                                             <th class="th-lg" style="width:20%;"><a>이름 <i
                                                         class="fas fa-sort ml-1"></i></a></th>
                                             <th class="th-lg" style="width:10%;"><a >해상도<i
                                                         class="fas fa-sort ml-1"></i></a></th>
                                             <th class="th-lg" style="width:20%;"><a >설명<i
                                                         class="fas fa-sort ml-1"></i></a></th>
-                                            <th class="th-lg" style="width:10%;"><a >레이아웃<i
+                                            <th class="th-lg" style="width:8%;"><a >레이아웃<i
                                                         class="fas fa-sort ml-1"></i></a></th>
-                                            <th class="th-lg" style="width:10%;"><a>매핑<i
+                                            <th class="th-lg" style="width:8%;"><a>매핑<i
                                                         class="fas fa-sort ml-1"></i></a></th>
-                                            <th class="th-lg text-center" style="width:20%;"><a >기능</a></th>
+                                            <th class="th-lg text-center" style="width:16%;"><a >기능</a></th>
                                         </tr>
                                     </thead>
                                     <!-- Table head -->
@@ -520,7 +537,7 @@
                                     <input type="text" id="nameLayoutInput" class="form-control" required>
                                     <label for="nameLayoutInput">이름</label>
                                 </div>
-
+                                
                                 <div class="md-form mt-3">
                                     <!-- BY START 2019-11-01 
                                             사유 : 규격에 맞는 해상도만 저장하게하기 위함.
@@ -528,13 +545,24 @@
                                     <select class="mdb-select md-form" id="resolutionLayoutInput" required>
                                         <option value="" disabled selected>해상도를 선택해주세요.</option>
                                         <option value="960X640">11.6' (960x640)</option>
-                                        <option value="640X384">7.5' (640x384)</option>
+                                        <option value="800X480">7.5' (800x480)</option>
                                         <option value="600X448">6.0' (600x448)</option>
                                     </select>
                                     <!-- BY END 2019-11-01 -->
 
                                 </div>
+                                <div class="md-form mt-3">
+                                    <h5>이미지 모드 선택</h5>
+                                    <input type="radio" id="imageMode1" name="imageMode" value="imageMode1" checked>
+                                    <label for="imageMode1" class="img-label">    
+                                        <img src="./images/v3_information.png" style="cursor: pointer; width:80px;height:80px; border: 1px solid black;">
+                                    </label>
+                                    <input type="radio" id="imageMode2" name="imageMode" value="imageMode2">
+                                    <label for="imageMode2" class="img-label">    
+                                        <img src="./images/v4_information.png" style="cursor: pointer; width:80px;height:80px; border: 1px solid black;">
+                                    </label>
 
+                                </div>
                                 <div class="md-form mt-3">
                                     <input type="text" id="detailsLayoutInput" class="form-control" required>
                                     <label for="detailsLayoutInput">설명</label>
@@ -626,7 +654,7 @@
                             <select class="easyui-combobox " id="device-size"  label="Device Size:"
                                 labelPosition="top" style="width:140px;">
                                 <option value="11.6">11.6' (960x640)</option>
-                                <option value="7.5">7.5' (640x384)</option>
+                                <option value="7.5">7.5' (800x480)</option>
                                 <option value="6.0">6.0' (600x448)</option>
                             </select>
 
@@ -736,6 +764,7 @@
                     </div>
                 </div>
 
+                
             </div>
 
 
@@ -843,6 +872,9 @@
                                 <span id="refreshTime2" style="margin-left:2em;"></span>
                                 <span id="refreshRemaining2" style="margin-left:2em;"></span>
                             </div>
+                            <button type="button" class="btn btn-warning btn-floating" style="display:flex; position:fixed; bottom:1vh;right:2vw;" onclick="showPage('page2-1')" >
+                                <i class="fas fa-arrow-left"></i>
+                            </button>
                         </div>
 
                         <!--
@@ -889,7 +921,7 @@
             <div id="page2-2" style="display:none;">
                 <div class="container-fluid">
 
-                    <div class="row mb-1" style="margin-top:-2em; margin-left:1em; margin-right:1em;">
+                    <div class="row mb-1" style="margin-top:-2em;margin-left:1em; margin-right:1em;">
                         <div class="col-md-12">
                             <h4 class="mt-5 mb-3 font-weight-bold dark-grey-text">단말 리스트</h4>
 
@@ -902,64 +934,55 @@
                             </nav>
                         </div>
                     </div>
-
+                    <div class="row" style=" margin-left:1em; margin-right:1em;">
                     <!-- Grid row -->
-                    <div class="row rgba-white-light z-depth-1"
-                        style="margin-left:1.2em; margin-right:1em; margin-bottom:3rem;max-width:38rem;">
+                        <div class="row rgba-white-light z-depth-1 col-md-5"
+                            style="margin-left:1.2em; margin-right:1em; margin-bottom:3rem;max-width:38rem;">
 
-                        <!-- Grid column -->
-                        <div class="col-md-4">
+                            <!-- Grid column -->
+                            <div class="col-md-4">
 
-                            <select class="mdb-select md-form" id="searchDeviceSelect">
-                                <option value="" disabled>검색 칼럼 선택</option>
-                                <option value="id">아이디</option>
-                                <option value="name" selected>이름</option>
-                                <option value="group_name">그룹</option>
-                                <option value="size">크기</option>
-                                <option value="status_message">상태</option>
-                                <option value="layout_name">레이아웃</option>
-                                <option value="code">단말 코드</option>
-                            </select>
+                                <select class="mdb-select md-form" id="searchDeviceSelect">
+                                    <option value="" disabled>검색 칼럼 선택</option>
+                                    <option value="id">아이디</option>
+                                    <option value="name" selected>이름</option>
+                                    <option value="group_name">그룹</option>
+                                    <option value="size">크기</option>
+                                    <option value="status_message">상태</option>
+                                    <option value="layout_name">레이아웃</option>
+                                    <option value="code">단말 코드</option>
+                                </select>
 
-                        </div>
-                        <div class="col-md-6" style="padding-top:1em;">
-
-                            <form class="form-inline md-form mt-2 ml-2">
-                                <input class="mt-2" type="text" placeholder="검색어 입력" style="max-width: 24em;"
-                                    id="searchDeviceInput">
-                                <button type="button" class="btn btn-outline-indigo btn-rounded btn-sm px-2"
-                                    onclick="searchDeviceItem()"><i class="fas fa-search mt-0 indigo-text"
-                                        style="margin-right:0.5em;"></i>검색</button>
-                            </form>
-
-                        </div>
-                        <div class="col-md-2">
-
-                            <!-- ProgressBar -->
-                            <div style="display:none; padding-top:1.7em;" id="progressDevice1">
-                                <div class="preloader-wrapper small active crazy">
-                                    <div class="spinner-layer spinner-blue-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle"></div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
+                            <div class="col-md-8" style="padding-top:1em;">
+
+                                <form class="form-inline md-form mt-2 ml-2">
+                                    <input class="mt-2" type="text" placeholder="검색어 입력" style="max-width: 24em;"
+                                        id="searchDeviceInput">
+                                    <button type="button" class="btn btn-outline-indigo btn-rounded btn-sm px-2"
+                                        onclick="searchDeviceItem()"><i class="fas fa-search mt-0 indigo-text"
+                                            style="margin-right:0.5em;"></i>검색</button>
+                                </form>
+
+                            </div>
+                            
+
+                            
+                            <!-- Grid column -->
 
                         </div>
-
-
-                        <!-- Grid column -->
-
+                        <div class="col-md-6" style="text-align:right;vertical-align: bottom; ">
+                            <p> Success : <span id="success"> ? </span> 
+                                Processing : <span id="processing"> ? </span> 
+                                TimeOut : <span id="timeout"> ? </span>
+                                <button type="button" class="btn btn-outline-indigo btn-rounded btn-sm px-2"
+                                onclick="requestDeviceListAll()"><i class="fas fa-sync mt-0 indigo-text"
+                                style="margin-right:0.5em;"></i>조회</button> 
+                            </p>
+                        </div>
                     </div>
                     <!-- Grid row -->
-
+                    
 
                     <div class="card card-cascade narrower z-depth-1"
                         style="margin-left:1em; margin-right:1em; margin-bottom:2em;">
@@ -969,7 +992,6 @@
                             class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
 
                             <a href="" class="white-text mx-3">단말 리스트</a>
-
                             <div>
                                 <span id="totalDeviceOutput" class="badge badge-pill badge-primary"
                                     style="padding:0.6em; margin-right:1em;">결과 0</span>
@@ -1067,7 +1089,7 @@
                                     <select class="mdb-select md-form" id="deviceSizeInput" required>
                                         <option value="" disabled selected>크기(inch)를 선택해주세요.</option>
                                         <option value="11"  data-sub='960X640'>11' (960X640) </option>
-                                        <option value="7"   data-sub='640X384'>7' (640X384)</option>
+                                        <option value="7"   data-sub='800X480'>7' (800x480)</option>
                                         <option value="6"   data-sub='600X448'>6' (600X448)</option>
                                     </select>
                                     <!-- BY END 2019-11-13 -->
@@ -1081,7 +1103,7 @@
                                     <select class="mdb-select md-form" id="deviceResolutionInput" required>
                                         <option value="" disabled selected>해상도를 선택해주세요.</option>
                                         <option value="960X640">11.6' (960x640)</option>
-                                        <option value="640X384">7.5' (640x384)</option>
+                                        <option value="800x480">7.5' (800x480)</option>
                                         <option value="600X448">6.0' (600x448)</option>
                                     </select>
                                      
@@ -1536,14 +1558,16 @@
                                     <thead>
                                         <tr>
                                             <th style="width:10%;"></th>
-                                            <th class="th-lg" style="width:20%;"><a>아이디 <i
+                                            <th class="th-lg" style="width:10%;"><a>아이디 <i
                                                         class="fas fa-sort ml-1"></i></a></th>
                                             <th class="th-lg" style="width:20%;"><a >이름<i
                                                         class="fas fa-sort ml-1"></i></a></th>
-                                            <th class="th-lg" style="width:20%;"><a>소속<i
+                                            <th class="th-lg" style="width:10%;"><a>ESL수신권한<i
                                                         class="fas fa-sort ml-1"></i></a></th>
-                                            <th class="th-lg" style="width:10%;"><a >권한<i
+                                            <th class="th-lg" style="width:10%;"><a >전광판수신권한<i
                                                         class="fas fa-sort ml-1"></i></a></th>
+                                            <th class="th-lg" style="width:20%;"><a >수신번호<i
+                                                class="fas fa-sort ml-1"></i></a></th>
                                             <th class="th-lg text-center" style="width:20%;"><a href="">기능</a></th>
                                         </tr>
                                     </thead>
@@ -1599,14 +1623,10 @@
                                     <label for="nameUsersInput">이름</label>
                                 </div>
 
-                                <!-- BY START 2019-11-01
-                                        사유: 등급과 설명의 불일치를 막기위해 등급선택시 자동 설명 입력 되게 설정.
-                                              관라자 등급은 함부로 만들 수 없게 하기 위해 disabled 적용
-                                    -->
-                                <!-- <div class="md-form mt-3">
-                                        <input type="text" id="detailsUsersInput" class="form-control">
-                                        <label for="detailsUsersInput">설명</label>
-                                    </div> -->
+                                <div class="md-form mt-3">
+                                    <input type="text" id="phoneUsersInput" class="form-control" required>
+                                    <label for="phoneUsersInput">SMS 수신 번호</label>
+                                </div>
 
                                 <div class="md-form mt-3">
                                     <input type="text" id="deptUsersInput" class="form-control" required>
@@ -1615,10 +1635,14 @@
                                 <div class="md-form mt-3">
 
                                     <select class="mdb-select md-form" id="levelUsersInput" required>
-                                        <option value="" disabled selected>등급을 선택해주세요</option>
-                                        <option value="1">1등급(일반 사용자)</option>
-                                        <option value="2">2등급 (관리자)</option>
-                                        <option value="3" class="superUserLevel" disabled>3등급 (슈퍼관리자)</option>
+                                        <option value="" disabled selected>ESL SMS 수신권한</option>
+                                        <option value="1">1등급(SMS 등록))</option>
+                                        <option value="2">2등급 (ESL관리자)</option>
+                                    </select>
+                                    <select class="mdb-select md-form" id="boardUsersInput" required>
+                                        <option value="" disabled selected>전광판  SMS 수신권한</option>
+                                        <option value="1">받기(SMS 등록 (UNS인원만)))</option>
+                                        <option value="0">받지 않기</option>
                                     </select>
                                 </div>
                                 <!-- BY END 2019-11-01 -->
@@ -1754,7 +1778,7 @@
                                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion1">
                                     <div class="card-body">
                                         <a class="btn-floating  btn-danger" style="float: right;" onclick="deleteImageModal('이미지 전체 보기')"><i class="fas fa-trash"></i></a>
-                                        <div class="imageDiv">
+                                        <div class="imageDiv">                  
                                         </div>
                                     </div>
                                   </div>
@@ -2170,6 +2194,30 @@
             </div>
         </div>
     </div>
+    <!-- The Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style="width:1080px">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">적용 이미지 보기</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img id="data_image" style="width: 50%; height: auto; margin-left:10vw;" />
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
     <!-- 단말 리스트에서 데이터 입력 폼 -->
@@ -2434,8 +2482,13 @@
     <!-- moment -->
     <script src="/js/moment.min.js"></script>
 
+    <!-- CryptoJS -->
+    <script src="/js/CryptoJS/rollups/aes.js"></script>
+    <script src="/js/CryptoJS/rollups/sha256.js"></script>
+    <script src="/js/CryptoJS/rollups/pbkdf2.js"></script>
+
     <script>
-        
+
         /*  BY START 2019-11-06
          *  required 조건
          */
@@ -2518,14 +2571,18 @@
 
         let eslServerIp;
 
+        let _key;
 
         $(document).ready(function () {
             console.log('ready 호출됨');
-
+            
+            //  BY START 2021-04-01 서버에서 받아온 key,iv 값
+            _key = '<%=parseKey %>';
             //replaceAll prototype 선언
             String.prototype.replaceAll = function (org, dest) {
                 return this.split(org).join(dest);
             }
+
 
 
             //===== Layout List =====//
@@ -2887,8 +2944,11 @@
             console.log('addItem 호출됨');
 
             var html = '<tr id="itemLayout' + item.id + '">'
-                + '    <td class="text-left align-middle" style="width:10%;">'
+                + '    <td class="text-left align-middle" style="width:8%;">'
                 + '      <img src="/index_img/layout_48.png" style="width:2em;">'
+                + '    </td>'
+                + '    <td class="text-left align-middle" style="width:10%;">'
+                + '      <span id="item' + item.id + '_resolution">' + item.id + '</span>'
                 + '    </td>'
                 + '    <td class="text-left align-middle" style="width:20%;">'
                 + '      <span id="item' + item.id + '_name">' + item.name + '</span>'
@@ -2899,13 +2959,13 @@
                 + '    <td class="text-left align-middle" style="width:20%;">'
                 + '      <span id="item' + item.id + '_details">' + item.details + '</span>'
                 + '    </td>'
-                + '    <td class="text-left align-middle" style="width:10%;">'
+                + '    <td class="text-left align-middle" style="width:8%;">'
                 + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" data-toggle="tooltip" data-placement="top" title="레이아웃 빌더로 보기" onclick="showLayoutBuilder(\'' + item.id + '\', \'' + item.name + '\', \'' + item.resolution + '\', \'' + item.details + '\', \'' + item.data + '\', \'' + item.mapping + '\')"><i class="fas fa-edit fa-lg blue-text"></i></button>'
                 + '    </td>'
-                + '    <td class="text-left align-middle" style="width:10%;">'
+                + '    <td class="text-left align-middle" style="width:8%;">'
                 + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" data-toggle="tooltip" data-placement="top" title="매핑 정보 입력하기" onclick="showLayoutMapping(\'' + item.id + '\', \'' + item.name + '\', \'' + item.resolution + '\', \'' + item.details + '\', \'' + item.data + '\', \'' + item.mapping + '\')"><i class="fas fa-edit fa-lg blue-text"></i></button>'
                 + '    </td>'
-                + '    <td class="text-center align-middle" style="width:20%;">'
+                + '    <td class="text-center align-middle" style="width:16%;">'
                 + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" data-toggle="tooltip" data-placement="top" title="레이아웃 수정하기" onclick="showLayoutModifyPage(\'' + item.id + '\', \'' + item.name + '\', \'' + item.resolution + '\', \'' + item.details + '\')"><i class="fas fa-edit fa-lg cyan-text"></i></button>'
                 + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" data-toggle="tooltip" data-placement="top" title="레이아웃 삭제하기" onclick="deleteLayoutItem(\'' + item.id + '\')"><i class="fas fa-trash fa-lg red-text"></i></button>'
                 + '    </td>'
@@ -3225,10 +3285,40 @@
 
         function requestDeviceList(page, perPage) {
             console.log('requestDeviceList 호출됨 : ' + page + ', ' + perPage);
-
             requestDeviceSearch(page, perPage);
         }
+        function requestDeviceListAll() {
+            axios({
+                method:'post',
+                url:'/baroboard/device/statussync',
+                responseType:'json'
+            }).then(async function (response) {
+                const data = response.data.output;
+                let success = 0;
+                let processing = 0;
+                let timeout = 0;
+                for(let i = 0 ; i < data.length ; i ++ ) {
+                    if (data[i].status == "SUCCESS") {
+                        success++;
+                    }
+                    else if (data[i].status == "PROCESSING") {
+                        processing++;
+                    }
+                    else if (data[i].status == "TIMEOUT") {
+                        timeout++;
+                    }
+                }
+                addDeviceStatus(success,processing,timeout);
+                
+            }).catch(function (err) {
+                console.log(err);
+            
+            }) 
 
+            
+            
+        }
+        
         function requestDeviceSearch(page, perPage) {
             console.log('requestDeviceSearch 호출됨');
 
@@ -3258,7 +3348,9 @@
                 var firstElementChild = tableDevice1.firstElementChild;
                 tableDevice1.innerHTML = '';
                 tableDevice1.append(firstElementChild);
-
+                
+                
+                
                 // 테이블에 응답 결과 추가
                 response.data.output.body.forEach(function (item, index) {
                     addDeviceItem(item, index);
@@ -3323,7 +3415,6 @@
                     console.log('추가 성공');
                     saveDeviceDataInput();
                     toastr.info('정상적으로 추가되었습니다.');
-
                     requestDeviceList(currentPage, 10);
                 }
 
@@ -3331,6 +3422,7 @@
                 console.error('Error -> ' + err);
             });
         }
+        
         // BY END 2019-11-04
         // BY START 2019-11-04
         function requestDeviceModify(id, deviceCode, deviceName, deviceGroupId, deviceGroupName, deviceType, deviceSize, deviceResolution, location, deviceRotation, battery, admin, deviceLayoutId, deviceLayoutName, deviceLayoutData ,deviceLayoutMapping, modify_author) {
@@ -3521,17 +3613,17 @@
                 // console.log('응답 -> ' + JSON.stringify(response));
 
                 
-                let status_message = 'normal'
                 if(response.data.code == 200) {
                     toastr.info('정상적으로 요청되었습니다. (in data/apply')
                 }
                 else {
                     toastr.error('요청 실패 : '+ response.data.code);
-                    status_message = 'error'
                 }
-                
+                    console.log(response.data);
+                    let status_code = "0" ;
+                    let status_message = "이미지 전송완료상태";
+                                       
 
-                status_code = response.data.code;
                 // BY START 2019-12-16
                 
                 await UpdateStatus(status_code,status_message);
@@ -3540,8 +3632,7 @@
 
             }).catch(async function (err) {
                 console.error('Error -> ' + err);
-                status_code = err.response.status;
-                // BY START 2019-12-16
+                let status_code = 400
                 let status_message = 'error'
                 
                 await UpdateStatus(status_code,status_message);
@@ -3550,6 +3641,7 @@
 
         function UpdateStatus(status_code,status_message ) {
             const statusParams= {
+
                     status:status_code,
                     id:selected,
                     status_message:status_message
@@ -3560,8 +3652,8 @@
                     data: statusParams,
                     responseType: 'json'
                 }).then(function (response) {
-                    toastr.info('정상적으로 요청되었습니다. in device/status');
-                    console.log('단말 데이터 적용 요청 성공');
+                    toastr.info('정상적으로 요청되었습니다. -상태확인을 위해 새로고침 필수');
+                    console.log('단말 데이터 적용 요청 성공 ');
 
                     $('#toast-container').attr('class', 'md-toast-bottom-right');
                     requestDeviceList(currentPage, 10);
@@ -3626,13 +3718,14 @@
             }).then(async function (response) {
                 
                 console.log('응답 -> ' + JSON.stringify(response));
-
+                console.log(response.data.output.length);
                 // modalDataInput 대화상자에 데이터 입력상자 표시
                 if (response.data.output.length > 0) {
                     
                     const curItem = response.data.output[0];
                     const layoutMappingText = Base64Decode(curItem.layout_mapping);
                     const layoutMapping = JSON.parse(layoutMappingText);
+                    const layout_id = curItem.layout_id;
                     // BY START 2019-12-09
                     let deviceData = [];
 
@@ -3666,8 +3759,7 @@
                     });
                     */
 
-                    const curOutput = await makeDataInputLayout(layoutMapping, deviceData);
-                    console.log('haha');
+                    const curOutput = await makeDataInputLayout(layoutMapping, deviceData,layout_id);
                     $('#inputContainer').html(curOutput);
                     
                     nameWarningOptions4();
@@ -3721,11 +3813,9 @@
         }
 
         // 데이터 입력상자를 위한 레이아웃 만들기
-        async function makeDataInputLayout(layoutMapping, deviceData) {
+        async function makeDataInputLayout(layoutMapping, deviceData,layout_id) {
             console.log('makeDataInputLayout called.');
             var imageCategoryItems =  await imageArrayProcess();
-            console.log(imageCategoryItems)
-
             let output = '';
             output += '<form class="text-left" style="color:#757575; padding-left:4em; padding-right:4em;" action="#">';
 
@@ -3777,31 +3867,52 @@
                 // BY START 2019-11-19
                 if (curObj.target =='src') {
                     //사진이 배열일 경우
-                    
                     if(curObj.operator.condition1=='array'){
+                        
                         var order=curObj.operator.condition2;
-                        curValueArr = curValue.split(',');  // curValueArr[order]
+                        try {
+                            curValueArr = curValue.split(',');
+                        } catch(err) {
+                            
+                        }   
+            
                         let imageName;
                         console.log(curObj.title +" : "+ curValueArr[order])
                         for(let i = 0 ; i < imageCategoryItems.length; i ++) {
                             if(curObj.source.split('.')[1] == imageCategoryItems[i].name.toLowerCase()) {
-                                imageName = imageCategoryItems[i].image;
+                                 imageName = imageCategoryItems[i].image;
                             }
-                            //     imageName = ['undefined','caution1A.png','caution1B.png','caution2A.png','caution2B.png','caution3.png','caution4.png','caution5.png','caution6A.png','caution6B.png'];
-                            // }else {
-                            //     imageName = ['undefined','information.png'];
-                            // }
+                           
                         }
+                        // // 레이아웃별 이미지 선택 다르게
+                        // if(curObj.source.split('.')[1] == 'CAUTIONS') {
+                        //     if (layout_id == 'L20200108813485601') {
+                                
+                        //         if (imageCategoryItems[i].image.includes('v3_')) {
+                        //             imageName = imageCategoryItems[i].image;
+                        //         }
+                        //     }
+                        //     else if (layout_id == 'L202010261493377801'){
+                        //         if (imageCategoryItems[i].image.includes('v4_')) {
+                        //             imageName = imageCategoryItems[i].image;
+                        //         }
+                        //     }
+                        // }
                         
                         
+                        // BY START 2020-12-09 (사진없음 선택 가능케 하기)
+                        if(!imageName.includes("undefined")) {
+                            imageName.push("undefined");
+                        }
+                        // BY END 2020-12-09
                         output += '    <div class="col-sm-12" id="orgDiv_' + curKey + '">';
                         output += '      <label for="' + curKey + '">' + curObj.title + '</label>';
                         output += '      <div class="row" style="margin-left:2em;">';
                         
-                        for(var j = 0 ; j < imageName.length ; j ++) {
-                            output += '    <div class="form-check form-check-inline" style="width:136.5px;">';
+                        for(var j = 0 ; j < imageName.length; j ++) {
+                            output += '    <div class="form-check form-check-inline" style="width:160px;">';
                             if(curValueArr[order] == imageName[j]) {
-                                output+='    <input type="checkbox" name="'+curKey+'" id="'+ curKey +'_'+imageName[j]+ '" checked  onclick=imageOptions(this)  class="form-check-input" >';
+                                output+='    <input type="checkbox" name="'+curKey+'" id="'+ curKey +'_'+imageName[j]+ '" checked  onclick=imageOptions(this)  class="form-check-input" style="" >';
                             }else {
                                 output+='    <input type="checkbox" name="'+curKey+'" id="'+ curKey +'_'+imageName[j]+ '"   onclick=imageOptions(this)  class="form-check-input" >';
                             }
@@ -3939,12 +4050,12 @@
         function addDeviceInputItem(deviceName, location, deviceGroupName, deviceGroupId, deviceType, deviceSize, deviceResolution, deviceCode, deviceRotation, deviceLayoutId, deviceLayoutName, deviceLayoutData ,deviceLayoutMapping , create_author) {
 
 
-            // device 상태코드 초기값 0
+            // device 상태코드 초기값 RESET
             // device 상태코드 가 100 일시 파랑색
-            var deviceStatusCode = '0';
+            var deviceStatusCode = 'RESET';
             // device 상태메세지 초기값 update
             // device 상태메서지 상태코드가 100 일시 normal
-            var deviceStatusMessage = null;
+            var deviceStatusMessage = 'RESET';
             var admin = sessionUser.id;
             // BY --> 베터리 정보 우선 100%로 해놓음.
             var battery = 'GOOD';
@@ -3995,6 +4106,7 @@
                 // + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" data-toggle="tooltip" data-placement="top" title="단말 데이터 JSON 입력" onclick="showDeviceData(\'' + item.id + '\', \'' + item.name + '\', \'' + item.group_name + '\', \'' + item.type + '\', \'' + item.size + '\', \'' + item.resolution + '\', \'' + item.status + '\', \'' + item.status_message + '\', \'' + item.data + '\')"><i class="fas fa-edit fa-lg blue-text"></i></button>'
                 // BY END 2019-11-19
                 + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" data-toggle="tooltip" data-placement="top" title="단말 데이터 입력" onclick="showDataInput(\'' + item.id + '\', \'' + item.name + '\')"><i class="fas fa-pen-alt fa-lg blue-text"></i></button>'
+                + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" data-toggle="tooltip" data-placement="top" title="현재 이미지 보기" onclick="showDataImage(\'' + item.code + '\', \'' + item.rotation + '\')"><i class="fas fa-image fa-lg blue-text"></i></i></button>'
                 + '    </td>'
                 + '    <td class="text-center align-middle" style="width:25%;">'
                 + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" data-toggle="tooltip" data-placement="top" title="아이템 수정하기" onclick="showDeviceModifyPage(\'' + item.id + '\', \'' + item.name + '\', \'' + item.group_name + '\', \'' + item.type + '\', \'' + item.size + '\', \'' + item.resolution + '\', \'' + item.code + '\', \'' + item.rotation + '\', \'' + item.status + '\', \'' + item.status_message + '\', \'' + item.layout_id + '\', \'' + item.layout_name + '\', \'' + item.data + '\')"><i class="fas fa-edit fa-lg cyan-text"></i></button>'
@@ -4004,9 +4116,14 @@
                 + '</tr>';
 
             $('#tableDevice1').append(html);
-
         }
-
+        function addDeviceStatus (s,p,t) {
+            $('#success').text(s +' 개');
+            $('#processing').text(p + ' 개');
+            $('#timeout').text(t + ' 개');
+            toastr.info('상태정보 조회 완료');
+        }
+        
         function showDeviceModifyPage(id, name, group_name, type, size, resolution, code, rotation, status, status_message,layoaut_id, layout_name) {
             console.log('showDeviceModifyPage 호출됨 : ' + id + ', ' + name + ', ' + group_name + ', ' + type + ', ' + size + ', ' + code + ', ' + rotation +',' + layout_name);
 
@@ -4142,6 +4259,10 @@
                     curInputValue = $('#deviceInput_' + curKey).val();
                     
                 }
+                else if (curObj.target == 'time') {
+                    curInputValue = timeSet();
+                    curInputValue = "["+curInputValue +"]"
+                }
                 // BY END 2019-12-11
 
                 // BY END 2019-11-21
@@ -4272,7 +4393,7 @@
                             goodDevice += item.labelCode +"'";
                         }
                     }
-                    else if (index == response.data.legth) {
+                    else if (index == response.data.length) {
                         goodDevice += "'"+item.labelCode; 
                     }
                     else {
@@ -4314,7 +4435,7 @@
                                     badDevice += item.labelCode +"'";
                                 }
                             }
-                            else if (index == response.data.legth) {
+                            else if (index == response.data.length) {
                                 badDevice += "'"+item.labelCode; 
                             }
                             else {
@@ -4386,8 +4507,6 @@
                 // hide progressbar
                 // $('#progressDevice1').hide();
 
-                console.log('응답 -> ' + JSON.stringify(response));
-
                 // 대시��드에서 헤더 아이템만 빼고 모두 삭제
                 var dashboardDevice1 = document.getElementById('dashboardDevice1');
                 var firstElementChild = dashboardDevice1.firstElementChild;
@@ -4404,7 +4523,6 @@
 
                 for (let i = 0; i < response.data.output.body.length; i++) {
                     const item = response.data.output.body[i];
-
                     // 4개마다 한 줄 표시
                     if (i % 4 == 0) {
                         outHtml += '<div class="row" style="margin-top:1em;">';
@@ -4551,9 +4669,8 @@
                         outHtml += '</div>';
                         console.log('a row end');
                     }
-
                     totalCount += 1;
-                    if (item.status == '200') {
+                    if (item.status == 'SUCCESS') {
                         totalNormal += 1;
                     } else {
                         totalAlert += 1;
@@ -4594,7 +4711,7 @@
 
             let curColor = 'primary-color';
             let curAnimStyle = 'fa-spin fa-md';
-            if (item.status != '200') {
+            if (item.status != 'SUCCESS') {
                 curColor = 'red accent-2';
                 curAnimStyle = 'animated heartBeat infinite';
             }
@@ -4726,12 +4843,12 @@
             if (resolution == '960X640') {
 
                 $('#device-size').combobox('setValue', '11.6');
-                $('#dropzone1').attr('style','width:960px;height:640px')
+                $('#dropzone1').attr('style','width:960px;height:800px')
 
-            } else if (resolution == '640X384') {
+            } else if (resolution == '800x480') {
 
                 $('#device-size').combobox('setValue', '7.5');
-                $('#dropzone1').attr('style','width:640px;height:384px')
+                $('#dropzone1').attr('style','width:800px;height:480px')
 
             } else if (resolution == '600X448') {
 
@@ -4822,11 +4939,11 @@
                 $('#dropzone1').css({ 'width': '960px' });
                 $('#dropzone1').css({ 'height': '640px' });
             } else if (selectValue == '7.5') {
-                $('#dropzone1').width('640px');
-                $('#dropzone1').height('384px');
+                $('#dropzone1').width('800px');
+                $('#dropzone1').height('480px');
 
-                $('#dropzone1').css({ 'width': '640px' });
-                $('#dropzone1').css({ 'height': '384px' });
+                $('#dropzone1').css({ 'width': '800px' });
+                $('#dropzone1').css({ 'height': '480px' });
             } else if (selectValue == '6.0') {
                 $('#dropzone1').width('600px');
                 $('#dropzone1').height('448px');
@@ -4983,7 +5100,7 @@
             if (deviceSize == '11.6') {
                 layoutResolution = '960X640';
             } else if (deviceSize == '7.5') {
-                layoutResolution = '640X384';
+                layoutResolution = '800X480';
             } else if (deviceSize == '6.0') {
                 layoutResolution = '600X448';
             }
@@ -5072,13 +5189,17 @@
 
                     if(layoutMode =='modify') {
                         if(views[i].properties[1].value =='true') {
-                            var jsonKey = Object.keys(modifyLayoutMappingItem);
-                        
-                            if(!jsonKey.includes(jsonName)) {
-                                modifyLayoutMappingItem[jsonName] = jsonItem;
-                                var mappingItem2 = JSON.stringify(modifyLayoutMappingItem);
-                                mapping2 = Base64Encode(mappingItem2);
+                            console.log(modifyLayoutMappingItem);
+                            if (modifyLayoutMappingItem) {
+                                var jsonKey = Object.keys(modifyLayoutMappingItem);
+                                if(!jsonKey.includes(jsonName)) {
+                                    modifyLayoutMappingItem[jsonName] = jsonItem;
+                                    var mappingItem2 = JSON.stringify(modifyLayoutMappingItem);
+                                    mapping2 = Base64Encode(mappingItem2);
+                                }
                             }
+                
+                            
                         }
                         
                         
@@ -5099,7 +5220,7 @@
                 if (deviceSize == '11.6') {
                     layoutResolution = '960X640';
                 } else if (deviceSize == '7.5') {
-                    layoutResolution = '640X384';
+                    layoutResolution = '800X480';
                 } else if (deviceSize == '6.0') {
                     layoutResolution = '600X448';
                 }
@@ -5154,7 +5275,6 @@
             var curCode = components.join("");
             return curCode;
         }
-
         /*
          * BY START 2019-11-01
          * Generate request code (usung time)
@@ -5360,7 +5480,7 @@
             clone.style.left = '0'
 
             clone.style.textAlign = 'center';
-            clone.style.fontFamily = 'NanumGothicBold';
+            clone.style.fontFamily = 'SGLB';
 
             clone.style.transform = "translate(0px, 0px)";
 
@@ -5392,7 +5512,7 @@
                 clone.style.width = '200px'
                 clone.style.height = '200px'
 
-                clone.setAttribute('data-code', 'www.naver.com');
+                clone.setAttribute('data-code', 'http://www.samsunghospital.com/');
 
                 clone.innerHTML = '';
             } else {
@@ -5786,7 +5906,7 @@
                         clone.style.top = (targetBounding.top + window.scrollY) + "px";
                         clone.style.left = (targetBounding.left + window.scrollX) + "px";
                         clone.style.textAlign = 'center';
-                        clone.style.fontFamily = 'NanumGothicBold';
+                        clone.style.fontFamily = 'SGLB';
 
                         // default background-color and color
                         clone.style.backgroundColor = '#ffffff';
@@ -5932,7 +6052,7 @@
             data.push({ name: 'changeable', value: viewCt , group: 'Basic', editor: 'text'});
 
             // top coord
-            const parentY = $('#dropzone1').offset().top;
+            const parentY = $('#dropzone1').offset().top +1;
             const orgY = parseFloat(target.style.top);
             const curY = parseFloat(target.getAttribute('data-y'));
             let styleTop = Math.round(orgY + curY - parentY);
@@ -6509,7 +6629,6 @@
             }).then(function (response) {
                 // hide progressbar
                 $('#progressUsers1').hide();
-
                 //console.log('응답 -> ' + JSON.stringify(response));
 
                 // 테이블에서 헤더 아이템만 빼고 모두 삭제
@@ -6554,20 +6673,23 @@
                 + '    <td class="text-left align-middle" style="width:10%;">'
                 + '      <img src="/index_img/users_48.png" style="width:2em;">'
                 + '    </td>'
-                + '    <td class="text-left align-middle" style="width:20%;">'
+                + '    <td class="text-left align-middle" style="width:10%;">'
                 + '      <span id="itemUsers' + item.id + '_id">' + item.id + '</span>'
                 + '    </td>'
-                + '    <td class="text-left align-middle" style="width:20%;">'
+                + '    <td class="text-left align-middle" style="width:15%;">'
                 + '      <span id="itemUsers' + item.id + '_name">' + item.name + '</span>'
                 + '    </td>'
-                + '    <td class="text-left align-middle" style="width:20%;">'
-                + '      <span id="itemUsers' + item.id + '_dept">' + item.dept + '</span>'
+                + '    <td class="text-left align-middle" style="width:10%;">'
+                + '      <span id="itemUsers' + item.id + '_dept">' + item.esl_authority + '</span>'
                 + '    </td>'
-                + '    <td class="text-left align-middle" style="width:20%;">'
-                + '      <span id="itemUsers' + item.id + '_details">' + item.details + '</span>'
+                + '    <td class="text-left align-middle" style="width:10%;">'
+                + '      <span id="itemUsers' + item.id + '_dept">' + item.board_authority + '</span>'
                 + '    </td>'
-                + '    <td class="text-center align-middle" style="width:30%;">'
-                + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="showUsersModifyPage(\'' + item.id + '\', \'' + item.password + '\', \'' + item.name + '\', \'' + item.dept + '\', \'' + item.details + '\', \'' + item.level + '\')"><i class="fas fa-edit fa-lg cyan-text"></i></button>'
+                + '    <td class="text-left align-middle" style="width:15%;">'
+                + '      <span id="itemUsers' + item.id + '_dept">' + item.phone + '</span>'
+                + '    </td>'
+                + '    <td class="text-center align-middle" style="width:20%;">'
+                + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="showUsersModifyPage(\'' + item.id + '\', \'' + item.password + '\', \'' + item.name + '\', \'' + item.dept + '\', \'' + item.details + '\', \'' + item.esl_authority + '\', \'' + item.phone + '\', \'' + item.board_authority + '\')"><i class="fas fa-edit fa-lg cyan-text"></i></button>'
                 + '      <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" onclick="deleteUsersItem(\'' + item.id + '\')"><i class="fas fa-trash fa-lg red-text"></i></button>'
                 + '    </td>'
                 + '</tr>';
@@ -6579,7 +6701,7 @@
         /* BY START 2019-11-04
          * 사유: USER 등록시 password 입력 추가 및 Level에 따른 detail 추가
          */
-        function requestUsersAdd(id, name, password, level, dept, create_author) {
+        function requestUsersAdd(id, name, password,dept,level,phone,board,create_author) {
             console.log('requestUsersAdd 호출됨');
             let details = null;
             if (level == '1') {
@@ -6588,17 +6710,17 @@
             else if (level == '2') {
                 details = '관리자'
             }
-            else if (level == '3') {
-                details = '슈퍼관리자'
-            }
+            
 
             var params = {
-                id: id,
+                id:id,
                 name: name,
                 password: password,
                 details: details,
+                esl_authority: level,
+                board_authority:board,
+                phone:phone,
                 dept: dept,
-                level: level,
                 create_author: create_author
             }
 
@@ -6623,18 +6745,20 @@
             });
         }
         // BY END 2019-11-04
-        function requestUsersModify(id, name, password, dept, details, level, modify_author) {
+        function requestUsersModify(id, name, password, dept, details,phone,board, level, modify_author) {
             console.log('requestUsersModify 호출됨');
 
             var params = {
                 name: name,
-                details: details,
                 password: password,
+                details: details,
+                esl_authority: level,
+                board_authority:board,
+                phone:phone,
                 dept: dept,
-                level: level,
                 modify_author: modify_author
             }
-
+            console.log(params);
             axios({
                 method: 'put',
                 url: '/baroboard/users/' + id,
@@ -6720,7 +6844,10 @@
             const password2 = $('#passwordUsersInput2').val();
             const dept = $('#deptUsersInput').val();
             const level = $('#levelUsersInput').val();
-            if (userId.includes(condition) || name.includes(condition) || password.includes(condition) || password2.includes(condition) || dept.includes(condition) || level.includes(condition)) {
+            const phone = $('#phoneUsersInput').val();
+            const board = $('#boardUsersInput').val();
+
+            if (board.includes(condition) ||userId.includes(condition) || name.includes(condition) || password.includes(condition) || password2.includes(condition) || dept.includes(condition) || level.includes(condition)) {
                 toastr.error('필수 항목들을 전부 입력해 주세요', { timeOut: 2000 });
             }
             else if (password !== password2) {
@@ -6730,11 +6857,11 @@
             else {
                 if (mode == 'add') {
                    
-                    var create_author = sessionUser.name;
-                    addUsersInputItem(userId, name, password, dept, level, create_author);
+                    var create_author = "admin";
+                    addUsersInputItem(userId, name, password, dept, level,phone,board,create_author);
                 } else if (mode == 'modify') {
-                    var modify_author = sessionUser.name;
-                    modifyUsersInputItem(userId, name, password, dept, level, modify_author);
+                    var modify_author = "admin";
+                    modifyUsersInputItem(userId, name, password, dept, level,phone,board,modify_author);
                 }
 
                 showPage('page4-1');
@@ -6742,7 +6869,7 @@
 
         }
 
-        function addUsersInputItem(userId, name, password, dept, level, create_author) {
+        function addUsersInputItem(userId, name, password, dept, level,phone,board,create_author) {
 
 
             if (level == '1') {
@@ -6751,21 +6878,17 @@
             else if (level == '2') {
                 const details = '관리자'
             }
-            else if (level == '3') {
-                const details = '슈퍼관리자'
-            }
-
-            requestUsersAdd(userId, name, password, level, dept, create_author);
+            requestUsersAdd(userId, name, password, dept, level,phone,board,create_author);
             // BY END 2019-11-06
         }
 
         function requestModifyProfile() {
             $('#sidenav-overlay').hide();
-            showUsersModifyPage(sessionUser.id,sessionUser.password,sessionUser.name,sessionUser.dept,sessionUser.detail,sessionUser.level);
+            showUsersModifyPage(sessionUser.id,sessionUser.password,sessionUser.name,sessionUser.dept,sessionUser.detail,sessionUser.level,sessionUser.phone,sessionUser.board);
         }
         
 
-        function showUsersModifyPage(id, password, name, dept,detail, level) {
+        function showUsersModifyPage(id, password, name, dept,detail, level,phone,board) {
             console.log('showUsersModifyPage 호출됨');
 
             mode = 'modify';
@@ -6794,6 +6917,8 @@
                 // BY END 2019-11-01
 
                 $('#levelUsersInput').val(level);
+                $('#phoneUsersInput').val(phone);
+                $('#boardUsersInput').val(board);
 
                 showPage('page4-1-1');
 
@@ -6806,13 +6931,15 @@
                 $('#deptUsersInput').focus();
                 // BY END 2019-11-01
                 $('#levelUsersInput').focus();
+                $('#phoneUsersInput').focus();
+                $('#boardUsersInput').focus();
                 }
                                                                                                                                     
 
         }
 
 
-        function modifyUsersInputItem(userId, name, password, dept, usersLevel, modify_author) {
+        function modifyUsersInputItem(userId, name, password, dept, usersLevel,phone,board,modify_author) {
             console.log('modifyUsersInputItem 호출됨');
             // BY START 2019-11-01
             let usersDetails = '';
@@ -6820,14 +6947,11 @@
                 usersDetails = '일반 사용자'
             }
             else if (usersLevel == '2') {
-                usersDetails = '관리자'
-            }
-            else if (usersLevel == '3') {
-                usersDetails = '슈퍼관리자'
+                usersDetails = '슈퍼 관리자'
             }
             // BY END 2019-11-01
 
-            requestUsersModify(selected, name, password, dept, usersDetails, usersLevel, modify_author);
+            requestUsersModify(selected, name, password, dept, usersDetails,phone,board,usersLevel, modify_author);
 
         }
 
@@ -6904,9 +7028,8 @@
                             outHtml += '</div>';
                             console.log('a row end');
                         }
-
                         totalCount += 1;
-                        if (item.status == '200') {
+                        if (item.status == 'SUCCESS') {
                             totalNormal += 1;
                         } else {
                             totalAlert += 1;
@@ -6946,7 +7069,7 @@
             let borderColor = 'white';
             let batteryIcon = 'full';
             let curAnimStyle = 'fa-spin fa-md';
-            if (item.status != '200') {
+            if (item.status != 'SUCCESS') {
                 curColor = 'red accent-2';
                 curAnimStyle = 'animated heartBeat infinite';
             }
@@ -7659,18 +7782,51 @@
         }
 
         //=============== 로그인 ===============//
-
         // 로그인 요청
-        function requestLogin() {
+        async function requestLogin() {
             console.log('requestLogin 호출됨');
-
             const userId = $('#userIdInput').val();
             const userPassword = $('#userPasswordInput').val();
+            
+        // BY START 2021-04-06
+           // Generate random salt
+            var salt16 = CryptoJS.lib.WordArray.random(16);                                     // Random 16 bytes salt
 
+            // Derive key and IV via PBKDF2
+            var keyIV = CryptoJS.PBKDF2(_key, salt16, {
+                keySize: (32 + 16) / 4,                                                           // 12 words a 4 bytes = 48 bytes
+                iterations: 1000,                                                                 // Choose a sufficiently high iteration count
+                hasher: CryptoJS.algo.SHA256                                                      // Default digest is SHA-1       
+            }); 
+            var key32 = CryptoJS.lib.WordArray.create(keyIV.words.slice(0, 32 / 4));            // 8 words a 4 bytes = 32 bytes 
+            var iv16 = CryptoJS.lib.WordArray.create(keyIV.words.slice(32 / 4, (32 + 16) / 4)); // 4 words a 4 bytes = 16 bytes 
+
+            // Encrypt
+            var cipherParams = CryptoJS.AES.encrypt(userPassword, key32, {iv:iv16});
+            var ciphertext = cipherParams.ciphertext;
+
+            // Concatenate salt and ciphertext
+            var saltCiphertext = salt16.clone().concat(ciphertext);
+            var saltCiphertextB64 = saltCiphertext.toString(CryptoJS.enc.Base64);               // This is passed to the recipient    
+
+        // BY END 2021-04-06
+            // console.log("Salt:\n", salt16.toString(CryptoJS.enc.Base64).replace(/(.{56})/g,'$1\n'));
+            // console.log("Ciphertext:\n", ciphertext.toString(CryptoJS.enc.Base64).replace(/(.{56})/g,'$1\n'));
+            // console.log("Salt | Ciphertext:\n", saltCiphertextB64.replace(/(.{56})/g,'$1\n'));
             const params = {
                 userId: userId,
-                userPassword: userPassword
+                userPassword: saltCiphertextB64 ,
             }
+            // BY START 2021-04-06 가입 
+            // axios({
+            //     method: 'post',
+            //     url: '/baroboard/users/signup',
+            //     data: params,
+            //     responseType: 'json'
+            // }).then(function (response) {
+            //     console.log(response);
+            // })
+            // BY END 2021-04-06 
 
             axios({
                 method: 'post',
@@ -7678,7 +7834,7 @@
                 data: params,
                 responseType: 'json'
             }).then(function (response) {
-                console.log('응답 -> ' + JSON.stringify(response));
+                // console.log('응답 -> ' + JSON.stringify(response));
                 requrestRemovePreviewDataApply();
 
                 // modalDataInput 대화상자에 데이터 입력상자 표시
@@ -7693,7 +7849,7 @@
                         // BY END 2019-11-12
 
                         sessionUser = response.data.output.body[0];
-
+                        console.log(sessionUser);
                         // 상단 타이틀바에 이름 표시
                         $('.userNameText').text(sessionUser.name);
                         $('#sessionUserName').text("성함: "+sessionUser.name);
@@ -8155,15 +8311,13 @@
         // BY END 2020-01-08
 
         function imageOptions (item) {
-            
             var key = item.id.split('_')[0];
-            var value = item.id.split('_')[1];
-
+            var value = item.id.split('_')[1] +"_"+item.id.split('_')[2];
             $('input[name='+key+']').prop('checked',false);
             item.checked=true;
             $()
             $('#deviceInput_'+key+'').val(value);
-            console.log($('#deviceInput_'+key+'').val());
+            
         }
 
         
@@ -8264,7 +8418,8 @@
             $('[name="totalImage"]').css('border','');
             if(active == 'false') {
                 $('#'+id).css('border','3px solid green');
-                selectedImage =  id.split('_')[0];
+                selectedImage =  id.split('_')[0]+"_"+id.split('_')[1];
+                console.log(selectedImage)
                 $('#'+id).attr('active','true');
             }
             else if (active == 'true') {
@@ -8384,6 +8539,130 @@
             }
             
 
+        } 
+
+        function darwinPost () {
+            const params = {
+				"ptntNm": "저승재",
+				"gendCd": "M",
+				"ageCtn": "28세",
+				"btdt": "1995-01-02",
+				"mcdpNm": "신경과",
+				"chdrNm": "김용훈",
+				"gndrNm": "이인호",
+				"fallCtn": "",
+				"bdsrEtcCtn": "",
+				"ctctYn": "",
+				"cnsdCtctStcrVl": "",
+				"airCatnYn": "",
+				"drplYn": "",
+				"blodCatnYn": "",
+				"invrIsltYn": "",
+				"etcYn": "",
+				"inptCasbCtn": "",
+				"admsDt": "2021-02-15",
+				"dschPrrnYmd": "",
+				"dvsnNm1": "",
+				"dvsnNm2": "",
+				"dvsnNm3": "",
+				"dvsnNm4": "",
+				"dvsnNm5": "",
+				"dvsnNm6": "",
+				"dvsnNm7": "",
+				"wardCdCtn": "07W",
+				"carePtrmNo": "02",
+				"careSckbNo": "02",
+				"ptno": "51848158",
+				"wardNm": "07서(NR)",
+				"wardCd": "171130",
+				"mdrpNo": 2023155495,
+				"ptntNmCatnYn": "Y",
+				"npoYn": "Y",
+				"npoCtn": "자정부터 금식",
+				"npoDscrMemoCtn": "",
+				"ptntInftCtn": "오른팔 채혈금지/( 09:00 )시까지 절대안정",
+				"obsrRomStinYn": "Y"
+            };
+            axios({
+                method: 'post',
+                url: '/baroboard/darwin/request_esl_sync',
+                data:params,
+                responseType: 'json'
+            }).then(function (response) {
+                toastr.info('데이터보내기 성공.');
+
+            }).catch(function (err) {
+                console.error('Error -> ' + err);
+                toastr.error('데이터보내기 실패');
+            });
+        }
+
+
+        // /* START 2022-02-03
+        //  *  AIMS 장애 발생 시 SMS 보내기 TEST
+        //  */
+        // function postSMS () {
+        //     const params = {
+        //         msg: "오른팔 채혈 금지"
+        //     }
+        //     axios({
+        //         method: 'post',
+        //         url: '/baroboard/aims/postsms',
+        //         data:params,
+        //         responseType: 'json'
+        //     }).then(function (response) {
+        //         toastr.info('SMS보내기 성공.');
+
+        //     }).catch(function (err) {
+        //         console.error('Error -> ' + err);
+        //         toastr.error('SMS보내기 실패');
+        //     });
+        // }
+        // //  END 2022-02-03
+
+        // START 2022-02-16
+        function showDataImage(code,rotate) {
+            console.log(code);
+            console.log(rotate);
+            $("#data_image").attr("src", '../esl/'+code+'.png');
+            if (rotate == 90) {
+                $("#data_image").css('transform','rotate(270deg)');
+            }
+	    else if (rotate == 180) {
+                $("#data_image").css('transform','rotate(180deg)');
+            }
+            else if (rotate == 270) {
+                $("#data_image").css('transform','rotate(90deg)');
+            }
+            $("#imageModal").modal('show');
+            
+        }
+
+        function timeSet ()  {
+            const now = new Date(); // 현재 시간
+            const utcNow = now.getTime() + (now.getTimezoneOffset() * 60 * 1000); // 현재 시간을 utc로 변환한 밀리세컨드값
+            const koreaTimeDiff = 9 * 60 * 60 * 1000; // 한국 시간은 UTC보다 9시간 빠름(9시간의 밀리세컨드 표현)
+            let koreaNow = new Date(utcNow + koreaTimeDiff);
+            let year = koreaNow.getFullYear();
+            let month = koreaNow.getMonth()+1;
+            let day = koreaNow.getDate();
+            if (day < 10 ) {
+                day = "0"+day;
+            }
+            let hour = koreaNow.getHours();
+            if(hour < 10) {
+                hour = "0"+hour;
+            }
+            let minutes = koreaNow.getMinutes();
+            if (minutes < 10) {
+                minutes = "0" +minutes;
+            }
+            const seconds = koreaNow.getSeconds();
+            if (seconds < 10) {
+                seconds = "0" +seconds;
+            }
+            const date = year+""+month+""+day+""+hour+""+minutes+""+seconds;
+            return date;
         } 
         
     </script>

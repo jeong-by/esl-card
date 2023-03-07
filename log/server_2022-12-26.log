@@ -1,0 +1,39 @@
+2022-12-26 08:22:09.496 - DEBUG: [index-controller.js:25:16] eslIndex called for path /esl-index.do
+2022-12-26 08:22:11.406 - DEBUG: [baroboard-users-controller.js:80:16] BaroboardUsers:login called for path /baroboard/users/login
+2022-12-26 08:22:11.457 - DEBUG: [baroboard-device-controller.js:698:16] BaroboardDevice:deletePreview called 
+2022-12-26 08:22:11.460 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:22:11.504 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:22:11.530 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:22:18.022 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:22:18.045 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:22:20.415 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:22:20.434 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:22:24.155 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:22:24.171 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:22:26.741 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:22:26.760 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:24:30.471 - DEBUG: [table-controller.js:547:14] Table:update called for PUT /baroboard/layout/:id
+2022-12-26 08:24:30.474 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:24:30.508 - DEBUG: [baroboard-device-controller.js:1392:16] modify layoutinfo: Data called for path /modify/layout
+2022-12-26 08:24:33.051 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:24:33.083 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:24:35.614 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:24:35.633 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:24:39.002 - DEBUG: [index-controller.js:25:16] eslIndex called for path /esl-index.do
+2022-12-26 08:24:40.465 - DEBUG: [baroboard-users-controller.js:80:16] BaroboardUsers:login called for path /baroboard/users/login
+2022-12-26 08:24:40.482 - DEBUG: [baroboard-device-controller.js:698:16] BaroboardDevice:deletePreview called 
+2022-12-26 08:24:40.484 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:24:40.503 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:24:40.519 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:24:43.321 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:24:43.337 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:25:19.948 - DEBUG: [table-controller.js:547:14] Table:update called for PUT /baroboard/layout/:id
+2022-12-26 08:25:19.951 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:25:19.972 - DEBUG: [baroboard-device-controller.js:1392:16] modify layoutinfo: Data called for path /modify/layout
+2022-12-26 08:27:16.621 - DEBUG: [table-controller.js:547:14] Table:update called for PUT /baroboard/layout/:id
+2022-12-26 08:27:16.624 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:27:16.649 - DEBUG: [baroboard-device-controller.js:1392:16] modify layoutinfo: Data called for path /modify/layout
+2022-12-26 08:27:18.477 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:27:18.496 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:27:29.920 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-26 08:27:29.951 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout

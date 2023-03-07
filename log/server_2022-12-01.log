@@ -1,0 +1,452 @@
+2022-12-01 11:40:37.845 - DEBUG: [service_loader.js:17:12] load in service_loader called.
+2022-12-01 11:40:37.850 - DEBUG: [service_loader.js:21:16] #0 -> id:1, unit:person
+2022-12-01 11:40:38.878 - DEBUG: [service_loader.js:39:16] method #0 -> list
+2022-12-01 11:40:38.879 - DEBUG: [service_loader.js:43:16]     do method name -> doList
+2022-12-01 11:40:38.880 - DEBUG: [service_loader.js:39:16] method #1 -> read
+2022-12-01 11:40:38.881 - DEBUG: [service_loader.js:43:16]     do method name -> doRead
+2022-12-01 11:40:38.882 - DEBUG: [service_loader.js:39:16] method #2 -> create
+2022-12-01 11:40:38.882 - DEBUG: [service_loader.js:43:16]     do method name -> doCreate
+2022-12-01 11:40:38.883 - DEBUG: [service_loader.js:39:16] method #3 -> update
+2022-12-01 11:40:38.884 - DEBUG: [service_loader.js:43:16]     do method name -> doUpdate
+2022-12-01 11:40:38.885 - DEBUG: [service_loader.js:39:16] method #4 -> delete
+2022-12-01 11:40:38.886 - DEBUG: [service_loader.js:43:16]     do method name -> doDelete
+2022-12-01 11:40:38.886 - INFO: [index.js:114:12] service loader called.
+2022-12-01 11:40:38.887 - DEBUG: [controller_loader.js:26:12] load called.
+2022-12-01 11:40:38.888 - DEBUG: [controller_loader.js:106:12] autoLoad called.
+2022-12-01 11:40:39.065 - DEBUG: [controller_loader.js:34:20] #0 -> id:1, type:rest, base:, unit:person
+2022-12-01 11:40:39.112 - DEBUG: [person-controller.js:27:16] PersonController initialized.
+2022-12-01 11:40:39.113 - DEBUG: [controller_loader.js:53:24] rest type #0 -> list
+2022-12-01 11:40:39.114 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person, func -> list
+2022-12-01 11:40:39.117 - DEBUG: [controller_loader.js:53:24] rest type #1 -> create
+2022-12-01 11:40:39.118 - DEBUG: [controller_loader.js:73:24] rest request method -> post, path -> /person, func -> create
+2022-12-01 11:40:39.120 - DEBUG: [controller_loader.js:53:24] rest type #2 -> read
+2022-12-01 11:40:39.121 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person/:id, func -> read
+2022-12-01 11:40:39.122 - DEBUG: [controller_loader.js:53:24] rest type #3 -> update
+2022-12-01 11:40:39.123 - DEBUG: [controller_loader.js:73:24] rest request method -> put, path -> /person/:id, func -> update
+2022-12-01 11:40:39.125 - DEBUG: [controller_loader.js:53:24] rest type #4 -> delete
+2022-12-01 11:40:39.126 - DEBUG: [controller_loader.js:73:24] rest request method -> delete, path -> /person/:id, func -> delete
+2022-12-01 11:40:39.128 - DEBUG: [controller_loader.js:36:20] #1 -> id:2, type:path, path:/profile/list, method:get,post, file:profile-controller, func:list
+2022-12-01 11:40:39.152 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-01 11:40:39.153 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-01 11:40:39.154 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-01 11:40:39.155 - DEBUG: [controller_loader.js:36:20] #2 -> id:3, type:path, path:/profile/get, method:get,post, file:profile-controller, func:get
+2022-12-01 11:40:39.155 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-01 11:40:39.156 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-01 11:40:39.158 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-01 11:40:39.160 - DEBUG: [controller_loader.js:36:20] #3 -> id:4, type:path, path:/profile/add, method:get, file:profile-controller, func:add
+2022-12-01 11:40:39.161 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-01 11:40:39.162 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-01 11:40:39.163 - DEBUG: [controller_loader.js:36:20] #4 -> id:5, type:path, path:/profile/upload, method:post, file:profile-controller, func:upload
+2022-12-01 11:40:39.164 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-01 11:40:39.166 - DEBUG: [controller_loader.js:84:28] method #0 -> post
+2022-12-01 11:40:39.168 - DEBUG: [controller_loader.js:36:20] #5 -> id:6, type:path, path:/test/set_cookie, method:get, file:test-controller, func:set_cookie
+2022-12-01 11:40:39.185 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-01 11:40:39.186 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-01 11:40:39.187 - DEBUG: [controller_loader.js:36:20] #6 -> id:7, type:path, path:/test/show_cookie, method:get, file:test-controller, func:show_cookie
+2022-12-01 11:40:39.188 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-01 11:40:39.188 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-01 11:40:39.189 - INFO: [index.js:118:12] controller loader called.
+2022-12-01 11:40:39.311 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-01 11:40:39.312 - DEBUG: [mci.js:28:20] name : external01
+2022-12-01 11:40:39.774 - DEBUG: [cni.js:15:16] CNI initialized.
+2022-12-01 11:40:39.775 - DEBUG: [cni.js:21:16] server name : external02
+2022-12-01 11:40:39.776 - DEBUG: [cni.js:25:16] server host : localhost
+2022-12-01 11:40:39.777 - DEBUG: [cni.js:26:16] server port : 7102
+2022-12-01 11:40:44.150 - INFO: [index.js:242:20] Http Server started.
+2022-12-01 11:40:44.150 - INFO: [index.js:252:16] Base URL -> http://localhost:7001
+2022-12-01 11:40:44.151 - INFO: [index.js:257:16] Namespace -> ::_7001_24360
+2022-12-01 11:40:45.525 - DEBUG: [socketio_loader.js:73:9] socketio_loader.load called.
+2022-12-01 11:40:45.534 - DEBUG: [socketio_loader.js:83:16] read namespace file -> ::_7001_28128
+2022-12-01 11:40:45.536 - INFO: [index.js:265:20] socket.io loader called.
+2022-12-01 11:40:45.544 - DEBUG: [socketio_loader.js:103:16] Error in executing sql -> Sql definition for chat_reset_presence not found in sql_config
+2022-12-01 11:40:45.887 - DEBUG: [socketio_loader.js:125:16] namespace file saved to -> ./socketio.pid
+2022-12-01 11:40:45.888 - INFO: [socketio_loader.js:133:12] socket.io service started.
+2022-12-01 11:40:45.889 - DEBUG: [socketio_loader.js:147:12] redis subscribed -> myapp_message
+2022-12-01 11:41:10.833 - DEBUG: [service_loader.js:17:12] load in service_loader called.
+2022-12-01 11:41:10.836 - DEBUG: [service_loader.js:21:16] #0 -> id:1, unit:person
+2022-12-01 11:41:10.882 - DEBUG: [service_loader.js:39:16] method #0 -> list
+2022-12-01 11:41:10.883 - DEBUG: [service_loader.js:43:16]     do method name -> doList
+2022-12-01 11:41:10.883 - DEBUG: [service_loader.js:39:16] method #1 -> read
+2022-12-01 11:41:10.883 - DEBUG: [service_loader.js:43:16]     do method name -> doRead
+2022-12-01 11:41:10.884 - DEBUG: [service_loader.js:39:16] method #2 -> create
+2022-12-01 11:41:10.884 - DEBUG: [service_loader.js:43:16]     do method name -> doCreate
+2022-12-01 11:41:10.885 - DEBUG: [service_loader.js:39:16] method #3 -> update
+2022-12-01 11:41:10.885 - DEBUG: [service_loader.js:43:16]     do method name -> doUpdate
+2022-12-01 11:41:10.886 - DEBUG: [service_loader.js:39:16] method #4 -> delete
+2022-12-01 11:41:10.886 - DEBUG: [service_loader.js:43:16]     do method name -> doDelete
+2022-12-01 11:41:10.887 - INFO: [index.js:114:12] service loader called.
+2022-12-01 11:41:10.887 - DEBUG: [controller_loader.js:26:12] load called.
+2022-12-01 11:41:10.887 - DEBUG: [controller_loader.js:106:12] autoLoad called.
+2022-12-01 11:41:10.895 - DEBUG: [controller_loader.js:34:20] #0 -> id:1, type:rest, base:, unit:person
+2022-12-01 11:41:10.897 - DEBUG: [person-controller.js:27:16] PersonController initialized.
+2022-12-01 11:41:10.898 - DEBUG: [controller_loader.js:53:24] rest type #0 -> list
+2022-12-01 11:41:10.898 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person, func -> list
+2022-12-01 11:41:10.899 - DEBUG: [controller_loader.js:53:24] rest type #1 -> create
+2022-12-01 11:41:10.900 - DEBUG: [controller_loader.js:73:24] rest request method -> post, path -> /person, func -> create
+2022-12-01 11:41:10.900 - DEBUG: [controller_loader.js:53:24] rest type #2 -> read
+2022-12-01 11:41:10.900 - DEBUG: [controller_loader.js:73:24] rest request method -> get, path -> /person/:id, func -> read
+2022-12-01 11:41:10.901 - DEBUG: [controller_loader.js:53:24] rest type #3 -> update
+2022-12-01 11:41:10.902 - DEBUG: [controller_loader.js:73:24] rest request method -> put, path -> /person/:id, func -> update
+2022-12-01 11:41:10.902 - DEBUG: [controller_loader.js:53:24] rest type #4 -> delete
+2022-12-01 11:41:10.902 - DEBUG: [controller_loader.js:73:24] rest request method -> delete, path -> /person/:id, func -> delete
+2022-12-01 11:41:10.903 - DEBUG: [controller_loader.js:36:20] #1 -> id:2, type:path, path:/profile/list, method:get,post, file:profile-controller, func:list
+2022-12-01 11:41:10.904 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-01 11:41:10.905 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-01 11:41:10.905 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-01 11:41:10.906 - DEBUG: [controller_loader.js:36:20] #2 -> id:3, type:path, path:/profile/get, method:get,post, file:profile-controller, func:get
+2022-12-01 11:41:10.906 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-01 11:41:10.906 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-01 11:41:10.907 - DEBUG: [controller_loader.js:84:28] method #1 -> post
+2022-12-01 11:41:10.907 - DEBUG: [controller_loader.js:36:20] #3 -> id:4, type:path, path:/profile/add, method:get, file:profile-controller, func:add
+2022-12-01 11:41:10.908 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-01 11:41:10.908 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-01 11:41:10.909 - DEBUG: [controller_loader.js:36:20] #4 -> id:5, type:path, path:/profile/upload, method:post, file:profile-controller, func:upload
+2022-12-01 11:41:10.909 - DEBUG: [profile-controller.js:21:11] ProfileController initialized.
+2022-12-01 11:41:10.910 - DEBUG: [controller_loader.js:84:28] method #0 -> post
+2022-12-01 11:41:10.910 - DEBUG: [controller_loader.js:36:20] #5 -> id:6, type:path, path:/test/set_cookie, method:get, file:test-controller, func:set_cookie
+2022-12-01 11:41:10.912 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-01 11:41:10.912 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-01 11:41:10.912 - DEBUG: [controller_loader.js:36:20] #6 -> id:7, type:path, path:/test/show_cookie, method:get, file:test-controller, func:show_cookie
+2022-12-01 11:41:10.913 - DEBUG: [test-controller.js:15:16] TestController initialized.
+2022-12-01 11:41:10.913 - DEBUG: [controller_loader.js:84:28] method #0 -> get
+2022-12-01 11:41:10.914 - INFO: [index.js:118:12] controller loader called.
+2022-12-01 11:41:10.924 - DEBUG: [mci.js:20:16] MCI initialized.
+2022-12-01 11:41:10.924 - DEBUG: [mci.js:28:20] name : external01
+2022-12-01 11:41:10.942 - DEBUG: [cni.js:15:16] CNI initialized.
+2022-12-01 11:41:10.943 - DEBUG: [cni.js:21:16] server name : external02
+2022-12-01 11:41:10.943 - DEBUG: [cni.js:25:16] server host : localhost
+2022-12-01 11:41:10.944 - DEBUG: [cni.js:26:16] server port : 7102
+2022-12-01 11:41:11.098 - INFO: [index.js:242:20] Http Server started.
+2022-12-01 11:41:11.099 - INFO: [index.js:252:16] Base URL -> http://localhost:7001
+2022-12-01 11:41:11.100 - INFO: [index.js:257:16] Namespace -> ::_7001_27972
+2022-12-01 11:41:11.171 - DEBUG: [socketio_loader.js:73:9] socketio_loader.load called.
+2022-12-01 11:41:11.172 - DEBUG: [socketio_loader.js:83:16] read namespace file -> ::_7001_24360
+2022-12-01 11:41:11.173 - INFO: [index.js:265:20] socket.io loader called.
+2022-12-01 11:41:11.175 - DEBUG: [socketio_loader.js:103:16] Error in executing sql -> Sql definition for chat_reset_presence not found in sql_config
+2022-12-01 11:41:11.186 - DEBUG: [socketio_loader.js:125:16] namespace file saved to -> ./socketio.pid
+2022-12-01 11:41:11.187 - INFO: [socketio_loader.js:133:12] socket.io service started.
+2022-12-01 11:41:11.188 - DEBUG: [socketio_loader.js:147:12] redis subscribed -> myapp_message
+2022-12-01 11:41:11.198 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/darwin -> in file ../controllers/baroboard-darwin-sync-controller, table : baroboard.device
+2022-12-01 11:41:11.200 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-01 11:41:11.201 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/darwin, func -> list
+2022-12-01 11:41:11.201 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-01 11:41:11.202 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/darwin, func -> create
+2022-12-01 11:41:11.203 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-01 11:41:11.204 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/darwin/:id, func -> read
+2022-12-01 11:41:11.228 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-01 11:41:11.228 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/darwin/:id, func -> update
+2022-12-01 11:41:11.229 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-01 11:41:11.229 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/darwin/:id, func -> delete
+2022-12-01 11:41:11.231 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/darwin/request_esl_sync -> updateData in file ../controllers/baroboard-darwin-sync-controller
+2022-12-01 11:41:11.432 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.438 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/device -> in file ../controllers/baroboard-device-controller, table : baroboard.device
+2022-12-01 11:41:11.439 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-01 11:41:11.439 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device, func -> list
+2022-12-01 11:41:11.440 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-01 11:41:11.440 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/device, func -> create
+2022-12-01 11:41:11.441 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-01 11:41:11.441 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device/:id, func -> read
+2022-12-01 11:41:11.442 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-01 11:41:11.443 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/device/:id, func -> update
+2022-12-01 11:41:11.443 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-01 11:41:11.444 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/device/:id, func -> delete
+2022-12-01 11:41:11.445 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/update -> updateData in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.469 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.470 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/select -> selectData in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.471 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.476 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/list -> dashboardList in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.491 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.493 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/sublist -> dashboardSubList in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.493 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.495 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/legacy -> legacyInfo in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.495 - DEBUG: [controller_loader.js:288:16] legacyInfo not found in the controller.
+2022-12-01 11:41:11.497 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/dashboard/fieldlist -> dashboardFieldList in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.497 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.498 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/preview2 -> preview2 in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.499 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.501 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/apply -> applyData in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.501 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.503 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/preview -> applyData2 in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.503 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.505 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/goodbattery -> batteryUpdate in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.506 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.507 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/badbattery -> batteryUpdate2 in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.508 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.509 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/check/usinglayout -> checkUsingLayout in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.510 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.511 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/status -> statusUpdate in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.512 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.513 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/statussync -> statusSync in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.514 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.515 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/mappinglist -> layoutMappingDataList in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.541 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.543 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/modify/layout -> modifyLayoutinfo in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.544 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.545 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/device/data/esl_request -> darwinPushESLData in file ../controllers/baroboard-device-controller
+2022-12-01 11:41:11.546 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.552 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/device_group -> in file ../controllers/baroboard-device-group-controller, table : baroboard.device_group
+2022-12-01 11:41:11.553 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-01 11:41:11.553 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device_group, func -> list
+2022-12-01 11:41:11.554 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-01 11:41:11.554 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/device_group, func -> create
+2022-12-01 11:41:11.555 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-01 11:41:11.555 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/device_group/:id, func -> read
+2022-12-01 11:41:11.556 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-01 11:41:11.556 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/device_group/:id, func -> update
+2022-12-01 11:41:11.556 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-01 11:41:11.557 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/device_group/:id, func -> delete
+2022-12-01 11:41:11.561 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/image -> in file ../controllers/baroboard-image-controller, table : baroboard.image
+2022-12-01 11:41:11.561 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-01 11:41:11.562 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/image, func -> list
+2022-12-01 11:41:11.562 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-01 11:41:11.562 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/image, func -> create
+2022-12-01 11:41:11.563 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-01 11:41:11.563 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/image/:id, func -> read
+2022-12-01 11:41:11.564 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-01 11:41:11.565 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/image/:id, func -> update
+2022-12-01 11:41:11.565 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-01 11:41:11.566 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/image/:id, func -> delete
+2022-12-01 11:41:11.567 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/list -> requestList in file ../controllers/baroboard-image-controller
+2022-12-01 11:41:11.568 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.570 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/list -> requestcategoryList in file ../controllers/baroboard-image-controller
+2022-12-01 11:41:11.570 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.571 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/delete_item -> requestDeleteImage2 in file ../controllers/baroboard-image-controller
+2022-12-01 11:41:11.572 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.573 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/title_delete -> requestDeleteCategory in file ../controllers/baroboard-image-controller
+2022-12-01 11:41:11.573 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.574 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/add -> requestAddCategoryItem in file ../controllers/baroboard-image-controller
+2022-12-01 11:41:11.574 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.577 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/image/category/image -> requestAddImageItemInCategory in file ../controllers/baroboard-image-controller
+2022-12-01 11:41:11.577 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.578 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.581 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/layout -> in file ../controllers/baroboard-layout-controller, table : baroboard.layout
+2022-12-01 11:41:11.581 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-01 11:41:11.582 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/layout, func -> list
+2022-12-01 11:41:11.582 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-01 11:41:11.582 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/layout, func -> create
+2022-12-01 11:41:11.583 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-01 11:41:11.583 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/layout/:id, func -> read
+2022-12-01 11:41:11.583 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-01 11:41:11.583 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/layout/:id, func -> update
+2022-12-01 11:41:11.584 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-01 11:41:11.584 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/layout/:id, func -> delete
+2022-12-01 11:41:11.585 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/layout/image/del -> requestImageDelete in file ../controllers/baroboard-layout-controller
+2022-12-01 11:41:11.586 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.586 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.587 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/layout/image/update -> requestUpdateImage in file ../controllers/baroboard-layout-controller
+2022-12-01 11:41:11.588 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.588 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/layout/mapping/update -> updateMapping in file ../controllers/baroboard-layout-controller
+2022-12-01 11:41:11.589 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.591 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/legacy -> in file ../controllers/baroboard-legacy, table : baroboard.legacy
+2022-12-01 11:41:11.591 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-01 11:41:11.591 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/legacy, func -> list
+2022-12-01 11:41:11.591 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-01 11:41:11.592 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/legacy, func -> create
+2022-12-01 11:41:11.592 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-01 11:41:11.592 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/legacy/:id, func -> read
+2022-12-01 11:41:11.593 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-01 11:41:11.593 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/legacy/:id, func -> update
+2022-12-01 11:41:11.594 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-01 11:41:11.594 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/legacy/:id, func -> delete
+2022-12-01 11:41:11.596 - DEBUG: [controller_loader.js:226:12] registerRest called : /baroboard/users -> in file ../controllers/baroboard-users-controller, table : baroboard.users
+2022-12-01 11:41:11.597 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-01 11:41:11.597 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/users, func -> list
+2022-12-01 11:41:11.598 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-01 11:41:11.598 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /baroboard/users, func -> create
+2022-12-01 11:41:11.598 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-01 11:41:11.598 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /baroboard/users/:id, func -> read
+2022-12-01 11:41:11.599 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-01 11:41:11.599 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /baroboard/users/:id, func -> update
+2022-12-01 11:41:11.599 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-01 11:41:11.600 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /baroboard/users/:id, func -> delete
+2022-12-01 11:41:11.601 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/users/signup -> signup in file ../controllers/baroboard-users-controller
+2022-12-01 11:41:11.614 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.615 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/users/login -> login in file ../controllers/baroboard-users-controller
+2022-12-01 11:41:11.615 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.616 - DEBUG: [controller_loader.js:267:12] registerPath called : /baroboard/users/logout -> logout in file ../controllers/baroboard-users-controller
+2022-12-01 11:41:11.616 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.618 - DEBUG: [controller_loader.js:226:12] registerRest called : /bear -> in file ../controllers/bear-controller, table : test.person
+2022-12-01 11:41:11.618 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-01 11:41:11.619 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /bear, func -> list
+2022-12-01 11:41:11.619 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-01 11:41:11.619 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /bear, func -> create
+2022-12-01 11:41:11.619 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-01 11:41:11.620 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /bear/:id, func -> read
+2022-12-01 11:41:11.620 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-01 11:41:11.620 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /bear/:id, func -> update
+2022-12-01 11:41:11.621 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-01 11:41:11.621 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /bear/:id, func -> delete
+2022-12-01 11:41:11.623 - DEBUG: [controller_loader.js:226:12] registerRest called : /cat -> in file ../controllers/cat-controller, table : undefined
+2022-12-01 11:41:11.625 - DEBUG: [controller_loader.js:241:16] rest type #0 -> list
+2022-12-01 11:41:11.625 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /cat, func -> list
+2022-12-01 11:41:11.626 - DEBUG: [controller_loader.js:241:16] rest type #1 -> create
+2022-12-01 11:41:11.626 - DEBUG: [controller_loader.js:259:16] rest request method -> post, path -> /cat, func -> create
+2022-12-01 11:41:11.627 - DEBUG: [controller_loader.js:241:16] rest type #2 -> read
+2022-12-01 11:41:11.627 - DEBUG: [controller_loader.js:259:16] rest request method -> get, path -> /cat/:id, func -> read
+2022-12-01 11:41:11.628 - DEBUG: [controller_loader.js:241:16] rest type #3 -> update
+2022-12-01 11:41:11.628 - DEBUG: [controller_loader.js:259:16] rest request method -> put, path -> /cat/:id, func -> update
+2022-12-01 11:41:11.628 - DEBUG: [controller_loader.js:241:16] rest type #4 -> delete
+2022-12-01 11:41:11.629 - DEBUG: [controller_loader.js:259:16] rest request method -> delete, path -> /cat/:id, func -> delete
+2022-12-01 11:41:11.632 - DEBUG: [controller_loader.js:267:12] registerPath called : /chat/send -> send in file ../controllers/chat-controller
+2022-12-01 11:41:11.633 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.638 - DEBUG: [controller_loader.js:267:12] registerPath called : /cni-test/patient-list -> patientList in file ../controllers/cni-controller
+2022-12-01 11:41:11.647 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.647 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.650 - DEBUG: [controller_loader.js:267:12] registerPath called : /consent/v1/patient/inpatient-list-01 -> inpatientList01 in file ../controllers/consent-v1-kbsmc-controller
+2022-12-01 11:41:11.651 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.651 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.652 - DEBUG: [controller_loader.js:267:12] registerPath called : /consent/v1/consent/consent-save-01 -> consentSave01 in file ../controllers/consent-v1-kbsmc-controller
+2022-12-01 11:41:11.653 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.653 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.655 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/index -> index in file ../controllers/dog-controller
+2022-12-01 11:41:11.656 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.657 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.657 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/list -> list in file ../controllers/dog-controller
+2022-12-01 11:41:11.658 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.658 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.659 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/create -> create in file ../controllers/dog-controller
+2022-12-01 11:41:11.659 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.660 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.661 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/read -> read in file ../controllers/dog-controller
+2022-12-01 11:41:11.661 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.662 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.663 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/update -> update in file ../controllers/dog-controller
+2022-12-01 11:41:11.663 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.664 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.664 - DEBUG: [controller_loader.js:267:12] registerPath called : /dog/delete -> delete in file ../controllers/dog-controller
+2022-12-01 11:41:11.665 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.667 - DEBUG: [controller_loader.js:267:12] registerPath called : /esl-index.do -> eslIndex in file ../controllers/index-controller
+2022-12-01 11:41:11.668 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.670 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/ -> list in file ../controllers/lion-controller
+2022-12-01 11:41:11.671 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.672 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/create -> create in file ../controllers/lion-controller
+2022-12-01 11:41:11.672 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.673 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/read/:id -> read in file ../controllers/lion-controller
+2022-12-01 11:41:11.674 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.675 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/update/:id -> update in file ../controllers/lion-controller
+2022-12-01 11:41:11.675 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.676 - DEBUG: [controller_loader.js:267:12] registerPath called : /lion/delete/:id -> delete in file ../controllers/lion-controller
+2022-12-01 11:41:11.676 - DEBUG: [controller_loader.js:274:20]  method #0 -> delete
+2022-12-01 11:41:11.679 - DEBUG: [controller_loader.js:267:12] registerPath called : /mci-test/patient-list -> patientList in file ../controllers/mci-controller
+2022-12-01 11:41:11.714 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.715 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.718 - DEBUG: [controller_loader.js:267:12] registerPath called : /panda/list -> list in file ../controllers/panda-controller
+2022-12-01 11:41:11.719 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.723 - DEBUG: [controller_loader.js:267:12] registerPath called : /sboard_image/upload -> upload in file ../controllers/sboard-image-controller
+2022-12-01 11:41:11.724 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.725 - DEBUG: [controller_loader.js:267:12] registerPath called : /sboard_image/send -> send in file ../controllers/sboard-image-controller
+2022-12-01 11:41:11.726 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.752 - DEBUG: [controller_loader.js:267:12] registerPath called : /sboard_image/send_group -> sendGroup in file ../controllers/sboard-image-controller
+2022-12-01 11:41:11.753 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.757 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/ -> list in file ../controllers/sheep-controller
+2022-12-01 11:41:11.782 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.784 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/ -> create in file ../controllers/sheep-controller
+2022-12-01 11:41:11.796 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.802 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/:id -> read in file ../controllers/sheep-controller
+2022-12-01 11:41:11.803 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.805 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/:id -> update in file ../controllers/sheep-controller
+2022-12-01 11:41:11.805 - DEBUG: [controller_loader.js:274:20]  method #0 -> put
+2022-12-01 11:41:11.806 - DEBUG: [controller_loader.js:267:12] registerPath called : /sheep/:id -> delete in file ../controllers/sheep-controller
+2022-12-01 11:41:11.806 - DEBUG: [controller_loader.js:274:20]  method #0 -> delete
+2022-12-01 11:41:11.810 - DEBUG: [controller_loader.js:267:12] registerPath called : /data/apply -> applyData in file ../controllers/sync_to_esl-controller
+2022-12-01 11:41:11.811 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.814 - DEBUG: [controller_loader.js:267:12] registerPath called : /data/lastmodifieddate -> getLastModifiedDate in file ../controllers/sync_to_mci-controller
+2022-12-01 11:41:11.815 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.816 - DEBUG: [controller_loader.js:267:12] registerPath called : /data/apply -> applyData in file ../controllers/sync_to_mci-controller
+2022-12-01 11:41:11.816 - DEBUG: [controller_loader.js:274:20]  method #0 -> post
+2022-12-01 11:41:11.819 - DEBUG: [controller_loader.js:267:12] registerPath called : /tiger/hello -> hello in file ../controllers/tiger-controller
+2022-12-01 11:41:11.820 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.820 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:11.821 - DEBUG: [controller_loader.js:267:12] registerPath called : /tiger/bye -> bye in file ../controllers/tiger-controller
+2022-12-01 11:41:11.821 - DEBUG: [controller_loader.js:274:20]  method #0 -> get
+2022-12-01 11:41:11.822 - DEBUG: [controller_loader.js:274:20]  method #1 -> post
+2022-12-01 11:41:52.034 - DEBUG: [index-controller.js:25:16] eslIndex called for path /esl-index.do
+2022-12-01 11:41:54.153 - DEBUG: [baroboard-users-controller.js:80:16] BaroboardUsers:login called for path /baroboard/users/login
+2022-12-01 11:41:54.235 - DEBUG: [baroboard-device-controller.js:696:16] BaroboardDevice:deletePreview called 
+2022-12-01 11:41:54.237 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-01 11:41:54.305 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-01 11:41:54.329 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/layout
+2022-12-01 11:41:58.160 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:02.094 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:02.647 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:03.653 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:04.117 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:04.542 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:05.414 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:06.517 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:07.333 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:08.848 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:09.255 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:09.447 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:09.638 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:09.815 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:09.999 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:10.190 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:10.374 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:10.615 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:10.830 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:11.438 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:11.621 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:11.805 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:11.997 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:12.150 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:12.342 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:12.509 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:12.654 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:12.845 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:13.014 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:13.189 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:13.357 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:13.549 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:13.704 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:13.887 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:14.087 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:14.254 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:14.429 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:14.606 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:14.790 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:14.974 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:15.150 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:15.350 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:15.519 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:15.703 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:15.886 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:16.087 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:16.270 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:16.462 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:16.815 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:17.005 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:17.190 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:17.375 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:17.558 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:17.742 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:17.926 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:18.110 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:18.279 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:18.470 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:18.654 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:18.838 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:19.023 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:19.215 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:19.418 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:19.586 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:19.778 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:19.970 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:20.162 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:20.366 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:20.542 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:20.734 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:20.919 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:21.104 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:21.295 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:21.470 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:21.663 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:21.838 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:22.031 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:22.215 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:22.407 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:22.591 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:22.783 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:22.967 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:23.143 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
+2022-12-01 11:42:23.359 - DEBUG: [table-controller.js:121:14] Table:list called for GET /baroboard/device
